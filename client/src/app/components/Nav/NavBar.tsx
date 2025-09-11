@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Group, Container, Anchor, Button, Drawer, Burger, Stack, Divider } from '@mantine/core'
+import { Group, Container, Anchor, Button, Drawer, Burger, Stack, Divider, ScrollArea } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import { smoothScrollTo } from '../../lib/anchors'
 import './Nav.css'
@@ -56,6 +56,7 @@ export function NavBar() {
               href={l.href}
               underline="never"
               className={`nav-link${active === l.href ? ' active' : ''}`}
+              aria-current={active === l.href ? 'page' : undefined}
               onClick={(e) => { e.preventDefault(); smoothScrollTo(l.href.slice(1)) }}
             >
               {l.label}
@@ -76,20 +77,26 @@ export function NavBar() {
       </Container>
 
       <Drawer opened={opened} onClose={close} padding="md" title="Menu" size="md" overlayProps={{ opacity: 0.35 }}>
-        <Stack gap="xs">
-          {links.map((l) => (
-            <Anchor
-              key={l.href}
-              href={l.href}
-              className={`nav-link${active === l.href ? ' active' : ''}`}
-              onClick={(e) => { e.preventDefault(); smoothScrollTo(l.href.slice(1)); close() }}
-            >
-              {l.label}
-            </Anchor>
-          ))}
-          <Divider my="sm" />
-          <Button component="a" href="#contact" onClick={(e:any) => { e.preventDefault(); smoothScrollTo('contact'); close() }}>Register</Button>
-        </Stack>
+        <ScrollArea style={{ height: 'calc(100dvh - 120px)' }} offsetScrollbars>
+          <Stack gap="xs">
+            {links.map((l) => (
+              <Button
+                key={l.href}
+                variant="subtle"
+                size="lg"
+                fullWidth
+                aria-current={active === l.href ? 'page' : undefined}
+                styles={{ root: { justifyContent: 'flex-start' } }}
+                onClick={(e) => { e.preventDefault(); smoothScrollTo(l.href.slice(1)); close() }}
+              >
+                {l.label}
+              </Button>
+            ))}
+            <Divider my="sm" />
+            <Button fullWidth size="lg" className="btn-gradient g-animate" component="a" href="#contact"
+              onClick={(e:any) => { e.preventDefault(); smoothScrollTo('contact'); close() }}>Register</Button>
+          </Stack>
+        </ScrollArea>
       </Drawer>
     </div>
   )
