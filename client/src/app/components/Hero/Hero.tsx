@@ -1,4 +1,4 @@
-import { Container, Title, Text, Button, Group, Stack, Grid, Badge, rem, Box } from '@mantine/core'
+import { Container, Title, Text, Button, Group, Stack, Grid, rem, Box } from '@mantine/core'
 import { Pane } from '../Common/Pane'
 
 type EventData = {
@@ -13,7 +13,6 @@ export function Hero({ event }: { event: EventData }){
   return (
     <Container size="lg" py={{ base: 56, md: 96 }}>
       <Stack gap="md" align="center">
-        <Badge size="lg" variant="light" color="crimson">Hackathon</Badge>
         {/* Mobile: full width pane */}
         <Box hiddenFrom="md" w="100%">
           <Pane maxWidth={820} width="100%">
@@ -35,7 +34,7 @@ export function Hero({ event }: { event: EventData }){
                       <Text><strong>Location:</strong> {event.location || '[Add venue + city]'}</Text>
                     </Group>
                   </Stack>
-                  <Button fullWidth size="lg" className="btn-gradient g-animate" component="a" href={event.registerUrl || '#contact'} target={event.registerUrl ? '_blank' : undefined}
+                  <Button fullWidth size="lg" mt="md" className="btn-gradient g-animate" component="a" href={event.registerUrl || '#contact'} target={event.registerUrl ? '_blank' : undefined}
                     onClick={(e:any) => { if(!event.registerUrl){ e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) } }}>
                     Register
                   </Button>
@@ -66,7 +65,7 @@ export function Hero({ event }: { event: EventData }){
                       <Text><strong>Location:</strong> {event.location || '[Add venue + city]'}</Text>
                     </Group>
                   </Stack>
-                  <Button fullWidth size="lg" className="btn-gradient g-animate" component="a" href={event.registerUrl || '#contact'} target={event.registerUrl ? '_blank' : undefined}
+                  <Button fullWidth size="lg" mt="md" className="btn-gradient g-animate" component="a" href={event.registerUrl || '#contact'} target={event.registerUrl ? '_blank' : undefined}
                     onClick={(e:any) => { if(!event.registerUrl){ e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) } }}>
                     Register
                   </Button>

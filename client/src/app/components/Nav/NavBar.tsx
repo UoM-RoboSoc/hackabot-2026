@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Group, Container, Anchor, Button, Drawer, Burger, Stack, Divider, ScrollArea } from '@mantine/core'
+import { Group, Container, Anchor, Button, Burger, Stack, ScrollArea, Collapse } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import { smoothScrollTo } from '../../lib/anchors'
 import './Nav.css'
@@ -76,28 +76,27 @@ export function NavBar() {
         </Group>
       </Container>
 
-      <Drawer opened={opened} onClose={close} padding="md" title="Menu" size="md" overlayProps={{ opacity: 0.35 }}>
-        <ScrollArea style={{ height: 'calc(100dvh - 120px)' }} offsetScrollbars>
-          <Stack gap="xs">
-            {links.map((l) => (
-              <Button
-                key={l.href}
-                variant="subtle"
-                size="lg"
-                fullWidth
-                aria-current={active === l.href ? 'page' : undefined}
-                styles={{ root: { justifyContent: 'flex-start' } }}
-                onClick={(e) => { e.preventDefault(); smoothScrollTo(l.href.slice(1)); close() }}
-              >
-                {l.label}
-              </Button>
-            ))}
-            <Divider my="sm" />
-            <Button fullWidth size="lg" className="btn-gradient g-animate" component="a" href="#contact"
-              onClick={(e:any) => { e.preventDefault(); smoothScrollTo('contact'); close() }}>Register</Button>
-          </Stack>
-        </ScrollArea>
-      </Drawer>
+      <Collapse in={opened} transitionDuration={180}>
+        <div className="nav-mobile-panel">
+          <ScrollArea style={{ maxHeight: 'calc(100dvh - 88px)' }} offsetScrollbars>
+            <Stack gap="xs" p="md">
+              {links.map((l) => (
+                <Button
+                  key={l.href}
+                  variant="subtle"
+                  size="lg"
+                  fullWidth
+                  aria-current={active === l.href ? 'page' : undefined}
+                  styles={{ root: { justifyContent: 'flex-start' } }}
+                  onClick={(e) => { e.preventDefault(); smoothScrollTo(l.href.slice(1)); close() }}
+                >
+                  {l.label}
+                </Button>
+              ))}
+            </Stack>
+          </ScrollArea>
+        </div>
+      </Collapse>
     </div>
   )
 }

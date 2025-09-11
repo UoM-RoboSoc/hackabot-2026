@@ -1,11 +1,12 @@
 /* Glassy, modern header and animated nav links */
 
 .nav-glass {
-  background: rgba(15, 15, 18, 0.35);
+  /* Match glassiness of mobile panel for testing */
+  background: rgba(15, 15, 18, 0.60);
   backdrop-filter: saturate(160%) blur(12px);
   -webkit-backdrop-filter: saturate(160%) blur(12px);
   border-bottom: 1px solid var(--border);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 8px 24px rgba(0,0,0,0.28);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 8px 24px rgba(0,0,0,0.35);
 }
 
 .brand {
@@ -39,3 +40,15 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
 }
+
+.nav-mobile-panel{
+  background: rgba(15, 15, 18, 0.60);
+  backdrop-filter: saturate(160%) blur(10px);
+  -webkit-backdrop-filter: saturate(160%) blur(10px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+/* Ensure readable text in mobile drop-down */
+.nav-mobile-panel .mantine-Button-root{ color: var(--text); font-weight: 600; }
+.nav-mobile-panel .mantine-Button-root[aria-current="page"]{ color: var(--auburn); }

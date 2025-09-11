@@ -11,6 +11,26 @@ export function Page({ children }: PropsWithChildren) {
       const el = document.getElementById(id)
       el?.focus?.()
     }
+    // Dynamic viewport height css var for robust centering across devices
+    const setVh = () => {
+      const vh = window.innerHeight
+      document.documentElement.style.setProperty('--app-vh', `${vh}px`)
+    }
+    const setAtTopPadding = () => {
+      document.documentElement.style.setProperty('--main-pt', '0px')
+    }
+    const onResize = () => { setVh(); setAtTopPadding() }
+    const onOrientation = () => { setVh(); setAtTopPadding() }
+    setVh()
+    setAtTopPadding()
+    window.addEventListener('resize', onResize)
+    window.addEventListener('orientationchange', onOrientation)
+    window.addEventListener('scroll', setAtTopPadding, { passive: true })
+    return () => {
+      window.removeEventListener('resize', onResize)
+      window.removeEventListener('orientationchange', onOrientation)
+      window.removeEventListener('scroll', setAtTopPadding)
+    }
   }, [])
 
   return (
@@ -18,9 +38,9 @@ export function Page({ children }: PropsWithChildren) {
       header={{ height: 88 }}
       padding={0}
       withBorder={false}
-      styles={{ main: { background: 'var(--bg-1)', paddingTop: 88 } }}
+      styles={{ main: { background: 'var(--bg-1)', paddingTop: 0 } }}
       // Expose header and main padding as CSS vars for sections using 100dvh centering
-      style={{ ['--header-h' as any]: '88px', ['--main-pt' as any]: '88px' }}
+      style={{ ['--header-h' as any]: '88px', ['--main-pt' as any]: '0px' }}
     >
       <AppShell.Header>
         <NavBar />

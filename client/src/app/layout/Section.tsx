@@ -16,9 +16,10 @@ type Props = PropsWithChildren<{
   gradient: GradientName
   divider?: Divider
   centered?: boolean
+  offsetTop?: boolean
 }>
 
-export function Section({ id, title, subtitle, gradient, divider = 'none', centered = false, children }: Props) {
+export function Section({ id, title, subtitle, gradient, divider = 'none', centered = false, offsetTop = false, children }: Props) {
   return (
     <section
       id={id}
@@ -27,7 +28,13 @@ export function Section({ id, title, subtitle, gradient, divider = 'none', cente
         position: 'relative',
         display: centered ? 'flex' : undefined,
         alignItems: centered ? 'center' : undefined,
-        minHeight: centered ? 'calc(100dvh - var(--header-h, 88px) - var(--main-pt, 88px))' : undefined,
+        justifyContent: centered ? 'center' : undefined,
+        marginTop: offsetTop ? 'var(--header-h, 88px)' : undefined,
+        minHeight: centered ? 'calc(var(--app-vh, 100dvh) - var(--header-h, 88px))' : undefined,
+        height: centered ? 'calc(var(--app-vh, 100dvh) - var(--header-h, 88px))' : undefined,
+        boxSizing: centered ? 'border-box' : undefined,
+        width: '100%',
+        scrollMarginTop: 'var(--header-h, 88px)',
       }}
       tabIndex={-1}
       className={`${gradient} g-animate`}>
