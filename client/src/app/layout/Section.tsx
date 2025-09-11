@@ -1,0 +1,47 @@
+import { type PropsWithChildren } from 'react'
+import { Container, Title, Text, Stack } from '@mantine/core'
+import './Gradients.css'
+
+type Divider = 'diagonal' | 'wave' | 'none'
+type GradientName =
+  | 'bg-gradient-crimson-mesh'
+  | 'bg-gradient-rosewood-radial'
+  | 'bg-gradient-falu-diagonal'
+  | 'bg-gradient-auburn-wave'
+
+type Props = PropsWithChildren<{
+  id: string
+  title?: string
+  subtitle?: string
+  gradient: GradientName
+  divider?: Divider
+}>
+
+export function Section({ id, title, subtitle, gradient, divider = 'none', children }: Props) {
+  return (
+    <section id={id} aria-labelledby={`${id}-title`} style={{ position: 'relative' }} tabIndex={-1}
+      className={`${gradient} g-animate`}>
+      <div className="section-overlay" aria-hidden="true" />
+      <Container size="lg" py={{ base: 80, md: 120 }} style={{ position: 'relative' }}>
+        {(title || subtitle) && (
+          <Stack gap={8} mb={{ base: 20, md: 28 }} className="section-header">
+            {title && (
+              <Title id={`${id}-title`} order={2} c="var(--text)">
+                {title}
+              </Title>
+            )}
+            {subtitle && (
+              <Text className="lede">{subtitle}</Text>
+            )}
+          </Stack>
+        )}
+        {children}
+      </Container>
+      {divider !== 'none' && (
+        <div aria-hidden="true" style={{ height: 24, opacity: 0.5 }} />
+      )}
+    </section>
+  )
+}
+
+export default Section

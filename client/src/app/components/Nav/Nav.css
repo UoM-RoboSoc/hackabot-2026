@@ -1,0 +1,39 @@
+/* Glassy, modern header and animated nav links */
+
+.nav-glass {
+  background: rgba(15, 15, 18, 0.55);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.nav-link {
+  position: relative;
+  color: var(--text-dim);
+  padding-block: 14px; /* larger hit area */
+}
+.nav-link:hover { color: var(--text); }
+.nav-link.active { color: var(--auburn); }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 4px;
+  height: 2px;
+  background: var(--auburn);
+  opacity: 0;
+  transform: scaleX(0.3);
+  transform-origin: center;
+  transition: 180ms ease;
+}
+.nav-link:hover::after, .nav-link.active::after { opacity: 0.9; transform: scaleX(1); }
+
+.mobile-strip {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}

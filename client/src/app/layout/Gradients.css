@@ -1,0 +1,41 @@
+/* Gradient utilities and animations for section backgrounds */
+
+.bg-gradient-crimson-mesh{
+  background:
+    radial-gradient(60rem 40rem at 10% 20%, rgba(173,40,49,0.18), transparent 60%),
+    radial-gradient(40rem 28rem at 80% 10%, rgba(100,13,20,0.18), transparent 60%),
+    radial-gradient(50rem 36rem at 20% 85%, rgba(128,14,19,0.14), transparent 60%),
+    linear-gradient(180deg, var(--bg-2), var(--bg-1));
+}
+
+.bg-gradient-rosewood-radial{
+  background:
+    radial-gradient(50rem 50rem at 15% 10%, rgba(100,13,20,0.22), transparent 60%),
+    radial-gradient(60rem 40rem at 85% 80%, rgba(37,9,2,0.18), transparent 60%),
+    linear-gradient(180deg, var(--bg-2), var(--bg-1));
+}
+
+.bg-gradient-falu-diagonal{
+  background:
+    linear-gradient(135deg, rgba(128,14,19,0.16), transparent 40%),
+    linear-gradient(180deg, var(--bg-2), var(--bg-1));
+}
+
+.bg-gradient-auburn-wave{
+  background:
+    radial-gradient(30rem 18rem at 70% 0%, rgba(173,40,49,0.16), transparent 60%),
+    radial-gradient(40rem 24rem at 0% 80%, rgba(37,9,2,0.14), transparent 60%),
+    linear-gradient(180deg, var(--bg-2), var(--bg-1));
+}
+
+@keyframes floatGradient{ 0%{background-position:0 0} 100%{background-position:8% 6%} }
+.g-animate{ animation: floatGradient 24s ease-in-out infinite alternate; }
+@media (prefers-reduced-motion: reduce){ .g-animate{ animation:none; } }
+
+.section-overlay{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0,0,0,.18), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,.22));
+}
+

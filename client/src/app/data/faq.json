@@ -1,0 +1,10 @@
+[
+  { "q": "Who can attend?", "a": "[Add eligibility details]" },
+  { "q": "Costs & tickets?", "a": "[Add info]" },
+  { "q": "Teams & size?", "a": "[Add info]" },
+  { "q": "Hardware & resources?", "a": "[Add info]" },
+  { "q": "Judging criteria?", "a": "[Add info]" },
+  { "q": "IP ownership?", "a": "Participants retain IP; [Add specifics]" },
+  { "q": "Code of Conduct?", "a": "[Link to CoC]" },
+  { "q": "Accessibility?", "a": "[Add notes if any]" }
+]
