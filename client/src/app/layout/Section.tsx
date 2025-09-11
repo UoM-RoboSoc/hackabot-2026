@@ -15,14 +15,24 @@ type Props = PropsWithChildren<{
   subtitle?: string
   gradient: GradientName
   divider?: Divider
+  centered?: boolean
 }>
 
-export function Section({ id, title, subtitle, gradient, divider = 'none', children }: Props) {
+export function Section({ id, title, subtitle, gradient, divider = 'none', centered = false, children }: Props) {
   return (
-    <section id={id} aria-labelledby={`${id}-title`} style={{ position: 'relative' }} tabIndex={-1}
+    <section
+      id={id}
+      aria-labelledby={`${id}-title`}
+      style={{
+        position: 'relative',
+        display: centered ? 'flex' : undefined,
+        alignItems: centered ? 'center' : undefined,
+        minHeight: centered ? 'calc(100dvh - var(--header-h, 88px) - var(--main-pt, 88px))' : undefined,
+      }}
+      tabIndex={-1}
       className={`${gradient} g-animate`}>
       <div className="section-overlay" aria-hidden="true" />
-      <Container size="lg" py={{ base: 80, md: 120 }} style={{ position: 'relative' }}>
+      <Container size="lg" py={centered ? 0 : { base: 80, md: 120 }} style={{ position: 'relative', width: '100%' }}>
         {(title || subtitle) && (
           <Stack gap={8} mb={{ base: 20, md: 28 }} className="section-header">
             {title && (

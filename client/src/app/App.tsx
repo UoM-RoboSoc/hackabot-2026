@@ -16,7 +16,7 @@ import event from './data/event.json'
 export default function App(){
   return (
     <Page>
-      <Section id="hero" gradient="bg-gradient-crimson-mesh">
+      <Section id="hero" gradient="bg-gradient-crimson-mesh" centered>
         <Hero event={event} />
       </Section>
 

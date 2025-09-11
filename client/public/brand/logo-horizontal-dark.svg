@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="48" viewBox="0 0 220 48" role="img" aria-label="Hack‑A‑Bot">
+  <rect width="220" height="48" rx="10" fill="#121218" stroke="#1e1e24"/>
+  <g transform="translate(10,6)">
+    <rect x="0" y="0" width="36" height="36" rx="8" fill="#ad2831"/>
+    <path d="M10 9h16l10 9-10 9H10l-10-9z" fill="#fff" opacity="0.92" transform="translate(2,0)"/>
+    <text x="54" y="24" dominant-baseline="middle" font-family="Space Grotesk, Arial, sans-serif" font-size="18" fill="#e6e6eb">Hack‑A‑Bot 2026</text>
+  </g>
+  <title>Placeholder logo; replace with final assets</title>
+</svg>

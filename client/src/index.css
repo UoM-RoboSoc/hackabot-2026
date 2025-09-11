@@ -60,4 +60,25 @@ a:hover{ color: #c54a52; }
 .lede{ max-width: 70ch; margin: 0 auto; color: var(--text-dim); }
 
 /* Softer gradient overlay */
-.section-overlay{ background: linear-gradient(180deg, rgba(0,0,0,.12), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,.16)); }
+.section-overlay{ background: linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,.12)); }
+
+/* Animated gradient buttons (reactive) */
+.btn-gradient{
+  color: #fff;
+  background-image: linear-gradient(90deg, var(--rosewood), var(--auburn), var(--falu-red));
+  background-size: 200% 100%;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: filter .2s ease, transform .06s ease, background-position .6s ease;
+}
+.btn-gradient:hover{ filter: brightness(1.05); background-position: 100% 0; }
+.btn-gradient:active{ transform: translateY(1px); }
+.btn-gradient.g-animate{ animation: moveGradient 8s ease-in-out infinite; }
+@keyframes moveGradient{ 0%{background-position:0% 0} 50%{background-position:100% 0} 100%{background-position:0% 0} }
+@media (prefers-reduced-motion: reduce){ .btn-gradient.g-animate{ animation: none; } }
+
+/* Softer, non-expressive button for utilities like BackToTop */
+.btn-soft{
+  color: #fff;
+  background-image: linear-gradient(180deg, rgba(173,40,49,0.20), rgba(100,13,20,0.24));
+  border: 1px solid rgba(255,255,255,0.08);
+}

@@ -5,11 +5,13 @@ type Props = PropsWithChildren<{
   title?: string
   subtitle?: string
   p?: any
+  maxWidth?: number
+  width?: string | number
 }>
 
-export function Pane({ title, subtitle, p = 'xl', children }: Props){
+export function Pane({ title, subtitle, p = 'xl', maxWidth = 980, width, children }: Props){
   return (
-    <Paper withBorder radius="xl" p={p} style={{ marginInline: 'auto', maxWidth: 1120, background: 'var(--panel)' }}>
+    <Paper withBorder radius="xl" p={p} style={{ marginInline: 'auto', maxWidth, width, background: 'var(--panel)' }}>
       {(title || subtitle) && (
         <Stack gap={6} mb="sm">
           {title && <Title order={3}>{title}</Title>}

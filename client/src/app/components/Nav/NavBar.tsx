@@ -43,21 +43,25 @@ export function NavBar() {
   return (
     <div className="nav-glass">
       <Container size="lg" h={88} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
-        <Group gap={12} align="center">
-          <Anchor className="brand" c="var(--text)" href="#hero" onClick={(e) => { e.preventDefault(); smoothScrollTo('hero') }}>Hack‑A‑Bot 2026</Anchor>
+        <Group gap={8} align="center">
+          <Anchor href="#hero" underline="never" onClick={(e) => { e.preventDefault(); smoothScrollTo('hero') }} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <img src="/brand/logo-mark.svg" alt="Hack‑A‑Bot" height={32} style={{ display: 'block' }} />
+            <span className="brand" style={{ color: 'var(--text)' }}>Hack‑A‑Bot 2026</span>
+          </Anchor>
         </Group>
         <Group gap={24} visibleFrom="md" align="center">
           {links.map((l) => (
             <Anchor
               key={l.href}
               href={l.href}
+              underline="never"
               className={`nav-link${active === l.href ? ' active' : ''}`}
               onClick={(e) => { e.preventDefault(); smoothScrollTo(l.href.slice(1)) }}
             >
               {l.label}
             </Anchor>
           ))}
-          <Button size="lg" component="a" href="#contact"
+          <Button size="lg" component="a" href="#contact" className="btn-gradient g-animate"
             onClick={(e: any) => { e.preventDefault(); smoothScrollTo('contact') }}>
             Register
           </Button>
@@ -65,7 +69,8 @@ export function NavBar() {
 
         {/* Mobile: burger + CTA */}
         <Group gap={12} hiddenFrom="md">
-          <Button size="md" component="a" href="#contact" onClick={(e:any) => { e.preventDefault(); smoothScrollTo('contact') }}>Register</Button>
+          <Button size="md" component="a" href="#contact" className="btn-gradient g-animate"
+            onClick={(e:any) => { e.preventDefault(); smoothScrollTo('contact') }}>Register</Button>
           <Burger opened={opened} onClick={toggle} aria-label="Toggle navigation" color="var(--text)" />
         </Group>
       </Container>
