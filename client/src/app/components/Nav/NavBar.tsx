@@ -22,6 +22,7 @@ export function NavBar() {
 
   useEffect(() => {
     const observers: IntersectionObserver[] = []
+    const rootEl = document.getElementById('app-main') || undefined
     links.forEach(({ href }) => {
       const id = href.slice(1)
       const el = document.getElementById(id)
@@ -32,7 +33,7 @@ export function NavBar() {
             if (e.isIntersecting) setActive(`#${id}`)
           })
         },
-        { rootMargin: '-50% 0px -50% 0px', threshold: [0, 1] }
+        { root: rootEl as any, rootMargin: '-50% 0px -50% 0px', threshold: [0, 1] }
       )
       io.observe(el)
       observers.push(io)
@@ -62,16 +63,14 @@ export function NavBar() {
               {l.label}
             </Anchor>
           ))}
-          <Button size="lg" component="a" href="#contact" className="btn-gradient g-animate"
+          <Button size="lg" component="a" href="#contact" color="crimson" variant="filled"
             onClick={(e: any) => { e.preventDefault(); smoothScrollTo('contact') }}>
             Register
           </Button>
         </Group>
 
-        {/* Mobile: burger + CTA */}
+        {/* Mobile: burger only; Register moves into menu */}
         <Group gap={12} hiddenFrom="md">
-          <Button size="md" component="a" href="#contact" className="btn-gradient g-animate"
-            onClick={(e:any) => { e.preventDefault(); smoothScrollTo('contact') }}>Register</Button>
           <Burger opened={opened} onClick={toggle} aria-label="Toggle navigation" color="var(--text)" />
         </Group>
       </Container>
@@ -80,15 +79,17 @@ export function NavBar() {
         <div className="nav-mobile-panel">
           <ScrollArea style={{ maxHeight: 'calc(100dvh - 88px)' }} offsetScrollbars>
             <Stack gap="xs" p="md">
+              <Button fullWidth size="lg" color="crimson" variant="filled" component="a" href="#contact"
+                onClick={(e:any) => { e.preventDefault(); smoothScrollTo('contact'); close() }}>Register</Button>
               {links.map((l) => (
-                <Button
+              <Button
                   key={l.href}
                   variant="subtle"
                   size="lg"
                   fullWidth
                   aria-current={active === l.href ? 'page' : undefined}
                   styles={{ root: { justifyContent: 'flex-start' } }}
-                  onClick={(e) => { e.preventDefault(); smoothScrollTo(l.href.slice(1)); close() }}
+                  onClick={(e) => { e.preventDefault(); close(); requestAnimationFrame(() => smoothScrollTo(l.href.slice(1))) }}
                 >
                   {l.label}
                 </Button>

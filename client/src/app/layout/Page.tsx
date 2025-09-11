@@ -38,14 +38,22 @@ export function Page({ children }: PropsWithChildren) {
       header={{ height: 88 }}
       padding={0}
       withBorder={false}
-      styles={{ main: { background: 'var(--bg-1)', paddingTop: 0 } }}
+      styles={{
+        main: {
+          background: 'var(--bg-1)',
+          // Make main a scroll container so the scrollbar starts below the header
+          height: 'calc(var(--app-vh, 100dvh) - var(--header-h, 88px))',
+          overflowY: 'auto',
+          width: '100%',
+        },
+      }}
       // Expose header and main padding as CSS vars for sections using 100dvh centering
       style={{ ['--header-h' as any]: '88px', ['--main-pt' as any]: '0px' }}
     >
-      <AppShell.Header>
+      <AppShell.Header id="app-header">
         <NavBar />
       </AppShell.Header>
-      <AppShell.Main>
+      <AppShell.Main id="app-main">
         {children}
         <BackToTop />
       </AppShell.Main>

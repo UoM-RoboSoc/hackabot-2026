@@ -19,13 +19,13 @@ export function Hero({ event }: { event: EventData }){
             <Grid align="center" gutter={{ base: 16, md: 24 }}>
               {/* Logo column (1/3 on md+, stacks on mobile) */}
               <Grid.Col span={{ base: 12, md: 4 }}>
-                <div style={{ minHeight: rem(240), display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ minHeight: 'var(--hero-min, 240px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <img src="/brand/logo-mark.svg" alt="Hack‑A‑Bot mark" style={{ height: '100%', maxHeight: rem(240), width: 'auto', display: 'block' }} />
                 </div>
               </Grid.Col>
               {/* Text + CTA column (2/3 on md+) */}
               <Grid.Col span={{ base: 12, md: 8 }}>
-                <div style={{ minHeight: rem(240), display: 'flex', flexDirection: 'column' }}>
+                <div style={{ minHeight: 'var(--hero-min, 240px)', display: 'flex', flexDirection: 'column' }}>
                   <Stack gap={6} style={{ flex: 1, minWidth: 260 }}>
                     <Title order={1}>{event.name}</Title>
                     <Text fz="lg" c="var(--text-dim)">{event.tagline || '[Add 1–2 sentence pitch for participants]'}</Text>
@@ -34,7 +34,7 @@ export function Hero({ event }: { event: EventData }){
                       <Text><strong>Location:</strong> {event.location || '[Add venue + city]'}</Text>
                     </Group>
                   </Stack>
-                  <Button fullWidth size="lg" mt="md" className="btn-gradient g-animate" component="a" href={event.registerUrl || '#contact'} target={event.registerUrl ? '_blank' : undefined}
+                  <Button fullWidth size="lg" mt="md" color="crimson" variant="filled" component="a" href={event.registerUrl || '#contact'} target={event.registerUrl ? '_blank' : undefined}
                     onClick={(e:any) => { if(!event.registerUrl){ e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) } }}>
                     Register
                   </Button>
@@ -50,13 +50,13 @@ export function Hero({ event }: { event: EventData }){
             <Grid align="center" gutter={{ base: 16, md: 24 }}>
               {/* Logo 1/3 */}
               <Grid.Col span={{ base: 12, md: 4 }}>
-                <div style={{ minHeight: rem(300), display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ minHeight: 'var(--hero-min, 300px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <img src="/brand/logo-mark.svg" alt="Hack‑A‑Bot mark" style={{ height: '100%', maxHeight: rem(280), width: 'auto', display: 'block' }} />
                 </div>
               </Grid.Col>
               {/* Text 2/3 with button at bottom */}
               <Grid.Col span={{ base: 12, md: 8 }}>
-                <div style={{ minHeight: rem(300), display: 'flex', flexDirection: 'column' }}>
+                <div style={{ minHeight: 'var(--hero-min, 300px)', display: 'flex', flexDirection: 'column' }}>
                   <Stack gap={6} style={{ flex: 1, minWidth: 260 }}>
                     <Title order={1}>{event.name}</Title>
                     <Text fz="lg" c="var(--text-dim)">{event.tagline || '[Add 1–2 sentence pitch for participants]'}</Text>
@@ -65,7 +65,7 @@ export function Hero({ event }: { event: EventData }){
                       <Text><strong>Location:</strong> {event.location || '[Add venue + city]'}</Text>
                     </Group>
                   </Stack>
-                  <Button fullWidth size="lg" mt="md" className="btn-gradient g-animate" component="a" href={event.registerUrl || '#contact'} target={event.registerUrl ? '_blank' : undefined}
+                  <Button fullWidth size="lg" mt="md" color="crimson" variant="filled" component="a" href={event.registerUrl || '#contact'} target={event.registerUrl ? '_blank' : undefined}
                     onClick={(e:any) => { if(!event.registerUrl){ e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) } }}>
                     Register
                   </Button>

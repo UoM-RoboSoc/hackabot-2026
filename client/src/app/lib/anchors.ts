@@ -1,9 +1,9 @@
 export function smoothScrollTo(id: string) {
-  const target = document.getElementById(id)
+  // CSS-first smooth scroll using #app-main scroll-behavior and scroll-padding-top
+  const heading = document.getElementById(`${id}-title`)
+  const target = heading || document.getElementById(id)
   if (!target) return
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  target.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'start' })
-  // Focus for a11y after scroll
-  setTimeout(() => target.tabIndex !== undefined && target.focus?.(), prefersReduced ? 0 : 300)
+  // Omit behavior so CSS scroll-behavior controls animation and respects reduced motion
+  target.scrollIntoView({ block: 'start' })
+  target.focus?.()
 }
-

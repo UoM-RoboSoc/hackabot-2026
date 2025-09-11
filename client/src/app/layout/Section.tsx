@@ -30,16 +30,19 @@ export function Section({ id, title, subtitle, gradient, divider = 'none', cente
         alignItems: centered ? 'center' : undefined,
         justifyContent: centered ? 'center' : undefined,
         marginTop: offsetTop ? 'var(--header-h, 88px)' : undefined,
-        minHeight: centered ? 'calc(var(--app-vh, 100dvh) - var(--header-h, 88px))' : undefined,
-        height: centered ? 'calc(var(--app-vh, 100dvh) - var(--header-h, 88px))' : undefined,
+        minHeight: centered ? 'var(--section-h, calc(var(--app-vh, 100dvh) - var(--header-h, 88px)))' : undefined,
+        height: centered ? 'var(--section-h, calc(var(--app-vh, 100dvh) - var(--header-h, 88px)))' : undefined,
         boxSizing: centered ? 'border-box' : undefined,
         width: '100%',
-        scrollMarginTop: 'var(--header-h, 88px)',
       }}
       tabIndex={-1}
       className={`${gradient} g-animate`}>
       <div className="section-overlay" aria-hidden="true" />
       <Container size="lg" py={centered ? 0 : { base: 80, md: 120 }} style={{ position: 'relative', width: '100%' }}>
+        {/* Anchor sentinel when no explicit title is provided */}
+        {!title && (
+          <div id={`${id}-title`} aria-hidden="true" style={{ position: 'absolute', insetInline: 0, top: 0, height: 0 }} />
+        )}
         {(title || subtitle) && (
           <Stack gap={8} mb={{ base: 20, md: 28 }} className="section-header">
             {title && (

@@ -36,6 +36,34 @@ body{
   overflow-x: hidden;
 }
 
+/* Integrated scrollbars */
+/* Scrollbars: style only the main scroll container so the track ends below header */
+#app-main{ /* no reserved gutter to avoid side bars */ scrollbar-width: thin; scrollbar-color: var(--auburn) var(--bg-2); overflow-x: hidden; display: block; scroll-padding-top: calc(var(--header-h, 88px) + 30px); scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce){
+  #app-main{ scroll-behavior: auto; }
+}
+#app-main::-webkit-scrollbar{ width: 10px; height: 10px; }
+#app-main::-webkit-scrollbar-track{ background: var(--bg-2); border-radius: 8px; }
+#app-main::-webkit-scrollbar-thumb{ background: linear-gradient(180deg, var(--rosewood), var(--falu-red)); border-radius: 8px; border: 2px solid var(--bg-2); }
+#app-main::-webkit-scrollbar-thumb:hover{ background: linear-gradient(180deg, var(--auburn), var(--falu-red)); }
+
+/* Ultra-small devices: iPhone 12 mini size or smaller (portrait) */
+@media (max-width: 360px) and (max-height: 780px){
+  html{ font-size: 15px; }
+  .mantine-Button-root{ height: 44px; font-size: 0.95rem; }
+  .count-val{ font-size: 22px !important; }
+  /* Scale hero section to half of usable height */
+  #hero{ --section-h: calc((var(--app-vh, 100dvh) - var(--header-h, 88px)) / 2); --hero-min: 160px; }
+}
+
+/* Ultra-small devices: iPhone 12 mini size or smaller (landscape) */
+@media (max-width: 780px) and (max-height: 360px){
+  html{ font-size: 15px; }
+  .mantine-Button-root{ height: 40px; font-size: 0.9rem; }
+  .count-val{ font-size: 20px !important; }
+  #hero{ --section-h: calc((var(--app-vh, 100dvh) - var(--header-h, 88px)) / 2); --hero-min: 130px; }
+}
+
 a{ color: var(--auburn); text-decoration: none; }
 a:hover{ color: #c54a52; }
 
