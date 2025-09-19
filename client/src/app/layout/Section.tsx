@@ -1,25 +1,20 @@
-import { type PropsWithChildren } from 'react'
+import { type PropsWithChildren, type ReactNode } from 'react'
 import { Container, Title, Text, Stack } from '@mantine/core'
 import './Gradients.css'
 
 type Divider = 'diagonal' | 'wave' | 'none'
-type GradientName =
-  | 'bg-gradient-crimson-mesh'
-  | 'bg-gradient-rosewood-radial'
-  | 'bg-gradient-falu-diagonal'
-  | 'bg-gradient-auburn-wave'
 
 type Props = PropsWithChildren<{
   id: string
   title?: string
   subtitle?: string
-  gradient: GradientName
   divider?: Divider
   centered?: boolean
   offsetTop?: boolean
+  background?: ReactNode
 }>
 
-export function Section({ id, title, subtitle, gradient, divider = 'none', centered = false, offsetTop = false, children }: Props) {
+export function Section({ id, title, subtitle, divider = 'none', centered = false, offsetTop = false, background, children }: Props) {
   return (
     <section
       id={id}
@@ -31,14 +26,19 @@ export function Section({ id, title, subtitle, gradient, divider = 'none', cente
         justifyContent: centered ? 'center' : undefined,
         marginTop: offsetTop ? 'var(--header-h, 88px)' : undefined,
         minHeight: centered ? 'var(--section-h, calc(var(--app-vh, 100dvh) - var(--header-h, 88px)))' : undefined,
-        height: centered ? 'var(--section-h, calc(var(--app-vh, 100dvh) - var(--header-h, 88px)))' : undefined,
         boxSizing: centered ? 'border-box' : undefined,
+        backgroundColor: 'var(--bg-2)',
         width: '100%',
       }}
       tabIndex={-1}
-      className={`${gradient} g-animate`}>
+    >
+      {background && (
+        <div aria-hidden="true" style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
+          {background}
+        </div>
+      )}
       <div className="section-overlay" aria-hidden="true" />
-      <Container size="lg" py={centered ? 0 : { base: 80, md: 120 }} style={{ position: 'relative', width: '100%' }}>
+      <Container size="lg" py={centered ? 0 : { base: 80, md: 120 }} style={{ position: 'relative', width: '100%', zIndex: 1 }}>
         {/* Anchor sentinel when no explicit title is provided */}
         {!title && (
           <div id={`${id}-title`} aria-hidden="true" style={{ position: 'absolute', insetInline: 0, top: 0, height: 0 }} />

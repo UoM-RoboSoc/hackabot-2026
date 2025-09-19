@@ -1,20 +1,25 @@
-/* Global dark-only theme variables */
+/* Global light palette (“Cool Coastal Vibes”) */
 :root{
-  /* Deep dark canvas */
-  --bg-1:#0b0b0d; /* page background */
-  --bg-2:#0f0f12; /* section inner */
-  --panel:#121218; /* cards/panels */
-  --border:#1e1e24; /* hairline borders */
-  /* Softer contrast */
-  --text:#cfd0d6; /* primary text */
-  --text-dim:#9ca0ae; /* secondary text */
+  --space-cadet:#2b2d42;
+  --cool-gray:#8d99ae;
+  --antiflash-white:#edf2f4;
+  --red-pantone:#ef233c;
+  --fire-engine-red:#d90429;
 
-  /* Crimson accents */
-  --black-bean:#250902;
-  --black-bean-2:#38040e;
-  --rosewood:#640d14;
-  --falu-red:#800e13;
-  --auburn:#ad2831;
+  --bg-1:#f6f7fb; /* page background */
+  --bg-2:#ffffff; /* section/cards */
+  --panel:rgba(255,255,255,0.92);
+  --border:rgba(43,45,66,0.08);
+  --text:#1f2333;
+  --text-dim:#4e596f;
+  --accent-soft:rgba(141,153,174,0.28);
+  --accent-strong:var(--red-pantone);
+  --accent-stronger:var(--fire-engine-red);
+
+  /* Legacy tokens kept for existing components */
+  --rosewood:var(--cool-gray);
+  --falu-red:var(--red-pantone);
+  --auburn:var(--fire-engine-red);
 }
 
 html, body, #root{
@@ -22,7 +27,7 @@ html, body, #root{
 }
 
 html{
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body{
@@ -38,14 +43,14 @@ body{
 
 /* Integrated scrollbars */
 /* Scrollbars: style only the main scroll container so the track ends below header */
-#app-main{ /* no reserved gutter to avoid side bars */ scrollbar-width: thin; scrollbar-color: var(--auburn) var(--bg-2); overflow-x: hidden; display: block; scroll-padding-top: calc(var(--header-h, 88px) + 30px); scroll-behavior: smooth; }
+#app-main{ /* no reserved gutter to avoid side bars */ scrollbar-width: thin; scrollbar-color: var(--cool-gray) var(--bg-1); background: var(--bg-1); overflow-x: hidden; display: block; scroll-padding-top: calc(var(--header-h, 88px) + 30px); scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce){
   #app-main{ scroll-behavior: auto; }
 }
 #app-main::-webkit-scrollbar{ width: 10px; height: 10px; }
-#app-main::-webkit-scrollbar-track{ background: var(--bg-2); border-radius: 8px; }
-#app-main::-webkit-scrollbar-thumb{ background: linear-gradient(180deg, var(--rosewood), var(--falu-red)); border-radius: 8px; border: 2px solid var(--bg-2); }
-#app-main::-webkit-scrollbar-thumb:hover{ background: linear-gradient(180deg, var(--auburn), var(--falu-red)); }
+#app-main::-webkit-scrollbar-track{ background: var(--bg-1); border-radius: 8px; }
+#app-main::-webkit-scrollbar-thumb{ background: linear-gradient(180deg, rgba(141,153,174,0.7), rgba(43,45,66,0.5)); border-radius: 8px; border: 2px solid var(--bg-1); }
+#app-main::-webkit-scrollbar-thumb:hover{ background: linear-gradient(180deg, rgba(239,35,60,0.85), rgba(217,4,41,0.65)); }
 
 /* Ultra-small devices: iPhone 12 mini size or smaller (portrait) */
 @media (max-width: 360px) and (max-height: 780px){
@@ -64,8 +69,8 @@ body{
   #hero{ --section-h: calc((var(--app-vh, 100dvh) - var(--header-h, 88px)) / 2); --hero-min: 130px; }
 }
 
-a{ color: var(--auburn); text-decoration: none; }
-a:hover{ color: #c54a52; }
+a{ color: var(--accent-strong); text-decoration: none; }
+a:hover{ color: var(--accent-stronger); }
 
 .skip-link{
   position: absolute;
@@ -89,17 +94,17 @@ a:hover{ color: #c54a52; }
 .lede{ max-width: 70ch; margin: 0 auto; color: var(--text-dim); }
 
 /* Softer gradient overlay */
-.section-overlay{ background: linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,.12)); }
+.section-overlay{ background: linear-gradient(180deg, rgba(43,45,66,0.08), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 80%, rgba(43,45,66,0.12)); }
 
 /* Animated gradient buttons (reactive) */
 .btn-gradient{
   color: #fff;
-  background-image: linear-gradient(90deg, var(--rosewood), var(--auburn), var(--falu-red));
+  background-image: linear-gradient(90deg, rgba(43,45,66,0.9), var(--accent-strong), var(--accent-stronger));
   background-size: 200% 100%;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(239,35,60,0.28);
   transition: filter .2s ease, transform .06s ease, background-position .6s ease;
 }
-.btn-gradient:hover{ filter: brightness(1.05); background-position: 100% 0; }
+.btn-gradient:hover{ filter: brightness(1.04); background-position: 100% 0; }
 .btn-gradient:active{ transform: translateY(1px); }
 .btn-gradient.g-animate{ animation: moveGradient 8s ease-in-out infinite; }
 @keyframes moveGradient{ 0%{background-position:0% 0} 50%{background-position:100% 0} 100%{background-position:0% 0} }
@@ -107,7 +112,7 @@ a:hover{ color: #c54a52; }
 
 /* Softer, non-expressive button for utilities like BackToTop */
 .btn-soft{
-  color: #fff;
-  background-image: linear-gradient(180deg, rgba(173,40,49,0.20), rgba(100,13,20,0.24));
-  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--text);
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(237,242,244,0.82));
+  border: 1px solid rgba(43,45,66,0.12);
 }

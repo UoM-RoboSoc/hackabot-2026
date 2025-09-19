@@ -10,7 +10,7 @@ type Props = {
 export function MediaFrame({ src, alt = 'Illustration', ratio = '16 / 9', caption }: Props){
   return (
     <Box>
-      <Box style={{ position: 'relative', width: '100%', aspectRatio: ratio, overflow: 'hidden', borderRadius: 16, border: '1px solid var(--border)', background: 'linear-gradient(180deg, rgba(173,40,49,0.08), rgba(0,0,0,0))' }}>
+      <Box style={{ position: 'relative', width: '100%', aspectRatio: ratio, overflow: 'hidden', borderRadius: 16, border: '1px solid var(--border)', background: 'linear-gradient(180deg, rgba(141,153,174,0.18), rgba(255,255,255,0))' }}>
         {src ? (
           <img src={src} alt={alt} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
         ) : (

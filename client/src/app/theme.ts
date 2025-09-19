@@ -12,18 +12,18 @@ export const theme: MantineThemeOverride = {
     fontWeight: '700',
   },
   colors: {
-    // Derive a crimson scale from CSS variables (approximation for Mantine)
+    // Custom red scale mapped to coastal palette accents
     crimson: [
-      '#2e0a0f', // 0
-      '#3a0d14', // 1
-      '#4b0f16', // 2
-      '#640d14', // 3 (rosewood)
-      '#800e13', // 4 (falu-red)
-      '#9a1820', // 5
-      '#ad2831', // 6 (auburn)
-      '#c23a44', // 7
-      '#d64a55', // 8
-      '#f06a74', // 9
+      '#fff1f3', // 0
+      '#ffd5dc', // 1
+      '#ffacb9', // 2
+      '#ff8397', // 3
+      '#ff5b74', // 4
+      '#ff3351', // 5
+      '#ef233c', // 6 (red pantone)
+      '#d90429', // 7 (fire engine red)
+      '#b10221', // 8
+      '#7c0116', // 9
     ],
   },
   components: {
@@ -31,7 +31,7 @@ export const theme: MantineThemeOverride = {
       defaultProps: { variant: 'filled', radius: 'md', size: 'lg' },
       styles: { root: { fontWeight: 600 } },
     },
-    Anchor: { styles: { root: { color: 'var(--auburn)', textUnderlineOffset: 4 } } },
+    Anchor: { styles: { root: { color: 'var(--accent-strong)', textUnderlineOffset: 4 } } },
     Paper: { styles: { root: { backgroundColor: 'var(--panel)', border: '1px solid var(--border)' } } },
   },
 }

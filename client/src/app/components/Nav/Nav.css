@@ -1,12 +1,11 @@
 /* Glassy, modern header and animated nav links */
 
 .nav-glass {
-  /* Match glassiness of mobile panel for testing */
-  background: rgba(15, 15, 18, 0.60);
+  background: linear-gradient(90deg, rgba(239,35,60,0.88), rgba(217,4,41,0.92));
   backdrop-filter: saturate(160%) blur(12px);
   -webkit-backdrop-filter: saturate(160%) blur(12px);
-  border-bottom: 1px solid var(--border);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 8px 24px rgba(0,0,0,0.35);
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 12px 28px rgba(15,17,24,0.45);
 }
 
 .brand {
@@ -16,24 +15,24 @@
 
 .nav-link {
   position: relative;
-  color: var(--text-dim);
+  color: #fff;
   padding-block: 14px; /* larger hit area */
   text-decoration: none;
 }
-.nav-link:hover { color: var(--text); }
-.nav-link.active { color: var(--auburn); }
+.nav-link:hover { color: #fff; }
+.nav-link.active { color: #fff; }
 .nav-link::after {
   content: '';
   position: absolute;
   left: 0; right: 0; bottom: 4px;
   height: 2px;
-  background: var(--auburn);
+  background: rgba(255,255,255,0.85);
   opacity: 0;
   transform: scaleX(0.3);
   transform-origin: center;
   transition: 180ms ease;
 }
-.nav-link:hover::after, .nav-link.active::after { opacity: 0.9; transform: scaleX(1); }
+.nav-link:hover::after, .nav-link.active::after { opacity: 1; transform: scaleX(1); }
 
 .mobile-strip {
   overflow-x: auto;
@@ -42,13 +41,13 @@
 }
 
 .nav-mobile-panel{
-  background: rgba(15, 15, 18, 0.60);
-  backdrop-filter: saturate(160%) blur(10px);
-  -webkit-backdrop-filter: saturate(160%) blur(10px);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid rgba(43,45,66,0.08);
+  box-shadow: 0 10px 24px rgba(15,17,24,0.12);
 }
 
 /* Ensure readable text in mobile drop-down */
 .nav-mobile-panel .mantine-Button-root{ color: var(--text); font-weight: 600; }
-.nav-mobile-panel .mantine-Button-root[aria-current="page"]{ color: var(--auburn); }
+.nav-mobile-panel .mantine-Button-root[aria-current="page"]{ color: var(--accent-strong); }

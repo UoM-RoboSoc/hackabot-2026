@@ -44,10 +44,9 @@ export function NavBar() {
   return (
     <div className="nav-glass">
       <Container size="lg" h={88} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
-        <Group gap={8} align="center">
-          <Anchor href="#hero" underline="never" onClick={(e) => { e.preventDefault(); smoothScrollTo('hero') }} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <img src="/brand/logo-mark.svg" alt="Hack‑A‑Bot" height={32} style={{ display: 'block' }} />
-            <span className="brand" style={{ color: 'var(--text)' }}>Hack‑A‑Bot 2026</span>
+        <Group gap={0} align="center">
+          <Anchor href="#hero" underline="never" onClick={(e) => { e.preventDefault(); smoothScrollTo('hero') }} style={{ display: 'flex', alignItems: 'center' }}>
+            <img src="/brand/Horizontal_Text.png" alt="Hack‑A‑Bot" height={40} style={{ display: 'block', height: '40px', width: 'auto' }} />
           </Anchor>
         </Group>
         <Group gap={24} visibleFrom="md" align="center">
@@ -63,7 +62,8 @@ export function NavBar() {
               {l.label}
             </Anchor>
           ))}
-          <Button size="lg" component="a" href="#contact" color="crimson" variant="filled"
+          <Button size="lg" component="a" href="#contact" variant="filled"
+            styles={{ root: { background: 'var(--accent-strong)', '&:hover': { background: 'var(--accent-stronger)' } } }}
             onClick={(e: any) => { e.preventDefault(); smoothScrollTo('contact') }}>
             Register
           </Button>
@@ -79,7 +79,8 @@ export function NavBar() {
         <div className="nav-mobile-panel">
           <ScrollArea style={{ maxHeight: 'calc(100dvh - 88px)' }} offsetScrollbars>
             <Stack gap="xs" p="md">
-              <Button fullWidth size="lg" color="crimson" variant="filled" component="a" href="#contact"
+              <Button fullWidth size="lg" variant="filled" component="a" href="#contact"
+                styles={{ root: { background: 'var(--accent-strong)', '&:hover': { background: 'var(--accent-stronger)' } } }}
                 onClick={(e:any) => { e.preventDefault(); smoothScrollTo('contact'); close() }}>Register</Button>
               {links.map((l) => (
               <Button
