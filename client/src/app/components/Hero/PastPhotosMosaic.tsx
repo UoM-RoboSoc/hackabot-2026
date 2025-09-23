@@ -1,72 +1,75 @@
-import { useEffect, useMemo, useState } from 'react'
-import { SimpleGrid, Box, Image } from '@mantine/core'
+import { useMemo } from 'react'
+import { Box, Image, Text } from '@mantine/core'
 import { useReducedMotion } from '@mantine/hooks'
 import gallery from '../../data/gallery.json'
+import './PastPhotosMosaic.css'
 
-const DISPLAY_COUNT = 6
-const INTERVAL_MS = 6000
+type Photo = { src?: string; alt: string }
 
 function Placeholder({ label }: { label: string }){
   return (
-    <Box
-      style={{
-        position: 'relative',
-        width: '100%',
-        paddingBottom: '80%',
-        borderRadius: 12,
-        background: 'linear-gradient(135deg, rgba(141,153,174,0.25), rgba(237,242,244,0.8))',
-        border: '1px dashed rgba(141,153,174,0.4)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: 'var(--text-dim)',
-        textAlign: 'center',
-        fontSize: '0.85rem',
-        padding: '0 12px',
-      }}
-    >
-      {label}
+    <Box className="mosaic-item">
+      <Text fz="xs" c="var(--text-dim)" ta="center" px={8}>
+        {label}
+      </Text>
     </Box>
   )
 }
 
-export function PastPhotosMosaic(){
-  const photos = gallery as { src?: string; alt: string }[]
-  const reducedMotion = useReducedMotion()
-  const [offset, setOffset] = useState(0)
+function Row({ photos, reverse, disableAnimation }: { photos: Photo[]; reverse?: boolean; disableAnimation?: boolean }){
+  const items = useMemo(() => (photos.length ? [...photos, ...photos] : []), [photos])
 
-  useEffect(() => {
-    if (reducedMotion || photos.length <= DISPLAY_COUNT) return
-    const id = setInterval(() => {
-      setOffset((prev) => (prev + DISPLAY_COUNT) % photos.length)
-    }, INTERVAL_MS)
-    return () => clearInterval(id)
-  }, [photos.length, reducedMotion])
-
-  const slots = useMemo(() => {
-    if (!photos.length) return []
-    const doubled = [...photos, ...photos]
-    return doubled.slice(offset, offset + DISPLAY_COUNT)
-  }, [offset, photos])
-
-  if (!photos.length){
-    return <Placeholder label="Past event photos coming soon" />
+  if (!items.length){
+    return (
+      <div className="mosaic-row">
+        <div className={`mosaic-track${reverse ? ' reverse' : ''}`} style={disableAnimation ? { animation: 'none' } : undefined}>
+          <Placeholder label="Past event photos coming soon" />
+        </div>
+      </div>
+    )
   }
 
   return (
-    <SimpleGrid cols={{ base: 2, sm: 3 }} spacing={12}>
-      {slots.map((photo, index) => {
-        const hasImage = Boolean(photo.src)
-        if (!hasImage){
-          return <Placeholder key={`placeholder-${index}`} label={photo.alt} />
-        }
-        return (
-          <Box key={`${photo.alt}-${index}`} style={{ position: 'relative', overflow: 'hidden', borderRadius: 12, border: '1px solid rgba(43,45,66,0.12)' }}>
-            <Image src={photo.src} alt={photo.alt} fit="cover" />
-          </Box>
-        )
-      })}
-    </SimpleGrid>
+    <div className="mosaic-row">
+      <div className={`mosaic-track${reverse ? ' reverse' : ''}`} style={disableAnimation ? { animation: 'none' } : undefined}>
+        {items.map((photo, idx) => {
+          if (!photo.src){
+            return <Placeholder key={`placeholder-${idx}`} label={photo.alt} />
+          }
+          return (
+            <div key={`${photo.alt}-${idx}`} className="mosaic-item">
+              <Image src={photo.src} alt={photo.alt} fit="cover" />
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+const IMAGE_REGEX = /\.(png|jpe?g|webp|gif)$/i
+
+export function PastPhotosMosaic(){
+  const photos = (gallery as Photo[]).filter((photo) => photo.src && IMAGE_REGEX.test(photo.src))
+  const reducedMotion = useReducedMotion()
+
+  const [rowOne, rowTwo] = useMemo(() => {
+    const first: Photo[] = []
+    const second: Photo[] = []
+    photos.forEach((photo, idx) => {
+      if (idx % 2 === 0) first.push(photo)
+      else second.push(photo)
+    })
+    return [first.length ? first : photos, second.length ? second : photos]
+  }, [photos])
+
+  return (
+    <div className="mosaic-container">
+      <div className="mosaic-overlay left" aria-hidden="true" />
+      <div className="mosaic-overlay right" aria-hidden="true" />
+      <Row photos={rowOne} disableAnimation={reducedMotion} />
+      <Row photos={rowTwo} reverse disableAnimation={reducedMotion} />
+    </div>
   )
 }
 

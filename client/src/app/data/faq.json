@@ -1,12 +1,12 @@
 [
-  { "q": "Who can attend?", "a": "Full-time students aged 18+ from any discipline may apply. Limited places exist for recent graduates within 12 months." },
-  { "q": "What does it cost?", "a": "Attendance is free. We cover meals, workspace, Wi-Fi, and loan hardware. You cover travel and accommodation." },
-  { "q": "How are teams formed?", "a": "Teams of up to four. You can register with a team or join the mixer on Friday evening to find collaborators." },
-  { "q": "What hardware is provided?", "a": "We supply microcontrollers, sensors, fabrication tools, and lab access. Bring personal laptops and any specialist kit you prefer." },
-  { "q": "How does judging work?", "a": "Judges score on technical depth, user impact, and clarity of demo. Final presentations are five minutes plus questions." },
+  { "q": "Who can attend?", "a": "Full-time students aged 18+ from any discipline may apply." },
+  { "q": "What does it cost?", "a": "Attendance is free. We cover meals, workspace, Wi-Fi, and loan hardware." },
+  { "q": "How are teams formed?", "a": "Teams of up to four. You register as a team on the day and we're generally flexible with team names ;)" },
+  { "q": "What hardware is provided?", "a": "We supply all tools necessary to complete each challenge; microcontrollers, sensors, fabrication tools, and makerspace access. Try and bring a personal laptop." },
+  { "q": "How does judging work?", "a": "Judges score on technical depth, user impact, and completion of the challenge." },
   { "q": "Who owns the IP?", "a": "Participants retain full ownership of anything they create. Sponsors and the university receive no automatic rights." },
-  { "q": "What code of conduct applies?", "a": "We enforce the Hack Code of Conduct plus university safeguarding rules. Breaches mean removal from the event." },
-  { "q": "Is the venue accessible?", "a": "Yes. Step-free access, lifts to all floors, accessible toilets, prayer room, and quiet zones are available." },
-  { "q": "Will there be food?", "a": "We provide meals from Friday evening to Sunday lunch, plus snacks and hot drinks. Dietary requirements are captured during sign-up." },
-  { "q": "How should I travel?", "a": "Take tram or bus to Oxford Road, then follow signage to Nancy Rothwell Building. Limited cycle parking is available on-site." }
+  { "q": "What code of conduct applies?", "a": "We enforce a personal Hack Code of Conduct (to be written) plus university safeguarding rules. Breaches mean removal from the event." },
+  { "q": "Is the venue accessible?", "a": "Yes. Step-free access, lifts to all floors, accessible toilets and quiet zones are available." },
+  { "q": "Will there be food?", "a": "We provide food throughout the event. Dietary requirements are captured during sign-up." },
+  { "q": "How should I travel?", "a": "Take a bus to North section of UoM's University Campus on Oxford Road, then follow signage to Nancy Rothwell Building. Cycle parking is available on-site." }
 ]

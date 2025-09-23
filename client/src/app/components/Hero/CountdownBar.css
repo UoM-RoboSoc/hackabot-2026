@@ -5,6 +5,7 @@
     linear-gradient(180deg, rgba(20,20,28,0.92), rgba(12,12,18,0.92));
   border: 1px solid rgba(239,35,60,0.2);
   box-shadow: 0 12px 28px rgba(239,35,60,0.08), inset 0 0 20px rgba(239,35,60,0.08);
+  width: 100%;
 }
 
 .count-seg{
@@ -27,4 +28,20 @@
 .count-label{
   letter-spacing: 0.12em;
   color: rgba(239,242,244,0.7);
+}
+
+@media (max-width: 48em){
+  .countdown-pane{
+    padding: 18px 16px;
+  }
+  .count-seg{
+    padding: 12px;
+  }
+  .count-val{
+    font-size: clamp(28px, 14vw, 40px);
+  }
+  .count-label{
+    letter-spacing: 0.08em;
+    font-size: clamp(10px, 3vw, 12px);
+  }
 }
