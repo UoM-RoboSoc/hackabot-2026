@@ -12,7 +12,7 @@ import { Grid, Stack, Text } from '@mantine/core'
 export default function App(){
   return (
     <Page>
-      <Section id="hero" tone="canvas" padding="compact" centered>
+      <Section id="hero" tone="canvas" padding="none" centered>
         <Hero />
       </Section>
 

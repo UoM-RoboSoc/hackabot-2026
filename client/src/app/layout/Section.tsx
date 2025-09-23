@@ -33,12 +33,13 @@ export function Section({ id, title, subtitle, divider = 'none', centered = fals
       aria-labelledby={`${id}-title`}
       style={{
         position: 'relative',
-        display: centered ? 'flex' : undefined,
+        display: 'flex',
+        flexDirection: 'column',
         alignItems: centered ? 'center' : undefined,
         justifyContent: centered ? 'center' : undefined,
         marginTop: offsetTop ? 'var(--header-h, 72px)' : undefined,
-        minHeight: centered ? 'var(--section-h, calc(var(--app-vh, 100dvh) - var(--header-h, 72px)))' : undefined,
-        boxSizing: centered ? 'border-box' : undefined,
+        minHeight: centered ? 'calc(var(--app-vh, 100dvh) - var(--header-h, 72px))' : undefined,
+        boxSizing: 'border-box',
         backgroundColor,
         width: '100%',
       }}

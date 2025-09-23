@@ -1,6 +1,6 @@
 {
-  "image": "/venue/IMG_0480.png",
-  "mobileImage": "/venue/IMG_0480.png",
+  "image": "/public/venue/horizontal.png",
+  "mobileImage": "/venue/vertical.png",
   "callouts": [
     { "title": "Three Floors", "body": "Ground, first, and second floors open all weekend with staffed access points." },
     { "title": "South Entrance", "body": "Enter via the south side plaza; signage and volunteers guide you inside." },
