@@ -35,20 +35,20 @@ export function Page({ children }: PropsWithChildren) {
 
   return (
     <AppShell
-      header={{ height: 88 }}
+      header={{ height: 72 }}
       padding={0}
       withBorder={false}
       styles={{
         main: {
           background: 'var(--bg-1)',
           // Make main a scroll container so the scrollbar starts below the header
-          height: 'calc(var(--app-vh, 100dvh) - var(--header-h, 88px))',
+          height: 'calc(var(--app-vh, 100dvh) - var(--header-h, 72px))',
           overflowY: 'auto',
           width: '100%',
         },
       }}
       // Expose header and main padding as CSS vars for sections using 100dvh centering
-      style={{ ['--header-h' as any]: '88px', ['--main-pt' as any]: '0px' }}
+      style={{ ['--header-h' as any]: '72px', ['--main-pt' as any]: '0px' }}
     >
       <AppShell.Header id="app-header">
         <NavBar />

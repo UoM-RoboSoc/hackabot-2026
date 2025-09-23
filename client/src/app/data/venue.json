@@ -1,0 +1,11 @@
+{
+  "image": "/venue/IMG_0480.png",
+  "mobileImage": "/venue/IMG_0480.png",
+  "callouts": [
+    { "title": "Three Floors", "body": "Ground, first, and second floors open all weekend with staffed access points." },
+    { "title": "South Entrance", "body": "Enter via the south side plaza; signage and volunteers guide you inside." },
+    { "title": "Makerspace", "body": "Bench tools and soldering bays staffed by technicians—bring safety footwear." },
+    { "title": "Power & Wi-Fi", "body": "High-capacity Wi-Fi and power strips at every bank of desks." },
+    { "title": "Quiet Areas", "body": "Dedicated rest zones and prayer room on level 2 for downtime." }
+  ]
+}

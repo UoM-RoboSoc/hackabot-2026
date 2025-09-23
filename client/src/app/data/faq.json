@@ -1,10 +1,12 @@
 [
-  { "q": "Who can attend?", "a": "[Add eligibility details]" },
-  { "q": "Costs & tickets?", "a": "[Add info]" },
-  { "q": "Teams & size?", "a": "[Add info]" },
-  { "q": "Hardware & resources?", "a": "[Add info]" },
-  { "q": "Judging criteria?", "a": "[Add info]" },
-  { "q": "IP ownership?", "a": "Participants retain IP; [Add specifics]" },
-  { "q": "Code of Conduct?", "a": "[Link to CoC]" },
-  { "q": "Accessibility?", "a": "[Add notes if any]" }
+  { "q": "Who can attend?", "a": "Full-time students aged 18+ from any discipline may apply. Limited places exist for recent graduates within 12 months." },
+  { "q": "What does it cost?", "a": "Attendance is free. We cover meals, workspace, Wi-Fi, and loan hardware. You cover travel and accommodation." },
+  { "q": "How are teams formed?", "a": "Teams of up to four. You can register with a team or join the mixer on Friday evening to find collaborators." },
+  { "q": "What hardware is provided?", "a": "We supply microcontrollers, sensors, fabrication tools, and lab access. Bring personal laptops and any specialist kit you prefer." },
+  { "q": "How does judging work?", "a": "Judges score on technical depth, user impact, and clarity of demo. Final presentations are five minutes plus questions." },
+  { "q": "Who owns the IP?", "a": "Participants retain full ownership of anything they create. Sponsors and the university receive no automatic rights." },
+  { "q": "What code of conduct applies?", "a": "We enforce the Hack Code of Conduct plus university safeguarding rules. Breaches mean removal from the event." },
+  { "q": "Is the venue accessible?", "a": "Yes. Step-free access, lifts to all floors, accessible toilets, prayer room, and quiet zones are available." },
+  { "q": "Will there be food?", "a": "We provide meals from Friday evening to Sunday lunch, plus snacks and hot drinks. Dietary requirements are captured during sign-up." },
+  { "q": "How should I travel?", "a": "Take tram or bus to Oxford Road, then follow signage to Nancy Rothwell Building. Limited cycle parking is available on-site." }
 ]

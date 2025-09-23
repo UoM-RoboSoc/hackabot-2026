@@ -6,13 +6,10 @@ import './Nav.css'
 
 const links = [
   { href: '#hero', label: 'Home' },
-  { href: '#about', label: 'About' },
-  { href: '#key-info', label: 'Key Info' },
-  { href: '#schedule', label: 'Schedule' },
-  { href: '#past-years', label: 'Past Years' },
+  { href: '#venue', label: 'Venue' },
+  { href: '#team', label: 'Team' },
   { href: '#sponsors', label: 'Sponsors' },
   { href: '#faq', label: 'FAQ' },
-  { href: '#team', label: 'Team' },
   { href: '#contact', label: 'Contact' },
 ]
 
@@ -43,10 +40,10 @@ export function NavBar() {
 
   return (
     <div className="nav-glass">
-      <Container size="lg" h={88} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
+      <Container size="lg" h={72} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <Group gap={0} align="center">
           <Anchor href="#hero" underline="never" onClick={(e) => { e.preventDefault(); smoothScrollTo('hero') }} style={{ display: 'flex', alignItems: 'center' }}>
-            <img src="/brand/Horizontal_Text.png" alt="Hack‑A‑Bot" height={40} style={{ display: 'block', height: '40px', width: 'auto' }} />
+            <img src="/brand/Logo.png" alt="Hack‑A‑Bot" height={40} style={{ display: 'block', height: '40px', width: 'auto' }} />
           </Anchor>
         </Group>
         <Group gap={24} visibleFrom="md" align="center">
@@ -62,11 +59,6 @@ export function NavBar() {
               {l.label}
             </Anchor>
           ))}
-          <Button size="lg" component="a" href="#contact" variant="filled"
-            styles={{ root: { background: 'var(--accent-strong)', '&:hover': { background: 'var(--accent-stronger)' } } }}
-            onClick={(e: any) => { e.preventDefault(); smoothScrollTo('contact') }}>
-            Register
-          </Button>
         </Group>
 
         {/* Mobile: burger only; Register moves into menu */}
@@ -77,11 +69,8 @@ export function NavBar() {
 
       <Collapse in={opened} transitionDuration={180}>
         <div className="nav-mobile-panel">
-          <ScrollArea style={{ maxHeight: 'calc(100dvh - 88px)' }} offsetScrollbars>
+          <ScrollArea style={{ maxHeight: 'calc(100dvh - 72px)' }} offsetScrollbars>
             <Stack gap="xs" p="md">
-              <Button fullWidth size="lg" variant="filled" component="a" href="#contact"
-                styles={{ root: { background: 'var(--accent-strong)', '&:hover': { background: 'var(--accent-stronger)' } } }}
-                onClick={(e:any) => { e.preventDefault(); smoothScrollTo('contact'); close() }}>Register</Button>
               {links.map((l) => (
               <Button
                   key={l.href}

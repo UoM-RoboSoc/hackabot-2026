@@ -1,70 +1,54 @@
-import { Container, Text, Button, Stack, rem, Box, Badge } from '@mantine/core'
-import { Pane } from '../Common/Pane'
+import { Container, Grid, Stack, Text, Flex, Paper } from '@mantine/core'
+import event from '../../data/event.json'
+import HeroCard from './HeroCard'
+import { CountdownBar } from './CountdownBar'
+import PastPhotosMosaic from './PastPhotosMosaic'
+import KeyInfoList from '../KeyInfo/KeyInfoList'
 
-type EventData = {
-  name: string
-  tagline: string
-  startsAt: string
-  location: string
-  registerUrl?: string
-}
-
-export function Hero({ event }: { event: EventData }){
-  const formattedDate = new Date(event.startsAt).toLocaleDateString(undefined, {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  })
-  const tagline = event.tagline || 'Manchester’s Premier Student Hackathon.'
-  const location = event.location || 'Nancy Rothwell Building'
-  const badgeStyles = {
-    root: {
-      background: 'rgba(239,35,60,0.15)',
-      border: '1px solid rgba(239,35,60,0.45)',
-      color: 'var(--antiflash-white)',
-      fontSize: rem(22),
-      fontWeight: 700,
-      paddingInline: rem(20),
-      paddingBlock: rem(10),
-      height: 'auto',
-      lineHeight: 1.2,
-    },
-  }
-
+export function Hero(){
   return (
-    <Container size="lg" py={{ base: 64, md: 120 }}>
-      <Pane maxWidth={720} width="100%">
-        <Stack gap={{ base: 24, md: 32 }} align="center" data-safezone>
-          <Box style={{ width: '100%', maxWidth: rem(560) }}>
-            <img
-              src="/brand/Red_Logo.png"
-              alt="Hack‑A‑Bot title lockup"
-              style={{ width: '100%', height: 'auto', display: 'block', margin: '0 auto' }}
-            />
-          </Box>
-          <Text fz={{ base: 'lg', md: 'xl' }} c="var(--text)" ta="center" fw={500}>
-            {tagline}
-          </Text>
-          <Badge size="lg" radius="xl" variant="filled" styles={badgeStyles}>
-            {formattedDate}
-          </Badge>
-          <Text fz={{ base: 'lg', md: 'xl' }} c="var(--text-dim)" ta="center" fw={600}>
-            {location}
-          </Text>
-          <Button
-            fullWidth
-            size="lg"
-            mt="md"
-            variant="filled"
-            component="a"
-            href={event.registerUrl || '#contact'}
-            target={event.registerUrl ? '_blank' : undefined}
-            styles={{ root: { background: 'var(--accent-strong)', '&:hover': { background: 'var(--accent-stronger)' }, maxWidth: rem(320) } }}
-            onClick={(e:any) => { if(!event.registerUrl){ e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) } }}>
-            Register
-          </Button>
-        </Stack>
-      </Pane>
+    <Container size="lg" py={0} style={{ paddingInline: 0 }}>
+      <Paper
+        withBorder={false}
+        radius="lg"
+        shadow="none"
+        p={0}
+        style={{
+          background: 'transparent',
+          border: 'none',
+          minHeight: 'calc(var(--app-vh, 100vh) - var(--header-h, 72px))',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          padding: 'clamp(60px, 6vh, 56px) clamp(20px, 6vw, 64px)',
+          boxSizing: 'border-box',
+        }}
+      >
+        <Grid gutter={{ base: 32, md: 52 }} align="stretch">
+          <Grid.Col span={{ base: 12, md: 5 }}>
+            <HeroCard />
+          </Grid.Col>
+          <Grid.Col span={{ base: 12, md: 7 }}>
+            <Stack gap={{ base: 28, md: 36 }} justify="space-between" style={{ height: '100%' }}>
+              <CountdownBar startsAt={event.startsAt} />
+              <Flex gap={{ base: 20, md: 32 }} direction={{ base: 'column', md: 'row' }} align="stretch">
+                <Stack gap={12} style={{ flex: 1, minWidth: 0 }}>
+                  <Text fw={600} fz={{ base: 'md', md: 'lg' }} c="var(--text)">
+                    Past highlights
+                  </Text>
+                  <PastPhotosMosaic />
+                </Stack>
+                <Stack gap={12} style={{ flex: 1, minWidth: 0 }}>
+                  <Text fw={600} fz={{ base: 'md', md: 'lg' }} c="var(--text)">
+                    Key information
+                  </Text>
+                  <KeyInfoList />
+                </Stack>
+              </Flex>
+            </Stack>
+          </Grid.Col>
+        </Grid>
+      </Paper>
     </Container>
   )
 }

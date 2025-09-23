@@ -1,0 +1,20 @@
+[
+  {
+    "id": "express",
+    "label": "Express Interest",
+    "description": "Let us know you want a seat at Hack-A-Bot 2026.",
+    "url": "https://docs.google.com/forms/d/e/express-interest-placeholder/viewform"
+  },
+  {
+    "id": "volunteer",
+    "label": "Volunteer",
+    "description": "Sign up to support teams, workshops, and logistics.",
+    "url": "https://docs.google.com/forms/d/e/volunteer-placeholder/viewform"
+  },
+  {
+    "id": "sponsor",
+    "label": "Sponsor",
+    "description": "Share how your organisation can back the event.",
+    "url": "https://docs.google.com/forms/d/e/sponsor-placeholder/viewform"
+  }
+]

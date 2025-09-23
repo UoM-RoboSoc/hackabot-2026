@@ -1,1 +1,10 @@
-{ "previous": [ { "name": "[Sponsor name]", "src": "/sponsors/previous/example.svg", "url": "" } ] }
+{
+  "logos": [
+    { "name": "Acme Robotics", "src": "/sponsors/previous/example.svg", "url": "" },
+    { "name": "Vector Labs", "src": "/sponsors/previous/example.svg", "url": "" },
+    { "name": "Stack Hardware", "src": "/sponsors/previous/example.svg", "url": "" },
+    { "name": "Bright Future Capital", "src": "/sponsors/previous/example.svg", "url": "" },
+    { "name": "CircuitWorks", "src": "/sponsors/previous/example.svg", "url": "" },
+    { "name": "CloudForge", "src": "/sponsors/previous/example.svg", "url": "" }
+  ]
+}

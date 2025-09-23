@@ -12,7 +12,7 @@ import App from './app/App'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <MantineProvider theme={theme} forceColorScheme="light" defaultColorScheme="light">
+    <MantineProvider theme={theme} forceColorScheme="dark" defaultColorScheme="dark">
       <Notifications position="top-right" />
       <App />
     </MantineProvider>
