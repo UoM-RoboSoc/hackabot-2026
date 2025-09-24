@@ -59,7 +59,7 @@ export function NavBar() {
         centered
         radius="lg"
         padding="lg"
-        overlayProps={{ opacity: 0.75, color: 'rgba(8, 9, 14, 0.85)' }}
+        overlayProps={{ opacity: 0.75, color: 'rgba(8, 9, 14, 0.85)', blur: 6 }}
         data-testid="qr-modal"
       >
         <Stack align="center" gap="md">
@@ -89,8 +89,13 @@ export function NavBar() {
       <div className="nav-glass">
         <Container size="lg" h={72} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
           <Group gap={0} align="center">
-            <Anchor href="#hero" underline="never" onClick={(e) => { e.preventDefault(); smoothScrollTo('hero') }} style={{ display: 'flex', alignItems: 'center' }}>
-              <img src={assetPath('brand/Header_Logo.png')} alt="Hack‑A‑Bot" height={44} style={{ display: 'block', height: '44px', width: 'auto' }} />
+            <Anchor
+              href="#hero"
+              underline="never"
+              onClick={(e) => { e.preventDefault(); smoothScrollTo('hero') }}
+              style={{ display: 'flex', alignItems: 'center' }}
+            >
+              <img src={assetPath('brand/Header_Logo.png')} alt="Hack-A-Bot" height={44} style={{ display: 'block', height: '44px', width: 'auto' }} />
             </Anchor>
           </Group>
           <Group gap={24} visibleFrom="md" align="center">
