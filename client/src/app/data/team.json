@@ -1,30 +1,23 @@
 [
   {
-    "name": "Alex Morgan",
-    "role": "Event Director",
-    "email": "alex.morgan@student.university.example",
-    "img": "",
+    "name": "Archie James",
+    "role": "",
+    "email": "",
+    "img": "public/organizers/archie.png",
     "link": ""
   },
   {
-    "name": "Priya Shah",
-    "role": "Operations Lead",
-    "email": "priya.shah@student.university.example",
-    "img": "",
+    "name": "Ted Donnan",
+    "role": "",
+    "email": "",
+    "img": "public/organizers/ted.jpg",
     "link": ""
   },
   {
-    "name": "Liam Zhang",
-    "role": "Sponsorship Lead",
-    "email": "liam.zhang@student.university.example",
-    "img": "",
-    "link": ""
-  },
-  {
-    "name": "Maya Patel",
-    "role": "Workshop Coordinator",
-    "email": "maya.patel@student.university.example",
-    "img": "",
+    "name": "Thierry Popatt",
+    "role": "",
+    "email": "",
+    "img": "public/organizers/thierry.jpg",
     "link": ""
   }
 ]

@@ -36,10 +36,36 @@ export function FAQ(){
       value={opened}
       onChange={onChange}
       radius="lg"
-      styles={{
-        item: { border: '1px solid var(--border)', borderRadius: 12, marginBottom: 8 },
-        control: { minHeight: 56, paddingBlock: 12 },
-      }}
+      styles={(theme) => ({
+        item: {
+          border: '1px solid var(--border)',
+          borderRadius: 12,
+          marginBottom: 8,
+          background: 'var(--panel)',
+          overflow: 'hidden',
+          '&:hover': {
+            background: 'var(--panel)',
+            borderColor: 'var(--border)',
+          },
+        },
+        control: {
+          minHeight: 56,
+          paddingBlock: 12,
+          color: 'var(--text)',
+          '&[data-active]': {
+            color: theme.colors.red[5],
+          },
+          '&:hover': {
+            background: 'transparent',
+          },
+        },
+        chevron: { color: 'var(--text-dim)' },
+        panel: {
+          background: 'rgba(0,0,0,0)',
+          color: 'var(--text-dim)',
+          padding: '0 16px 16px',
+        },
+      })}
     >
       {list.map((qa, i) => {
         const value = `q${i}`

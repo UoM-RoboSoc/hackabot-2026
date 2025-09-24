@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react'
-import { Affix, Transition, Button } from '@mantine/core'
+import { Affix, Transition, Button, useMantineTheme } from '@mantine/core'
+import { useMediaQuery } from '@mantine/hooks'
 import { IconArrowUp } from '@tabler/icons-react'
 
 export function BackToTop(){
   const [visible, setVisible] = useState(false)
   const [bottom, setBottom] = useState(24)
+  const theme = useMantineTheme()
+  const isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.md})`)
   useEffect(() => {
     const scroller = document.getElementById('app-main')
     if (!scroller) return
@@ -29,6 +32,8 @@ export function BackToTop(){
     }
   }, [])
 
+  if (isDesktop) return null
+
   return (
     <Affix position={{ bottom, right: 24 }}>
       <Transition mounted={visible} transition="slide-up" duration={200} timingFunction="ease">
@@ -37,7 +42,14 @@ export function BackToTop(){
             leftSection={<IconArrowUp size={18} />}
             style={styles}
             className="btn-soft"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => {
+              const scroller = document.getElementById('app-main')
+              if (scroller){
+                scroller.scrollTo({ top: 0, behavior: 'smooth' })
+              } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }
+            }}
           >
             Top
           </Button>

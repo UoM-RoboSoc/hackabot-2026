@@ -43,7 +43,7 @@ export function NavBar() {
       <Container size="lg" h={72} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
         <Group gap={0} align="center">
           <Anchor href="#hero" underline="never" onClick={(e) => { e.preventDefault(); smoothScrollTo('hero') }} style={{ display: 'flex', alignItems: 'center' }}>
-            <img src="/brand/Logo.png" alt="Hack‑A‑Bot" height={40} style={{ display: 'block', height: '40px', width: 'auto' }} />
+            <img src="/brand/Header_Logo.png" alt="Hack‑A‑Bot" height={44} style={{ display: 'block', height: '44px', width: 'auto' }} />
           </Anchor>
         </Group>
         <Group gap={24} visibleFrom="md" align="center">

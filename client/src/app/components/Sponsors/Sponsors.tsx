@@ -9,19 +9,42 @@ export function Sponsors(){
 
   return (
     <Stack gap={24}>
-      <Title order={3}>Sponsors</Title>
+      <Stack gap={4}>
+        <Title order={3}>Previous Sponsors</Title>
+        <Text fz="sm" c="var(--text-dim)">Representative partners from past years — sponsorship lineup changes annually.</Text>
+      </Stack>
       {logos.length ? (
         <SimpleGrid cols={{ base: 2, sm: 3, md: 4, lg: 5 }} spacing={16}>
           {logos.map((logo, idx) => (
-            <Paper key={idx} withBorder radius="lg" padding="md" style={{ display: 'grid', placeItems: 'center', background: 'var(--panel)' }}>
+            <Paper
+              key={idx}
+              withBorder
+              radius="lg"
+              padding="md"
+              style={{
+                display: 'grid',
+                placeItems: 'center',
+                background: 'var(--panel)',
+                height: 140,
+                overflow: 'hidden',
+              }}
+            >
               <Anchor
                 href={logo.url || '#contact'}
                 target={logo.url ? '_blank' : undefined}
                 rel={logo.url ? 'noopener noreferrer' : undefined}
                 onClick={(e) => { if (!logo.url) { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) } }}
-                style={{ display: 'grid', placeItems: 'center' }}
+                style={{ display: 'grid', placeItems: 'center', width: '100%', height: '100%' }}
               >
-                <Image src={logo.src} alt={logo.name} fit="contain" h={48} />
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  fit="cover"
+                  height="100%"
+                  width="100%"
+                  radius="md"
+                  style={{ objectPosition: 'center' }}
+                />
               </Anchor>
             </Paper>
           ))}
