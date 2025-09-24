@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { Box, Image, Text } from '@mantine/core'
 import { useReducedMotion } from '@mantine/hooks'
 import gallery from '../../data/gallery.json'
+import { assetPath } from '../../lib/assets'
 import './PastPhotosMosaic.css'
 
 type Photo = { src?: string; alt: string }
@@ -50,7 +51,9 @@ function Row({ photos, reverse, disableAnimation }: { photos: Photo[]; reverse?:
 const IMAGE_REGEX = /\.(png|jpe?g|webp|gif)$/i
 
 export function PastPhotosMosaic(){
-  const photos = (gallery as Photo[]).filter((photo) => photo.src && IMAGE_REGEX.test(photo.src))
+  const photos = (gallery as Photo[])
+    .map((photo) => (photo.src ? { ...photo, src: assetPath(photo.src) } : photo))
+    .filter((photo) => photo.src && IMAGE_REGEX.test(photo.src))
   const reducedMotion = useReducedMotion()
 
   const [rowOne, rowTwo] = useMemo(() => {

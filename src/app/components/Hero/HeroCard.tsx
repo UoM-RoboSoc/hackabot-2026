@@ -1,5 +1,6 @@
 import { Paper, Stack, Image, Text, Button, Group, Badge, rem } from '@mantine/core'
 import event from '../../data/event.json'
+import { assetPath } from '../../lib/assets'
 
 type Props = {
   onPrimaryClick?: () => void
@@ -16,7 +17,7 @@ export function HeroCard({ onPrimaryClick }: Props){
   return (
     <Paper withBorder p="xl" radius="lg" style={{ background: 'var(--panel)' }}>
       <Stack gap={24}>
-        <Image src="/brand/Title_Date_Logo.png" alt="Hack-A-Bot 2026" maw={rem(420)} mx="auto" />
+        <Image src={assetPath('brand/Title_Date_Logo.png')} alt="Hack-A-Bot 2026" maw={rem(420)} mx="auto" />
         <Stack gap={8} ta="center">
           <Text fz={{ base: 'lg', md: 'xl' }} fw={500} c="var(--text)">{event.tagline}</Text>
           <Badge

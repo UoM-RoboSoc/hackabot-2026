@@ -1,12 +1,12 @@
 {
   "logos": [
-    { "name": "RoboSoc", "src": "/sponsors/previous/robosoc.png", "url": "" },
-    { "name": "Makerspace", "src": "/sponsors/previous/makerspace.png", "url": "" },
-    { "name": "EEE Society", "src": "/sponsors/previous/eeesoc.png", "url": "" },
-    { "name": "Sony", "src": "/sponsors/previous/sony.png", "url": "" },
-    { "name": "University of Manchester", "src": "/sponsors/previous/manchester.png", "url": "" },
-    { "name": "Red Bull", "src": "/sponsors/previous/redbull.png", "url": "" },
-    { "name": "Cradle", "src": "/sponsors/previous/cradle.png", "url": "" },
-    { "name": "Ice Nine", "src": "/sponsors/previous/icenine.png", "url": "" }
+    { "name": "RoboSoc", "src": "sponsors/previous/robosoc.png", "url": "" },
+    { "name": "Makerspace", "src": "sponsors/previous/makerspace.png", "url": "" },
+    { "name": "EEE Society", "src": "sponsors/previous/eeesoc.png", "url": "" },
+    { "name": "Sony", "src": "sponsors/previous/sony.png", "url": "" },
+    { "name": "University of Manchester", "src": "sponsors/previous/manchester.png", "url": "" },
+    { "name": "Red Bull", "src": "sponsors/previous/redbull.png", "url": "" },
+    { "name": "Cradle", "src": "sponsors/previous/cradle.png", "url": "" },
+    { "name": "Ice Nine", "src": "sponsors/previous/icenine.png", "url": "" }
   ]
 }

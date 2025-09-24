@@ -1,6 +1,7 @@
 import { Card, Image, Stack, Text, Box } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import venue from '../../data/venue.json'
+import { assetPath } from '../../lib/assets'
 
 type Callout = { title: string; body: string }
 
@@ -13,11 +14,13 @@ type VenueData = {
 export function VenueFocus(){
   const data = venue as VenueData
   const isMobile = useMediaQuery('(max-width: 48em)')
+  const desktopImage = assetPath(data.image)
+  const mobileImage = data.mobileImage ? assetPath(data.mobileImage) : desktopImage
 
   if (isMobile){
     return (
       <Stack gap={24}>
-        <Image src={data.mobileImage || data.image} alt="Venue exterior" radius="lg" />
+        <Image src={mobileImage} alt="Venue exterior" radius="lg" />
         <Stack gap={16}>
           {data.callouts.map((callout, idx) => (
             <Card key={idx} shadow="sm" p="lg" radius="lg" withBorder>
@@ -38,7 +41,7 @@ export function VenueFocus(){
 
   return (
     <Box style={{ position: 'relative', paddingInline: 'min(5vw, 64px)' }}>
-      <Image src={data.image} alt="Venue exterior" radius="lg" />
+      <Image src={desktopImage} alt="Venue exterior" radius="lg" />
       <Box
         style={{
           position: 'absolute',

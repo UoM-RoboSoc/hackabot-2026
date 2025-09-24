@@ -3,21 +3,21 @@
     "name": "Archie James",
     "role": "",
     "email": "",
-    "img": "public/organizers/archie.png",
+    "img": "organizers/archie.png",
     "link": ""
   },
   {
     "name": "Ted Donnan",
     "role": "",
     "email": "",
-    "img": "public/organizers/ted.jpg",
+    "img": "organizers/ted.jpg",
     "link": ""
   },
   {
     "name": "Thierry Popatt",
     "role": "",
     "email": "",
-    "img": "public/organizers/thierry.jpg",
+    "img": "organizers/thierry.jpg",
     "link": ""
   }
 ]

@@ -1,5 +1,6 @@
 import { SimpleGrid, Card, Stack, Text, Avatar, Anchor, Image, Box } from '@mantine/core'
 import team from '../../data/team.json'
+import { assetPath } from '../../lib/assets'
 
 type Member = { name: string; role: string; email: string; img?: string }
 
@@ -19,7 +20,7 @@ export function Team(){
             <Stack align="center" gap={12}>
               {member.img ? (
                 <Box style={{ width: '100%', aspectRatio: '3 / 4', overflow: 'hidden', borderRadius: 16, border: '1px solid var(--border)' }}>
-                  <Image src={member.img} alt={member.name} fit="cover" width="100%" height="100%" />
+                  <Image src={assetPath(member.img)} alt={member.name} fit="cover" width="100%" height="100%" />
                 </Box>
               ) : (
                 <Avatar name={member.name} size={96} radius={999} color="crimson" />

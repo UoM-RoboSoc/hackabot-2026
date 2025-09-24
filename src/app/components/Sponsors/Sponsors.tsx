@@ -1,5 +1,6 @@
 import { SimpleGrid, Image, Paper, Stack, Title, Text, Anchor, Button } from '@mantine/core'
 import sponsors from '../../data/sponsors.json'
+import { assetPath } from '../../lib/assets'
 
 type Logo = { name: string; src: string; url?: string }
 
@@ -37,7 +38,7 @@ export function Sponsors(){
                 style={{ display: 'grid', placeItems: 'center', width: '100%', height: '100%' }}
               >
                 <Image
-                  src={logo.src}
+                  src={assetPath(logo.src)}
                   alt={logo.name}
                   fit="cover"
                   height="100%"
