@@ -1,4 +1,4 @@
-import type { MantineThemeOverride } from '@mantine/core'
+import type { MantineThemeOverride, MantineTheme } from '@mantine/core'
 
 export const theme: MantineThemeOverride = {
   primaryColor: 'red',
@@ -15,7 +15,7 @@ export const theme: MantineThemeOverride = {
       styles: { root: { fontWeight: 600 } },
     },
     Anchor: {
-      styles: (theme) => ({ root: { color: theme.colors.red[4], textUnderlineOffset: 4 } }),
+      styles: (theme: MantineTheme) => ({ root: { color: theme.colors.red[4], textUnderlineOffset: 4 } }),
     },
     Paper: {
       styles: { root: { backgroundColor: 'var(--panel)', border: '1px solid var(--border)' } },

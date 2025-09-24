@@ -8,14 +8,14 @@ export function Team(){
   const list = people.length ? people : [{ name: 'TBC', role: 'Role', email: 'placeholder@student.example' }]
 
   return (
-    <Stack align="center" gap={{ base: 24, md: 32 }}>
+    <Stack align="center" gap={28}>
       <SimpleGrid
         cols={{ base: 2, sm: 3, md: 3 }}
-        spacing={{ base: 16, md: 24 }}
+        spacing={20}
         style={{ width: '100%', maxWidth: 720, justifyItems: 'center' }}
       >
         {list.map((member, idx) => (
-          <Card key={idx} withBorder radius="lg" padding="lg" style={{ background: 'var(--panel)' }}>
+          <Card key={idx} withBorder radius="lg" p="lg" style={{ background: 'var(--panel)' }}>
             <Stack align="center" gap={12}>
               {member.img ? (
                 <Box style={{ width: '100%', aspectRatio: '3 / 4', overflow: 'hidden', borderRadius: 16, border: '1px solid var(--border)' }}>

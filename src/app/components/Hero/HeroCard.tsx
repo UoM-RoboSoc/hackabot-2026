@@ -14,8 +14,8 @@ export function HeroCard({ onPrimaryClick }: Props){
   const formattedDate = `${day}${suffix} ${month} ${year}`
 
   return (
-    <Paper withBorder p={{ base: 'xl', md: 40 }} radius="lg" style={{ background: 'var(--panel)' }}>
-      <Stack gap={{ base: 18, md: 24 }}>
+    <Paper withBorder p="xl" radius="lg" style={{ background: 'var(--panel)' }}>
+      <Stack gap={24}>
         <Image src="/brand/Title_Date_Logo.png" alt="Hack-A-Bot 2026" maw={rem(420)} mx="auto" />
         <Stack gap={8} ta="center">
           <Text fz={{ base: 'lg', md: 'xl' }} fw={500} c="var(--text)">{event.tagline}</Text>

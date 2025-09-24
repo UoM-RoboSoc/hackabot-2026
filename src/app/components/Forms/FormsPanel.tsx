@@ -12,12 +12,12 @@ export function FormsPanel(){
   const items = forms as FormLink[]
   return (
     <Stack gap={20}>
-      <Card withBorder radius="lg" padding="lg" style={{ background: 'var(--panel)' }}>
+      <Card withBorder radius="lg" p="lg" style={{ background: 'var(--panel)' }}>
         <Text fw={600} c="var(--text)">Ticket sales: coming soon.</Text>
       </Card>
       <SimpleGrid cols={{ base: 1, sm: 3 }} spacing={16}>
         {items.map((item) => (
-          <Card key={item.id} withBorder shadow="sm" radius="lg" padding="lg" style={{ background: 'var(--panel)' }}>
+          <Card key={item.id} withBorder shadow="sm" radius="lg" p="lg" style={{ background: 'var(--panel)' }}>
             <Stack gap={8}>
               <Text fw={600}>{item.label}</Text>
               <Text fz="sm" c="var(--text-dim)">{item.description}</Text>

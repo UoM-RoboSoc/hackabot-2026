@@ -20,7 +20,7 @@ export function Sponsors(){
               key={idx}
               withBorder
               radius="lg"
-              padding="md"
+              p="md"
               style={{
                 display: 'grid',
                 placeItems: 'center',
@@ -50,7 +50,7 @@ export function Sponsors(){
           ))}
         </SimpleGrid>
       ) : (
-        <Paper withBorder radius="lg" padding="xl" style={{ background: 'var(--panel)' }}>
+        <Paper withBorder radius="lg" p="xl" style={{ background: 'var(--panel)' }}>
           <Text c="var(--text-dim)" ta="center">Sponsor logos to be confirmed.</Text>
         </Paper>
       )}
