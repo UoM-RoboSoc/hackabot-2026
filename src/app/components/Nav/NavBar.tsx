@@ -59,27 +59,43 @@ export function NavBar() {
         centered
         radius="lg"
         padding="lg"
-        overlayProps={{ opacity: 0.65, blur: 6 }}
+        overlayProps={{ opacity: 0.75, color: 'rgba(8, 9, 14, 0.85)', blur: 6 }}
         data-testid="qr-modal"
       >
-        <Stack align="center" gap="sm">
-          <Paper withBorder radius="lg" p="lg" shadow="md">
-            <QRCode value={QR_TARGET_URL} size={196} bgColor="transparent" fgColor="var(--text)" />
+        <Stack align="center" gap="md">
+          <Paper
+            withBorder
+            radius="md"
+            p="lg"
+            shadow="lg"
+            style={{
+              backgroundColor: 'var(--bg-2)',
+              borderColor: 'rgba(255, 255, 255, 0.12)',
+            }}
+          >
+            <QRCode value={QR_TARGET_URL} size={196} bgColor="var(--bg-2)" fgColor="var(--text)" />
           </Paper>
-          <Text ta="center" fz="sm" c="var(--text)">
-            {event.tagline}
-          </Text>
-          <Text ta="center" fz="xs" c="var(--text-dim)">
-            {QR_CARD_TITLE}
-          </Text>
+          <Stack gap={2} align="center">
+            <Text ta="center" fz="sm" fw={600} c="var(--text)">
+              {event.tagline}
+            </Text>
+            <Text ta="center" fz="xs" c="var(--text-dim)">
+              {QR_CARD_TITLE}
+            </Text>
+          </Stack>
         </Stack>
       </Modal>
 
       <div className="nav-glass">
         <Container size="lg" h={72} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16 }}>
           <Group gap={0} align="center">
-            <Anchor href="#hero" underline="never" onClick={(e) => { e.preventDefault(); smoothScrollTo('hero') }} style={{ display: 'flex', alignItems: 'center' }}>
-              <img src={assetPath('brand/Header_Logo.png')} alt="Hack‑A‑Bot" height={44} style={{ display: 'block', height: '44px', width: 'auto' }} />
+            <Anchor
+              href="#hero"
+              underline="never"
+              onClick={(e) => { e.preventDefault(); smoothScrollTo('hero') }}
+              style={{ display: 'flex', alignItems: 'center' }}
+            >
+              <img src={assetPath('brand/Header_Logo.png')} alt="Hack-A-Bot" height={44} style={{ display: 'block', height: '44px', width: 'auto' }} />
             </Anchor>
           </Group>
           <Group gap={24} visibleFrom="md" align="center">

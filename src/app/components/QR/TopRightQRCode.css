@@ -7,8 +7,7 @@
 }
 
 .qr-card {
-  background: rgba(24, 24, 32, 0.9);
-  backdrop-filter: blur(6px);
+  background: var(--bg-2);
 }
 
 @media (min-width: 992px) {
