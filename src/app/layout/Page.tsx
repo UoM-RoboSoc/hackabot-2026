@@ -2,6 +2,7 @@ import { type PropsWithChildren, useEffect } from 'react'
 import { AppShell } from '@mantine/core'
 import { NavBar } from '../components/Nav/NavBar'
 import { BackToTop } from '../components/Nav/BackToTop'
+import { TopRightQRCode } from '../components/QR/TopRightQRCode'
 
 export function Page({ children }: PropsWithChildren) {
   useEffect(() => {
@@ -54,6 +55,7 @@ export function Page({ children }: PropsWithChildren) {
         <NavBar />
       </AppShell.Header>
       <AppShell.Main id="app-main">
+        <TopRightQRCode />
         {children}
         <BackToTop />
       </AppShell.Main>

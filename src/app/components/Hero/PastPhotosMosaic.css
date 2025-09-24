@@ -1,5 +1,5 @@
 .mosaic-container{
-  --mosaic-height: clamp(220px, 34vh, 360px);
+  --mosaic-height: clamp(440px, 68vh, 720px);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -76,7 +76,7 @@
 
 @media (max-width: 48em){
   .mosaic-container{
-    --mosaic-height: clamp(180px, 36vh, 260px);
+    --mosaic-height: clamp(360px, 72vh, 520px);
   }
   .mosaic-row{
     height: calc(var(--mosaic-height) / 2 - 6px);
