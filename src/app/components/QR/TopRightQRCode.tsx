@@ -6,7 +6,7 @@ import './TopRightQRCode.css'
 export function TopRightQRCode() {
   return (
     <div className="qr-affix" aria-label={QR_CARD_TITLE} role="complementary">
-      <Paper withBorder radius="lg" p="md" className="qr-card">
+      <Paper withBorder radius="lg" p="md" className="qr-card" bg="rgb(24, 24, 32)">
         <Stack align="center" gap={8}>
           <QRCode value={QR_TARGET_URL} size={108} bgColor="transparent" fgColor="var(--text)" />
           <Text fz="xs" c="var(--text-dim)" tt="uppercase" fw={600}>
