@@ -59,7 +59,28 @@ export function NavBar() {
         centered
         radius="lg"
         padding="lg"
-        overlayProps={{ opacity: 0.75, color: 'rgba(8, 9, 14, 0.85)', blur: 6 }}
+        overlayProps={{ opacity: 1, color: '#08090E', blur: 0 }}
+        styles={{
+          content: {
+            backgroundColor: 'rgb(24, 24, 32)',
+            border: '1px solid rgba(255, 255, 255, 0.08)',
+            boxShadow: '0 16px 40px rgba(0, 0, 0, 0.55)',
+          },
+          header: {
+            backgroundColor: 'rgb(24, 24, 32)',
+            borderBottom: 'none',
+            color: 'var(--text)',
+          },
+          title: {
+            color: 'var(--text)',
+          },
+          body: {
+            backgroundColor: 'rgb(24, 24, 32)',
+          },
+          close: {
+            color: 'var(--text)',
+          },
+        }}
         data-testid="qr-modal"
       >
         <Stack align="center" gap="md">
@@ -69,11 +90,11 @@ export function NavBar() {
             p="lg"
             shadow="lg"
             style={{
-              backgroundColor: 'var(--bg-2)',
+              backgroundColor: 'rgb(24, 24, 32)',
               borderColor: 'rgba(255, 255, 255, 0.12)',
             }}
           >
-            <QRCode value={QR_TARGET_URL} size={196} bgColor="var(--bg-2)" fgColor="var(--text)" />
+            <QRCode value={QR_TARGET_URL} size={196} bgColor="rgb(24, 24, 32)" fgColor="var(--text)" />
           </Paper>
           <Stack gap={2} align="center">
             <Text ta="center" fz="sm" fw={600} c="var(--text)">
