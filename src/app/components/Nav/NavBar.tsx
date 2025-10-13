@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, lazy, Suspense } from 'react'
 import { Group, Container, Anchor, Button, Burger, Stack, ScrollArea, Collapse, Modal, Text, Paper } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import { smoothScrollTo } from '../../lib/anchors'
 import { assetPath } from '../../lib/assets'
 import event from '../../data/event.json'
-import QRCode from 'react-qr-code'
+const QRCode = lazy(() => import('react-qr-code'))
 import { QR_CARD_TITLE, QR_TARGET_URL } from '../QR/constants'
 import './Nav.css'
 
@@ -95,7 +95,9 @@ export function NavBar() {
               borderColor: 'rgba(255, 255, 255, 0.12)',
             }}
           >
-            <QRCode value={QR_TARGET_URL} size={196} bgColor="rgb(24, 24, 32)" fgColor="var(--text)" />
+            <Suspense fallback={<div style={{ width:196, height:196 }} /> }>
+              <QRCode value={QR_TARGET_URL} size={196} bgColor="rgb(24, 24, 32)" fgColor="var(--text)" />
+            </Suspense>
           </Paper>
           <Stack gap={2} align="center">
             <Text ta="center" fz="sm" fw={600} c="var(--text)">
@@ -117,7 +119,7 @@ export function NavBar() {
               onClick={(e) => { e.preventDefault(); smoothScrollTo('hero') }}
               style={{ display: 'flex', alignItems: 'center' }}
             >
-              <img src={assetPath('brand/Header_Logo.png')} alt="Hack-A-Bot" height={44} style={{ display: 'block', height: '44px', width: 'auto' }} />
+              <img src={assetPath('brand/Header_Logo.png')} alt="Hack-A-Bot" height={44} decoding="async" style={{ display: 'block', height: '44px', width: 'auto' }} />
             </Anchor>
           </Group>
           <Group gap={24} visibleFrom="md" align="center">

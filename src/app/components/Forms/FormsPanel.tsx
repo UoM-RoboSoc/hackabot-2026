@@ -31,7 +31,7 @@ export function FormsPanel(){
       <Card withBorder radius="lg" p={{ base: 'md', md: 'lg' }} style={{ background: 'var(--panel)' }}>
         {isDesktop ? (
           <Box style={{ display: 'grid', gridTemplateColumns: 'auto 1fr auto', alignItems: 'center', gap: 12 }}>
-            <Image src={assetPath('icons/ticket.svg')} alt="Tickets icon" w={56} h={56} />
+            <Image src={assetPath('icons/ticket.svg')} alt="Tickets icon" w={56} h={56} loading="lazy" decoding="async" />
             <Stack gap={6}>
               <Text fw={700} fz={{ base: 'md', md: 'lg' }} c="var(--text)">Tickets</Text>
               <Text fz="sm" c="var(--text-dim)">Tickets will be released early in Semester 2.</Text>
@@ -41,7 +41,7 @@ export function FormsPanel(){
         ) : (
           <Stack gap={10}>
             <Box style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', alignItems: 'center', gap: 10 }}>
-              <Image src={assetPath('icons/ticket.svg')} alt="Tickets icon" w={40} h={40} />
+              <Image src={assetPath('icons/ticket.svg')} alt="Tickets icon" w={40} h={40} loading="lazy" decoding="async" />
               <Stack gap={4}>
                 <Text fw={700} c="var(--text)">Tickets</Text>
                 <Text fz="sm" c="var(--text-dim)">Tickets will be released early in Semester 2.</Text>

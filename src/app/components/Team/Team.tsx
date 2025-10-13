@@ -27,7 +27,7 @@ export function Team(){
             <Stack align="center" gap={12}>
               {member.img ? (
                 <Box style={{ width: '100%', aspectRatio: '3 / 4', overflow: 'hidden', borderRadius: 12, border: '1px solid var(--border)' }}>
-                  <Image src={assetPath(member.img)} alt={member.name} fit="cover" width="100%" height="100%" />
+                  <Image src={assetPath(member.img)} alt={member.name} fit="cover" width="100%" height="100%" loading="lazy" decoding="async" />
                 </Box>
               ) : (
                 <Avatar name={member.name} size={72} radius={999} color="crimson" />

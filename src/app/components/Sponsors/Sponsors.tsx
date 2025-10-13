@@ -1,5 +1,6 @@
 import { SimpleGrid, Image, Paper, Stack, Title, Text, Anchor, Button } from '@mantine/core'
 import sponsors from '../../data/sponsors.json'
+import { smoothScrollTo } from '../../lib/anchors'
 import { assetPath } from '../../lib/assets'
 
 type Logo = { name: string; src: string; url?: string }
@@ -38,7 +39,7 @@ export function Sponsors(){
                 href={logo.url || '#contact'}
                 target={logo.url ? '_blank' : undefined}
                 rel={logo.url ? 'noopener noreferrer' : undefined}
-                onClick={(e) => { if (!logo.url) { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) } }}
+                onClick={(e) => { if (!logo.url) { e.preventDefault(); smoothScrollTo('contact'); } }}
                 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%', cursor: 'pointer' }}
               >
                 <Image
@@ -48,6 +49,8 @@ export function Sponsors(){
                   height="100%"
                   width="100%"
                   radius="md"
+                  loading="lazy"
+                  decoding="async"
                   style={{ maxWidth: '100%', maxHeight: '100%', objectPosition: 'center', transition: 'transform 160ms ease', transformOrigin: 'center', transform: `scale(${LOGO_BASE_SCALE})` }}
                   onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = `scale(${LOGO_BASE_SCALE * 1.06})` }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = `scale(${LOGO_BASE_SCALE})` }}

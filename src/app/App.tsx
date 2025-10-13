@@ -62,7 +62,7 @@ export default function App(){
               <Card withBorder radius="lg" p={{ base: 'md', md: 'lg' }} style={{ background: 'var(--panel)' }}>
                 {isDesktop ? (
                   <Box style={{ display: 'grid', gridTemplateColumns: 'auto 1fr auto', alignItems: 'center', gap: 12 }}>
-                    <Image src={assetPath('icons/email.svg')} alt="Email icon" w={56} h={56} />
+                    <Image src={assetPath('icons/email.svg')} alt="Email icon" w={56} h={56} loading="lazy" decoding="async" />
                     <Stack gap={6}>
                       <Text fw={700} fz={{ base: 'md', md: 'lg' }} c="var(--text)">Send us an email</Text>
                       <Text fz="sm" c="var(--text-dim)">We’re happy to help with any questions about the event.</Text>
@@ -77,15 +77,12 @@ export default function App(){
                       >
                         {copiedEmail ? 'Copied!' : 'Copy Email'}
                       </Button>
-                      <Text fz="xs" c="var(--text-dim)" ta="center" style={{ width: '100%', overflowWrap: 'anywhere' }}>
-                        {emailAddress}
-                      </Text>
                     </Stack>
                   </Box>
                 ) : (
                   <Stack gap={10}>
                     <Box style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', alignItems: 'center', gap: 10 }}>
-                      <Image src={assetPath('icons/email.svg')} alt="Email icon" w={40} h={40} />
+                      <Image src={assetPath('icons/email.svg')} alt="Email icon" w={40} h={40} loading="lazy" decoding="async" />
                       <Stack gap={4}>
                         <Text fw={700} c="var(--text)">Send us an email</Text>
                         <Text fz="sm" c="var(--text-dim)">We’re happy to help with any questions about the event.</Text>
@@ -101,9 +98,6 @@ export default function App(){
                       >
                         {copiedEmail ? 'Copied!' : 'Copy Email'}
                       </Button>
-                      {/* <Text fz="xs" c="var(--text-dim)" ta="center" style={{ width: '100%', overflowWrap: 'anywhere' }}>
-                        {emailAddress}
-                      </Text> */}
                     </Stack>
                   </Stack>
                 )}

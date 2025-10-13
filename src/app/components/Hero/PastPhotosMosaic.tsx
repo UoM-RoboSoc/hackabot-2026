@@ -39,7 +39,7 @@ function Row({ photos, reverse, disableAnimation }: { photos: Photo[]; reverse?:
           }
           return (
             <div key={`${photo.alt}-${idx}`} className="mosaic-item">
-              <Image src={photo.src} alt={photo.alt} fit="cover" />
+              <Image src={photo.src} alt={photo.alt} fit="cover" loading="lazy" decoding="async" />
             </div>
           )
         })}

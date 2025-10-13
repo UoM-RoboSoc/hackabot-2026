@@ -43,7 +43,7 @@ body{
 
 /* Integrated scrollbars */
 /* Scrollbars: style only the main scroll container so the track ends below header */
-#app-main{ /* no reserved gutter to avoid side bars */ scrollbar-width: thin; scrollbar-color: var(--cool-gray) var(--bg-1); background: var(--bg-1); overflow-x: hidden; display: block; scroll-padding-top: calc(var(--header-h, 88px) + 30px); scroll-behavior: smooth; }
+#app-main{ /* no reserved gutter to avoid side bars */ scrollbar-width: thin; scrollbar-color: var(--cool-gray) var(--bg-1); background: var(--bg-1); overflow-x: hidden; display: block; scroll-padding-top: calc(var(--header-h, 88px) + 24px); scroll-behavior: auto; }
 @media (prefers-reduced-motion: reduce){
   #app-main{ scroll-behavior: auto; }
 }

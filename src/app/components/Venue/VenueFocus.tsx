@@ -20,7 +20,7 @@ export function VenueFocus(){
   if (isMobile){
     return (
       <Stack gap={24}>
-        <Image src={mobileImage} alt="Venue exterior" radius="lg" />
+        <Image src={mobileImage} alt="Venue exterior" radius="lg" loading="lazy" decoding="async" />
         <Stack gap={16}>
           {data.callouts.map((callout, idx) => (
             <Card key={idx} shadow="sm" p="lg" radius="lg" withBorder>
@@ -41,7 +41,7 @@ export function VenueFocus(){
 
   return (
     <Box style={{ position: 'relative', paddingInline: 'min(5vw, 64px)' }}>
-      <Image src={desktopImage} alt="Venue exterior" radius="lg" />
+      <Image src={desktopImage} alt="Venue exterior" radius="lg" loading="lazy" decoding="async" />
       <Box
         style={{
           position: 'absolute',
