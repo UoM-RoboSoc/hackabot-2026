@@ -14,9 +14,11 @@ export function CountdownBar({ startsAt }: { startsAt: string }){
 
   if (remaining <= 0){
     return (
-      <Paper withBorder radius="lg" p="md" className="countdown-pane" style={{ textAlign: 'center' }}>
-        <Text fw={700} c="var(--auburn)">We’re live!</Text>
-      </Paper>
+      <div className="countdown-wrap">
+        <Paper withBorder radius="lg" p="md" className="countdown-pane" style={{ textAlign: 'center' }}>
+          <Text fw={700} c="var(--auburn)">We’re live!</Text>
+        </Paper>
+      </div>
     )
   }
 
@@ -34,16 +36,18 @@ export function CountdownBar({ startsAt }: { startsAt: string }){
   ]
 
   return (
-    <Paper withBorder radius="lg" p="lg" className="countdown-pane">
-      <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="md" className="count-grid">
-        {items.map((it) => (
-          <div key={it.label} className="count-seg">
-            <Text className="count-val" fw={800} fz={{ base: 26, sm: 32, md: 48 }}>{it.value}</Text>
-            <Text className="count-label" fz="xs" tt="uppercase" c="var(--text-dim)">{it.label}</Text>
-          </div>
-        ))}
-      </SimpleGrid>
-    </Paper>
+    <div className="countdown-wrap">
+      <Paper withBorder radius="lg" p="lg" className="countdown-pane">
+        <SimpleGrid cols={4} spacing="md" className="count-grid">
+          {items.map((it) => (
+            <div key={it.label} className="count-seg">
+              <Text className="count-val" fw={800} fz={{ base: 26, sm: 32, md: 48 }}>{it.value}</Text>
+              <Text className="count-label" fz="xs" tt="uppercase" c="var(--text-dim)">{it.label}</Text>
+            </div>
+          ))}
+        </SimpleGrid>
+      </Paper>
+    </div>
   )
 }
 

@@ -10,10 +10,12 @@ import Footer from './components/Footer/Footer'
 import { Grid, Stack, Text, Card, Box, Button, Image } from '@mantine/core'
 import { assetPath } from './lib/assets'
 import { useState } from 'react'
+import { useMediaQuery } from '@mantine/hooks'
 
 export default function App(){
   const [copiedEmail, setCopiedEmail] = useState(false)
   const emailAddress = 'hackabot@uom-robosoc.com'
+  const isDesktop = useMediaQuery('(min-width: 48em)')
 
   const copyEmailToClipboard = async () => {
     try {
@@ -30,7 +32,7 @@ export default function App(){
         <Hero />
       </Section>
 
-      <Section id="venue" title="Venue" subtitle="Nancy Rothwell Building access overview" padding="compact">
+      <Section id="venue" title="Venue" subtitle="Nancy Rothwell Building overview" padding="compact">
         <VenueFocus />
       </Section>
 
@@ -58,27 +60,53 @@ export default function App(){
               <div id="contact" tabIndex={-1} style={{ position: 'absolute', top: '-80px', left: 0, width: '1px', height: '1px' }} aria-hidden="true" />
               <Text fw={600} fz={{ base: 'lg', md: 'xl' }}>Contact</Text>
               <Card withBorder radius="lg" p={{ base: 'md', md: 'lg' }} style={{ background: 'var(--panel)' }}>
-                <Box style={{ display: 'grid', gridTemplateColumns: 'auto 1fr auto', alignItems: 'center', gap: 12 }}>
-                  <Image src={assetPath('icons/email.svg')} alt="Email icon" w={56} h={56} />
-                  <Stack gap={6}>
-                    <Text fw={700} fz={{ base: 'md', md: 'lg' }} c="var(--text)">Send us an email</Text>
-                    <Text fz="sm" c="var(--text-dim)">We’re happy to help with any questions about the event.</Text>
+                {isDesktop ? (
+                  <Box style={{ display: 'grid', gridTemplateColumns: 'auto 1fr auto', alignItems: 'center', gap: 12 }}>
+                    <Image src={assetPath('icons/email.svg')} alt="Email icon" w={56} h={56} />
+                    <Stack gap={6}>
+                      <Text fw={700} fz={{ base: 'md', md: 'lg' }} c="var(--text)">Send us an email</Text>
+                      <Text fz="sm" c="var(--text-dim)">We’re happy to help with any questions about the event.</Text>
+                    </Stack>
+                    <Stack gap={4} align="center" style={{ width: 170 }}>
+                      <Button
+                        variant="light"
+                        color={copiedEmail ? 'teal' : 'crimson'}
+                        radius="md"
+                        style={{ width: '100%' }}
+                        onClick={copyEmailToClipboard}
+                      >
+                        {copiedEmail ? 'Copied!' : 'Copy Email'}
+                      </Button>
+                      <Text fz="xs" c="var(--text-dim)" ta="center" style={{ width: '100%', overflowWrap: 'anywhere' }}>
+                        {emailAddress}
+                      </Text>
+                    </Stack>
+                  </Box>
+                ) : (
+                  <Stack gap={10}>
+                    <Box style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', alignItems: 'center', gap: 10 }}>
+                      <Image src={assetPath('icons/email.svg')} alt="Email icon" w={40} h={40} />
+                      <Stack gap={4}>
+                        <Text fw={700} c="var(--text)">Send us an email</Text>
+                        <Text fz="sm" c="var(--text-dim)">We’re happy to help with any questions about the event.</Text>
+                      </Stack>
+                    </Box>
+                    <Stack gap={4} align="center" style={{ width: '100%' }}>
+                      <Button
+                        variant="light"
+                        color={copiedEmail ? 'teal' : 'crimson'}
+                        radius="md"
+                        style={{ width: '100%' }}
+                        onClick={copyEmailToClipboard}
+                      >
+                        {copiedEmail ? 'Copied!' : 'Copy Email'}
+                      </Button>
+                      {/* <Text fz="xs" c="var(--text-dim)" ta="center" style={{ width: '100%', overflowWrap: 'anywhere' }}>
+                        {emailAddress}
+                      </Text> */}
+                    </Stack>
                   </Stack>
-                  <Stack gap={4} align="center" style={{ width: 170 }}>
-                    <Button
-                      variant="light"
-                      color={copiedEmail ? 'teal' : 'crimson'}
-                      radius="md"
-                      style={{ width: '100%' }}
-                      onClick={copyEmailToClipboard}
-                    >
-                      {copiedEmail ? 'Copied!' : 'Copy Email'}
-                    </Button>
-                    {/* <Text fz="xs" c="var(--text-dim)" ta="center" style={{ width: '100%', overflowWrap: 'anywhere' }}>
-                      {emailAddress}
-                    </Text> */}
-                  </Stack>
-                </Box>
+                )}
               </Card>
             </Stack>
           </Grid.Col>

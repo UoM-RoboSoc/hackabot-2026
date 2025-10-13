@@ -29,14 +29,27 @@ export function FormsPanel(){
   return (
     <Stack gap={20}>
       <Card withBorder radius="lg" p={{ base: 'md', md: 'lg' }} style={{ background: 'var(--panel)' }}>
-        <Box style={{ display: 'grid', gridTemplateColumns: 'auto 1fr auto', alignItems: 'center', gap: 12 }}>
-          <Image src={assetPath('icons/ticket.svg')} alt="Tickets icon" w={isDesktop ? 56 : 40} h={isDesktop ? 56 : 40} />
-          <Stack gap={6}>
-            <Text fw={700} fz={{ base: 'md', md: 'lg' }} c="var(--text)">Tickets</Text>
-            <Text fz="sm" c="var(--text-dim)">Tickets will be released early in Semester 2.</Text>
+        {isDesktop ? (
+          <Box style={{ display: 'grid', gridTemplateColumns: 'auto 1fr auto', alignItems: 'center', gap: 12 }}>
+            <Image src={assetPath('icons/ticket.svg')} alt="Tickets icon" w={56} h={56} />
+            <Stack gap={6}>
+              <Text fw={700} fz={{ base: 'md', md: 'lg' }} c="var(--text)">Tickets</Text>
+              <Text fz="sm" c="var(--text-dim)">Tickets will be released early in Semester 2.</Text>
+            </Stack>
+            <Button disabled variant="light" color="gray" radius="md" style={{ width: 170 }}>Coming Soon</Button>
+          </Box>
+        ) : (
+          <Stack gap={10}>
+            <Box style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', alignItems: 'center', gap: 10 }}>
+              <Image src={assetPath('icons/ticket.svg')} alt="Tickets icon" w={40} h={40} />
+              <Stack gap={4}>
+                <Text fw={700} c="var(--text)">Tickets</Text>
+                <Text fz="sm" c="var(--text-dim)">Tickets will be released early in Semester 2.</Text>
+              </Stack>
+            </Box>
+            <Button disabled variant="light" color="gray" radius="md" style={{ width: '100%' }}>Coming Soon</Button>
           </Stack>
-          <Button disabled variant="light" color="gray" radius="md" style={{ width: 170 }}>Coming Soon</Button>
-        </Box>
+        )}
       </Card>
       <SimpleGrid cols={{ base: 1, sm: 3 }} spacing={{ base: 12, md: 16 }}>
         {items.map((item) => (

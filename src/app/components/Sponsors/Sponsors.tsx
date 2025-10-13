@@ -4,7 +4,7 @@ import { assetPath } from '../../lib/assets'
 
 type Logo = { name: string; src: string; url?: string }
 
-const LOGO_BASE_SCALE = 1.75
+const LOGO_BASE_SCALE = 1.5
 
 export function Sponsors(){
   const data = sponsors as { logos: Logo[] }
