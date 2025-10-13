@@ -13,11 +13,17 @@ export function Team(){
       <SimpleGrid
         w="100%"
         cols={{ base: 3, sm: 3, md: 3 }}
-        spacing={{ base: 10, sm: 12 }}
+        spacing={{ base: 10, sm: 12, md: 8 }}
         style={{ width: '100%', justifyContent: 'center', justifyItems: 'center' }}
       >
         {list.map((member, idx) => (
-          <Card key={idx} withBorder radius="lg" p={{ base: 'sm', sm: 'md' }} style={{ background: 'var(--panel)', width: '100%' }}>
+          <Card
+            key={idx}
+            withBorder
+            radius="lg"
+            p={{ base: 'sm', sm: 'md' }}
+            style={{ background: 'var(--panel)', width: '100%', maxWidth: 200, marginInline: 'auto' }}
+          >
             <Stack align="center" gap={12}>
               {member.img ? (
                 <Box style={{ width: '100%', aspectRatio: '3 / 4', overflow: 'hidden', borderRadius: 12, border: '1px solid var(--border)' }}>
