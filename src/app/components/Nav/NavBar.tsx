@@ -14,6 +14,7 @@ const links = [
   { href: '#team', label: 'Team' },
   { href: '#sponsors', label: 'Sponsors' },
   { href: '#faq', label: 'FAQ' },
+  { href: '#forms', label: 'Forms' },
   { href: '#contact', label: 'Contact' },
 ]
 

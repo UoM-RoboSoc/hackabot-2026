@@ -35,7 +35,7 @@ export function FormsPanel(){
             <Text fw={700} fz={{ base: 'md', md: 'lg' }} c="var(--text)">Tickets</Text>
             <Text fz="sm" c="var(--text-dim)">Tickets will be released early in Semester 2.</Text>
           </Stack>
-          <Button disabled variant="light" color="gray" radius="md">Coming Soon</Button>
+          <Button disabled variant="light" color="gray" radius="md" style={{ width: 170 }}>Coming Soon</Button>
         </Box>
       </Card>
       <SimpleGrid cols={{ base: 1, sm: 3 }} spacing={{ base: 12, md: 16 }}>

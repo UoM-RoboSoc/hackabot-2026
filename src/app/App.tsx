@@ -7,9 +7,23 @@ import Sponsors from './components/Sponsors/Sponsors'
 import FAQ from './components/FAQ/FAQ'
 import FormsPanel from './components/Forms/FormsPanel'
 import Footer from './components/Footer/Footer'
-import { Grid, Stack, Text } from '@mantine/core'
+import { Grid, Stack, Text, Card, Box, Button, Image } from '@mantine/core'
+import { assetPath } from './lib/assets'
+import { useState } from 'react'
 
 export default function App(){
+  const [copiedEmail, setCopiedEmail] = useState(false)
+  const emailAddress = 'hackabot@uom-robosoc.com'
+
+  const copyEmailToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(emailAddress)
+      setCopiedEmail(true)
+      window.setTimeout(() => setCopiedEmail(false), 2000)
+    } catch {
+      window.location.href = `mailto:${emailAddress}`
+    }
+  }
   return (
     <Page>
       <Section id="hero" tone="canvas" padding="none" centered>
@@ -28,7 +42,7 @@ export default function App(){
         <Sponsors />
       </Section>
 
-      <Section id="faq" title="FAQs & Forms" subtitle="Essential answers and next steps" padding="compact">
+      <Section id="faq" title="FAQs, Forms & Contact" subtitle="Essential answers and next steps" padding="compact">
         <Grid gutter={{ base: 32, md: 48 }} align="stretch">
           <Grid.Col span={{ base: 12, md: 6 }}>
             <Stack gap={20}>
@@ -38,9 +52,34 @@ export default function App(){
           </Grid.Col>
           <Grid.Col span={{ base: 12, md: 6 }}>
             <Stack gap={20} style={{ position: 'relative' }}>
-              <div id="contact" tabIndex={-1} style={{ position: 'absolute', top: '-80px', left: 0, width: '1px', height: '1px' }} aria-hidden="true" />
+              <div id="forms" tabIndex={-1} style={{ position: 'absolute', top: '-80px', left: 0, width: '1px', height: '1px' }} aria-hidden="true" />
               <Text fw={600} fz={{ base: 'lg', md: 'xl' }}>Forms</Text>
               <FormsPanel />
+              <div id="contact" tabIndex={-1} style={{ position: 'absolute', top: '-80px', left: 0, width: '1px', height: '1px' }} aria-hidden="true" />
+              <Text fw={600} fz={{ base: 'lg', md: 'xl' }}>Contact</Text>
+              <Card withBorder radius="lg" p={{ base: 'md', md: 'lg' }} style={{ background: 'var(--panel)' }}>
+                <Box style={{ display: 'grid', gridTemplateColumns: 'auto 1fr auto', alignItems: 'center', gap: 12 }}>
+                  <Image src={assetPath('icons/email.svg')} alt="Email icon" w={56} h={56} />
+                  <Stack gap={6}>
+                    <Text fw={700} fz={{ base: 'md', md: 'lg' }} c="var(--text)">Send us an email</Text>
+                    <Text fz="sm" c="var(--text-dim)">We’re happy to help with any questions about the event.</Text>
+                  </Stack>
+                  <Stack gap={4} align="center" style={{ width: 170 }}>
+                    <Button
+                      variant="light"
+                      color={copiedEmail ? 'teal' : 'crimson'}
+                      radius="md"
+                      style={{ width: '100%' }}
+                      onClick={copyEmailToClipboard}
+                    >
+                      {copiedEmail ? 'Copied!' : 'Copy Email'}
+                    </Button>
+                    {/* <Text fz="xs" c="var(--text-dim)" ta="center" style={{ width: '100%', overflowWrap: 'anywhere' }}>
+                      {emailAddress}
+                    </Text> */}
+                  </Stack>
+                </Box>
+              </Card>
             </Stack>
           </Grid.Col>
         </Grid>
