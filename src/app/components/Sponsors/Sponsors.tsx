@@ -4,6 +4,8 @@ import { assetPath } from '../../lib/assets'
 
 type Logo = { name: string; src: string; url?: string }
 
+const LOGO_BASE_SCALE = 1.75
+
 export function Sponsors(){
   const data = sponsors as { logos: Logo[] }
   const logos = data.logos || []
@@ -15,7 +17,7 @@ export function Sponsors(){
         <Text fz="sm" c="var(--text-dim)">Representative partners from past years — sponsorship lineup changes annually.</Text>
       </Stack>
       {logos.length ? (
-        <SimpleGrid cols={{ base: 2, sm: 3, md: 4, lg: 5 }} spacing={16}>
+        <SimpleGrid cols={{ base: 2, sm: 2, md: 4, lg: 4 }} spacing={{ base: 12, md: 16 }} style={{ justifyItems: 'center' }}>
           {logos.map((logo, idx) => (
             <Paper
               key={idx}
@@ -23,10 +25,12 @@ export function Sponsors(){
               radius="lg"
               p="md"
               style={{
-                display: 'grid',
-                placeItems: 'center',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
                 background: 'var(--panel)',
-                height: 140,
+                width: '100%',
+                aspectRatio: '2 / 1',
                 overflow: 'hidden',
               }}
             >
@@ -35,17 +39,19 @@ export function Sponsors(){
                 target={logo.url ? '_blank' : undefined}
                 rel={logo.url ? 'noopener noreferrer' : undefined}
                 onClick={(e) => { if (!logo.url) { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) } }}
-                style={{ display: 'grid', placeItems: 'center', width: '100%', height: '100%' }}
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%', cursor: 'pointer' }}
               >
                 <Image
                   src={assetPath(logo.src)}
                   alt={logo.name}
-                  fit="cover"
+                  fit="contain"
                   height="100%"
                   width="100%"
                   radius="md"
-                  style={{ objectPosition: 'center' }}
-                />
+                  style={{ maxWidth: '100%', maxHeight: '100%', objectPosition: 'center', transition: 'transform 160ms ease', transformOrigin: 'center', transform: `scale(${LOGO_BASE_SCALE})` }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = `scale(${LOGO_BASE_SCALE * 1.06})` }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = `scale(${LOGO_BASE_SCALE})` }}
+                  />
               </Anchor>
             </Paper>
           ))}
