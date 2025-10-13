@@ -51,9 +51,11 @@ export function VenueFocus(){
           justifyContent: 'space-between',
           pointerEvents: 'none',
           gap: 'min(3vw, 48px)',
+          overflow: 'visible',
+          zIndex: 2,
         }}
       >
-        <Stack gap={16} style={{ width: 'min(260px, 22%)' }}>
+        <Stack gap={16} style={{ width: 'min(280px, 24%)', overflow: 'visible' }}>
           {left.map((callout, idx) => (
             <Card
               key={`left-${idx}`}
@@ -65,17 +67,18 @@ export function VenueFocus(){
                 background: 'rgba(22,24,35,0.92)',
                 borderColor: 'var(--border)',
                 pointerEvents: 'auto',
-                color: 'var(--text)'
+                color: 'var(--text)',
+                overflow: 'visible'
               }}
             >
               <Stack gap={6}>
-                <Text fw={600}>{callout.title}</Text>
-                <Text c="var(--text-dim)" fz="sm">{callout.body}</Text>
+                <Text fw={600} fz="sm">{callout.title}</Text>
+                <Text c="var(--text-dim)" fz="xs">{callout.body}</Text>
               </Stack>
             </Card>
           ))}
         </Stack>
-        <Stack gap={16} style={{ width: 'min(260px, 22%)' }}>
+        <Stack gap={16} style={{ width: 'min(280px, 24%)', overflow: 'visible' }}>
           {right.map((callout, idx) => (
             <Card
               key={`right-${idx}`}
@@ -87,12 +90,13 @@ export function VenueFocus(){
                 background: 'rgba(22,24,35,0.92)',
                 borderColor: 'var(--border)',
                 pointerEvents: 'auto',
-                color: 'var(--text)'
+                color: 'var(--text)',
+                overflow: 'visible'
               }}
             >
               <Stack gap={6}>
-                <Text fw={600}>{callout.title}</Text>
-                <Text c="var(--text-dim)" fz="sm">{callout.body}</Text>
+                <Text fw={600} fz="sm">{callout.title}</Text>
+                <Text c="var(--text-dim)" fz="xs">{callout.body}</Text>
               </Stack>
             </Card>
           ))}
