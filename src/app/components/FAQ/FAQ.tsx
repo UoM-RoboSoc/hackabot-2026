@@ -40,17 +40,31 @@ export function FAQ(){
         item: {
           border: '1px solid var(--border)',
           borderRadius: 12,
-          marginBottom: 8,
+          marginBottom: 6,
           background: 'var(--panel)',
           overflow: 'hidden',
+          transition: 'box-shadow 120ms ease, border-color 120ms ease, background-color 120ms ease',
           '&:hover': {
-            background: 'var(--panel)',
-            borderColor: 'var(--border)',
+            boxShadow: 'inset 0 0 0 9999px rgba(255,255,255,0.06)',
+            borderColor: 'var(--border)'
+          },
+          // Keep subtle tint when expanded; also apply when child control has data-active
+          '&[data-active]': {
+            boxShadow: 'inset 0 0 0 9999px rgba(255,255,255,0.06)'
+          },
+          '&:has([data-active])': {
+            boxShadow: 'inset 0 0 0 9999px rgba(255,255,255,0.06)'
+          },
+          '&:focus-within': {
+            boxShadow: 'inset 0 0 0 9999px rgba(255,255,255,0.06)'
           },
         },
         control: {
-          minHeight: 56,
-          paddingBlock: 12,
+          minHeight: 44,
+          paddingBlock: 8,
+          background: 'transparent',
+          // Ensure control inherits the item hover/active tint visually
+          backgroundColor: 'transparent',
           color: 'var(--text)',
           '&[data-active]': {
             color: theme.colors.red[5],
@@ -61,9 +75,9 @@ export function FAQ(){
         },
         chevron: { color: 'var(--text-dim)' },
         panel: {
-          background: 'rgba(0,0,0,0)',
+          background: 'transparent',
           color: 'var(--text-dim)',
-          padding: '0 16px 16px',
+          padding: '0 12px 12px',
         },
       })}
     >
