@@ -7,6 +7,6 @@
     { "name": "Red Bull", "src": "sponsors/previous/redbull.png", "url": "https://www.redbull.com/gb-en" },
     { "name": "Cradle Robotics", "src": "sponsors/previous/cradle.png", "url": "https://cradlerobotics.co.uk/" },
     { "name": "Ice Nine Robotics", "src": "sponsors/previous/icenine.png", "url": "https://ice9robotics.co.uk/" },
-    { "name": "RoboSoc", "src": "sponsors/previous/robosoc.png", "url": "https://manchesterstudentsunion.com/activities/view/eeesoc" }
+    { "name": "RoboSoc", "src": "sponsors/previous/robosoc.png", "url": "https://uom-robosoc.com/" }
   ]
 }

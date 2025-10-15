@@ -15,7 +15,7 @@ export function Sponsors(){
     <Stack gap={24}>
       <Stack gap={4}>
         <Title order={3}>Previous Sponsors</Title>
-        <Text fz="sm" c="var(--text-dim)">Representative partners from past years — sponsorship lineup changes annually.</Text>
+        <Text fz="sm" c="var(--text-dim)">Representative partners from past years, sponsorship lineup changes annually.</Text>
       </Stack>
       {logos.length ? (
         <SimpleGrid cols={{ base: 2, sm: 2, md: 4, lg: 4 }} spacing={{ base: 12, md: 16 }} style={{ justifyItems: 'center' }}>
