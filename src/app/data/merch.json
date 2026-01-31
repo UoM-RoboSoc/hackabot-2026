@@ -1,0 +1,34 @@
+{
+  "free": {
+    "title": "Free Merch",
+    "description": "Free merch is given to every participant upon entry at the event.",
+    "image": "merch/free-merch.jpg",
+    "alt": "Free merch lineup",
+    "items": [
+      "Bottle",
+      "Mug",
+      "Notebook",
+      "Poster",
+      "Stickers",
+      "Tote Bag",
+      "Lanyard"
+    ]
+  },
+  "paid": {
+    "title": "Paid Merch",
+    "description": "Paid merch is more expensive and all proceeds go toward funding the event. The feedback form is live now, and the merch order window will run from 9th to 19th February 2026.",
+    "image": "merch/paid-merch.jpg",
+    "alt": "Paid merch lineup ideas",
+    "formUrl": "",
+    "items": [
+      "Beanies",
+      "Cap",
+      "Hoodies",
+      "Sweatshirt",
+      "Embroidered Fleece",
+      "Embroidered Jacket",
+      "Sunglasses",
+      "RoboSocks"
+    ]
+  }
+}

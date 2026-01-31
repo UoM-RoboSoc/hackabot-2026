@@ -1,0 +1,13 @@
+{
+  "ctaUrl": "https://manchesterstudentsunion.com/events/id/12217-hack-a-bot-2026/17986",
+  "ctaLabel": "Buy tickets on the Students' Union site",
+  "steps": [
+    "Tickets are free.",
+    "Follow the link above.",
+    "Click \"Buy Tickets for Hack-A-Bot 2026\".",
+    "If you aren't logged in to the Students' Union website, select \"Student\" at the bottom of the page and log in with your university account.",
+    "Once logged in, click \"ADD TO BASKET\" next to the Hackers Ticket item, then click \"Proceed to basket\".",
+    "Then click \"Proceed to Payment\". No payment details are required apart from a billing address."
+  ],
+  "emailNote": "Make sure you have access to the email since that is where your ticket will be sent. It is also where we will send the Hack-A-Bot 2026 Participant Form where we will take in your Student ID and any dietary requirements you have."
+}
