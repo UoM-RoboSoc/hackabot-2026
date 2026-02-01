@@ -1,4 +1,4 @@
-import { Grid, Card, Stack, Text, Title, Button, Box, Image } from '@mantine/core'
+import { Grid, Card, Stack, Text, Title, Button, Box } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import tickets from '../../data/tickets.json'
 import { assetPath } from '../../lib/assets'
@@ -7,7 +7,8 @@ type TicketsData = {
   ctaUrl: string
   ctaLabel: string
   steps: string[]
-  emailNote: string
+  ticketNote: string
+  formNote: string
 }
 
 export function Tickets(){
@@ -50,56 +51,6 @@ export function Tickets(){
     <Grid gutter={{ base: 24, md: 32 }} align="stretch">
       <Grid.Col span={{ base: 12, md: 6 }}>
         <Card withBorder radius="lg" p={{ base: 'md', md: 'lg' }} style={{ background: 'var(--panel)', height: '100%' }}>
-          <Stack gap={12} style={{ height: '100%' }}>
-            <Stack gap={6}>
-              <Title order={3}>Get your ticket</Title>
-              <Text c="var(--text-dim)">Follow the steps to claim your free Hack-A-Bot 2026 ticket.</Text>
-            </Stack>
-            <Stack gap={8}>
-              <Text fw={600}>Tickets are free.</Text>
-              <Text fz="sm" c="var(--text-dim)">The Students' Union link opens in a new tab.</Text>
-            </Stack>
-            {isDesktop && (
-              <Box
-                style={{
-                  flex: 1,
-                  minHeight: 140,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: 16,
-                  border: '1px solid rgba(255,255,255,0.06)',
-                  background: 'rgba(255,255,255,0.02)',
-                }}
-              >
-                <Image
-                  src={assetPath('icons/ticket.svg')}
-                  alt=""
-                  w={160}
-                  h={160}
-                  style={{ opacity: 0.7 }}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </Box>
-            )}
-            <Button
-              component="a"
-              href={data.ctaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              color="crimson"
-              radius="md"
-              fullWidth
-              style={isDesktop ? { alignSelf: 'stretch' } : undefined}
-            >
-              {data.ctaLabel}
-            </Button>
-          </Stack>
-        </Card>
-      </Grid.Col>
-      <Grid.Col span={{ base: 12, md: 6 }}>
-        <Card withBorder radius="lg" p={{ base: 'md', md: 'lg' }} style={{ background: 'var(--panel)', height: '100%' }}>
           <Stack gap={12}>
             <Title order={3}>How to buy tickets</Title>
             <Box
@@ -122,12 +73,79 @@ export function Tickets(){
               withBorder
               radius="md"
               p="sm"
-              style={{ background: 'rgba(239,35,60,0.2)', borderColor: 'rgba(239,35,60,0.55)' }}
+              style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.12)' }}
             >
-              <Text fz="md" fw={600} c="var(--text)">
-                {data.emailNote}
+              <Text fz="sm" fw={700} tt="uppercase" style={{ letterSpacing: '0.08em', marginBottom: 6 }}>
+                Ticket email
+              </Text>
+              <Text fz="sm" fw={600} c="var(--text)">
+                {data.ticketNote}
               </Text>
             </Card>
+            <Card
+              withBorder
+              radius="md"
+              p="sm"
+              style={{ background: 'rgba(239,35,60,0.2)', borderColor: 'rgba(239,35,60,0.6)' }}
+            >
+              <Text fz="sm" fw={700} tt="uppercase" style={{ letterSpacing: '0.08em', marginBottom: 6 }}>
+                Participant form required
+              </Text>
+              <Text fz="md" fw={700} c="var(--text)">
+                {data.formNote}
+              </Text>
+            </Card>
+          </Stack>
+        </Card>
+      </Grid.Col>
+      <Grid.Col span={{ base: 12, md: 6 }} order={{ base: 2, md: 1 }}>
+        <Card withBorder radius="lg" p={{ base: 'md', md: 'lg' }} style={{ background: 'var(--panel)', height: '100%' }}>
+          <Stack gap={12} style={{ height: '100%' }}>
+            <Box
+              style={{
+                width: '100%',
+                aspectRatio: '4 / 3',
+                minHeight: 180,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: 16,
+                overflow: 'hidden',
+              }}
+            >
+              <model-viewer
+                src={assetPath('model/hack-trophy-recoloured.glb')}
+                poster={assetPath('model/hack-trophy.png')}
+                alt="Hack-A-Bot trophy 3D logo"
+                camera-controls
+                auto-rotate
+                rotation-per-second="20deg"
+                environment-image="neutral"
+                tone-mapping="neutral"
+                interaction-prompt="none"
+                shadow-intensity="0.7"
+                shadow-softness="0.7"
+                exposure="1.15"
+                style={{ width: '100%', height: '100%', background: 'transparent' }}
+              />
+            </Box>
+            <Stack gap={8} style={isDesktop ? { marginTop: 'auto' } : undefined}>
+              <Stack gap={6}>
+                <Title order={3}>Get your ticket</Title>
+                <Text c="var(--text-dim)">Follow the steps to claim your free Hack-A-Bot 2026 ticket.</Text>
+              </Stack>
+              <Button
+                component="a"
+                href={data.ctaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                color="crimson"
+                radius="md"
+                fullWidth
+              >
+                {data.ctaLabel}
+              </Button>
+            </Stack>
           </Stack>
         </Card>
       </Grid.Col>
