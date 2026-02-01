@@ -132,7 +132,7 @@ export function Tickets(){
             <Stack gap={8} style={isDesktop ? { marginTop: 'auto' } : undefined}>
               <Stack gap={6}>
                 <Title order={3}>Get your ticket</Title>
-                <Text c="var(--text-dim)">Follow the steps to claim your free Hack-A-Bot 2026 ticket.</Text>
+                <Text c="var(--text-dim)">Read the guide above before using the link below.</Text>
               </Stack>
               <Button
                 component="a"
@@ -142,8 +142,9 @@ export function Tickets(){
                 color="crimson"
                 radius="md"
                 fullWidth
+                style={!isDesktop ? { whiteSpace: 'normal', height: 'auto', paddingBlock: 14, lineHeight: 1.2 } : undefined}
               >
-                {data.ctaLabel}
+                {isDesktop ? data.ctaLabel : 'Buy tickets'}
               </Button>
             </Stack>
           </Stack>

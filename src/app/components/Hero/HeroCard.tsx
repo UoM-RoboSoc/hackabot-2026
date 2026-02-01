@@ -39,13 +39,13 @@ export function HeroCard({ onPrimaryClick }: Props){
                 gap: rem(8),
                 textTransform: 'uppercase',
                 letterSpacing: '0.08em',
-                fontWeight: 600,
-                fontSize: rem(16),
+                fontWeight: 700,
+                fontSize: rem(22),
               },
             }}
           >
             <IconCircleFilled size={10} style={{ color: '#ff4d63' }} />
-            Tickets live now
+            TICKETS LIVE NOW
           </Badge>
         </Group>
         <Image src={assetPath('brand/Title_Date_Logo.png')} alt="Hack-A-Bot 2026" maw={rem(420)} mx="auto" />

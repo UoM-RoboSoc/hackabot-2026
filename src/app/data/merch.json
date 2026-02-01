@@ -1,9 +1,18 @@
 {
   "free": {
     "title": "Free Merch",
-    "description": "Free merch is given to every participant upon entry at the event.",
-    "image": "merch/free-merch.jpg",
+    "description": "Included with every participant at check-in.",
+    "image": "merch/free-mockup.png",
     "alt": "Free merch lineup",
+    "imagePosition": "center",
+    "imageFit": "contain",
+    "imageAspectRatio": "3 / 2",
+    "notes": [
+      {
+        "label": "Included with entry",
+        "body": "Given to every participant when you arrive."
+      }
+    ],
     "items": [
       "Bottle",
       "Mug",
@@ -16,10 +25,22 @@
   },
   "paid": {
     "title": "Paid Merch",
-    "description": "Paid merch is more expensive and all proceeds go toward funding the event. The feedback form is live now, and the merch order window will run from 9th to 19th February 2026.",
-    "image": "merch/paid-merch.jpg",
+    "description": "We are also offering paid merch this year with all proceeds put towards funding the event.",
+    "image": "merch/paid-mockup.png",
     "alt": "Paid merch lineup ideas",
     "formUrl": "",
+    "imageAspectRatio": "3 / 2",
+    "notes": [
+      {
+        "label": "Feedback form",
+        "body": "Choose which of the lineup below you'd be most interested in buying by following the link below."
+      },
+      {
+        "label": "Release window",
+        "body": "The 3 most popular will be offered for sale sometime between 9th and 19th February (dates TBD).",
+        "tone": "accent"
+      }
+    ],
     "items": [
       "Beanies",
       "Cap",

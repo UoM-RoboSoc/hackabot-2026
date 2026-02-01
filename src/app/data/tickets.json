@@ -3,7 +3,7 @@
   "ctaLabel": "Buy tickets on the Students' Union site",
   "steps": [
     "Tickets are free.",
-    "Follow the link above.",
+    "Follow the link below.",
     "Click \"Buy Tickets for Hack-A-Bot 2026\".",
     "If you aren't logged in to the Students' Union website, select \"Student\" at the bottom of the page and log in with your university account.",
     "Once logged in, click \"ADD TO BASKET\" next to the Hackers Ticket item, then click \"Proceed to basket\".",
