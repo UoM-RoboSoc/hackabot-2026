@@ -4,11 +4,7 @@ import event from '../../data/event.json'
 import { assetPath } from '../../lib/assets'
 import { smoothScrollTo } from '../../lib/anchors'
 
-type Props = {
-  onPrimaryClick?: () => void
-}
-
-export function HeroCard({ onPrimaryClick }: Props){
+export function HeroCard(){
   const eventDate = new Date(event.startsAt)
   const day = eventDate.getDate()
   const month = eventDate.toLocaleString(undefined, { month: 'long' })

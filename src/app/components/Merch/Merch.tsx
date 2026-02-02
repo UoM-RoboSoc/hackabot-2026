@@ -100,7 +100,7 @@ export function Merch(){
                 hideCloseButton
                 imgAttributes={{
                   alt: block.alt,
-                  style: { width: '100%', height: '100%', objectFit: 'var(--merch-object-fit)', objectPosition: 'var(--merch-object-position)' },
+                  style: { width: '100%', height: '100%', objectFit: block.imageFit ?? 'cover', objectPosition: block.imagePosition ?? 'center' },
                   loading: 'lazy',
                   decoding: 'async',
                 }}

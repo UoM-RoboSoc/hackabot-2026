@@ -4,6 +4,7 @@ import sharp from 'sharp'
 
 const ROOT = path.resolve(process.cwd(), 'public')
 const VALID_EXTENSIONS = new Set(['.png', '.jpg', '.jpeg'])
+const SKIP_FILES = new Set(['og-placeholder.png'])
 const MAX_CONCURRENCY = 4
 
 async function collectFiles(dir){
@@ -12,6 +13,9 @@ async function collectFiles(dir){
     const fullPath = path.join(dir, entry.name)
     if (entry.isDirectory()){
       return collectFiles(fullPath)
+    }
+    if (SKIP_FILES.has(entry.name)){
+      return []
     }
     const ext = path.extname(entry.name).toLowerCase()
     if (!VALID_EXTENSIONS.has(ext)){

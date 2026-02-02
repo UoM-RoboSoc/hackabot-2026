@@ -6,8 +6,6 @@
 .merch-zoom .iiz__img {
   width: 100%;
   height: 100%;
-  object-fit: var(--merch-object-fit, cover);
-  object-position: var(--merch-object-position, center);
   display: block;
 }
 

@@ -1,4 +1,4 @@
-import { Stack, Card, Text, Title, Box, Image, SimpleGrid, Grid } from '@mantine/core'
+import { Stack, Card, Text, Title, Box, Image, Grid } from '@mantine/core'
 import prizes from '../../data/prizes.json'
 import { assetPath } from '../../lib/assets'
 
