@@ -17,8 +17,6 @@ const links = [
   { href: '#merch', label: 'Merch' },
   { href: '#tickets', label: 'Tickets' },
   { href: '#faq', label: 'FAQ' },
-  { href: '#forms', label: 'Forms' },
-  { href: '#contact', label: 'Contact' },
 ]
 
 export function NavBar() {

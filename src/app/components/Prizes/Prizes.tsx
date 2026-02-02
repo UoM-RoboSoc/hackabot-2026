@@ -40,22 +40,9 @@ export function Prizes(){
               <Text c="var(--text-dim)">{data.intro}</Text>
             </Stack>
 
-            <Card
-              withBorder
-              radius="md"
-              p="sm"
-              style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.12)' }}
-            >
-              <Text fz="xs" fw={700} tt="uppercase" style={{ letterSpacing: '0.08em', marginBottom: 4 }}>
-                Sponsor prize
-              </Text>
-              <Text fz="sm" fw={600} c="var(--text)">
-                {data.sponsorNote}
-              </Text>
-            </Card>
-
+            <Title order={3}>Sponsor prize</Title>
             <Text fz="sm" fw={600} c="var(--text)">
-              {data.suspenseNote}
+              {data.sponsorNote} {data.suspenseNote}
             </Text>
 
             <Stack gap={8}>

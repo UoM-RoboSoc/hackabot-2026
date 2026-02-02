@@ -6,7 +6,11 @@ export function Footer(){
       <Container size="lg" py="md">
         <Group justify="space-between" align="center" style={{ rowGap: 8 }}>
           <Text fz="sm" c="var(--text-dim)">
-            Hack‑A‑Bot is a non-profit event run by the University of Manchester Robotics Society.
+            Hack‑A‑Bot is a non-profit event run by the University of Manchester{' '}
+            <Anchor href="https://uom-robosoc.com/" target="_blank" rel="noopener noreferrer" c="var(--text-dim)">
+              Robotics Society
+            </Anchor>
+            .
           </Text>
           <Group gap="md">
             <Anchor

@@ -47,7 +47,7 @@ export default function App(){
         <Sponsors />
       </Section>
 
-      <Section id="prizes" title="Prizes" subtitle="Trophies, awards, and sponsor prizes" padding="compact">
+      <Section id="prizes" title="Prizes" subtitle="Awards and sponsor prizes" padding="compact">
         <Prizes />
       </Section>
 
