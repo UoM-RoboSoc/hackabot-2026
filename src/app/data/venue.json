@@ -1,6 +1,22 @@
 {
   "image": "venue/horizontal.png",
   "mobileImage": "venue/vertical.png",
+  "summary": "Hosted in the south side of the Nancy Rothwell Building (Core 4).",
+  "dates": [
+    "Saturday 21st March 2026",
+    "Sunday 22nd March 2026"
+  ],
+  "timeline": [
+    { "day": "Saturday", "time": "11:00", "label": "Doors open" },
+    { "day": "Saturday", "time": "11:00-12:00", "label": "Introductory session" },
+    { "day": "Saturday", "time": "12:00", "label": "Hacking begins (24 hours)" },
+    { "day": "Saturday", "time": "13:00-14:00", "label": "Lunch provided" },
+    { "day": "Saturday", "time": "18:00-19:00", "label": "Dominos provided" },
+    { "day": "Sunday", "time": "09:00-10:00", "label": "Breakfast provided" },
+    { "day": "Sunday", "time": "12:00", "label": "Hacking ends" },
+    { "day": "Sunday", "time": "13:00", "label": "Closing words and Awards ceremony" },
+    { "day": "Sunday", "time": "14:00", "label": "Wraps up" }
+  ],
   "callouts": [
     { "title": "Three Floors", "body": "Ground, first, and second floors open all weekend with staffed access points." },
     { "title": "South Entrance", "body": "Enter via the south side plaza; signage and volunteers will be there to guide you inside on the day." },
