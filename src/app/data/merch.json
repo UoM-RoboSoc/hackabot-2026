@@ -1,7 +1,7 @@
 {
   "free": {
     "title": "Free Merch",
-    "description": "Included with every participant at check-in.",
+    "description": "Included for every participant at check-in.",
     "image": "merch/free-mockup.png",
     "alt": "Free merch lineup",
     "imagePosition": "center",
@@ -28,8 +28,7 @@
     "description": "We are also offering paid merch this year with all proceeds put towards funding the event.",
     "image": "merch/paid-mockup.png",
     "alt": "Paid merch lineup ideas",
-    "formUrl": "",
-    "imageAspectRatio": "3 / 2",
+    "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeH77aZACIMFtcQZxl8r6_Jy-mUlrLETTCz7iDpBTL5IYxjwA/viewform?usp=dialog",
     "notes": [
       {
         "label": "Feedback form",
@@ -49,7 +48,8 @@
       "Embroidered Fleece",
       "Embroidered Jacket",
       "Sunglasses",
-      "RoboSocks"
+      "RoboSocks",
+      "T-Shirt"
     ]
   }
 }

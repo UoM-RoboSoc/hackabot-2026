@@ -61,6 +61,7 @@ export function Hero(){
             </Text>
             <KeyInfoList />
           </Stack>
+
         </Stack>
       </PagePanel>
     </Container>

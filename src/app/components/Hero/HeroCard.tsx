@@ -1,4 +1,4 @@
-import { Paper, Stack, Image, Text, Button, Group, Badge, rem } from '@mantine/core'
+import { Paper, Stack, Image, Text, Group, Badge, Anchor, rem } from '@mantine/core'
 import { IconCircleFilled } from '@tabler/icons-react'
 import event from '../../data/event.json'
 import { assetPath } from '../../lib/assets'
@@ -66,16 +66,16 @@ export function HeroCard({ onPrimaryClick }: Props){
           </Text>
         </Stack>
         <Group justify="center">
-          <Button
-            size="lg"
-            component="a"
-            href="#tickets"
-            color="crimson"
-            radius="xl"
-            onClick={(e) => { e.preventDefault(); smoothScrollTo('tickets'); onPrimaryClick?.() }}
+          <Anchor
+            href="#venue"
+            underline="never"
+            onClick={(e) => { e.preventDefault(); smoothScrollTo('venue') }}
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'var(--text-dim)' }}
           >
-            Get Tickets
-          </Button>
+            <Text fz="sm" fw={600} c="var(--text-dim)">
+              Scroll down to find out more ↓
+            </Text>
+          </Anchor>
         </Group>
       </Stack>
     </Paper>
