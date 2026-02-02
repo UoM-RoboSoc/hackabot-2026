@@ -71,11 +71,14 @@ export function FormsPanel(){
       <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={{ base: 12, md: 16 }}>
         {items.map((item) => {
           const isExpress = item.id === 'express'
+          const isVolunteer = item.id === 'volunteer'
           const label = isExpress ? 'Express Interest' : item.label
           const description = isExpress
             ? 'Thanks for expressing interest — tickets are live now.'
             : item.description
-          const linkColor = isExpress ? 'gray' : 'crimson'
+          const linkColor = isExpress || isVolunteer ? 'gray' : 'crimson'
+          const isDisabled = isExpress || isVolunteer
+          const linkLabel = isExpress ? 'Thanks for your interest' : isVolunteer ? '(not currently available)' : 'Open ↗'
           return (
             <Card key={item.id} withBorder shadow="sm" radius="lg" p={{ base: 'md', md: 'lg' }} style={{ background: 'var(--panel)' }}>
               {isDesktop ? (
@@ -86,14 +89,14 @@ export function FormsPanel(){
                     <Text fz="sm" c="var(--text-dim)">{description}</Text>
                   </Stack>
                   <Anchor
-                    href={isExpress ? undefined : item.url}
-                    target={isExpress ? undefined : '_blank'}
-                    rel={isExpress ? undefined : 'noopener noreferrer'}
+                    href={isDisabled ? undefined : item.url}
+                    target={isDisabled ? undefined : '_blank'}
+                    rel={isDisabled ? undefined : 'noopener noreferrer'}
                     color={linkColor}
                     fw={600}
-                    style={isExpress ? { pointerEvents: 'none', opacity: 0.6 } : undefined}
+                    style={isDisabled ? { pointerEvents: 'none', opacity: 0.6 } : undefined}
                   >
-                    {isExpress ? 'Thanks for your interest' : 'Open ↗'}
+                    {linkLabel}
                   </Anchor>
                 </Stack>
               ) : (
@@ -104,14 +107,14 @@ export function FormsPanel(){
                     <Text fz="sm" c="var(--text-dim)">{description}</Text>
                   </Stack>
                   <Anchor
-                    href={isExpress ? undefined : item.url}
-                    target={isExpress ? undefined : '_blank'}
-                    rel={isExpress ? undefined : 'noopener noreferrer'}
+                    href={isDisabled ? undefined : item.url}
+                    target={isDisabled ? undefined : '_blank'}
+                    rel={isDisabled ? undefined : 'noopener noreferrer'}
                     color={linkColor}
                     fw={600}
-                    style={isExpress ? { pointerEvents: 'none', opacity: 0.6 } : undefined}
+                    style={isDisabled ? { pointerEvents: 'none', opacity: 0.6 } : undefined}
                   >
-                    {isExpress ? 'Thanks' : 'Open ↗'}
+                    {isVolunteer ? '(not currently available)' : isExpress ? 'Thanks' : 'Open ↗'}
                   </Anchor>
                 </Box>
               )}

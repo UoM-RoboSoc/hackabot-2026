@@ -13,6 +13,7 @@ const links = [
   { href: '#venue', label: 'Venue' },
   { href: '#team', label: 'Team' },
   { href: '#sponsors', label: 'Sponsors' },
+  { href: '#prizes', label: 'Prizes' },
   { href: '#merch', label: 'Merch' },
   { href: '#tickets', label: 'Tickets' },
   { href: '#faq', label: 'FAQ' },
