@@ -10,11 +10,5 @@
     "label": "Volunteer",
     "description": "Sign up to support the team during Hack-A-Bot 2026.",
     "url": "https://docs.google.com/forms/d/e/volunteer-placeholder/viewform"
-  },
-  {
-    "id": "sponsor",
-    "label": "Sponsor",
-    "description": "Share how your organisation can back the event.",
-    "url": "https://docs.google.com/forms/d/e/sponsor-placeholder/viewform"
   }
 ]

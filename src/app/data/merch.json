@@ -1,0 +1,55 @@
+{
+  "free": {
+    "title": "Free Merch",
+    "description": "Included for every participant at check-in.",
+    "image": "merch/free-mockup.png",
+    "alt": "Free merch lineup",
+    "imagePosition": "center",
+    "imageFit": "contain",
+    "imageAspectRatio": "3 / 2",
+    "notes": [
+      {
+        "label": "Included with entry",
+        "body": "Given to every participant when you arrive."
+      }
+    ],
+    "items": [
+      "Bottle",
+      "Mug",
+      "Notebook",
+      "Poster",
+      "Stickers",
+      "Tote Bag",
+      "Lanyard"
+    ]
+  },
+  "paid": {
+    "title": "Paid Merch",
+    "description": "We are also offering paid merch this year with all proceeds put towards funding the event.",
+    "image": "merch/paid-mockup.png",
+    "alt": "Paid merch lineup ideas",
+    "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeH77aZACIMFtcQZxl8r6_Jy-mUlrLETTCz7iDpBTL5IYxjwA/viewform?usp=dialog",
+    "notes": [
+      {
+        "label": "Feedback form",
+        "body": "Choose which of the lineup below you'd be most interested in buying by following the link below."
+      },
+      {
+        "label": "Release window",
+        "body": "The 3 most popular will be offered for sale sometime between 9th and 19th February (dates TBD).",
+        "tone": "accent"
+      }
+    ],
+    "items": [
+      "Beanies",
+      "Cap",
+      "Hoodies",
+      "Sweatshirt",
+      "Embroidered Fleece",
+      "Embroidered Jacket",
+      "Sunglasses",
+      "RoboSocks",
+      "T-Shirt"
+    ]
+  }
+}

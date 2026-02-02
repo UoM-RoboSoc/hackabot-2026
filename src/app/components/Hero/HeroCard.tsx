@@ -1,6 +1,8 @@
-import { Paper, Stack, Image, Text, Button, Group, Badge, rem } from '@mantine/core'
+import { Paper, Stack, Image, Text, Group, Badge, Anchor, rem } from '@mantine/core'
+import { IconCircleFilled } from '@tabler/icons-react'
 import event from '../../data/event.json'
 import { assetPath } from '../../lib/assets'
+import { smoothScrollTo } from '../../lib/anchors'
 
 type Props = {
   onPrimaryClick?: () => void
@@ -17,34 +19,63 @@ export function HeroCard({ onPrimaryClick }: Props){
   return (
     <Paper withBorder p="xl" radius="lg" style={{ background: 'var(--panel)' }}>
       <Stack gap={24}>
-        <Image src={assetPath('brand/Title_Date_Logo.png')} alt="Hack-A-Bot 2026" maw={rem(420)} mx="auto" />
-        <Stack gap={8} ta="center">
-          <Text fz={{ base: 'lg', md: 'xl' }} fw={500} c="var(--text)">{event.tagline}</Text>
+        <Group justify="center">
           <Badge
             size="lg"
             radius="xl"
-            variant="light"
-            styles={{ root: { alignSelf: 'center', fontSize: rem(18), paddingInline: rem(22), background: 'rgba(239,35,60,0.18)', color: '#ff8594', border: '1px solid rgba(239,35,60,0.4)', letterSpacing: '0.02em' } }}
+            styles={{
+              root: {
+                background: 'rgba(239,35,60,0.22)',
+                color: '#ff9aa8',
+                border: '1px solid rgba(239,35,60,0.55)',
+                paddingInline: rem(18),
+                paddingBlock: rem(8),
+                width: 'min(100%, 520px)',
+                justifyContent: 'center',
+              },
+              label: {
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: rem(8),
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+                fontWeight: 700,
+                fontSize: rem(22),
+              },
+            }}
           >
-            {formattedDate}
+            <IconCircleFilled size={10} style={{ color: '#ff4d63' }} />
+            TICKETS LIVE NOW
           </Badge>
+        </Group>
+        <Image src={assetPath('brand/Title_Date_Logo.png')} alt="Hack-A-Bot 2026" maw={rem(420)} mx="auto" />
+        <Stack gap={8} ta="center">
+          <Text fz={{ base: 'lg', md: 'xl' }} fw={500} c="var(--text)">{event.tagline}</Text>
+          <Group justify="center" gap="sm">
+            <Badge
+              size="lg"
+              radius="xl"
+              variant="light"
+              styles={{ root: { alignSelf: 'center', fontSize: rem(18), paddingInline: rem(22), background: 'rgba(239,35,60,0.18)', color: '#ff8594', border: '1px solid rgba(239,35,60,0.4)', letterSpacing: '0.02em' } }}
+            >
+              {formattedDate}
+            </Badge>
+          </Group>
           <Text fz={{ base: 'md', md: 'lg' }} fw={600} c="var(--text)" ta="center">
             {event.location}
           </Text>
         </Stack>
         <Group justify="center">
-          <Button
-            size="lg"
-            component="a"
-            href={event.registerUrl || '#contact'}
-            target={event.registerUrl ? '_blank' : undefined}
-            rel={event.registerUrl ? 'noopener noreferrer' : undefined}
-            color="crimson"
-            radius="xl"
-            onClick={onPrimaryClick}
+          <Anchor
+            href="#venue"
+            underline="never"
+            onClick={(e) => { e.preventDefault(); smoothScrollTo('venue') }}
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'var(--text-dim)' }}
           >
-            Express Interest
-          </Button>
+            <Text fz="sm" fw={600} c="var(--text-dim)">
+              Scroll down to find out more ↓
+            </Text>
+          </Anchor>
         </Group>
       </Stack>
     </Paper>

@@ -1,12 +1,18 @@
 {
-  "logos": [
-    { "name": "EEE Society", "src": "sponsors/previous/eeesoc.png", "url": "https://manchesterstudentsunion.com/activities/view/eeesoc" },
-    { "name": "Makerspace", "src": "sponsors/previous/makerspace.png", "url": "https://www.makerspacemanchester.org/" },
-    { "name": "Sony", "src": "sponsors/previous/sony.png", "url": "https://developer.sony.com/posts/hack-a-bot-2025-imx500-powers-24-hour-student-hackathon" },
-    { "name": "University of Manchester", "src": "sponsors/previous/manchester.png", "url": "https://www.manchester.ac.uk/" },
-    { "name": "Red Bull", "src": "sponsors/previous/redbull.png", "url": "https://www.redbull.com/gb-en" },
-    { "name": "Cradle Robotics", "src": "sponsors/previous/cradle.png", "url": "https://cradlerobotics.co.uk/" },
-    { "name": "Ice Nine Robotics", "src": "sponsors/previous/icenine.png", "url": "https://ice9robotics.co.uk/" },
-    { "name": "RoboSoc", "src": "sponsors/previous/robosoc.png", "url": "https://uom-robosoc.com/" }
+  "current": [
+    { "name": "RoboSoc", "src": "sponsors/current/robosoc.png", "url": "https://uom-robosoc.com/" },
+    { "name": "EEE Society", "src": "sponsors/current/eeesoc.png", "url": "https://manchesterstudentsunion.com/activities/view/eeesoc" },
+    { "name": "Makerspace", "src": "sponsors/current/makerspace.png", "url": "https://www.makerspacemanchester.org/" },
+    { "name": "University of Manchester", "src": "sponsors/current/manchester.png", "url": "https://www.manchester.ac.uk/" },
+    { "name": "ARM", "src": "sponsors/current/arm.png" },
+    { "name": "Quanser", "src": "sponsors/current/quanser.png" },
+    { "name": "Cradle Robotics", "src": "sponsors/current/cradle.png", "url": "https://cradlerobotics.co.uk/" },
+    { "name": "Amentum", "src": "sponsors/current/amentum.png" },
+    { "name": "Ice Nine Robotics", "src": "sponsors/current/icenine.png", "url": "https://ice9robotics.co.uk/" },
+    { "name": "GDG", "src": "sponsors/current/gdg.png" },
+    { "name": "UKRI", "src": "sponsors/current/UKRI.png" },
+    { "name": "IBM Z", "src": "sponsors/current/ibm-z.png" },
+    { "name": "Dominos", "src": "sponsors/current/dominos.png" },
+    { "name": "Red Bull", "src": "sponsors/current/redbull.png", "url": "https://www.redbull.com/gb-en" }
   ]
 }

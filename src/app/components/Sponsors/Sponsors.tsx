@@ -1,6 +1,5 @@
-import { SimpleGrid, Image, Paper, Stack, Title, Text, Anchor, Button } from '@mantine/core'
+import { SimpleGrid, Image, Paper, Stack, Title, Text, Anchor, Box } from '@mantine/core'
 import sponsors from '../../data/sponsors.json'
-import { smoothScrollTo } from '../../lib/anchors'
 import { assetPath } from '../../lib/assets'
 
 type Logo = { name: string; src: string; url?: string }
@@ -8,14 +7,14 @@ type Logo = { name: string; src: string; url?: string }
 const LOGO_BASE_SCALE = 1.5
 
 export function Sponsors(){
-  const data = sponsors as { logos: Logo[] }
-  const logos = data.logos || []
+  const data = sponsors as { current: Logo[] }
+  const logos = data.current || []
 
   return (
     <Stack gap={24}>
       <Stack gap={4}>
-        <Title order={3}>Previous Sponsors</Title>
-        <Text fz="sm" c="var(--text-dim)">Representative partners from past years, sponsorship lineup changes annually.</Text>
+        <Title order={3}>Current Sponsors</Title>
+        <Text fz="sm" c="var(--text-dim)">Thank you to our 2026 partners.</Text>
       </Stack>
       {logos.length ? (
         <SimpleGrid cols={{ base: 2, sm: 2, md: 4, lg: 4 }} spacing={{ base: 12, md: 16 }} style={{ justifyItems: 'center' }}>
@@ -35,43 +34,52 @@ export function Sponsors(){
                 overflow: 'hidden',
               }}
             >
-              <Anchor
-                href={logo.url || '#contact'}
-                target={logo.url ? '_blank' : undefined}
-                rel={logo.url ? 'noopener noreferrer' : undefined}
-                onClick={(e) => { if (!logo.url) { e.preventDefault(); smoothScrollTo('contact'); } }}
-                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%', cursor: 'pointer' }}
-              >
-                <Image
-                  src={assetPath(logo.src)}
-                  alt={logo.name}
-                  fit="contain"
-                  height="100%"
-                  width="100%"
-                  radius="md"
-                  loading="lazy"
-                  decoding="async"
-                  style={{ maxWidth: '100%', maxHeight: '100%', objectPosition: 'center', transition: 'transform 160ms ease', transformOrigin: 'center', transform: `scale(${LOGO_BASE_SCALE})` }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = `scale(${LOGO_BASE_SCALE * 1.06})` }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = `scale(${LOGO_BASE_SCALE})` }}
+              {logo.url ? (
+                <Anchor
+                  href={logo.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%', cursor: 'pointer' }}
+                >
+                  <Image
+                    src={assetPath(logo.src)}
+                    alt={logo.name}
+                    fit="contain"
+                    height="100%"
+                    width="100%"
+                    radius="md"
+                    loading="lazy"
+                    decoding="async"
+                    style={{ maxWidth: '100%', maxHeight: '100%', objectPosition: 'center', transition: 'transform 160ms ease', transformOrigin: 'center', transform: `scale(${LOGO_BASE_SCALE})` }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = `scale(${LOGO_BASE_SCALE * 1.06})` }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = `scale(${LOGO_BASE_SCALE})` }}
                   />
-              </Anchor>
+                </Anchor>
+              ) : (
+                <Box style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%' }}>
+                  <Image
+                    src={assetPath(logo.src)}
+                    alt={logo.name}
+                    fit="contain"
+                    height="100%"
+                    width="100%"
+                    radius="md"
+                    loading="lazy"
+                    decoding="async"
+                    style={{ maxWidth: '100%', maxHeight: '100%', objectPosition: 'center', transition: 'transform 160ms ease', transformOrigin: 'center', transform: `scale(${LOGO_BASE_SCALE})` }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = `scale(${LOGO_BASE_SCALE * 1.06})` }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = `scale(${LOGO_BASE_SCALE})` }}
+                  />
+                </Box>
+              )}
             </Paper>
           ))}
         </SimpleGrid>
       ) : (
         <Paper withBorder radius="lg" p="xl" style={{ background: 'var(--panel)' }}>
-          <Text c="var(--text-dim)" ta="center">Sponsor logos to be confirmed.</Text>
+          <Text c="var(--text-dim)" ta="center">Current sponsor logos to be confirmed.</Text>
         </Paper>
       )}
-      <Button
-        variant="subtle"
-        color="crimson"
-        onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-        style={{ alignSelf: 'flex-start' }}
-      >
-        Want to sponsor?
-      </Button>
     </Stack>
   )
 }

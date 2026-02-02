@@ -4,6 +4,9 @@ import Hero from './components/Hero/Hero'
 import VenueFocus from './components/Venue/VenueFocus'
 import Team from './components/Team/Team'
 import Sponsors from './components/Sponsors/Sponsors'
+import Prizes from './components/Prizes/Prizes'
+import Merch from './components/Merch/Merch'
+import Tickets from './components/Tickets/Tickets'
 import FAQ from './components/FAQ/FAQ'
 import FormsPanel from './components/Forms/FormsPanel'
 import Footer from './components/Footer/Footer'
@@ -42,6 +45,18 @@ export default function App(){
 
       <Section id="sponsors" title="Sponsors" subtitle="Thank you to our partners" padding="compact">
         <Sponsors />
+      </Section>
+
+      <Section id="prizes" title="Prizes" subtitle="Trophies, awards, and sponsor prizes" padding="compact">
+        <Prizes />
+      </Section>
+
+      <Section id="merch" title="Merch" subtitle="Free merch for every participant + paid lineup coming soon" padding="compact">
+        <Merch />
+      </Section>
+
+      <Section id="tickets" title="Tickets" subtitle="Follow the steps below to claim your free ticket" padding="compact">
+        <Tickets />
       </Section>
 
       <Section id="faq" title="FAQs, Forms & Contact" subtitle="Essential answers and next steps" padding="compact">
