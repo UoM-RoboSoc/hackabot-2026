@@ -111,6 +111,7 @@ export function Tickets(){
                 justifyContent: 'center',
                 borderRadius: 16,
                 overflow: 'hidden',
+                touchAction: 'none',
               }}
             >
               <model-viewer
@@ -126,7 +127,7 @@ export function Tickets(){
                 shadow-intensity="0.7"
                 shadow-softness="0.7"
                 exposure="1.15"
-                style={{ width: '100%', height: '100%', background: 'transparent' }}
+                style={{ width: '100%', height: '100%', background: 'transparent', touchAction: 'none' }}
               />
             </Box>
             <Stack gap={8} style={isDesktop ? { marginTop: 'auto' } : undefined}>
