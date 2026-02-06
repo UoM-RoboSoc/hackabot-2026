@@ -24,32 +24,23 @@
     ]
   },
   "paid": {
-    "title": "Paid Merch",
-    "description": "We are also offering paid merch this year with all proceeds put towards funding the event.",
-    "image": "merch/paid-mockup.png",
-    "alt": "Paid merch lineup ideas",
-    "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeH77aZACIMFtcQZxl8r6_Jy-mUlrLETTCz7iDpBTL5IYxjwA/viewform?usp=dialog",
+    "title": "Supporter Merch",
+    "description": "Supporter Merch uses premium, heavyweight blanks — softer, thicker, and better at holding its shape than typical society merch.",
+    "image": "merch/supporter-mockup.png",
+    "alt": "Supporter merch mockup",
+    "imageAspectRatio": "3 / 2",
+    "tone": "accent",
+    "formUrl": "https://tally.so/r/WOzLBR",
     "notes": [
       {
-        "label": "Feedback form",
-        "body": "Choose which of the lineup below you'd be most interested in buying by following the link below."
-      },
-      {
-        "label": "Release window",
-        "body": "The 3 most popular will be offered for sale sometime between 9th and 19th February (dates TBD).",
-        "tone": "accent"
+        "label": "Design vote",
+        "body": "Design vote closes 9 Feb — orders open 10 Feb (collect at Hack-A-Bot 21 March 2026)."
       }
     ],
     "items": [
-      "Beanies",
-      "Cap",
-      "Hoodies",
-      "Sweatshirt",
-      "Embroidered Fleece",
-      "Embroidered Jacket",
-      "Sunglasses",
-      "RoboSocks",
-      "T-Shirt"
+      "Hoodie",
+      "Crewneck",
+      "Tee"
     ]
   }
 }

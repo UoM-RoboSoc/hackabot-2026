@@ -21,6 +21,7 @@ type MerchBlock = {
   imagePosition?: string
   imageFit?: 'cover' | 'contain'
   imageAspectRatio?: string
+  tone?: 'accent' | 'neutral'
   formUrl?: string
   items?: string[]
   notes?: MerchNote[]
@@ -36,18 +37,25 @@ export function Merch(){
   const isDesktop = useMediaQuery('(min-width: 48em)')
 
   const renderBlock = (block: MerchBlock, extra?: ReactNode) => {
-    const isPaid = block.title.toLowerCase().includes('paid')
+    const isPaid = block.tone === 'accent' || block.title.toLowerCase().includes('paid')
     const chipStyle = {
       padding: '6px 10px',
       borderRadius: 10,
-      background: isPaid ? 'rgba(239,35,60,0.12)' : 'rgba(255,255,255,0.04)',
-      border: isPaid ? '1px solid rgba(239,35,60,0.28)' : '1px solid rgba(255,255,255,0.08)',
+      background: isPaid ? 'rgba(239,35,60,0.18)' : 'rgba(255,255,255,0.04)',
+      border: isPaid ? '1px solid rgba(239,35,60,0.35)' : '1px solid rgba(255,255,255,0.08)',
     } as const
 
     const noteStyle = (tone: MerchNote['tone']) => ({
-      background: tone === 'accent' ? 'rgba(239,35,60,0.2)' : 'rgba(255,255,255,0.04)',
-      borderColor: tone === 'accent' ? 'rgba(239,35,60,0.6)' : 'rgba(255,255,255,0.12)',
+      background: tone === 'accent' ? 'rgba(239,35,60,0.24)' : 'rgba(255,255,255,0.04)',
+      borderColor: tone === 'accent' ? 'rgba(239,35,60,0.7)' : 'rgba(255,255,255,0.12)',
     })
+
+    const paneStyle = isPaid
+      ? {
+          background: 'linear-gradient(140deg, rgba(239,35,60,0.16), rgba(22,24,35,0.94))',
+          borderColor: 'rgba(239,35,60,0.35)',
+        }
+      : { background: 'var(--panel)' }
 
     const lineup = block.items?.length ? (
       <Stack gap={8}>
@@ -70,7 +78,7 @@ export function Merch(){
     const remainingNotes = block.notes?.slice(1) ?? []
 
     return (
-      <Card withBorder radius="lg" p={{ base: 'md', md: 'lg' }} style={{ background: 'var(--panel)', height: '100%' }}>
+      <Card withBorder radius="lg" p={{ base: 'md', md: 'lg' }} style={{ height: '100%', ...paneStyle }}>
       <Stack gap={12} style={{ height: '100%' }}>
         <Stack gap={6}>
           <Title order={3}>{block.title}</Title>
