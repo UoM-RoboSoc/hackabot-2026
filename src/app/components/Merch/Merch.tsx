@@ -206,7 +206,7 @@ export function Merch(){
             fullWidth
             style={isDesktop ? { alignSelf: 'stretch' } : undefined}
           >
-            Fill in the merch feedback form
+            Vote for your design!
           </Button>
         )}
       </Grid.Col>
