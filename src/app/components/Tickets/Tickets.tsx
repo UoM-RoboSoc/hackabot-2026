@@ -50,25 +50,36 @@ export function Tickets(){
   return (
     <Grid gutter={{ base: 24, md: 32 }} align="stretch">
       <Grid.Col span={{ base: 12, md: 6 }}>
-        <Card withBorder radius="lg" p={{ base: 'md', md: 'lg' }} style={{ background: 'var(--panel)', height: '100%' }}>
+        <Card
+          withBorder
+          radius="lg"
+          p={{ base: 'md', md: 'lg' }}
+          style={{ background: 'var(--panel)', height: '100%' }}
+        >
           <Stack gap={12}>
-            <Title order={3}>How to buy tickets</Title>
-            <Box
-              component="ol"
-              style={{
-                margin: 0,
-                paddingLeft: 20,
-                display: 'grid',
-                gap: 10,
-                color: 'var(--text)'
-              }}
-            >
-              {data.steps.map((step, idx) => (
-                <Text component="li" key={idx} fz="sm" c="var(--text)">
-                  {renderStep(step)}
+            {data.steps.length ? (
+              <>
+                <Text fz={{ base: '1.6rem', md: '2.2rem' }} fw={700}>
+                  {data.steps[0]}
                 </Text>
-              ))}
-            </Box>
+                <Box
+                  component="ol"
+                  style={{
+                    margin: 0,
+                    paddingLeft: 20,
+                    display: 'grid',
+                    gap: 10,
+                    color: 'var(--text)'
+                  }}
+                >
+                  {data.steps.slice(1).map((step, idx) => (
+                    <Text component="li" key={idx} fz="sm" c="var(--text)">
+                      {renderStep(step)}
+                    </Text>
+                  ))}
+                </Box>
+              </>
+            ) : null}
             <Card
               withBorder
               radius="md"
@@ -132,12 +143,12 @@ export function Tickets(){
             </Box>
             <Stack gap={8} style={isDesktop ? { marginTop: 'auto' } : undefined}>
               <Stack gap={6}>
-                <Title order={3}>Get your ticket</Title>
-                <Text c="var(--text-dim)">Read the guide above before using the link below.</Text>
+                <Title order={3}>Join the waitlist</Title>
+                <Text c="var(--text-dim)">Tickets are sold out. Join the waitlist for a chance to attend if places open up.</Text>
               </Stack>
               <Button
                 component="a"
-                href={data.ctaUrl}
+                href="https://forms.gle/fpxyHErvXNcJJPzn6"
                 target="_blank"
                 rel="noopener noreferrer"
                 color="crimson"
@@ -145,20 +156,20 @@ export function Tickets(){
                 fullWidth
                 style={!isDesktop ? { whiteSpace: 'normal', height: 'auto', paddingBlock: 14, lineHeight: 1.2 } : undefined}
               >
-                {isDesktop ? data.ctaLabel : 'Buy tickets'}
+                {isDesktop ? 'Join the waitlist' : 'Join waitlist'}
               </Button>
               <Button
                 component="a"
-                href="https://forms.gle/fpxyHErvXNcJJPzn6"
+                href={data.ctaUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                variant="light"
+                variant="subtle"
                 color="gray"
                 radius="md"
                 fullWidth
                 style={!isDesktop ? { whiteSpace: 'normal', height: 'auto', paddingBlock: 12, lineHeight: 1.2 } : undefined}
               >
-                Join the waitlist (if tickets are sold out)
+                Check ticket availability
               </Button>
             </Stack>
           </Stack>

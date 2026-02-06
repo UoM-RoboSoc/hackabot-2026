@@ -41,7 +41,7 @@ export function HeroCard(){
             }}
           >
             <IconCircleFilled size={10} style={{ color: '#ff4d63' }} />
-            TICKETS LIVE NOW
+            JOIN THE WAITLIST
           </Badge>
         </Group>
         <Image src={assetPath('brand/Title_Date_Logo.png')} alt="Hack-A-Bot 2026" maw={rem(420)} mx="auto" />
