@@ -147,6 +147,19 @@ export function Tickets(){
               >
                 {isDesktop ? data.ctaLabel : 'Buy tickets'}
               </Button>
+              <Button
+                component="a"
+                href="https://forms.gle/fpxyHErvXNcJJPzn6"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="light"
+                color="gray"
+                radius="md"
+                fullWidth
+                style={!isDesktop ? { whiteSpace: 'normal', height: 'auto', paddingBlock: 12, lineHeight: 1.2 } : undefined}
+              >
+                Join the waitlist (if tickets are sold out)
+              </Button>
             </Stack>
           </Stack>
         </Card>
