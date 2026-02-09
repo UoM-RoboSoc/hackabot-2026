@@ -48,7 +48,7 @@ const merchProducts: MerchProductCard[] = [
   {
     id: 'crew',
     name: 'Crew',
-    image: 'merch/product-images/crew 2.png',
+    image: 'merch/product-images/crew 2.jpg',
     imageAlt: 'Merch crew product image',
     subtitle: 'Thinker (STSU269)',
     details: 'Unisex recycled cotton crewneck, medium fit, 350 GSM.',
