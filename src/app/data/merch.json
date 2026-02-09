@@ -24,17 +24,23 @@
     ]
   },
   "paid": {
-    "title": "Support the event",
-    "description": "Supporter Merch uses premium, heavyweight blanks — softer, thicker, and better at holding its shape than typical society merch.",
-    "image": "merch/supporter-mockup.png",
-    "alt": "Supporter merch mockup",
+    "title": "Support Hack-A-Bot 2026",
+    "description": "Premium heavyweight blanks chosen for better comfort and cleaner structure, built to keep shape wear after wear.",
+    "image": "merch/supporter-merch.png",
+    "alt": "Hack-A-Bot supporter merch lineup and order guide",
+    "imageFit": "contain",
     "imageAspectRatio": "3 / 2",
     "tone": "accent",
     "formUrl": "https://tally.so/r/WOzLBR",
     "notes": [
       {
-        "label": "Design vote",
-        "body": "Design vote closes 9 Feb — orders open 10 Feb (collect at Hack-A-Bot 21 March 2026)."
+        "label": "Deadline",
+        "body": "Orders close 20 February 2026. Collect at Hack-A-Bot on 21 March 2026.",
+        "tone": "accent"
+      },
+      {
+        "label": "Why it matters",
+        "body": "Every order directly improves Hack-A-Bot 2026 by funding hardware, prizes, and core event costs."
       }
     ],
     "items": [

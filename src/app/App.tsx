@@ -190,7 +190,7 @@ export default function App(){
   const showMainPage = merchRoute.kind === 'main'
 
   return (
-    <Page>
+    <Page showBackToTop={showMainPage}>
       {showMainPage ? (
         <>
           <Section id="hero" tone="canvas" padding="none" centered>
@@ -292,7 +292,13 @@ export default function App(){
           tone="canvas"
           padding="none"
         >
-          <Box py={{ base: 24, md: 32 }}>
+          <Box
+            py={{ base: 24, md: 32 }}
+            style={{
+              minHeight: 'calc(var(--app-vh, 100dvh) - var(--header-h, 72px))',
+              boxSizing: 'border-box',
+            }}
+          >
             <MerchFlow
               route={merchRoute as MerchRoute}
               onBack={goBackFromMerch}

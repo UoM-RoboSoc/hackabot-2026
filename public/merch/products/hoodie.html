@@ -197,6 +197,25 @@
         line-height: 1.08;
       }
 
+      .title-row {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 8px 0 6px;
+      }
+
+      .title-row h1 {
+        margin: 0;
+      }
+
+      .product-price {
+        color: var(--text-dim);
+        font-size: 0.95rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+
       .subtitle {
         margin: 0 0 16px;
         color: var(--text-dim);
@@ -285,6 +304,49 @@
       .order-btn:hover {
         filter: brightness(1.05);
         background: var(--accent-stronger);
+      }
+
+      .impact-banner {
+        margin-top: 14px;
+        border: 1px solid rgba(239, 35, 60, 0.28);
+        border-radius: 12px;
+        padding: 12px 14px;
+        background: linear-gradient(140deg, rgba(239, 35, 60, 0.12), rgba(22, 24, 35, 0.72));
+      }
+
+      .impact-heading {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 4px;
+      }
+
+      .impact-icon {
+        width: 16px;
+        height: 16px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(239, 35, 60, 0.45);
+        background: rgba(239, 35, 60, 0.18);
+        color: #ffacb7;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .impact-banner strong {
+        margin: 0;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .impact-banner p {
+        margin: 0;
+        color: #d9dde4;
+        line-height: 1.5;
       }
 
       .section {
@@ -546,7 +608,10 @@
 
         <article class="glass-panel details-panel">
           <p class="eyebrow">Unisex Merch</p>
-          <h1>Slammer 2.0</h1>
+          <div class="title-row">
+            <h1>Slammer 2.0</h1>
+            <span class="product-price">£42</span>
+          </div>
           <p class="subtitle">The unisex oversized hoodie with a clean, modern silhouette.</p>
 
           <ul class="quick-specs">
@@ -557,7 +622,7 @@
 
           <div class="single-color">
             <span class="swatch" aria-hidden="true"></span>
-            <span><strong>Color:</strong> Single SKU</span>
+            <span><strong>Color:</strong> Black</span>
           </div>
 
           <p class="label">Choose size</p>
@@ -571,6 +636,14 @@
 
           <button class="order-btn" id="order-btn" type="button">Order - Size M</button>
 
+          <div class="impact-banner" aria-label="Support impact information">
+            <div class="impact-heading">
+              <span class="impact-icon" aria-hidden="true">i</span>
+              <strong>Support impact</strong>
+            </div>
+            <p>We price these to cover production. The surplus goes straight into Hack-A-Bot 2026: challenge hardware, prizes and event costs.</p>
+          </div>
+
           <section class="section">
             <h2>Description</h2>
             <ul>
@@ -580,6 +653,7 @@
               <li>Herringbone back neck tape and self-fabric half-moon at back neck</li>
               <li>Set-in sleeves, kangaroo pocket, 2x1 rib cuffs and hem</li>
               <li>Twin-needle topstitching throughout</li>
+              <li>Front logo is embroidered and the back graphic is screen printed using single colour plastisol ink.</li>
             </ul>
           </section>
 
@@ -904,7 +978,7 @@
         });
 
         orderButton.addEventListener("click", function () {
-          console.log("Order clicked for size:", selectedSize);
+          orderButton.textContent = "Not currently on SU website";
         });
       })();
     </script>

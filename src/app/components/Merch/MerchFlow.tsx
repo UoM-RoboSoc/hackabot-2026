@@ -1,6 +1,7 @@
 import { Box, Button, Card, Group, Image, SimpleGrid, Stack, Text, Title } from '@mantine/core'
 import { IconArrowLeft } from '@tabler/icons-react'
 import { assetPath } from '../../lib/assets'
+import './MerchFlow.css'
 
 export type MerchProductId = 'tee' | 'hoodie' | 'crew'
 
@@ -28,28 +29,28 @@ const merchProducts: MerchProductCard[] = [
   {
     id: 'tee',
     name: 'Tee',
-    image: 'merch/slammer/Hoodie-2.png',
-    imageAlt: 'Merch tee placeholder',
-    subtitle: 'Lightweight cut',
-    details: 'Placeholder product page for now.',
+    image: 'merch/product-images/tee 2.png',
+    imageAlt: 'Merch tee product image',
+    subtitle: 'Creator 2.0 (STTU169)',
+    details: 'Unisex iconic t-shirt, medium fit, 180 GSM.',
     pageUrl: '/merch/products/tee.html',
   },
   {
     id: 'hoodie',
     name: 'Hoodie',
-    image: 'merch/slammer/Hoodie-1.png',
+    image: 'merch/product-images/hoodie 2.png',
     imageAlt: 'Merch hoodie front view',
-    subtitle: 'Heavyweight blank',
-    details: 'Slammer 2.0 product details and gallery.',
+    subtitle: 'Slammer 2.0 (STSU209)',
+    details: 'Unisex organic cotton hoodie, oversized fit, 350 GSM.',
     pageUrl: '/merch/products/hoodie.html',
   },
   {
     id: 'crew',
     name: 'Crew',
-    image: 'merch/slammer/Hoodie-3.png',
-    imageAlt: 'Merch crew placeholder',
-    subtitle: 'Classic crewneck',
-    details: 'Placeholder product page for now.',
+    image: 'merch/product-images/crew 2.png',
+    imageAlt: 'Merch crew product image',
+    subtitle: 'Thinker (STSU269)',
+    details: 'Unisex recycled cotton crewneck, medium fit, 350 GSM.',
     pageUrl: '/merch/products/crew.html',
   },
 ]
@@ -98,12 +99,8 @@ function MerchListView({ onBack, onOpenProduct }: Pick<MerchFlowProps, 'onBack' 
             withBorder
             radius="lg"
             p="md"
-            style={{
-              background: 'var(--panel)',
-              borderColor: 'var(--border)',
-              cursor: 'pointer',
-              height: '100%',
-            }}
+            className="merch-choice-card"
+            style={{ height: '100%' }}
             onClick={() => onOpenProduct(product.id)}
             role="button"
             tabIndex={0}
@@ -117,16 +114,14 @@ function MerchListView({ onBack, onOpenProduct }: Pick<MerchFlowProps, 'onBack' 
           >
             <Stack gap={12} h="100%">
               <Box
+                className="merch-choice-media"
                 style={{
                   width: '100%',
-                  aspectRatio: '2 / 3',
-                  borderRadius: 12,
-                  overflow: 'hidden',
-                  border: '1px solid var(--border)',
-                  background: 'rgba(255,255,255,0.02)',
+                  aspectRatio: '1 / 1',
                 }}
               >
                 <Image
+                  className="merch-choice-image"
                   src={assetPath(product.image)}
                   alt={product.imageAlt}
                   fit="cover"
@@ -138,11 +133,11 @@ function MerchListView({ onBack, onOpenProduct }: Pick<MerchFlowProps, 'onBack' 
               </Box>
 
               <Stack gap={4}>
-                <Title order={4}>{product.name}</Title>
-                <Text fz="sm" c="var(--text-dim)">
+                <Title order={4} className="merch-choice-title">{product.name}</Title>
+                <Text fz="sm" className="merch-choice-meta">
                   {product.subtitle}
                 </Text>
-                <Text fz="sm" c="var(--text-dim)">
+                <Text fz="sm" className="merch-choice-meta">
                   {product.details}
                 </Text>
               </Stack>

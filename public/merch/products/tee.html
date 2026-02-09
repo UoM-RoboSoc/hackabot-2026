@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slammer 2.0 | Product Page</title>
+    <title>Creator 2.0 | Product Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -197,6 +197,25 @@
         line-height: 1.08;
       }
 
+      .title-row {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 8px 0 6px;
+      }
+
+      .title-row h1 {
+        margin: 0;
+      }
+
+      .product-price {
+        color: var(--text-dim);
+        font-size: 0.95rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+
       .subtitle {
         margin: 0 0 16px;
         color: var(--text-dim);
@@ -285,6 +304,49 @@
       .order-btn:hover {
         filter: brightness(1.05);
         background: var(--accent-stronger);
+      }
+
+      .impact-banner {
+        margin-top: 14px;
+        border: 1px solid rgba(239, 35, 60, 0.28);
+        border-radius: 12px;
+        padding: 12px 14px;
+        background: linear-gradient(140deg, rgba(239, 35, 60, 0.12), rgba(22, 24, 35, 0.72));
+      }
+
+      .impact-heading {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 4px;
+      }
+
+      .impact-icon {
+        width: 16px;
+        height: 16px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(239, 35, 60, 0.45);
+        background: rgba(239, 35, 60, 0.18);
+        color: #ffacb7;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .impact-banner strong {
+        margin: 0;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .impact-banner p {
+        margin: 0;
+        color: #d9dde4;
+        line-height: 1.5;
       }
 
       .section {
@@ -502,28 +564,28 @@
           <div class="media-stage">
             <div class="media-track" id="media-track">
               <figure class="media-slide" tabindex="0" role="button" aria-label="Open image 1 in full screen" data-slide-index="0">
-                <img src="/merch/slammer/Hoodie-1.png" alt="Slammer 2.0 front view" />
+                <img src="/merch/creator/Tee-1.png" alt="Creator 2.0 t-shirt front view" />
               </figure>
               <figure class="media-slide" tabindex="0" role="button" aria-label="Open image 2 in full screen" data-slide-index="1">
-                <img src="/merch/slammer/Hoodie-2.png" alt="Slammer 2.0 alternate angle" />
+                <img src="/merch/creator/Tee-2.png" alt="Creator 2.0 t-shirt alternate angle" />
               </figure>
               <figure class="media-slide" tabindex="0" role="button" aria-label="Open image 3 in full screen" data-slide-index="2">
-                <img src="/merch/slammer/Hoodie-3.png" alt="Slammer 2.0 close detail" />
+                <img src="/merch/creator/Tee-3.png" alt="Creator 2.0 t-shirt detail image 3" />
               </figure>
               <figure class="media-slide" tabindex="0" role="button" aria-label="Open image 4 in full screen" data-slide-index="3">
-                <img src="/merch/slammer/Hoodie-4.png" alt="Slammer 2.0 image 4" />
+                <img src="/merch/creator/Tee-4.png" alt="Creator 2.0 t-shirt detail image 4" />
               </figure>
               <figure class="media-slide" tabindex="0" role="button" aria-label="Open image 5 in full screen" data-slide-index="4">
-                <img src="/merch/slammer/Hoodie-5.png" alt="Slammer 2.0 image 5" />
+                <img src="/merch/creator/Tee-5.png" alt="Creator 2.0 t-shirt detail image 5" />
               </figure>
               <figure class="media-slide" tabindex="0" role="button" aria-label="Open image 6 in full screen" data-slide-index="5">
-                <img src="/merch/slammer/Hoodie-6.png" alt="Slammer 2.0 image 6" />
+                <img src="/merch/creator/Tee-6.png" alt="Creator 2.0 t-shirt detail image 6" />
               </figure>
               <figure class="media-slide" tabindex="0" role="button" aria-label="Open image 7 in full screen" data-slide-index="6">
-                <img src="/merch/slammer/Hoodie-7.png" alt="Slammer 2.0 image 7" />
+                <img src="/merch/creator/Tee-7.png" alt="Creator 2.0 t-shirt detail image 7" />
               </figure>
               <figure class="media-slide" tabindex="0" role="button" aria-label="Open image 8 in full screen" data-slide-index="7">
-                <img src="/merch/slammer/Hoodie-8.png" alt="Slammer 2.0 image 8" />
+                <img src="/merch/creator/Tee-8.png" alt="Creator 2.0 t-shirt detail image 8" />
               </figure>
             </div>
 
@@ -546,18 +608,21 @@
 
         <article class="glass-panel details-panel">
           <p class="eyebrow">Unisex Merch</p>
-          <h1>Slammer 2.0</h1>
-          <p class="subtitle">The unisex oversized hoodie with a clean, modern silhouette.</p>
+          <div class="title-row">
+            <h1>Creator 2.0</h1>
+            <span class="product-price">£15</span>
+          </div>
+          <p class="subtitle">The unisex Iconic t-shirt.</p>
 
           <ul class="quick-specs">
-            <li><strong>Fit:</strong> Oversized</li>
+            <li><strong>Fit:</strong> Medium Fit</li>
             <li><strong>Size:</strong> XS - XL</li>
-            <li><strong>Weight:</strong> 350 GSM</li>
+            <li><strong>Weight:</strong> 180 GSM</li>
           </ul>
 
           <div class="single-color">
             <span class="swatch" aria-hidden="true"></span>
-            <span><strong>Color:</strong> Single SKU</span>
+            <span><strong>Color:</strong> Black</span>
           </div>
 
           <p class="label">Choose size</p>
@@ -571,21 +636,28 @@
 
           <button class="order-btn" id="order-btn" type="button">Order - Size M</button>
 
+          <div class="impact-banner" aria-label="Support impact information">
+            <div class="impact-heading">
+              <span class="impact-icon" aria-hidden="true">i</span>
+              <strong>Support impact</strong>
+            </div>
+            <p>We price these to cover production. The surplus goes straight into Hack-A-Bot 2026: challenge hardware, prizes and event costs.</p>
+          </div>
+
           <section class="section">
             <h2>Description</h2>
             <ul>
-              <li>Double-layered hood in self-fabric</li>
-              <li>Flat drawcord in matching color</li>
-              <li>Embroidered eyelets</li>
-              <li>Herringbone back neck tape and self-fabric half-moon at back neck</li>
-              <li>Set-in sleeves, kangaroo pocket, 2x1 rib cuffs and hem</li>
-              <li>Twin-needle topstitching throughout</li>
+              <li>1x1 rib at neckline</li>
+              <li>Self-fabric back neck tape</li>
+              <li>Set-in sleeves</li>
+              <li>Twin-needle topstitching at sleeve cuffs and hem</li>
+              <li>Front logo is embroidered and the back graphic is screen printed using single colour plastisol ink.</li>
             </ul>
           </section>
 
           <section class="section">
             <h2>Composition</h2>
-            <p>Shell: Brushed, 100% Organic Ring Spun Combed Cotton, fabric washed.</p>
+            <p>Shell: Single Jersey, 100% Cotton - Organic Combed Ring Spun, Fabric washed.</p>
           </section>
 
           <section class="section">
@@ -605,7 +677,7 @@
           <section class="section">
             <a
               class="product-sheet"
-              href="https://res.cloudinary.com/www-stanleystella-com/image/upload/v1633603833/Product%20Content/Product%20Sheets/en_GB/STSU209.pdf"
+              href="https://res.cloudinary.com/www-stanleystella-com/image/upload/v1633603833/Product%20Content/Product%20Sheets/en_GB/STTU169.pdf"
               target="_blank"
               rel="noopener noreferrer"
               >Product sheet</a
@@ -904,7 +976,7 @@
         });
 
         orderButton.addEventListener("click", function () {
-          console.log("Order clicked for size:", selectedSize);
+          orderButton.textContent = "Not currently on SU website";
         });
       })();
     </script>

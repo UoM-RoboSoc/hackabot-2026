@@ -142,9 +142,11 @@ export function Merch({ onOpenMerchShop }: MerchProps){
             />
           )}
         </Box>
-        <Text fz="xs" c="var(--text-dim)">
-          Concept design — subject to change.
-        </Text>
+        {!isPaid ? (
+          <Text fz="xs" c="var(--text-dim)">
+            Concept design — subject to change.
+          </Text>
+        ) : null}
         {firstNote ? (
           <Stack gap={8}>
             <Card
@@ -196,7 +198,7 @@ export function Merch({ onOpenMerchShop }: MerchProps){
       <Grid.Col span={{ base: 12, md: 6 }}>
         {renderBlock(data.free)}
       </Grid.Col>
-      <Grid.Col span={{ base: 12, md: 6 }}>
+      <Grid.Col id="support-merch" tabIndex={-1} span={{ base: 12, md: 6 }}>
         {renderBlock(
           data.paid,
           <Button

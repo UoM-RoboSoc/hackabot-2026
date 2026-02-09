@@ -1,0 +1,58 @@
+.merch-choice-card {
+  background: var(--panel);
+  border-color: var(--border);
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 220ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.merch-choice-media {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color 180ms ease;
+}
+
+.merch-choice-image .mantine-Image-image {
+  transition: transform 260ms ease;
+  transform-origin: center;
+}
+
+.merch-choice-title {
+  transition: color 180ms ease;
+}
+
+.merch-choice-meta {
+  color: var(--text-dim);
+  transition: color 180ms ease;
+}
+
+.merch-choice-card:focus-visible {
+  outline: 2px solid rgba(239, 35, 60, 0.9);
+  outline-offset: 2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .merch-choice-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(239, 35, 60, 0.5);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(239, 35, 60, 0.22) inset;
+  }
+
+  .merch-choice-card:hover .merch-choice-media {
+    border-color: rgba(239, 35, 60, 0.5);
+  }
+
+  .merch-choice-card:hover .merch-choice-image .mantine-Image-image {
+    transform: scale(1.045);
+  }
+
+  .merch-choice-card:hover .merch-choice-title {
+    color: #ffffff;
+  }
+
+  .merch-choice-card:hover .merch-choice-meta {
+    color: rgba(241, 243, 245, 0.92);
+  }
+}
