@@ -4,7 +4,12 @@ import { NavBar } from '../components/Nav/NavBar'
 import { BackToTop } from '../components/Nav/BackToTop'
 import { TopRightQRCode } from '../components/QR/TopRightQRCode'
 
-export function Page({ children }: PropsWithChildren) {
+type PageProps = PropsWithChildren<{
+  showBackToTop?: boolean
+  showTopRightQRCode?: boolean
+}>
+
+export function Page({ children, showBackToTop = true, showTopRightQRCode = true }: PageProps) {
   useEffect(() => {
     // Ensure hash navigation focuses target for a11y
     if (window.location.hash) {
@@ -55,9 +60,9 @@ export function Page({ children }: PropsWithChildren) {
         <NavBar />
       </AppShell.Header>
       <AppShell.Main id="app-main">
-        <TopRightQRCode />
+        {showTopRightQRCode ? <TopRightQRCode /> : null}
         {children}
-        <BackToTop />
+        {showBackToTop ? <BackToTop /> : null}
       </AppShell.Main>
     </AppShell>
   )
