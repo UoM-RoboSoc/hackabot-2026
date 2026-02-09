@@ -6,9 +6,10 @@ import { TopRightQRCode } from '../components/QR/TopRightQRCode'
 
 type PageProps = PropsWithChildren<{
   showBackToTop?: boolean
+  showTopRightQRCode?: boolean
 }>
 
-export function Page({ children, showBackToTop = true }: PageProps) {
+export function Page({ children, showBackToTop = true, showTopRightQRCode = true }: PageProps) {
   useEffect(() => {
     // Ensure hash navigation focuses target for a11y
     if (window.location.hash) {
@@ -59,7 +60,7 @@ export function Page({ children, showBackToTop = true }: PageProps) {
         <NavBar />
       </AppShell.Header>
       <AppShell.Main id="app-main">
-        <TopRightQRCode />
+        {showTopRightQRCode ? <TopRightQRCode /> : null}
         {children}
         {showBackToTop ? <BackToTop /> : null}
       </AppShell.Main>

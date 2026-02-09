@@ -190,7 +190,7 @@ export default function App(){
   const showMainPage = merchRoute.kind === 'main'
 
   return (
-    <Page showBackToTop={showMainPage}>
+    <Page showBackToTop={showMainPage} showTopRightQRCode={showMainPage}>
       {showMainPage ? (
         <>
           <Section id="hero" tone="canvas" padding="none" centered>
