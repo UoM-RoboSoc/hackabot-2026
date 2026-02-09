@@ -32,7 +32,11 @@ type MerchData = {
   paid: MerchBlock
 }
 
-export function Merch(){
+type MerchProps = {
+  onOpenMerchShop?: () => void
+}
+
+export function Merch({ onOpenMerchShop }: MerchProps){
   const data = merch as MerchData
   const isDesktop = useMediaQuery('(min-width: 48em)')
 
@@ -196,17 +200,14 @@ export function Merch(){
         {renderBlock(
           data.paid,
           <Button
-            component={data.paid.formUrl ? 'a' : 'button'}
-            href={data.paid.formUrl || undefined}
-            target={data.paid.formUrl ? '_blank' : undefined}
-            rel={data.paid.formUrl ? 'noopener noreferrer' : undefined}
+            component="button"
             color="crimson"
             radius="md"
-            disabled={!data.paid.formUrl}
             fullWidth
             style={isDesktop ? { alignSelf: 'stretch' } : undefined}
+            onClick={onOpenMerchShop}
           >
-            Vote for your design!
+            Buy the merch
           </Button>
         )}
       </Grid.Col>
