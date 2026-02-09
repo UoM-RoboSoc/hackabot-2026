@@ -32,6 +32,20 @@
   outline-offset: 2px;
 }
 
+.merch-flow-header {
+  min-height: 36px;
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  padding-block: 6px;
+  background: var(--bg-1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.merch-flow-back {
+  touch-action: manipulation;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .merch-choice-card:hover {
     transform: translateY(-4px);
@@ -54,5 +68,12 @@
 
   .merch-choice-card:hover .merch-choice-meta {
     color: rgba(241, 243, 245, 0.92);
+  }
+}
+
+@media (max-width: 48em) {
+  .merch-flow-header {
+    min-height: 28px;
+    padding-block: 4px;
   }
 }
