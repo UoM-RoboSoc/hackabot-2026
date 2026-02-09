@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hack-A-Bot Template Viewer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --text: rgba(250,250,252,0.95);
+      --muted: rgba(250,250,252,0.62);
+      --accent: #ff3a57;
+      --shell: rgba(16, 18, 24, 0.84);
+      --stroke: rgba(255, 80, 110, 0.24);
+      --btn-bg: rgba(19, 21, 28, 0.92);
+      --btn-stroke: rgba(255, 100, 130, 0.36);
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding: 20px;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 900px at 15% 10%, rgba(255,58,87,0.10), transparent 60%),
+        radial-gradient(1200px 900px at 85% 90%, rgba(255,58,87,0.08), transparent 60%),
+        linear-gradient(180deg, #05060a 0%, #080911 100%);
+    }
+
+    .viewer{
+      width: min(1200px, 96vw);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap: 14px;
+    }
+
+    .meta{
+      width: min(740px, 92vw, calc(92vh * 4 / 5));
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      padding: 8px 2px;
+    }
+
+    .metaTitle{
+      min-width: 0;
+      font-size: clamp(14px, 1.8vw, 18px);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .metaCount{
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .toolbar{
+      width: min(740px, 92vw, calc(92vh * 4 / 5));
+      display:flex;
+      justify-content:flex-end;
+    }
+
+    .exportControls{
+      display:flex;
+      align-items:center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .controlLabel{
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .qualitySelect,
+    .toolBtn{
+      height: 36px;
+      border-radius: 10px;
+      border: 1px solid var(--btn-stroke);
+      background: var(--btn-bg);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .qualitySelect{
+      padding: 0 10px;
+      min-width: 122px;
+    }
+
+    .toolBtn{
+      padding: 0 14px;
+      cursor: pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      white-space: nowrap;
+    }
+
+    .toolBtn:hover{ border-color: rgba(255, 115, 145, 0.58); }
+    .toolBtn:disabled{
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .frameWrap{
+      width: min(740px, 92vw, calc(92vh * 4 / 5));
+      aspect-ratio: 4 / 5;
+      max-height: 92vh;
+      position: relative;
+      overflow: visible;
+    }
+
+    .frameMask{
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      background: var(--shell);
+      border: 1px solid var(--stroke);
+      box-shadow: 0 24px 80px rgba(0,0,0,0.55);
+      overflow: hidden;
+    }
+
+    iframe{
+      width:100%;
+      height:100%;
+      border:0;
+      display:block;
+      background:#0b0c10;
+    }
+
+    .arrow{
+      position:absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 52px;
+      height: 52px;
+      border-radius: 999px;
+      border: 1px solid var(--btn-stroke);
+      background: var(--btn-bg);
+      color: var(--text);
+      display:grid;
+      place-items:center;
+      font-size: 26px;
+      cursor:pointer;
+      user-select:none;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+    }
+
+    .arrow:hover{ border-color: rgba(255, 115, 145, 0.58); }
+    .arrow:active{ transform: translateY(-50%) scale(0.98); }
+
+    .arrow.prev{ left: -76px; }
+    .arrow.next{ right: -76px; }
+
+    .status{
+      min-height: 20px;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+      text-align:center;
+    }
+
+    @media (max-width: 980px){
+      .arrow.prev{ left: 8px; }
+      .arrow.next{ right: 8px; }
+      .arrow{
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+        background: rgba(9, 11, 16, 0.82);
+      }
+      .toolbar{ justify-content:center; }
+      .exportControls{ justify-content:center; }
+    }
+  </style>
+</head>
+<body>
+  <main class="viewer">
+    <div class="meta">
+      <div class="metaTitle" id="metaTitle">Loading templates...</div>
+      <div class="metaCount" id="metaCount">0 / 0</div>
+    </div>
+
+    <div class="toolbar">
+      <div class="exportControls">
+        <label class="controlLabel" for="qualitySelect">Export</label>
+        <select id="qualitySelect" class="qualitySelect">
+          <option value="1080x1350">1080 x 1350</option>
+          <option value="2160x2700" selected>2160 x 2700</option>
+          <option value="3240x4050">3240 x 4050</option>
+        </select>
+        <button class="toolBtn" id="downloadBtn" type="button">Download PNG</button>
+        <button class="toolBtn" id="downloadAllBtn" type="button">Download All</button>
+      </div>
+    </div>
+
+    <section class="frameWrap" aria-live="polite">
+      <button class="arrow prev" id="prevBtn" aria-label="Previous template">&#x2039;</button>
+      <div class="frameMask">
+        <iframe id="templateFrame" title="Instagram template preview" loading="eager"></iframe>
+      </div>
+      <button class="arrow next" id="nextBtn" aria-label="Next template">&#x203A;</button>
+    </section>
+
+    <div class="status" id="statusText"></div>
+  </main>
+
+  <script>
+    const FALLBACK_TEMPLATES = [
+      { title: "Supporter Drop", src: "./templates/supporter-drop/index.html" },
+      { title: "Product Image", src: "./templates/product-image/index.html" }
+    ];
+
+    const frame = document.getElementById("templateFrame");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const metaTitle = document.getElementById("metaTitle");
+    const metaCount = document.getElementById("metaCount");
+    const statusText = document.getElementById("statusText");
+    const qualitySelect = document.getElementById("qualitySelect");
+    const downloadBtn = document.getElementById("downloadBtn");
+    const downloadAllBtn = document.getElementById("downloadAllBtn");
+
+    let templates = [];
+    let currentIndex = 0;
+    let isExporting = false;
+    const inlinedImageCache = new Map();
+
+    const templatesRoot = new URL("./templates/", window.location.href);
+    const html2canvasCdn = "https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js";
+
+    function titleFromPath(pathname) {
+      const clean = pathname.replace(/\/+$/, "");
+      const chunk = clean.split("/").filter(Boolean).slice(-2, -1)[0] || "Template";
+      return chunk
+        .replace(/[-_]+/g, " ")
+        .replace(/\b\w/g, (m) => m.toUpperCase());
+    }
+
+    function uniqueBySrc(items) {
+      const seen = new Set();
+      return items.filter((item) => {
+        const key = item.src;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+    }
+
+    async function urlExists(url) {
+      try {
+        const head = await fetch(url, { method: "HEAD", cache: "no-store" });
+        if (head.ok) return true;
+        if (head.status !== 405) return false;
+      } catch (error) {
+        return false;
+      }
+
+      try {
+        const get = await fetch(url, { method: "GET", cache: "no-store" });
+        return get.ok;
+      } catch (error) {
+        return false;
+      }
+    }
+
+    async function discoverFromDirectoryListing() {
+      try {
+        const listing = await fetch(templatesRoot.href, { cache: "no-store" });
+        if (!listing.ok) return [];
+
+        const html = await listing.text();
+        const doc = new DOMParser().parseFromString(html, "text/html");
+        const links = Array.from(doc.querySelectorAll("a[href]"))
+          .map((a) => a.getAttribute("href") || "")
+          .map((href) => href.trim())
+          .filter(Boolean);
+
+        const candidates = [];
+
+        for (const href of links) {
+          if (href.startsWith("#") || href.startsWith("?") || href.startsWith("../")) continue;
+
+          if (href.endsWith("/")) {
+            candidates.push(new URL(`${href}index.html`, templatesRoot).href);
+            continue;
+          }
+
+          if (href.endsWith(".html")) {
+            candidates.push(new URL(href, templatesRoot).href);
+          }
+        }
+
+        const inTemplates = uniqueBySrc(candidates.map((src) => ({ src }))).filter((item) =>
+          item.src.startsWith(templatesRoot.href)
+        );
+
+        const checks = await Promise.all(
+          inTemplates.map(async (item) => {
+            const ok = await urlExists(item.src);
+            if (!ok) return null;
+            const title = titleFromPath(new URL(item.src).pathname);
+            return { title, src: item.src };
+          })
+        );
+
+        return checks.filter(Boolean);
+      } catch (error) {
+        return [];
+      }
+    }
+
+    function fallbackTemplates() {
+      return FALLBACK_TEMPLATES.map((item) => ({
+        title: item.title,
+        src: new URL(item.src, window.location.href).href
+      }));
+    }
+
+    function setControlsDisabled(disabled) {
+      prevBtn.disabled = disabled || templates.length <= 1;
+      nextBtn.disabled = disabled || templates.length <= 1;
+      qualitySelect.disabled = disabled;
+      downloadBtn.disabled = disabled || templates.length === 0;
+      downloadAllBtn.disabled = disabled || templates.length === 0;
+    }
+
+    function parseExportSize() {
+      const [width, height] = (qualitySelect.value || "2160x2700")
+        .split("x")
+        .map((n) => Number(n));
+      return {
+        width: Number.isFinite(width) ? width : 2160,
+        height: Number.isFinite(height) ? height : 2700
+      };
+    }
+
+    function slugify(text) {
+      return String(text)
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "")
+        .slice(0, 80) || "template";
+    }
+
+    function blobToDataUrl(blob) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result || "");
+        reader.onerror = () => reject(new Error("Failed to convert blob to data URL."));
+        reader.readAsDataURL(blob);
+      });
+    }
+
+    async function toInlineDataUrl(url) {
+      const cached = inlinedImageCache.get(url);
+      if (cached) return cached;
+
+      const response = await fetch(url, { cache: "force-cache" });
+      if (!response.ok) {
+        throw new Error(`Failed to fetch image: ${url}`);
+      }
+
+      const blob = await response.blob();
+      const dataUrl = await blobToDataUrl(blob);
+      inlinedImageCache.set(url, dataUrl);
+      return dataUrl;
+    }
+
+    async function buildInlineImageMap(doc) {
+      const map = new Map();
+      const images = Array.from(doc.images || []);
+
+      await Promise.all(
+        images.map(async (img) => {
+          const absoluteSrc = img.currentSrc || img.src;
+          if (!absoluteSrc) return;
+          if (absoluteSrc.startsWith("data:")) {
+            map.set(absoluteSrc, absoluteSrc);
+            return;
+          }
+
+          try {
+            const dataUrl = await toInlineDataUrl(absoluteSrc);
+            map.set(absoluteSrc, dataUrl);
+          } catch (error) {
+            map.set(absoluteSrc, absoluteSrc);
+          }
+        })
+      );
+
+      return map;
+    }
+
+    function waitForFrameLoad(timeoutMs) {
+      return new Promise((resolve, reject) => {
+        const timeout = window.setTimeout(() => {
+          frame.removeEventListener("load", onLoad);
+          reject(new Error("Template load timed out."));
+        }, timeoutMs || 12000);
+
+        function onLoad() {
+          window.clearTimeout(timeout);
+          resolve();
+        }
+
+        frame.addEventListener("load", onLoad, { once: true });
+      });
+    }
+
+    async function ensureFrameReady() {
+      const doc = frame.contentDocument;
+      const win = frame.contentWindow;
+
+      if (!doc || !win) {
+        throw new Error("Template frame is not available.");
+      }
+
+      if (doc.readyState !== "complete") {
+        await waitForFrameLoad();
+      }
+
+      const images = Array.from(doc.images || []);
+      await Promise.all(
+        images.map((img) => {
+          if (img.complete) return Promise.resolve();
+          return new Promise((resolve) => {
+            img.addEventListener("load", resolve, { once: true });
+            img.addEventListener("error", resolve, { once: true });
+          });
+        })
+      );
+
+      // Normalize image URLs to absolute paths so cloned export documents keep valid asset URLs.
+      images.forEach((img) => {
+        const absoluteSrc = img.currentSrc || img.src;
+        if (!absoluteSrc) return;
+        img.setAttribute("src", absoluteSrc);
+        if (img.hasAttribute("srcset")) {
+          img.removeAttribute("srcset");
+        }
+      });
+
+      if (doc.fonts && doc.fonts.ready) {
+        try {
+          await doc.fonts.ready;
+        } catch (error) {
+          // Font readiness failure should not block export.
+        }
+      }
+
+      return { doc, win };
+    }
+
+    async function ensureHtml2Canvas(win, doc) {
+      if (typeof win.html2canvas === "function") return;
+
+      await new Promise((resolve, reject) => {
+        const existing = doc.querySelector('script[data-exporter="html2canvas"]');
+        if (existing) {
+          existing.addEventListener("load", resolve, { once: true });
+          existing.addEventListener("error", () => reject(new Error("Failed to load html2canvas.")), { once: true });
+          return;
+        }
+
+        const script = doc.createElement("script");
+        script.src = html2canvasCdn;
+        script.async = true;
+        script.dataset.exporter = "html2canvas";
+        script.onload = resolve;
+        script.onerror = () => reject(new Error("Failed to load html2canvas."));
+        doc.head.appendChild(script);
+      });
+
+      if (typeof win.html2canvas !== "function") {
+        throw new Error("html2canvas did not initialize.");
+      }
+    }
+
+    async function exportCurrentTemplateBlob() {
+      const current = templates[currentIndex];
+      if (!current) {
+        throw new Error("No template selected.");
+      }
+
+      const { width, height } = parseExportSize();
+      const { doc, win } = await ensureFrameReady();
+      await ensureHtml2Canvas(win, doc);
+      const inlineImageMap = await buildInlineImageMap(doc);
+
+      const target = doc.querySelector(".ig-wrap") || doc.body;
+      if (!target) {
+        throw new Error("Could not find export target in template.");
+      }
+
+      const rect = target.getBoundingClientRect();
+      const safeWidth = Math.max(1, rect.width);
+      const scale = Math.max(2, width / safeWidth);
+      const renderWidth = Math.max(1, Math.ceil(rect.width));
+      const renderHeight = Math.max(1, Math.ceil(rect.height));
+
+      const sourceCanvas = await win.html2canvas(target, {
+        backgroundColor: null,
+        useCORS: true,
+        allowTaint: true,
+        foreignObjectRendering: true,
+        imageTimeout: 0,
+        logging: false,
+        scale,
+        width: renderWidth,
+        height: renderHeight,
+        windowWidth: renderWidth,
+        windowHeight: renderHeight,
+        scrollX: 0,
+        scrollY: 0,
+        onclone: (clonedDoc) => {
+          const base = clonedDoc.createElement("base");
+          base.href = doc.baseURI;
+          clonedDoc.head.prepend(base);
+
+          const clonedHtml = clonedDoc.documentElement;
+          const clonedBody = clonedDoc.body;
+          const clonedTarget = clonedDoc.querySelector(".ig-wrap") || clonedBody;
+
+          clonedHtml.style.width = `${renderWidth}px`;
+          clonedHtml.style.height = `${renderHeight}px`;
+          clonedHtml.style.margin = "0";
+          clonedHtml.style.padding = "0";
+          clonedHtml.style.overflow = "hidden";
+
+          if (clonedBody) {
+            clonedBody.style.width = `${renderWidth}px`;
+            clonedBody.style.height = `${renderHeight}px`;
+            clonedBody.style.margin = "0";
+            clonedBody.style.padding = "0";
+            clonedBody.style.display = "block";
+            clonedBody.style.minHeight = "0";
+            clonedBody.style.overflow = "hidden";
+          }
+
+          if (clonedTarget) {
+            clonedTarget.style.width = `${renderWidth}px`;
+            clonedTarget.style.height = `${renderHeight}px`;
+            clonedTarget.style.maxWidth = "none";
+            clonedTarget.style.maxHeight = "none";
+            clonedTarget.style.margin = "0";
+            clonedTarget.style.left = "0";
+            clonedTarget.style.top = "0";
+          }
+
+          Array.from(clonedDoc.images || []).forEach((img) => {
+            const raw = img.getAttribute("src");
+            if (!raw) return;
+            try {
+              const absolute = new URL(raw, doc.baseURI).href;
+              img.setAttribute("src", inlineImageMap.get(absolute) || absolute);
+              if (img.hasAttribute("srcset")) {
+                img.removeAttribute("srcset");
+              }
+            } catch (error) {
+              // Keep existing src if URL normalization fails.
+            }
+          });
+        }
+      });
+
+      const outputCanvas = document.createElement("canvas");
+      outputCanvas.width = width;
+      outputCanvas.height = height;
+
+      const ctx = outputCanvas.getContext("2d");
+      if (!ctx) {
+        throw new Error("Could not create canvas context.");
+      }
+
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = "high";
+      ctx.drawImage(sourceCanvas, 0, 0, width, height);
+
+      const blob = await new Promise((resolve, reject) => {
+        outputCanvas.toBlob(
+          (fileBlob) => (fileBlob ? resolve(fileBlob) : reject(new Error("Failed to create PNG blob."))),
+          "image/png"
+        );
+      });
+
+      return { blob, width, height, title: current.title };
+    }
+
+    function downloadBlob(blob, filename) {
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.setTimeout(() => URL.revokeObjectURL(url), 1500);
+    }
+
+    async function runExport(task) {
+      if (isExporting) return;
+      isExporting = true;
+      setControlsDisabled(true);
+      try {
+        await task();
+      } catch (error) {
+        statusText.textContent = `Export failed: ${error.message || "Unknown error"}`;
+      } finally {
+        isExporting = false;
+        setControlsDisabled(false);
+      }
+    }
+
+    function render() {
+      if (!templates.length) {
+        metaTitle.textContent = "No templates found";
+        metaCount.textContent = "0 / 0";
+        frame.removeAttribute("src");
+        return;
+      }
+
+      const current = templates[currentIndex];
+      metaTitle.textContent = current.title;
+      metaCount.textContent = `${currentIndex + 1} / ${templates.length}`;
+      frame.src = current.src;
+    }
+
+    function move(step) {
+      if (!templates.length) return;
+      currentIndex = (currentIndex + step + templates.length) % templates.length;
+      render();
+    }
+
+    prevBtn.addEventListener("click", () => move(-1));
+    nextBtn.addEventListener("click", () => move(1));
+
+    downloadBtn.addEventListener("click", () => {
+      runExport(async () => {
+        statusText.textContent = "Rendering PNG...";
+        const result = await exportCurrentTemplateBlob();
+        const filename = `${slugify(result.title)}-${result.width}x${result.height}.png`;
+        downloadBlob(result.blob, filename);
+        statusText.textContent = `Downloaded ${filename}`;
+      });
+    });
+
+    downloadAllBtn.addEventListener("click", () => {
+      runExport(async () => {
+        if (!templates.length) return;
+
+        const originalIndex = currentIndex;
+        const total = templates.length;
+
+        for (let i = 0; i < total; i += 1) {
+          currentIndex = i;
+          render();
+          statusText.textContent = `Rendering ${i + 1}/${total}...`;
+          await waitForFrameLoad();
+
+          const result = await exportCurrentTemplateBlob();
+          const filename = `${String(i + 1).padStart(2, "0")}-${slugify(result.title)}-${result.width}x${result.height}.png`;
+          downloadBlob(result.blob, filename);
+        }
+
+        currentIndex = originalIndex;
+        render();
+        statusText.textContent = `Downloaded ${total} PNG files.`;
+      });
+    });
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") move(-1);
+      if (event.key === "ArrowRight") move(1);
+    });
+
+    (async function init() {
+      const discovered = await discoverFromDirectoryListing();
+
+      if (discovered.length) {
+        templates = discovered;
+        statusText.textContent = "Auto-loaded templates from ./templates/";
+      } else {
+        templates = fallbackTemplates();
+        statusText.textContent = "Directory auto-scan unavailable here. Showing known templates.";
+      }
+
+      render();
+      setControlsDisabled(false);
+    })();
+  </script>
+</body>
+</html>

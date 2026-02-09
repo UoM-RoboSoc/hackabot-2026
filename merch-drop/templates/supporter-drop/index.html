@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hack-A-Bot 2026 — Supporter Merch Drop (IG 4:5)</title>
+
+  <!-- Font (close enough to your site vibe) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg0: #0b0c10;
+      --bg1: #0f1118;
+      --panel: rgba(28, 30, 36, 0.72);
+      --panel2: rgba(18, 20, 26, 0.72);
+      --stroke: rgba(255, 70, 90, 0.28);
+      --stroke-strong: rgba(255, 70, 90, 0.52);
+      --glow: rgba(255, 55, 85, 0.36);
+      --glow2: rgba(255, 55, 85, 0.18);
+      --text: rgba(250,250,252,0.96);
+      --muted: rgba(250,250,252,0.66);
+      --muted2: rgba(250,250,252,0.42);
+      --accent: #ff3a57;
+      --accent2: #d62744;
+      --shadow: 0 18px 70px rgba(0,0,0,0.55);
+      --radius-xl: 44px;
+      --radius-lg: 28px;
+      --radius-md: 18px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      background:
+        radial-gradient(1200px 900px at 50% 20%, rgba(255,55,85,0.10), transparent 55%),
+        radial-gradient(900px 900px at 12% 90%, rgba(255,55,85,0.06), transparent 60%),
+        radial-gradient(1100px 1000px at 85% 85%, rgba(255,55,85,0.05), transparent 65%),
+        linear-gradient(180deg, #05060a 0%, #070812 30%, #05060a 100%);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      padding: 18px;
+    }
+
+    /* Responsive IG portrait canvas: 4:5, constrained by both viewport width and height */
+    .ig-wrap{
+      width: min(740px, 92vw, calc(92vh * 4 / 5));
+      max-height: 92vh;
+      aspect-ratio: 4 / 5;
+      position: relative;
+      border-radius: 0;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background:
+        radial-gradient(900px 900px at 50% 40%, rgba(255,55,85,0.10), transparent 60%),
+        radial-gradient(900px 900px at 50% 105%, rgba(0,0,0,0.65), transparent 70%),
+        linear-gradient(180deg, #0b0c10 0%, #0a0b10 100%);
+    }
+
+    /* subtle star/noise specks */
+    .ig-wrap::before{
+      content:"";
+      position:absolute; inset:0;
+      background-image:
+        radial-gradient(rgba(255,255,255,0.10) 1px, transparent 1px),
+        radial-gradient(rgba(255,55,85,0.14) 1px, transparent 1px);
+      background-size: 70px 70px, 110px 110px;
+      background-position: 0 0, 20px 40px;
+      opacity: 0.12;
+      pointer-events:none;
+      mix-blend-mode: screen;
+    }
+
+    .content{
+      position:absolute; inset:0;
+      padding: clamp(20px, 3.2vw, 34px);
+      display:flex;
+      flex-direction:column;
+      gap: clamp(14px, 2.1vw, 22px);
+    }
+
+    /* Top bar */
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 16px;
+      padding: 6px 4px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      min-width: 0;
+    }
+
+    .headerLogo{
+      width: auto;
+      height: clamp(40px, 5vw, 54px);
+      max-width: min(48vw, 320px);
+      flex: 0 0 auto;
+      display: block;
+      object-fit: contain;
+      object-position: center;
+      filter: drop-shadow(0 10px 18px rgba(255,55,85,0.16));
+    }
+
+    .toplabel{
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255, 85, 110, 0.85);
+      text-align:right;
+      white-space: nowrap;
+    }
+
+    /* Primary panel */
+    .heroPanel{
+      position: relative;
+      flex: 1 1 auto;
+      border-radius: var(--radius-xl);
+      padding: clamp(18px, 2.6vw, 26px);
+      background:
+        radial-gradient(900px 500px at 50% 0%, rgba(255,55,85,0.14), transparent 65%),
+        linear-gradient(180deg, rgba(28, 30, 36, 0.76), rgba(16, 18, 24, 0.76));
+      border: 1px solid rgba(255,55,85,0.20);
+      box-shadow:
+        0 30px 90px rgba(0,0,0,0.52),
+        0 0 0 1px rgba(255,55,85,0.08) inset;
+      overflow:hidden;
+    }
+
+    /* outer red glow rim like your UI */
+    .heroPanel::before{
+      content:"";
+      position:absolute;
+      inset:-18px;
+      border-radius: calc(var(--radius-xl) + 18px);
+      background: radial-gradient(closest-side at 50% 10%, rgba(255,55,85,0.30), transparent 55%);
+      filter: blur(18px);
+      opacity: 0.55;
+      pointer-events:none;
+    }
+
+    /* inner highlight line across top (thin red) */
+    .heroPanel::after{
+      content:"";
+      position:absolute;
+      left: 22px;
+      right: 22px;
+      top: 16px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, transparent, rgba(255,55,85,0.65), transparent);
+      opacity: 0.65;
+      pointer-events:none;
+    }
+
+    .heroGrid{
+      height: 100%;
+      display:flex;
+      flex-direction:column;
+      gap: clamp(14px, 2.1vw, 20px);
+      justify-content:flex-start;
+    }
+
+    /* 7:6 image slot */
+    .mockSlot{
+      width: 100%;
+      aspect-ratio: 7 / 6;
+      border-radius: 34px;
+      background:
+        radial-gradient(800px 500px at 50% 20%, rgba(255,55,85,0.10), transparent 65%),
+        linear-gradient(180deg, rgba(70, 74, 86, 0.30), rgba(20, 22, 28, 0.58));
+      border: 1px solid rgba(255, 85, 110, 0.22);
+      box-shadow:
+        0 20px 70px rgba(0,0,0,0.45),
+        0 0 0 1px rgba(255,55,85,0.08) inset;
+      display:grid;
+      place-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .mockImage{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* placeholder text */
+    .mockSlot .ph{
+      text-align:center;
+      color: rgba(250,250,252,0.28);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: clamp(18px, 2.0vw, 26px);
+      line-height: 1.25;
+      text-shadow: 0 8px 24px rgba(0,0,0,0.40);
+      padding: 0 18px;
+      user-select:none;
+    }
+    .mockSlot .ph span{
+      display:block;
+      font-size: 0.84em;
+      opacity: 0.85;
+      margin-top: 10px;
+      letter-spacing: 0.10em;
+    }
+
+    /* Headline + subline */
+    .headline{
+      margin-top: 2px;
+      text-align:center;
+      font-weight: 900;
+      font-size: clamp(20px, 2.6vw, 34px);
+      letter-spacing: 0.045em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .subline{
+      text-align:center;
+      margin-top: -4px;
+      color: rgba(250,250,252,0.56);
+      font-size: clamp(16px, 1.8vw, 22px);
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+    }
+
+    /* Bottom CTA panel */
+    .ctaPanel{
+      flex: 0 0 auto;
+      border-radius: 26px;
+      padding: clamp(16px, 2.2vw, 22px);
+      background:
+        radial-gradient(700px 300px at 80% 50%, rgba(255,55,85,0.18), transparent 65%),
+        linear-gradient(180deg, rgba(20, 22, 28, 0.70), rgba(12, 13, 18, 0.74));
+      border: 1px solid rgba(255,55,85,0.18);
+      box-shadow:
+        0 16px 55px rgba(0,0,0,0.45),
+        0 0 0 1px rgba(255,55,85,0.06) inset;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 18px;
+    }
+
+    .ctaLeft{
+      min-width: 0;
+    }
+
+    .ctaRight{
+      flex: 0 0 auto;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap: 8px;
+    }
+
+    .kicker{
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: rgba(250,250,252,0.38);
+      margin-bottom: 8px;
+    }
+
+    .deadline{
+      font-weight: 900;
+      font-size: clamp(18px, 2.3vw, 26px);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .ctaBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 16px 26px;
+      min-width: clamp(170px, 24vw, 240px);
+      border-radius: 16px;
+      background: linear-gradient(180deg, #ff4a63, #d92844);
+      border: 1px solid rgba(255, 120, 140, 0.25);
+      box-shadow:
+        0 16px 40px rgba(255,55,85,0.16),
+        0 10px 26px rgba(0,0,0,0.35);
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      font-size: clamp(16px, 2.0vw, 22px);
+      color: rgba(255,255,255,0.96);
+      user-select:none;
+    }
+
+    .footer{
+      text-align:center;
+      margin-top: 0;
+      color: rgba(250,250,252,0.30);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      font-size: 15px;
+    }
+
+    /* Optional: show guides for export / safe areas (toggle by adding class 'guides' on ig-wrap) */
+    .guides .safe{
+      position:absolute;
+      inset: 52px;
+      border-radius: 18px;
+      border: 1px dashed rgba(255,255,255,0.16);
+      pointer-events:none;
+    }
+
+    /* Make it look crisp on any screen size */
+    @media (max-width: 440px){
+      .headerLogo{ height: 36px; max-width: 56vw; }
+      .toplabel{ font-size: 12px; letter-spacing: 0.18em; }
+      .ctaBtn{ padding: 14px 18px; border-radius: 14px; }
+      .headline{ font-size: 18px; letter-spacing: 0.03em; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ig-wrap" role="img" aria-label="Instagram portrait post template: Hack-A-Bot 2026 supporter merch drop">
+    <!-- <div class="safe"></div>  Uncomment for guides: add class 'guides' to ig-wrap and keep this div -->
+    <div class="content">
+      <!-- Top bar -->
+      <div class="topbar">
+        <div class="brand">
+          <img
+            class="headerLogo"
+            src="../../header_logo.png"
+            alt="Hack-A-Bot 2026"
+          />
+        </div>
+
+        <div class="toplabel">SUPPORTER MERCH DROP</div>
+      </div>
+
+      <!-- Main panel -->
+          <div class="heroPanel">
+        <div class="heroGrid">
+          <div class="mockSlot">
+            <img class="mockImage" src="../../concept.png" alt="Hack-A-Bot merch concept" />
+          </div>
+
+          <div class="headline">SUPPORT HACK-A-BOT 2026</div>
+          <div class="subline">
+            Premium heavyweight blanks.<br/>
+            Softer feel. Better structure.
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div>
+        <div class="ctaPanel">
+          <div class="ctaLeft">
+            <div class="kicker">LIMITED EDITION</div>
+            <div class="deadline">ORDERS CLOSE<br/>20 FEBRUARY</div>
+          </div>
+          <div class="ctaRight">
+            <div class="ctaBtn">ORDER NOW</div>
+            <div class="footer">Link in bio</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notes:
+    - Replace logo src with your real logo image path/URL (PNG/SVG/WebP/etc.).
+    - Drop your merch mockup into the .mockSlot by setting a background-image on it,
+      or placing an <img> inside and hiding the placeholder text.
+  -->
+</body>
+</html>
