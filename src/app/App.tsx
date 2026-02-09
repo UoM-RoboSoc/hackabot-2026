@@ -202,16 +202,26 @@ export default function App(){
           <Footer />
         </>
       ) : (
-        <Section
+        <Box
           id="merch"
-          tone="canvas"
-          padding="none"
+          style={{
+            width: '100%',
+            minHeight: 'calc(var(--app-vh, 100dvh) - var(--header-h, 72px))',
+            background: 'var(--bg-1)',
+            boxSizing: 'border-box',
+            display: 'flex',
+          }}
         >
           <Box
-            py={{ base: 24, md: 32 }}
+            px={{ base: 12, md: 24 }}
+            py={{ base: 8, md: 20 }}
             style={{
-              minHeight: 'calc(var(--app-vh, 100dvh) - var(--header-h, 72px))',
+              width: '100%',
+              minHeight: '100%',
               boxSizing: 'border-box',
+              display: 'flex',
+              maxWidth: '1280px',
+              margin: '0 auto',
             }}
           >
             <MerchFlow
@@ -220,7 +230,7 @@ export default function App(){
               onOpenProduct={openMerchProduct}
             />
           </Box>
-        </Section>
+        </Box>
       )}
     </Page>
   )

@@ -1,4 +1,5 @@
 import { Box, Button, Card, Group, Image, SimpleGrid, Stack, Text, Title } from '@mantine/core'
+import { useMediaQuery } from '@mantine/hooks'
 import { IconArrowLeft } from '@tabler/icons-react'
 import { assetPath } from '../../lib/assets'
 import './MerchFlow.css'
@@ -59,16 +60,20 @@ function getProductById(productId: MerchProductId) {
   return merchProducts.find((product) => product.id === productId) ?? merchProducts[1]
 }
 
-function MerchBackButton({ onBack }: { onBack: () => void }) {
+function MerchBackButton({ onBack, compact = false }: { onBack: () => void; compact?: boolean }) {
   return (
     <Button
+      className="merch-flow-back"
       variant="subtle"
-      leftSection={<IconArrowLeft size={16} />}
+      leftSection={<IconArrowLeft size={compact ? 14 : 16} />}
       onClick={onBack}
       color="gray"
+      size={compact ? 'xs' : 'sm'}
       styles={{
         root: {
-          paddingInline: 10,
+          paddingInline: compact ? 8 : 10,
+          minHeight: compact ? 30 : 36,
+          height: compact ? 30 : 36,
         },
       }}
     >
@@ -78,10 +83,12 @@ function MerchBackButton({ onBack }: { onBack: () => void }) {
 }
 
 function MerchListView({ onBack, onOpenProduct }: Pick<MerchFlowProps, 'onBack' | 'onOpenProduct'>) {
+  const isMobile = useMediaQuery('(max-width: 48em)')
+
   return (
-    <Stack gap={20}>
-      <Group justify="space-between" align="center">
-        <MerchBackButton onBack={onBack} />
+    <Stack gap={isMobile ? 12 : 20} style={{ width: '100%' }}>
+      <Group justify="space-between" align="center" className="merch-flow-header">
+        <MerchBackButton onBack={onBack} compact={isMobile} />
         <Text c="var(--text-dim)" fw={700} tt="uppercase" style={{ letterSpacing: '0.08em' }}>
           Merch
         </Text>
@@ -153,12 +160,13 @@ function MerchProductView({
   route,
   onBack,
 }: Pick<MerchFlowProps, 'route' | 'onBack'>) {
+  const isMobile = useMediaQuery('(max-width: 48em)')
   const product = route.kind === 'product' ? getProductById(route.productId) : merchProducts[1]
 
   return (
-    <Stack gap={16}>
-      <Group justify="space-between" align="center">
-        <MerchBackButton onBack={onBack} />
+    <Stack gap={isMobile ? 8 : 16} style={{ width: '100%', minHeight: 0, height: '100%', flex: 1 }}>
+      <Group justify="space-between" align="center" className="merch-flow-header">
+        <MerchBackButton onBack={onBack} compact={isMobile} />
         <Text c="var(--text-dim)" fw={700} tt="uppercase" style={{ letterSpacing: '0.08em' }}>
           Merch
         </Text>
@@ -169,7 +177,9 @@ function MerchProductView({
         title={`${product.name} product page`}
         style={{
           width: '100%',
-          height: 'calc(var(--app-vh, 100dvh) - 210px)',
+          minHeight: 0,
+          height: '100%',
+          flex: 1,
           border: 0,
           display: 'block',
           background: 'transparent',
