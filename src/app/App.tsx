@@ -35,7 +35,7 @@ function parseMerchRouteFromUrl(): AppRoute {
     return { kind: 'list' }
   }
 
-  if (merchQuery === 'tee' || merchQuery === 'hoodie' || merchQuery === 'crew') {
+  if (merchQuery === 'tee' || merchQuery === 'hoodie' || merchQuery === 'crew' || merchQuery === 'robo-hoodie') {
     return { kind: 'product', productId: merchQuery }
   }
 

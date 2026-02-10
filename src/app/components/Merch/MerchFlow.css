@@ -22,6 +22,11 @@
   transition: color 180ms ease;
 }
 
+.merch-choice-price {
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
 .merch-choice-meta {
   color: var(--text-dim);
   transition: color 180ms ease;
@@ -64,6 +69,10 @@
 
   .merch-choice-card:hover .merch-choice-title {
     color: #ffffff;
+  }
+
+  .merch-choice-card:hover .merch-choice-price {
+    color: rgba(241, 243, 245, 0.92);
   }
 
   .merch-choice-card:hover .merch-choice-meta {

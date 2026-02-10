@@ -4,7 +4,7 @@ import { IconArrowLeft } from '@tabler/icons-react'
 import { assetPath } from '../../lib/assets'
 import './MerchFlow.css'
 
-export type MerchProductId = 'tee' | 'hoodie' | 'crew'
+export type MerchProductId = 'tee' | 'hoodie' | 'crew' | 'robo-hoodie'
 
 export type MerchRoute =
   | { kind: 'list' }
@@ -19,6 +19,7 @@ type MerchFlowProps = {
 type MerchProductCard = {
   id: MerchProductId
   name: string
+  price: string
   image: string
   imageAlt: string
   subtitle: string
@@ -29,7 +30,8 @@ type MerchProductCard = {
 const merchProducts: MerchProductCard[] = [
   {
     id: 'tee',
-    name: 'Tee',
+    name: 'Hack-A-Bot Tee',
+    price: '£18',
     image: 'merch/product-images/tee 2.png',
     imageAlt: 'Merch tee product image',
     subtitle: 'Creator 2.0 (STTU169)',
@@ -37,22 +39,34 @@ const merchProducts: MerchProductCard[] = [
     pageUrl: '/merch/products/tee.html',
   },
   {
-    id: 'hoodie',
-    name: 'Hoodie',
-    image: 'merch/product-images/hoodie 2.png',
-    imageAlt: 'Merch hoodie front view',
-    subtitle: 'Slammer 2.0 (STSU209)',
-    details: 'Unisex organic cotton hoodie, oversized fit, 350 GSM.',
-    pageUrl: '/merch/products/hoodie.html',
+    id: 'robo-hoodie',
+    name: 'RoboSoc Hoodie',
+    price: '£30',
+    image: 'merch/product-images/robo 2.png',
+    imageAlt: 'RoboSoc hoodie product image',
+    subtitle: 'Drummer 2.0 (STSU168)',
+    details: 'Unisex hoodie, medium fit, 280 GSM.',
+    pageUrl: '/merch/products/robo-hoodie.html',
   },
   {
     id: 'crew',
-    name: 'Crew',
+    name: 'Hack-A-Bot Crew',
+    price: '£32',
     image: 'merch/product-images/crew 2.jpg',
     imageAlt: 'Merch crew product image',
     subtitle: 'Thinker (STSU269)',
     details: 'Unisex recycled cotton crewneck, medium fit, 350 GSM.',
     pageUrl: '/merch/products/crew.html',
+  },
+  {
+    id: 'hoodie',
+    name: 'Hack-A-Bot Hoodie',
+    price: '£40',
+    image: 'merch/product-images/hoodie 2.png',
+    imageAlt: 'Merch hoodie front view',
+    subtitle: 'Slammer 2.0 (STSU209)',
+    details: 'Unisex organic cotton hoodie, oversized fit, 350 GSM.',
+    pageUrl: '/merch/products/hoodie.html',
   },
 ]
 
@@ -95,11 +109,11 @@ function MerchListView({ onBack, onOpenProduct }: Pick<MerchFlowProps, 'onBack' 
       </Group>
 
       <Stack gap={6}>
-        <Title order={2}>Buy the merch</Title>
-        <Text c="var(--text-dim)">Choose a product to open its dedicated product page.</Text>
+        <Title order={2}>Choose your Hack-A-Bot merch</Title>
+        <Text c="var(--text-dim)">Ready for collection at Hack-A-Bot 2026</Text>
       </Stack>
 
-      <SimpleGrid cols={{ base: 1, sm: 1, md: 3 }} spacing={{ base: 16, md: 20 }}>
+      <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing={{ base: 16, md: 20 }}>
         {merchProducts.map((product) => (
           <Card
             key={product.id}
@@ -140,7 +154,12 @@ function MerchListView({ onBack, onOpenProduct }: Pick<MerchFlowProps, 'onBack' 
               </Box>
 
               <Stack gap={4}>
-                <Title order={4} className="merch-choice-title">{product.name}</Title>
+                <Group justify="space-between" align="center" gap={8}>
+                  <Title order={4} className="merch-choice-title">{product.name}</Title>
+                  <Text fz="sm" className="merch-choice-price">
+                    {product.price}
+                  </Text>
+                </Group>
                 <Text fz="sm" className="merch-choice-meta">
                   {product.subtitle}
                 </Text>
