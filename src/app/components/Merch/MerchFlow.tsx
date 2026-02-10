@@ -35,7 +35,7 @@ const merchProducts: MerchProductCard[] = [
     image: 'merch/product-images/tee 2.png',
     imageAlt: 'Merch tee product image',
     subtitle: 'Creator 2.0 (STTU169)',
-    details: 'Unisex iconic t-shirt, medium fit, 180 GSM.',
+    details: 'Support Hack-A-Bot 2026 and get a nice memento to remember it by.',
     pageUrl: '/merch/products/tee.html',
   },
   {
@@ -45,7 +45,7 @@ const merchProducts: MerchProductCard[] = [
     image: 'merch/product-images/robo 2.png',
     imageAlt: 'RoboSoc hoodie product image',
     subtitle: 'Drummer 2.0 (STSU168)',
-    details: 'Unisex hoodie, medium fit, 280 GSM.',
+    details: 'A good-quality, lightweight hoodie with a RoboSoc-themed design.',
     pageUrl: '/merch/products/robo-hoodie.html',
   },
   {
@@ -55,7 +55,7 @@ const merchProducts: MerchProductCard[] = [
     image: 'merch/product-images/crew 2.jpg',
     imageAlt: 'Merch crew product image',
     subtitle: 'Thinker (STSU269)',
-    details: 'Unisex recycled cotton crewneck, medium fit, 350 GSM.',
+    details: 'A thick, warm, and soft crewneck with a form-fitting cut.',
     pageUrl: '/merch/products/crew.html',
   },
   {
@@ -65,7 +65,7 @@ const merchProducts: MerchProductCard[] = [
     image: 'merch/product-images/hoodie 2.png',
     imageAlt: 'Merch hoodie front view',
     subtitle: 'Slammer 2.0 (STSU209)',
-    details: 'Unisex organic cotton hoodie, oversized fit, 350 GSM.',
+    details: 'Thick, warm, soft, and comfortable. Our most premium material and design, built to last for years.',
     pageUrl: '/merch/products/hoodie.html',
   },
 ]
