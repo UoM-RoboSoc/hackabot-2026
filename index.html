@@ -26,6 +26,42 @@
     <meta name="twitter:description" content="Tickets live now. Manchester’s Premier Student Hackathon. Join us 21-22 March 2026 in Manchester." />
     <meta name="twitter:image" content="/brand/Title_Date_Logo_BG.png" />
     <meta name="twitter:image:alt" content="Hack‑A‑Bot 2026 logo with event date" />
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var merchRoute = params.get('merch');
+
+        if (!merchRoute) {
+          return;
+        }
+
+        var merchTitle = 'Hack‑A‑Bot 2026 Merch';
+        var merchDescription = 'Choose your Hack‑A‑Bot merch. Tees, crewnecks, hoodies, and RoboSoc hoodie, ready for collection at Hack‑A‑Bot 2026.';
+        var merchImage = '/brand/merch.png';
+        var merchImageAlt = 'Hack‑A‑Bot 2026 merch lineup';
+        var merchUrl = window.location.origin + '/?merch=' + encodeURIComponent(merchRoute);
+
+        document.title = merchTitle;
+
+        function setMeta(selector, content) {
+          var el = document.querySelector(selector);
+          if (el) {
+            el.setAttribute('content', content);
+          }
+        }
+
+        setMeta('meta[name="description"]', merchDescription);
+        setMeta('meta[property="og:title"]', merchTitle);
+        setMeta('meta[property="og:description"]', merchDescription);
+        setMeta('meta[property="og:image"]', merchImage);
+        setMeta('meta[property="og:image:alt"]', merchImageAlt);
+        setMeta('meta[property="og:url"]', merchUrl);
+        setMeta('meta[name="twitter:title"]', merchTitle);
+        setMeta('meta[name="twitter:description"]', merchDescription);
+        setMeta('meta[name="twitter:image"]', merchImage);
+        setMeta('meta[name="twitter:image:alt"]', merchImageAlt);
+      })();
+    </script>
   </head>
   <body>
     <a href="#hero" class="skip-link">Skip to content</a>
