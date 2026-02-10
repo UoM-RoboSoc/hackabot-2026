@@ -1096,8 +1096,24 @@
           });
         }
 
+        const orderLinksBySize = {
+          XS: "https://manchesterstudentsunion.com/shop/product/27326-",
+          S: "https://manchesterstudentsunion.com/shop/product/27325-",
+          M: "https://manchesterstudentsunion.com/shop/product/27324-",
+          L: "https://manchesterstudentsunion.com/shop/product/27323-",
+          XL: "https://manchesterstudentsunion.com/shop/product/27322-",
+        };
+
         orderButton.addEventListener("click", function () {
-          orderButton.textContent = "Not currently on SU website";
+          const orderUrl = orderLinksBySize[selectedSize] || orderLinksBySize.M;
+          try {
+            if (window.top && window.top !== window) {
+              window.top.location.href = orderUrl;
+              return;
+            }
+          } catch (error) {}
+
+          window.location.href = orderUrl;
         });
       })();
     </script>
