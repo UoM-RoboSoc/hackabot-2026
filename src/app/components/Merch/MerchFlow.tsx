@@ -1,6 +1,7 @@
 import { Box, Button, Card, Group, Image, SimpleGrid, Stack, Text, Title } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { IconArrowLeft } from '@tabler/icons-react'
+import { useEffect, useState } from 'react'
 import { assetPath } from '../../lib/assets'
 import './MerchFlow.css'
 
@@ -181,6 +182,22 @@ function MerchProductView({
 }: Pick<MerchFlowProps, 'route' | 'onBack'>) {
   const isMobile = useMediaQuery('(max-width: 48em)')
   const product = route.kind === 'product' ? getProductById(route.productId) : merchProducts[1]
+  const [frameInstance, setFrameInstance] = useState(0)
+
+  useEffect(() => {
+    const handlePageShow = (event: PageTransitionEvent) => {
+      if (!event.persisted) {
+        return
+      }
+
+      setFrameInstance((value) => value + 1)
+    }
+
+    window.addEventListener('pageshow', handlePageShow)
+    return () => {
+      window.removeEventListener('pageshow', handlePageShow)
+    }
+  }, [])
 
   return (
     <Stack gap={isMobile ? 8 : 16} style={{ width: '100%', minHeight: 0, height: '100%', flex: 1 }}>
@@ -192,6 +209,7 @@ function MerchProductView({
       </Group>
 
       <iframe
+        key={`${product.id}-${frameInstance}`}
         src={product.pageUrl}
         title={`${product.name} product page`}
         style={{
