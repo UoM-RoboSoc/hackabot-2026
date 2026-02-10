@@ -1,7 +1,6 @@
 import { useEffect, useState, lazy, Suspense } from 'react'
 import { Group, Container, Anchor, Button, Burger, Stack, ScrollArea, Collapse, Modal, Text, Paper } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
-import { smoothScrollTo } from '../../lib/anchors'
 import { assetPath } from '../../lib/assets'
 import event from '../../data/event.json'
 const QRCode = lazy(() => import('react-qr-code'))
@@ -18,6 +17,10 @@ const links = [
   { href: '#tickets', label: 'Tickets' },
   { href: '#faq', label: 'FAQ' },
 ]
+
+function requestSectionNavigation(sectionId: string) {
+  window.dispatchEvent(new CustomEvent('hackabot:navigate-section', { detail: { sectionId } }))
+}
 
 export function NavBar() {
   const [active, setActive] = useState('#hero')
@@ -50,6 +53,21 @@ export function NavBar() {
       observers.push(io)
     })
     return () => observers.forEach((o) => o.disconnect())
+  }, [])
+
+  useEffect(() => {
+    const handleSetActive = (event: Event) => {
+      const href = (event as CustomEvent<{ href?: string }>).detail?.href
+      if (href) {
+        setActive(href)
+      }
+    }
+
+    window.addEventListener('hackabot:set-active-nav', handleSetActive as EventListener)
+
+    return () => {
+      window.removeEventListener('hackabot:set-active-nav', handleSetActive as EventListener)
+    }
   }, [])
 
   return (
@@ -117,7 +135,11 @@ export function NavBar() {
             <Anchor
               href="#hero"
               underline="never"
-              onClick={(e) => { e.preventDefault(); smoothScrollTo('hero') }}
+              onClick={(e) => {
+                e.preventDefault()
+                setActive('#hero')
+                requestSectionNavigation('hero')
+              }}
               style={{ display: 'flex', alignItems: 'center' }}
             >
               <img src={assetPath('brand/Header_Logo.png')} alt="Hack-A-Bot" height={44} decoding="async" style={{ display: 'block', height: '44px', width: 'auto' }} />
@@ -131,7 +153,11 @@ export function NavBar() {
                 underline="never"
                 className={`nav-link${active === l.href ? ' active' : ''}`}
                 aria-current={active === l.href ? 'page' : undefined}
-                onClick={(e) => { e.preventDefault(); smoothScrollTo(l.href.slice(1)) }}
+                onClick={(e) => {
+                  e.preventDefault()
+                  setActive(l.href)
+                  requestSectionNavigation(l.href.slice(1))
+                }}
               >
                 {l.label}
               </Anchor>
@@ -156,7 +182,14 @@ export function NavBar() {
                     fullWidth
                     aria-current={active === l.href ? 'page' : undefined}
                     styles={{ root: { justifyContent: 'flex-start' } }}
-                    onClick={(e) => { e.preventDefault(); close(); requestAnimationFrame(() => smoothScrollTo(l.href.slice(1))) }}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      close()
+                      requestAnimationFrame(() => {
+                        setActive(l.href)
+                        requestSectionNavigation(l.href.slice(1))
+                      })
+                    }}
                   >
                     {l.label}
                   </Button>

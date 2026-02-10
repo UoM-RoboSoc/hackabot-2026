@@ -32,7 +32,11 @@ type MerchData = {
   paid: MerchBlock
 }
 
-export function Merch(){
+type MerchProps = {
+  onOpenMerchShop?: () => void
+}
+
+export function Merch({ onOpenMerchShop }: MerchProps){
   const data = merch as MerchData
   const isDesktop = useMediaQuery('(min-width: 48em)')
 
@@ -138,9 +142,11 @@ export function Merch(){
             />
           )}
         </Box>
-        <Text fz="xs" c="var(--text-dim)">
-          Concept design — subject to change.
-        </Text>
+        {!isPaid ? (
+          <Text fz="xs" c="var(--text-dim)">
+            Concept design — subject to change.
+          </Text>
+        ) : null}
         {firstNote ? (
           <Stack gap={8}>
             <Card
@@ -192,21 +198,18 @@ export function Merch(){
       <Grid.Col span={{ base: 12, md: 6 }}>
         {renderBlock(data.free)}
       </Grid.Col>
-      <Grid.Col span={{ base: 12, md: 6 }}>
+      <Grid.Col id="support-merch" tabIndex={-1} span={{ base: 12, md: 6 }}>
         {renderBlock(
           data.paid,
           <Button
-            component={data.paid.formUrl ? 'a' : 'button'}
-            href={data.paid.formUrl || undefined}
-            target={data.paid.formUrl ? '_blank' : undefined}
-            rel={data.paid.formUrl ? 'noopener noreferrer' : undefined}
+            component="button"
             color="crimson"
             radius="md"
-            disabled={!data.paid.formUrl}
             fullWidth
             style={isDesktop ? { alignSelf: 'stretch' } : undefined}
+            onClick={onOpenMerchShop}
           >
-            Vote for your design!
+            Buy the merch
           </Button>
         )}
       </Grid.Col>
