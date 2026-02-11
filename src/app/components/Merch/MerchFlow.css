@@ -32,6 +32,14 @@
   transition: color 180ms ease;
 }
 
+.merch-choice-cta {
+  margin-top: auto;
+  color: rgba(241, 243, 245, 0.88);
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
 .merch-choice-card:focus-visible {
   outline: 2px solid rgba(239, 35, 60, 0.9);
   outline-offset: 2px;
@@ -77,6 +85,11 @@
 
   .merch-choice-card:hover .merch-choice-meta {
     color: rgba(241, 243, 245, 0.92);
+  }
+
+  .merch-choice-card:hover .merch-choice-cta {
+    color: #ffffff;
+    border-color: rgba(239, 35, 60, 0.45);
   }
 }
 

@@ -1,6 +1,6 @@
 import { Box, Button, Card, Group, Image, SimpleGrid, Stack, Text, Title } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
-import { IconArrowLeft } from '@tabler/icons-react'
+import { IconArrowLeft, IconChevronRight } from '@tabler/icons-react'
 import { useEffect, useState } from 'react'
 import { assetPath } from '../../lib/assets'
 import './MerchFlow.css'
@@ -112,6 +112,9 @@ function MerchListView({ onBack, onOpenProduct }: Pick<MerchFlowProps, 'onBack' 
       <Stack gap={6}>
         <Title order={2}>Choose your Hack-A-Bot merch</Title>
         <Text c="var(--text-dim)">Ready for collection at Hack-A-Bot 2026</Text>
+        <Text fz="sm" fw={600} c="var(--text)">
+          Tap any product card to view full details.
+        </Text>
       </Stack>
 
       <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing={{ base: 16, md: 20 }}>
@@ -154,7 +157,7 @@ function MerchListView({ onBack, onOpenProduct }: Pick<MerchFlowProps, 'onBack' 
                 />
               </Box>
 
-              <Stack gap={4}>
+              <Stack gap={6} style={{ flex: 1 }}>
                 <Group justify="space-between" align="center" gap={8}>
                   <Title order={4} className="merch-choice-title">{product.name}</Title>
                   <Text fz="sm" className="merch-choice-price">
@@ -167,6 +170,12 @@ function MerchListView({ onBack, onOpenProduct }: Pick<MerchFlowProps, 'onBack' 
                 <Text fz="sm" className="merch-choice-meta">
                   {product.details}
                 </Text>
+                <Group justify="space-between" align="center" className="merch-choice-cta" mt="auto">
+                  <Text fz="sm" fw={700}>
+                    {isMobile ? 'Tap for details' : 'View details'}
+                  </Text>
+                  <IconChevronRight size={16} stroke={2.25} aria-hidden="true" />
+                </Group>
               </Stack>
             </Stack>
           </Card>
