@@ -51,18 +51,54 @@
         var pathname = rawPath === '' ? '/' : rawPath;
         var parts = pathname.split('/').filter(Boolean);
         var isMerchPath = parts[0] === 'merch';
+        var merchSubroute = parts[1] || 'list';
 
         if (!isMerchPath) {
           return;
         }
 
-        var merchTitle = 'Hack‑A‑Bot 2026 Merch';
-        var merchDescription = 'Choose your Hack‑A‑Bot merch. Tees, crewnecks, hoodies, and RoboSoc hoodie, ready for collection at Hack‑A‑Bot 2026.';
-        var merchImage = '/brand/merch.png';
-        var merchImageAlt = 'Hack‑A‑Bot 2026 merch lineup';
-        var merchUrl = window.location.origin + pathname;
+        var merchMeta = {
+          list: {
+            title: 'Hack‑A‑Bot 2026 Merch',
+            description: 'Choose your Hack‑A‑Bot merch. Tees, crewnecks, hoodies, and RoboSoc hoodie, ready for collection at Hack‑A‑Bot 2026.',
+            image: '/brand/merch.png',
+            imageAlt: 'Hack‑A‑Bot 2026 merch lineup',
+            urlPath: '/merch/list'
+          },
+          tee: {
+            title: 'Hack‑A‑Bot Tee | Hack‑A‑Bot 2026 Merch',
+            description: 'Hack‑A‑Bot Tee (Creator 2.0). Sizes XS–XL. Ready for collection at Hack‑A‑Bot 2026.',
+            image: '/brand/merch.png',
+            imageAlt: 'Hack‑A‑Bot merch lineup including tee',
+            urlPath: '/merch/tee'
+          },
+          crew: {
+            title: 'Hack‑A‑Bot Crew | Hack‑A‑Bot 2026 Merch',
+            description: 'Hack‑A‑Bot Crew (Thinker). Sizes XS–XL. Ready for collection at Hack‑A‑Bot 2026.',
+            image: '/brand/merch.png',
+            imageAlt: 'Hack‑A‑Bot merch lineup including crewneck',
+            urlPath: '/merch/crew'
+          },
+          hoodie: {
+            title: 'Hack‑A‑Bot Hoodie | Hack‑A‑Bot 2026 Merch',
+            description: 'Hack‑A‑Bot Hoodie (Slammer 2.0). Sizes XS–XL. Ready for collection at Hack‑A‑Bot 2026.',
+            image: '/brand/merch.png',
+            imageAlt: 'Hack‑A‑Bot merch lineup including hoodie',
+            urlPath: '/merch/hoodie'
+          },
+          'robo-hoodie': {
+            title: 'RoboSoc Hoodie | Hack‑A‑Bot 2026 Merch',
+            description: 'RoboSoc Hoodie (Drummer 2.0). Sizes XS–XL. Ready for collection at Hack‑A‑Bot 2026.',
+            image: '/brand/merch.png',
+            imageAlt: 'Hack‑A‑Bot merch lineup including RoboSoc hoodie',
+            urlPath: '/merch/robo-hoodie'
+          }
+        };
 
-        document.title = merchTitle;
+        var meta = merchMeta[merchSubroute] || merchMeta.list;
+        var merchUrl = window.location.origin + meta.urlPath;
+
+        document.title = meta.title;
 
         function setMeta(selector, content) {
           var el = document.querySelector(selector);
@@ -71,16 +107,16 @@
           }
         }
 
-        setMeta('meta[name="description"]', merchDescription);
-        setMeta('meta[property="og:title"]', merchTitle);
-        setMeta('meta[property="og:description"]', merchDescription);
-        setMeta('meta[property="og:image"]', merchImage);
-        setMeta('meta[property="og:image:alt"]', merchImageAlt);
+        setMeta('meta[name="description"]', meta.description);
+        setMeta('meta[property="og:title"]', meta.title);
+        setMeta('meta[property="og:description"]', meta.description);
+        setMeta('meta[property="og:image"]', meta.image);
+        setMeta('meta[property="og:image:alt"]', meta.imageAlt);
         setMeta('meta[property="og:url"]', merchUrl);
-        setMeta('meta[name="twitter:title"]', merchTitle);
-        setMeta('meta[name="twitter:description"]', merchDescription);
-        setMeta('meta[name="twitter:image"]', merchImage);
-        setMeta('meta[name="twitter:image:alt"]', merchImageAlt);
+        setMeta('meta[name="twitter:title"]', meta.title);
+        setMeta('meta[name="twitter:description"]', meta.description);
+        setMeta('meta[name="twitter:image"]', meta.image);
+        setMeta('meta[name="twitter:image:alt"]', meta.imageAlt);
       })();
     </script>
   </head>

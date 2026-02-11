@@ -20,6 +20,82 @@ import { useMediaQuery } from '@mantine/hooks'
 const MERCH_BASE_PATH = '/merch'
 const MERCH_PRODUCT_IDS: MerchProductId[] = ['tee', 'hoodie', 'crew', 'robo-hoodie']
 
+type RouteMeta = {
+  title: string
+  description: string
+  image: string
+  imageAlt: string
+  urlPath: string
+}
+
+const DEFAULT_ROUTE_META: RouteMeta = {
+  title: 'Hack‑A‑Bot 2026 • Manchester’s Premier Student Hackathon',
+  description: 'Tickets live now. Manchester’s premier student hackathon returns 21-22 March 2026 at the Nancy Rothwell Building in Manchester. Join us for 24 hours of creativity, collaboration, and cutting-edge robotics.',
+  image: '/brand/Title_Date_Logo_BG.png',
+  imageAlt: 'Hack‑A‑Bot 2026 logo with event date',
+  urlPath: '/',
+}
+
+const MERCH_LIST_META: RouteMeta = {
+  title: 'Hack‑A‑Bot 2026 Merch',
+  description: 'Choose your Hack‑A‑Bot merch. Tees, crewnecks, hoodies, and RoboSoc hoodie, ready for collection at Hack‑A‑Bot 2026.',
+  image: '/brand/merch.png',
+  imageAlt: 'Hack‑A‑Bot 2026 merch lineup',
+  urlPath: '/merch/list',
+}
+
+const MERCH_PRODUCT_META: Record<MerchProductId, RouteMeta> = {
+  tee: {
+    title: 'Hack‑A‑Bot Tee | Hack‑A‑Bot 2026 Merch',
+    description: 'Hack‑A‑Bot Tee (Creator 2.0). Sizes XS–XL. Ready for collection at Hack‑A‑Bot 2026.',
+    image: '/brand/merch.png',
+    imageAlt: 'Hack‑A‑Bot merch lineup including tee',
+    urlPath: '/merch/tee',
+  },
+  crew: {
+    title: 'Hack‑A‑Bot Crew | Hack‑A‑Bot 2026 Merch',
+    description: 'Hack‑A‑Bot Crew (Thinker). Sizes XS–XL. Ready for collection at Hack‑A‑Bot 2026.',
+    image: '/brand/merch.png',
+    imageAlt: 'Hack‑A‑Bot merch lineup including crewneck',
+    urlPath: '/merch/crew',
+  },
+  hoodie: {
+    title: 'Hack‑A‑Bot Hoodie | Hack‑A‑Bot 2026 Merch',
+    description: 'Hack‑A‑Bot Hoodie (Slammer 2.0). Sizes XS–XL. Ready for collection at Hack‑A‑Bot 2026.',
+    image: '/brand/merch.png',
+    imageAlt: 'Hack‑A‑Bot merch lineup including hoodie',
+    urlPath: '/merch/hoodie',
+  },
+  'robo-hoodie': {
+    title: 'RoboSoc Hoodie | Hack‑A‑Bot 2026 Merch',
+    description: 'RoboSoc Hoodie (Drummer 2.0). Sizes XS–XL. Ready for collection at Hack‑A‑Bot 2026.',
+    image: '/brand/merch.png',
+    imageAlt: 'Hack‑A‑Bot merch lineup including RoboSoc hoodie',
+    urlPath: '/merch/robo-hoodie',
+  },
+}
+
+function getRouteMeta(route: AppRoute): RouteMeta {
+  if (route.kind === 'main') {
+    return DEFAULT_ROUTE_META
+  }
+
+  if (route.kind === 'list') {
+    return MERCH_LIST_META
+  }
+
+  return MERCH_PRODUCT_META[route.productId]
+}
+
+function setMetaContent(selector: string, content: string) {
+  const element = document.querySelector(selector)
+  if (!element) {
+    return
+  }
+
+  element.setAttribute('content', content)
+}
+
 type AppRoute = { kind: 'main' } | MerchRoute
 
 function parseMerchRouteFromUrl(): AppRoute {
@@ -169,6 +245,23 @@ export default function App(){
       detail: { href: '#merch' },
     }))
   }, [merchRoute.kind])
+
+  useEffect(() => {
+    const meta = getRouteMeta(merchRoute)
+    const absoluteUrl = `${window.location.origin}${meta.urlPath}`
+
+    document.title = meta.title
+    setMetaContent('meta[name="description"]', meta.description)
+    setMetaContent('meta[property="og:title"]', meta.title)
+    setMetaContent('meta[property="og:description"]', meta.description)
+    setMetaContent('meta[property="og:image"]', meta.image)
+    setMetaContent('meta[property="og:image:alt"]', meta.imageAlt)
+    setMetaContent('meta[property="og:url"]', absoluteUrl)
+    setMetaContent('meta[name="twitter:title"]', meta.title)
+    setMetaContent('meta[name="twitter:description"]', meta.description)
+    setMetaContent('meta[name="twitter:image"]', meta.image)
+    setMetaContent('meta[name="twitter:image:alt"]', meta.imageAlt)
+  }, [merchRoute])
 
   const openMerchList = useCallback(() => {
     updateMerchRoute({ kind: 'list' })
