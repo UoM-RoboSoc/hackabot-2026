@@ -202,12 +202,20 @@ export function Merch({ onOpenMerchShop }: MerchProps){
         {renderBlock(
           data.paid,
           <Button
-            component="button"
+            component="a"
+            href="/merch/list"
             color="crimson"
             radius="md"
             fullWidth
             style={isDesktop ? { alignSelf: 'stretch' } : undefined}
-            onClick={onOpenMerchShop}
+            onClick={(event) => {
+              if (!onOpenMerchShop) {
+                return
+              }
+
+              event.preventDefault()
+              onOpenMerchShop()
+            }}
           >
             Buy the merch
           </Button>
