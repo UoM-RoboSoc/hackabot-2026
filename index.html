@@ -28,10 +28,31 @@
     <meta name="twitter:image:alt" content="Hack‑A‑Bot 2026 logo with event date" />
     <script>
       (function () {
-        var params = new URLSearchParams(window.location.search);
-        var merchRoute = params.get('merch');
+        var url = new URL(window.location.href);
+        var ghPath = url.searchParams.get('__gh_path');
 
-        if (!merchRoute) {
+        if (!ghPath) {
+          return;
+        }
+
+        url.searchParams.delete('__gh_path');
+
+        var restored = new URL(ghPath, window.location.origin);
+        url.searchParams.forEach(function (value, key) {
+          restored.searchParams.set(key, value);
+        });
+
+        window.history.replaceState(window.history.state, '', restored.pathname + restored.search + restored.hash);
+      })();
+    </script>
+    <script>
+      (function () {
+        var rawPath = window.location.pathname.replace(/\/+$/, '');
+        var pathname = rawPath === '' ? '/' : rawPath;
+        var parts = pathname.split('/').filter(Boolean);
+        var isMerchPath = parts[0] === 'merch';
+
+        if (!isMerchPath) {
           return;
         }
 
@@ -39,7 +60,7 @@
         var merchDescription = 'Choose your Hack‑A‑Bot merch. Tees, crewnecks, hoodies, and RoboSoc hoodie, ready for collection at Hack‑A‑Bot 2026.';
         var merchImage = '/brand/merch.png';
         var merchImageAlt = 'Hack‑A‑Bot 2026 merch lineup';
-        var merchUrl = window.location.origin + '/?merch=' + encodeURIComponent(merchRoute);
+        var merchUrl = window.location.origin + pathname;
 
         document.title = merchTitle;
 

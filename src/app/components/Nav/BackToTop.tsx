@@ -8,7 +8,7 @@ export function BackToTop(){
   const [bottom, setBottom] = useState(24)
   const theme = useMantineTheme()
   const isDesktop = useMediaQuery(`(min-width: ${theme.breakpoints.md})`)
-  const hasMerchRoute = typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('merch')
+  const hasMerchRoute = typeof window !== 'undefined' && /^\/merch(?:\/|$)/.test(window.location.pathname)
   useEffect(() => {
     const scroller = document.getElementById('app-main')
     if (!scroller) return

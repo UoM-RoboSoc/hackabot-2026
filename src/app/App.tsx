@@ -17,7 +17,8 @@ import { assetPath } from './lib/assets'
 import { smoothScrollTo } from './lib/anchors'
 import { useMediaQuery } from '@mantine/hooks'
 
-const MERCH_QUERY_KEY = 'merch'
+const MERCH_BASE_PATH = '/merch'
+const MERCH_PRODUCT_IDS: MerchProductId[] = ['tee', 'hoodie', 'crew', 'robo-hoodie']
 
 type AppRoute = { kind: 'main' } | MerchRoute
 
@@ -26,32 +27,39 @@ function parseMerchRouteFromUrl(): AppRoute {
     return { kind: 'main' }
   }
 
-  const merchQuery = new URLSearchParams(window.location.search).get(MERCH_QUERY_KEY)
+  const rawPath = window.location.pathname.replace(/\/+$/, '')
+  const pathname = rawPath === '' ? '/' : rawPath
+  const pathParts = pathname.split('/').filter(Boolean)
+  const isMerchPath = pathParts[0] === 'merch'
 
-  if (!merchQuery) {
+  if (!isMerchPath) {
     return { kind: 'main' }
   }
 
-  if (merchQuery === 'list') {
+  const merchSubroute = pathParts[1] ?? 'list'
+
+  if (merchSubroute === 'list') {
     return { kind: 'list' }
   }
 
-  if (merchQuery === 'tee' || merchQuery === 'hoodie' || merchQuery === 'crew' || merchQuery === 'robo-hoodie') {
-    return { kind: 'product', productId: merchQuery }
+  if (MERCH_PRODUCT_IDS.includes(merchSubroute as MerchProductId)) {
+    return { kind: 'product', productId: merchSubroute as MerchProductId }
   }
 
-  return { kind: 'main' }
+  return { kind: 'list' }
 }
 
 function writeMerchRouteToHistory(route: AppRoute, mode: 'push' | 'replace' = 'push') {
   const url = new URL(window.location.href)
+  url.search = ''
+  url.hash = ''
 
   if (route.kind === 'main') {
-    url.searchParams.delete(MERCH_QUERY_KEY)
+    url.pathname = '/'
   } else if (route.kind === 'list') {
-    url.searchParams.set(MERCH_QUERY_KEY, 'list')
+    url.pathname = `${MERCH_BASE_PATH}/list`
   } else {
-    url.searchParams.set(MERCH_QUERY_KEY, route.productId)
+    url.pathname = `${MERCH_BASE_PATH}/${route.productId}`
   }
 
   const method = mode === 'replace' ? 'replaceState' : 'pushState'
