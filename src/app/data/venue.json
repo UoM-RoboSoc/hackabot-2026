@@ -7,15 +7,19 @@
     "Sunday 22nd March 2026"
   ],
   "timeline": [
-    { "day": "Saturday", "time": "11:00", "label": "Doors open" },
-    { "day": "Saturday", "time": "11:00-12:00", "label": "Introductory session" },
-    { "day": "Saturday", "time": "12:00", "label": "Hacking begins (24 hours)" },
-    { "day": "Saturday", "time": "13:00-14:00", "label": "Lunch provided" },
-    { "day": "Saturday", "time": "18:00-19:00", "label": "Dominos provided" },
-    { "day": "Sunday", "time": "09:00-10:00", "label": "Breakfast provided" },
-    { "day": "Sunday", "time": "12:00", "label": "Hacking ends" },
-    { "day": "Sunday", "time": "13:00", "label": "Closing words and Awards ceremony" },
-    { "day": "Sunday", "time": "14:00", "label": "Wraps up" }
+    { "day": "Saturday", "time": "08:00-09:30", "label": "Setup" },
+    { "day": "Saturday", "time": "09:30-10:30", "label": "Registration" },
+    { "day": "Saturday", "time": "10:30-11:00", "label": "Opening Lecture" },
+    { "day": "Saturday", "time": "11:00-11:15", "label": "Make Teams" },
+    { "day": "Saturday", "time": "11:15-11:30", "label": "Project Allocation" },
+    { "day": "Saturday", "time": "13:00-14:00", "label": "Lunch" },
+    { "day": "Saturday", "time": "15:00", "label": "Mini Event #1" },
+    { "day": "Saturday", "time": "19:00-20:00", "label": "Dinner" },
+    { "day": "Sunday", "time": "00:00", "label": "Movie" },
+    { "day": "Sunday", "time": "03:00", "label": "Mini Event #2" },
+    { "day": "Sunday", "time": "06:00-07:00", "label": "Breakfast" },
+    { "day": "Sunday", "time": "12:00-14:00", "label": "Judging" },
+    { "day": "Sunday", "time": "14:00-15:00", "label": "Ending Lecture" }
   ],
   "callouts": [
     { "title": "Three Floors", "body": "Ground, first, and second floors open all weekend with staffed access points." },

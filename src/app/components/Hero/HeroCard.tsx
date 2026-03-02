@@ -1,5 +1,4 @@
 import { Paper, Stack, Image, Text, Group, Badge, Anchor, rem } from '@mantine/core'
-import { IconShirt } from '@tabler/icons-react'
 import event from '../../data/event.json'
 import { assetPath } from '../../lib/assets'
 import { smoothScrollTo } from '../../lib/anchors'
@@ -16,40 +15,32 @@ export function HeroCard(){
     <Paper withBorder p="xl" radius="lg" style={{ background: 'var(--panel)' }}>
       <Stack gap={24}>
         <Group justify="center">
-          <Anchor
-            href="#support-merch"
-            underline="never"
-            onClick={(e) => { e.preventDefault(); smoothScrollTo('support-merch') }}
-            style={{ display: 'inline-flex', width: 'min(100%, 520px)' }}
+          <Badge
+            size="lg"
+            radius="xl"
+            styles={{
+              root: {
+                background: 'rgba(239,35,60,0.22)',
+                color: '#ff9aa8',
+                border: '1px solid rgba(239,35,60,0.55)',
+                paddingInline: rem(18),
+                paddingBlock: rem(8),
+                width: 'min(100%, 520px)',
+                justifyContent: 'center',
+              },
+              label: {
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: rem(8),
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+                fontWeight: 700,
+                fontSize: rem(18),
+              },
+            }}
           >
-            <Badge
-              size="lg"
-              radius="xl"
-              styles={{
-                root: {
-                  background: 'rgba(239,35,60,0.22)',
-                  color: '#ff9aa8',
-                  border: '1px solid rgba(239,35,60,0.55)',
-                  paddingInline: rem(18),
-                  paddingBlock: rem(8),
-                  width: '100%',
-                  justifyContent: 'center',
-                },
-                label: {
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: rem(8),
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.08em',
-                  fontWeight: 700,
-                  fontSize: rem(22),
-                },
-              }}
-            >
-              <IconShirt size={16} stroke={2} style={{ color: '#ff8a99' }} aria-hidden="true" />
-              BUY THE MERCH
-            </Badge>
-          </Anchor>
+            Fill out participation form!
+          </Badge>
         </Group>
         <Image src={assetPath('brand/Title_Date_Logo.png')} alt="Hack-A-Bot 2026" maw={rem(420)} mx="auto" />
         <Stack gap={8} ta="center">

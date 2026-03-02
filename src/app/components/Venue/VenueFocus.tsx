@@ -43,7 +43,7 @@ export function VenueFocus(){
   const timelineBlock = timeline.length ? (
     <Card withBorder radius="lg" p={{ base: 'md', md: 'lg' }} style={{ background: 'var(--panel)' }}>
       <Stack gap={12}>
-        <Text fw={700} fz={{ base: 'sm', md: 'md' }}>Event timeline</Text>
+        <Text fw={700} fz={{ base: 'sm', md: 'md' }}>Event timeline (updated)</Text>
         <Grid gutter={{ base: 16, md: 24 }}>
           <Grid.Col span={{ base: 12, md: 6 }}>
             <Stack gap={8}>
