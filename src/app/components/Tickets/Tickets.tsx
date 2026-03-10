@@ -2,6 +2,7 @@ import { Grid, Card, Stack, Text, Title, Button, Box } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import tickets from '../../data/tickets.json'
 import { assetPath } from '../../lib/assets'
+import { liveMicrosite } from '../../lib/liveMicrosite'
 
 type TicketsData = {
   ctaUrl: string
@@ -106,6 +107,33 @@ export function Tickets(){
                 {data.formNote}
               </Text>
             </Card>
+            {liveMicrosite.enabled ? (
+              <Card
+                withBorder
+                radius="md"
+                p="sm"
+                style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(239,35,60,0.28)' }}
+              >
+                <Stack gap={8}>
+                  <Text fz="sm" fw={700} tt="uppercase" style={{ letterSpacing: '0.08em' }}>
+                    {liveMicrosite.ticketsNoteTitle}
+                  </Text>
+                  <Text fz="sm" c="var(--text)">
+                    {liveMicrosite.ticketsNoteBody}
+                  </Text>
+                  <Button
+                    component="a"
+                    href={liveMicrosite.path}
+                    color="crimson"
+                    radius="md"
+                    variant="light"
+                    w="fit-content"
+                  >
+                    {liveMicrosite.bannerCtaLabel}
+                  </Button>
+                </Stack>
+              </Card>
+            ) : null}
           </Stack>
         </Card>
       </Grid.Col>

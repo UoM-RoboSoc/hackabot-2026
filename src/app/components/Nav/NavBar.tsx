@@ -5,6 +5,7 @@ import { assetPath } from '../../lib/assets'
 import event from '../../data/event.json'
 const QRCode = lazy(() => import('react-qr-code'))
 import { QR_CARD_TITLE, QR_TARGET_URL } from '../QR/constants'
+import { liveMicrosite } from '../../lib/liveMicrosite'
 import './Nav.css'
 
 const links = [
@@ -162,6 +163,17 @@ export function NavBar() {
                 {l.label}
               </Anchor>
             ))}
+            {liveMicrosite.enabled ? (
+              <Button
+                component="a"
+                href={liveMicrosite.path}
+                variant="gradient"
+                gradient={{ from: 'red', to: 'pink', deg: 135 }}
+                radius="md"
+              >
+                {liveMicrosite.navLabel}
+              </Button>
+            ) : null}
           </Group>
 
           {/* Mobile: burger only; Register moves into menu */}
@@ -194,6 +206,20 @@ export function NavBar() {
                     {l.label}
                   </Button>
                 ))}
+                {liveMicrosite.enabled ? (
+                  <Button
+                    component="a"
+                    href={liveMicrosite.path}
+                    variant="gradient"
+                    gradient={{ from: 'red', to: 'pink', deg: 135 }}
+                    size="lg"
+                    fullWidth
+                    styles={{ root: { justifyContent: 'flex-start' } }}
+                    onClick={() => close()}
+                  >
+                    {liveMicrosite.navLabel}
+                  </Button>
+                ) : null}
                 <Button
                   variant="gradient"
                   gradient={{ from: 'red', to: 'pink', deg: 135 }}

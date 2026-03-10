@@ -1,7 +1,8 @@
-import { Paper, Stack, Image, Text, Group, Badge, Anchor, rem } from '@mantine/core'
+import { Paper, Stack, Image, Text, Group, Badge, Anchor, Button, rem } from '@mantine/core'
 import event from '../../data/event.json'
 import { assetPath } from '../../lib/assets'
 import { smoothScrollTo } from '../../lib/anchors'
+import { liveMicrosite } from '../../lib/liveMicrosite'
 
 export function HeroCard(){
   const eventDate = new Date(event.startsAt)
@@ -39,7 +40,7 @@ export function HeroCard(){
               },
             }}
           >
-            Fill out participation form!
+            {liveMicrosite.enabled ? liveMicrosite.heroBadgeLabel : 'Fill out participation form!'}
           </Badge>
         </Group>
         <Image src={assetPath('brand/Title_Date_Logo.png')} alt="Hack-A-Bot 2026" maw={rem(420)} mx="auto" />
@@ -59,6 +60,21 @@ export function HeroCard(){
             {event.location}
           </Text>
         </Stack>
+        {liveMicrosite.enabled ? (
+          <Stack gap={12} align="center">
+            <Text fz="sm" c="var(--text-dim)" ta="center" maw={420}>
+              {liveMicrosite.heroCtaBody}
+            </Text>
+            <Button
+              component="a"
+              href={liveMicrosite.path}
+              color="crimson"
+              radius="md"
+            >
+              {liveMicrosite.heroCtaLabel}
+            </Button>
+          </Stack>
+        ) : null}
         <Group justify="center">
           <Anchor
             href="#venue"

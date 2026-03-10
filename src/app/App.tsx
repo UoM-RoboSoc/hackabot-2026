@@ -12,9 +12,11 @@ import Tickets from './components/Tickets/Tickets'
 import FAQ from './components/FAQ/FAQ'
 import FormsPanel from './components/Forms/FormsPanel'
 import Footer from './components/Footer/Footer'
+import LiveSiteBanner from './components/LiveSite/LiveSiteBanner'
 import { Grid, Stack, Text, Card, Box, Button, Image } from '@mantine/core'
 import { assetPath } from './lib/assets'
 import { smoothScrollTo } from './lib/anchors'
+import { liveMicrosite } from './lib/liveMicrosite'
 import { useMediaQuery } from '@mantine/hooks'
 
 const MERCH_BASE_PATH = '/merch'
@@ -300,6 +302,12 @@ export default function App(){
             <Hero />
           </Section>
 
+          {liveMicrosite.enabled ? (
+            <Section id="live" tone="canvas" padding="compact">
+              <LiveSiteBanner />
+            </Section>
+          ) : null}
+
           <Section id="venue" title="Venue" subtitle="Nancy Rothwell Building overview" padding="compact">
             <VenueFocus />
           </Section>
@@ -320,7 +328,12 @@ export default function App(){
             <Merch onOpenMerchShop={openMerchList} />
           </Section>
 
-          <Section id="tickets" title="Tickets" subtitle="Follow the steps below to claim your free ticket" padding="compact">
+          <Section
+            id="tickets"
+            title="Tickets"
+            subtitle={liveMicrosite.enabled ? liveMicrosite.ticketsSectionSubtitleWhenEnabled : 'Follow the steps below to claim your free ticket'}
+            padding="compact"
+          >
             <Tickets />
           </Section>
 

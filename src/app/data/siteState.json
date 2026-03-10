@@ -1,0 +1,16 @@
+{
+  "liveMicrosite": {
+    "enabled": false,
+    "path": "/live/",
+    "navLabel": "Event Day",
+    "heroBadgeLabel": "Event-day site",
+    "heroCtaLabel": "Open event-day site",
+    "heroCtaBody": "Schedule, judging, announcements, maps and key links will be published here on the day.",
+    "bannerTitle": "Attending Hack-A-Bot today?",
+    "bannerBody": "Use the event-day site for schedule, judging, announcements, maps and operational updates.",
+    "bannerCtaLabel": "Open /live",
+    "ticketsNoteTitle": "On-the-day updates",
+    "ticketsNoteBody": "Once the event starts, attendees should use the event-day site for schedule and operational information.",
+    "ticketsSectionSubtitleWhenEnabled": "Ticketing stays here. Attendees should use the event-day site for schedule and day-of updates."
+  }
+}
