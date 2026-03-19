@@ -2,7 +2,7 @@ import { SimpleGrid, Image, Paper, Stack, Title, Text, Anchor, Box } from '@mant
 import sponsors from '../../data/sponsors.json'
 import { assetPath } from '../../lib/assets'
 
-type Logo = { name: string; src: string; url?: string }
+type Logo = { name: string; src: string; url?: string; invert?: boolean }
 
 const LOGO_BASE_SCALE = 1.5
 
@@ -50,7 +50,7 @@ export function Sponsors(){
                     radius="md"
                     loading="lazy"
                     decoding="async"
-                    style={{ maxWidth: '100%', maxHeight: '100%', objectPosition: 'center', transition: 'transform 160ms ease', transformOrigin: 'center', transform: `scale(${LOGO_BASE_SCALE})` }}
+                    style={{ maxWidth: '100%', maxHeight: '100%', objectPosition: 'center', transition: 'transform 160ms ease', transformOrigin: 'center', transform: `scale(${LOGO_BASE_SCALE})`, filter: logo.invert ? 'invert(1)' : undefined }}
                     onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = `scale(${LOGO_BASE_SCALE * 1.06})` }}
                     onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = `scale(${LOGO_BASE_SCALE})` }}
                   />
@@ -66,7 +66,7 @@ export function Sponsors(){
                     radius="md"
                     loading="lazy"
                     decoding="async"
-                    style={{ maxWidth: '100%', maxHeight: '100%', objectPosition: 'center', transition: 'transform 160ms ease', transformOrigin: 'center', transform: `scale(${LOGO_BASE_SCALE})` }}
+                    style={{ maxWidth: '100%', maxHeight: '100%', objectPosition: 'center', transition: 'transform 160ms ease', transformOrigin: 'center', transform: `scale(${LOGO_BASE_SCALE})`, filter: logo.invert ? 'invert(1)' : undefined }}
                     onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = `scale(${LOGO_BASE_SCALE * 1.06})` }}
                     onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = `scale(${LOGO_BASE_SCALE})` }}
                   />
