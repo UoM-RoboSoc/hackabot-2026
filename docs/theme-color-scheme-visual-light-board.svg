@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1600"
+   height="1200"
+   viewBox="0 0 1600 1200"
+   version="1.1"
+   id="svg56"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs9">
+    <linearGradient
+       id="bgGrad"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="1">
+      <stop
+         offset="0%"
+         stop-color="#f5f7fb"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#e9edf4"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="ctaGrad"
+       x1="0"
+       y1="391.66123"
+       x2="122.96341"
+       y2="391.66123"
+       gradientTransform="scale(2.2771002,0.43915503)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="rgba(43,45,66,0.8)"
+         id="stop3" />
+      <stop
+         offset="60%"
+         stop-color="#ef233c"
+         id="stop4" />
+      <stop
+         offset="100%"
+         stop-color="#d90429"
+         id="stop5" />
+    </linearGradient>
+    <linearGradient
+       id="softBtnGrad"
+       x1="117.61936"
+       y1="441.62796"
+       x2="117.61936"
+       y2="580.2786"
+       gradientTransform="scale(2.5676044,0.38946809)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="rgba(38,40,54,0.85)"
+         id="stop6" />
+      <stop
+         offset="100%"
+         stop-color="rgba(23,24,32,0.9)"
+         id="stop7" />
+    </linearGradient>
+    <linearGradient
+       id="countdownGrad"
+       x1="0"
+       y1="657.8913"
+       x2="0"
+       y2="903.93194"
+       gradientTransform="scale(2.6743549,0.37392196)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         stop-color="rgba(24,24,32,0.95)"
+         id="stop8" />
+      <stop
+         offset="100%"
+         stop-color="rgba(15,15,22,0.9)"
+         id="stop9" />
+    </linearGradient>
+    <style
+       id="style9">
+      .title { font: 700 42px &quot;Space Grotesk&quot;, &quot;Segoe UI&quot;, Arial, sans-serif; fill: #111827; }
+      .subtitle { font: 500 20px &quot;Space Grotesk&quot;, &quot;Segoe UI&quot;, Arial, sans-serif; fill: #374151; }
+      .panel-title { font: 700 24px &quot;Space Grotesk&quot;, &quot;Segoe UI&quot;, Arial, sans-serif; fill: #111827; }
+      .token-name { font: 600 16px &quot;Space Grotesk&quot;, &quot;Segoe UI&quot;, Arial, sans-serif; fill: #111827; }
+      .token-value { font: 400 14px &quot;Space Grotesk&quot;, &quot;Segoe UI&quot;, Arial, sans-serif; fill: #4b5563; }
+      .label { font: 600 15px &quot;Space Grotesk&quot;, &quot;Segoe UI&quot;, Arial, sans-serif; fill: #111827; }
+      .small { font: 400 13px &quot;Space Grotesk&quot;, &quot;Segoe UI&quot;, Arial, sans-serif; fill: #4b5563; }
+      .chip { font: 600 13px &quot;Space Grotesk&quot;, &quot;Segoe UI&quot;, Arial, sans-serif; fill: #f1f3f5; }
+    </style>
+  </defs>
+  <rect
+     x="0"
+     y="0"
+     width="1600"
+     height="1200"
+     fill="url(#bgGrad)"
+     id="rect9" />
+  <rect
+     x="36"
+     y="34"
+     width="1528"
+     height="1132"
+     rx="20"
+     fill="#ffffff"
+     stroke="#cbd5e1"
+     id="rect10" />
+  <text
+     x="72"
+     y="95"
+     class="title"
+     id="text10">Hack-A-Bot 2026 Theme Board</text>
+  <text
+     x="72"
+     y="130"
+     class="subtitle"
+     id="text11">Dark technical base, cool-neutral structure, red interaction accents</text>
+  <text
+     x="72"
+     y="158"
+     class="small"
+     id="text11b">Font: Space Grotesk (used across all board labels and headings)</text>
+  <rect
+     x="72"
+     y="170"
+     width="1456"
+     height="420"
+     rx="18"
+     fill="#ffffff"
+     stroke="#d1d9e6"
+     id="rect11" />
+  <text
+     x="96"
+     y="212"
+     class="panel-title"
+     id="text12">Core Palette</text>
+  <g
+     transform="translate(96,236)"
+     id="g31">
+    <g
+       transform="translate(0,0)"
+       id="g14">
+      <rect
+         x="0"
+         y="0"
+         width="130"
+         height="92"
+         rx="12"
+         fill="#101113"
+         stroke="rgba(255,255,255,0.6)"
+         stroke-width="2"
+         id="rect12" />
+      <text
+         x="0"
+         y="116"
+         class="token-name"
+         id="text13">--bg-1</text>
+      <text
+         x="0"
+         y="136"
+         class="token-value"
+         id="text14">#101113</text>
+    </g>
+    <g
+       transform="translate(160,0)"
+       id="g16">
+      <rect
+         x="0"
+         y="0"
+         width="130"
+         height="92"
+         rx="12"
+         fill="#161922"
+         stroke="rgba(255,255,255,0.6)"
+         stroke-width="2"
+         id="rect14" />
+      <text
+         x="0"
+         y="116"
+         class="token-name"
+         id="text15">--bg-2</text>
+      <text
+         x="0"
+         y="136"
+         class="token-value"
+         id="text16">#161922</text>
+    </g>
+    <g
+       transform="translate(320,0)"
+       id="g18">
+      <rect
+         x="0"
+         y="0"
+         width="130"
+         height="92"
+         rx="12"
+         fill="rgba(255,255,255,0.05)"
+         stroke="rgba(255,255,255,0.72)"
+         stroke-width="2"
+         id="rect16" />
+      <text
+         x="0"
+         y="116"
+         class="token-name"
+         id="text17">--panel</text>
+      <text
+         x="0"
+         y="136"
+         class="token-value"
+         id="text18">rgba(255,255,255,0.05)</text>
+    </g>
+    <g
+       transform="translate(480,0)"
+       id="g20">
+      <rect
+         x="0"
+         y="0"
+         width="130"
+         height="92"
+         rx="12"
+         fill="rgba(255,255,255,0.08)"
+         stroke="rgba(255,255,255,0.72)"
+         stroke-width="2"
+         id="rect18" />
+      <text
+         x="0"
+         y="116"
+         class="token-name"
+         id="text19">--border</text>
+      <text
+         x="0"
+         y="136"
+         class="token-value"
+         id="text20">rgba(255,255,255,0.08)</text>
+    </g>
+    <g
+       transform="translate(640,0)"
+       id="g22">
+      <rect
+         x="0"
+         y="0"
+         width="130"
+         height="92"
+         rx="12"
+         fill="#f1f3f5"
+         stroke="rgba(0,0,0,0.45)"
+         stroke-width="2"
+         id="rect20" />
+      <text
+         x="0"
+         y="116"
+         class="token-name"
+         id="text21">--text</text>
+      <text
+         x="0"
+         y="136"
+         class="token-value"
+         id="text22">#f1f3f5</text>
+    </g>
+    <g
+       transform="translate(800,0)"
+       id="g24">
+      <rect
+         x="0"
+         y="0"
+         width="130"
+         height="92"
+         rx="12"
+         fill="#c1c2c5"
+         stroke="rgba(0,0,0,0.45)"
+         stroke-width="2"
+         id="rect22" />
+      <text
+         x="0"
+         y="116"
+         class="token-name"
+         id="text23">--text-dim</text>
+      <text
+         x="0"
+         y="136"
+         class="token-value"
+         id="text24">#c1c2c5</text>
+    </g>
+    <g
+       transform="translate(960,0)"
+       id="g26">
+      <rect
+         x="0"
+         y="0"
+         width="130"
+         height="92"
+         rx="12"
+         fill="#ef233c"
+         stroke="rgba(255,255,255,0.55)"
+         stroke-width="2"
+         id="rect24" />
+      <text
+         x="0"
+         y="116"
+         class="token-name"
+         id="text25">--accent-strong</text>
+      <text
+         x="0"
+         y="136"
+         class="token-value"
+         id="text26">#ef233c</text>
+    </g>
+    <g
+       transform="translate(1120,0)"
+       id="g28">
+      <rect
+         x="0"
+         y="0"
+         width="130"
+         height="92"
+         rx="12"
+         fill="#d90429"
+         stroke="rgba(255,255,255,0.55)"
+         stroke-width="2"
+         id="rect26" />
+      <text
+         x="0"
+         y="116"
+         class="token-name"
+         id="text27">--accent-stronger</text>
+      <text
+         x="0"
+         y="136"
+         class="token-value"
+         id="text28">#d90429</text>
+    </g>
+    <g
+       transform="translate(1280,0)"
+       id="g30">
+      <rect
+         x="0"
+         y="0"
+         width="130"
+         height="92"
+         rx="12"
+         fill="rgba(239,35,60,0.24)"
+         stroke="rgba(255,255,255,0.55)"
+         stroke-width="2"
+         id="rect28" />
+      <text
+         x="0"
+         y="116"
+         class="token-name"
+         id="text29">--accent-soft</text>
+      <text
+         x="0"
+         y="136"
+         class="token-value"
+         id="text30">rgba(239,35,60,0.24)</text>
+    </g>
+  </g>
+  <g
+     transform="translate(96,420)"
+     id="g37">
+    <rect
+       x="0"
+       y="0"
+       width="1410"
+       height="146"
+       rx="14"
+       fill="#ffffff"
+       stroke="#d1d9e6"
+       id="rect31" />
+    <text
+       x="24"
+       y="38"
+       class="label"
+       id="text31">Legacy/Brand Tokens</text>
+    <g
+       transform="translate(24,52)"
+       id="g36">
+      <rect
+         x="0"
+         y="0"
+         width="72"
+         height="48"
+         rx="8"
+         fill="#2b2d42"
+         stroke="rgba(255,255,255,0.6)"
+         stroke-width="1.5"
+         id="rect32" />
+      <text
+         x="0"
+         y="66"
+         class="small"
+         id="text32">space-cadet</text>
+      <rect
+         x="194"
+         y="0"
+         width="72"
+         height="48"
+         rx="8"
+         fill="#8d99ae"
+         stroke="rgba(255,255,255,0.45)"
+         stroke-width="1.5"
+         id="rect33" />
+      <text
+         x="194"
+         y="66"
+         class="small"
+         id="text33">cool-gray</text>
+      <rect
+         x="388"
+         y="0"
+         width="72"
+         height="48"
+         rx="8"
+         fill="#edf2f4"
+         stroke="rgba(0,0,0,0.45)"
+         stroke-width="1.5"
+         id="rect34" />
+      <text
+         x="388"
+         y="66"
+         class="small"
+         id="text34">antiflash-white</text>
+      <rect
+         x="582"
+         y="0"
+         width="72"
+         height="48"
+         rx="8"
+         fill="#ef233c"
+         stroke="rgba(255,255,255,0.55)"
+         stroke-width="1.5"
+         id="rect35" />
+      <text
+         x="582"
+         y="66"
+         class="small"
+         id="text35">red-pantone</text>
+      <rect
+         x="776"
+         y="0"
+         width="72"
+         height="48"
+         rx="8"
+         fill="#d90429"
+         stroke="rgba(255,255,255,0.55)"
+         stroke-width="1.5"
+         id="rect36" />
+      <text
+         x="776"
+         y="66"
+         class="small"
+         id="text36">fire-engine-red</text>
+    </g>
+  </g>
+  <rect
+     x="72"
+     y="620"
+     width="706"
+     height="510"
+     rx="18"
+     fill="#ffffff"
+     stroke="#d1d9e6"
+     id="element-panel" />
+  <text
+     x="96"
+     y="662"
+     class="panel-title"
+     id="element-panel-title">Element Samples</text>
+  <g
+     transform="translate(96,688)"
+     id="element-samples">
+    <rect
+       x="0"
+       y="0"
+       width="658"
+       height="58"
+       rx="12"
+       fill="#101113"
+       stroke="rgba(255,255,255,0.18)"
+       id="el-nav" />
+    <text
+       x="18"
+       y="34"
+       class="chip"
+       id="el-nav-text">Header / Nav Bar: bg-1 + subtle white border</text>
+    <rect
+       x="0"
+       y="78"
+       width="658"
+       height="74"
+       rx="12"
+       fill="#101113"
+       stroke="rgba(255,255,255,0.18)"
+       id="el-cards" />
+    <rect
+       x="0"
+       y="78"
+       width="658"
+       height="74"
+       rx="12"
+       fill="rgba(255,255,255,0.05)"
+       stroke="rgba(255,255,255,0.08)"
+       id="el-cards-overlay" />
+    <text
+       x="18"
+       y="110"
+       class="chip"
+       id="el-cards-title">Cards / Panels</text>
+    <text
+       x="18"
+       y="130"
+       class="small"
+       style="fill:#f1f3f5"
+       id="el-cards-meta">background: panel, border: border</text>
+    <rect
+       x="0"
+       y="172"
+       width="280"
+       height="54"
+       rx="10"
+       fill="url(#ctaGrad)"
+       stroke="rgba(239,35,60,0.32)"
+       id="el-cta" />
+    <text
+       x="18"
+       y="205"
+       class="chip"
+       id="el-cta-text">CTA Button</text>
+    <rect
+       x="302"
+       y="172"
+       width="356"
+       height="54"
+       rx="10"
+       fill="url(#softBtnGrad)"
+       stroke="rgba(255,255,255,0.18)"
+       id="el-soft-btn" />
+    <text
+       x="320"
+       y="205"
+       class="chip"
+       id="el-soft-btn-text">Utility Button (.btn-soft)</text>
+    <rect
+       x="0"
+       y="246"
+       width="658"
+       height="92"
+       rx="12"
+       fill="url(#countdownGrad)"
+       stroke="rgba(239,35,60,0.28)"
+       id="el-countdown" />
+    <circle
+       cx="46"
+       cy="292"
+       r="14"
+       fill="rgba(239,35,60,0.2)"
+       stroke="rgba(255,255,255,0.35)"
+       stroke-width="1.5"
+       id="el-countdown-dot" />
+    <text
+       x="72"
+       y="286"
+       class="chip"
+       id="el-countdown-title">Countdown Panel</text>
+    <text
+       x="72"
+       y="308"
+       class="small"
+       style="fill:#f1f3f5"
+       id="el-countdown-meta">dark base with red glow accents</text>
+    <rect
+       x="0"
+       y="358"
+       width="658"
+       height="126"
+       rx="12"
+       fill="#161922"
+       stroke="rgba(255,255,255,0.18)"
+       id="el-text-hierarchy" />
+    <text
+       x="18"
+       y="390"
+       class="chip"
+       id="el-text-hierarchy-title">Text + Link Hierarchy</text>
+    <text
+       x="18"
+       y="416"
+       style="font: 500 17px 'Space Grotesk', 'Segoe UI', Arial, sans-serif; fill: #f1f3f5;"
+       id="el-text-primary">Primary text (--text)</text>
+    <text
+       x="18"
+       y="442"
+       style="font: 500 17px 'Space Grotesk', 'Segoe UI', Arial, sans-serif; fill: #c1c2c5;"
+       id="el-text-secondary">Secondary text (--text-dim)</text>
+    <text
+       x="18"
+       y="468"
+       style="font: 600 17px 'Space Grotesk', 'Segoe UI', Arial, sans-serif; fill: #ef233c;"
+       id="el-text-link">Link accent (--accent-strong)</text>
+  </g>
+  <rect
+     x="822"
+     y="620"
+     width="706"
+     height="510"
+     rx="18"
+     fill="#ffffff"
+     stroke="#d1d9e6"
+     id="additional-panel" />
+  <text
+     x="846"
+     y="662"
+     class="panel-title"
+     id="additional-panel-title">Additional Scheme Colors</text>
+  <g
+     transform="translate(846,688)"
+     id="additional-scheme-colors">
+    <text
+       x="0"
+       y="18"
+       class="label"
+       id="additional-explicit-title">Explicit Surface Colors</text>
+    <rect
+       x="0"
+       y="30"
+       width="146"
+       height="82"
+       rx="10"
+       fill="rgb(24,24,32)"
+       stroke="rgba(255,255,255,0.35)"
+       id="sw-qr-surface" />
+    <text
+       x="0"
+       y="132"
+       class="small"
+       id="sw-qr-surface-name">qr surface</text>
+    <text
+       x="0"
+       y="148"
+       class="small"
+       id="sw-qr-surface-val">rgb(24,24,32)</text>
+    <rect
+       x="164"
+       y="30"
+       width="146"
+       height="82"
+       rx="10"
+       fill="#08090E"
+       stroke="rgba(255,255,255,0.35)"
+       id="sw-modal-overlay" />
+    <text
+       x="164"
+       y="132"
+       class="small"
+       id="sw-modal-overlay-name">modal overlay</text>
+    <text
+       x="164"
+       y="148"
+       class="small"
+       id="sw-modal-overlay-val">#08090E</text>
+    <rect
+       x="328"
+       y="30"
+       width="146"
+       height="82"
+       rx="10"
+       fill="#101113"
+       stroke="rgba(255,255,255,0.35)"
+       id="sw-callout-base" />
+    <rect
+       x="328"
+       y="30"
+       width="146"
+       height="82"
+       rx="10"
+       fill="rgba(22,24,35,0.92)"
+       stroke="rgba(255,255,255,0.35)"
+       stroke-width="1.5"
+       id="sw-callout-overlay" />
+    <text
+       x="328"
+       y="132"
+       class="small"
+       id="sw-callout-name">callout bubble</text>
+    <text
+       x="328"
+       y="148"
+       class="small"
+       id="sw-callout-val">rgba(22,24,35,0.92)</text>
+    <rect
+       x="492"
+       y="30"
+       width="146"
+       height="82"
+       rx="10"
+       fill="#0b0b0d"
+       stroke="rgba(255,255,255,0.35)"
+       id="sw-theme-color" />
+    <text
+       x="492"
+       y="132"
+       class="small"
+       id="sw-theme-color-name">browser theme</text>
+    <text
+       x="492"
+       y="148"
+       class="small"
+       id="sw-theme-color-val">#0b0b0d</text>
+    <text
+       x="0"
+       y="186"
+       class="label"
+       id="additional-merch-title">Merch Page Colors</text>
+    <rect
+       x="0"
+       y="198"
+       width="120"
+       height="72"
+       rx="10"
+       fill="#0f1318"
+       stroke="rgba(255,255,255,0.35)"
+       id="sw-merch-slide" />
+    <text
+       x="0"
+       y="286"
+       class="small"
+       id="sw-merch-slide-name">slide #0f1318</text>
+    <rect
+       x="134"
+       y="198"
+       width="120"
+       height="72"
+       rx="10"
+       fill="#212730"
+       stroke="rgba(255,255,255,0.35)"
+       id="sw-merch-chip" />
+    <text
+       x="134"
+       y="286"
+       class="small"
+       id="sw-merch-chip-name">chip #212730</text>
+    <rect
+       x="268"
+       y="198"
+       width="120"
+       height="72"
+       rx="10"
+       fill="#ffacb7"
+       stroke="rgba(0,0,0,0.35)"
+       id="sw-merch-accent" />
+    <text
+       x="268"
+       y="286"
+       class="small"
+       id="sw-merch-accent-name">accent #ffacb7</text>
+    <rect
+       x="402"
+       y="198"
+       width="120"
+       height="72"
+       rx="10"
+       fill="#d9dde4"
+       stroke="rgba(0,0,0,0.35)"
+       id="sw-merch-muted" />
+    <text
+       x="402"
+       y="286"
+       class="small"
+       id="sw-merch-muted-name">muted #d9dde4</text>
+    <rect
+       x="536"
+       y="198"
+       width="120"
+       height="72"
+       rx="10"
+       fill="#ffffff"
+       stroke="rgba(0,0,0,0.35)"
+       id="sw-merch-white" />
+    <text
+       x="536"
+       y="286"
+       class="small"
+       id="sw-merch-white-name">white #ffffff</text>
+    <text
+       x="0"
+       y="328"
+       class="label"
+       id="additional-modal-title">Merch Modal Tones</text>
+    <rect
+       x="0"
+       y="340"
+       width="316"
+       height="90"
+       rx="12"
+       fill="#101113"
+       stroke="rgba(255,255,255,0.35)"
+       id="sw-merch-modal-base" />
+    <rect
+       x="0"
+       y="340"
+       width="316"
+       height="90"
+       rx="12"
+       fill="rgba(5,7,10,0.93)"
+       stroke="rgba(255,255,255,0.35)"
+       stroke-width="1.5"
+       id="sw-merch-modal-backdrop" />
+    <text
+       x="16"
+       y="391"
+       class="chip"
+       id="sw-merch-modal-backdrop-text">Backdrop rgba(5,7,10,0.93)</text>
+    <rect
+       x="340"
+       y="340"
+       width="316"
+       height="90"
+       rx="12"
+       fill="#101113"
+       stroke="rgba(255,255,255,0.35)"
+       id="sw-merch-controls-base" />
+    <rect
+       x="340"
+       y="340"
+       width="316"
+       height="90"
+       rx="12"
+       fill="rgba(15,19,24,0.82)"
+       stroke="rgba(255,255,255,0.35)"
+       stroke-width="1.5"
+       id="sw-merch-controls" />
+    <text
+       x="356"
+       y="391"
+       class="chip"
+       id="sw-merch-controls-text">Controls rgba(15,19,24,0.82)</text>
+    <rect
+       x="0"
+       y="450"
+       width="658"
+       height="34"
+       rx="8"
+       fill="#161922"
+       stroke="rgba(255,255,255,0.18)"
+       id="focus-outline-row" />
+    <text
+       x="14"
+       y="472"
+       class="chip"
+       id="focus-outline-text">Focus outline token: 2px solid var(--auburn) -&gt; #d90429</text>
+  </g>
+</svg>
