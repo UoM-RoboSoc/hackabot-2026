@@ -7,6 +7,28 @@ Development
 - Install deps: `npm i`
 - Run dev server: `npm run dev`
 
+Local testing
+-------------
+
+To test the integrated GitHub Pages shape, including the copied `/live/` microsite:
+
+- Build to a throwaway output dir: `./node_modules/.bin/vite build --outDir /tmp/hackabot-2026-dist-live`
+- Preview that build locally: `./node_modules/.bin/vite preview --outDir /tmp/hackabot-2026-dist-live --host 127.0.0.1 --port 4173`
+
+Open:
+
+- `http://127.0.0.1:4173/`
+- `http://127.0.0.1:4173/live/`
+- `http://127.0.0.1:4173/live/schedule/`
+- `http://127.0.0.1:4173/live/project-1/`
+- `http://127.0.0.1:4173/live/typo`
+
+Expected behavior:
+
+- `/live/typo` should redirect to `/live/`.
+
+If you change the private `hackabot-2026-live` source, rebuild and recopy its static output into `public/live/` before re-running the integrated preview.
+
 Project structure
 -----------------
 

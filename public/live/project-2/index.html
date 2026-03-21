@@ -1,0 +1,906 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/live/assets/css/just-the-docs-default.css">
+
+  <link rel="stylesheet" href="/live/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  
+    .site-nav ul li a {
+      background-image: none;
+    }
+
+  </style>
+
+  
+
+  
+    <script src="/live/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/live/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Project 2 - Catapult | Hack-A-Bot Live</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Project 2 - Catapult" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Private event-day microsite for Hack-A-Bot 2026." />
+<meta property="og:description" content="Private event-day microsite for Hack-A-Bot 2026." />
+<link rel="canonical" href="https://hackabot-2026.com/live/project-2/" />
+<meta property="og:url" content="https://hackabot-2026.com/live/project-2/" />
+<meta property="og:site_name" content="Hack-A-Bot Live" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Project 2 - Catapult" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Private event-day microsite for Hack-A-Bot 2026.","headline":"Project 2 - Catapult","url":"https://hackabot-2026.com/live/project-2/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link rel="icon" href="/live/assets/images/brand/Logo.png" type="image/png" />
+<link rel="apple-touch-icon" href="/live/assets/images/brand/Logo.png" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+/>
+
+<script>
+  (() => {
+    const onReady =
+      (window.jtd && window.jtd.onReady) ||
+      ((callback) => {
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", callback, { once: true });
+        } else {
+          callback();
+        }
+      });
+
+    let youtubeApiPromise = null;
+
+    const loadYouTubeApi = () => {
+      if (window.YT && typeof window.YT.Player === "function") {
+        return Promise.resolve(window.YT);
+      }
+
+      if (youtubeApiPromise) {
+        return youtubeApiPromise;
+      }
+
+      youtubeApiPromise = new Promise((resolve) => {
+        const existingHandler = window.onYouTubeIframeAPIReady;
+
+        window.onYouTubeIframeAPIReady = () => {
+          if (typeof existingHandler === "function") {
+            existingHandler();
+          }
+          resolve(window.YT);
+        };
+
+        const script = document.createElement("script");
+        script.src = "https://www.youtube.com/iframe_api";
+        script.async = true;
+        document.head.appendChild(script);
+      });
+
+      return youtubeApiPromise;
+    };
+
+    onReady(async () => {
+      const players = Array.from(document.querySelectorAll(".js-project-video-player"));
+      if (players.length === 0) {
+        return;
+      }
+
+      const YT = await loadYouTubeApi();
+
+      players.forEach((playerElement) => {
+        if (!playerElement.id || playerElement.dataset.youtubeMuted === "true") {
+          return;
+        }
+
+        playerElement.dataset.youtubeMuted = "true";
+        new YT.Player(playerElement.id, {
+          events: {
+            onReady: (event) => {
+              event.target.mute();
+            },
+          },
+        });
+      });
+    });
+  })();
+</script>
+<meta name="theme-color" content="#101113" />
+
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  
+    
+      <header class="side-bar">
+  <div class="site-header">
+    <a href="/live/" class="site-title lh-tight"><span class="site-title__brand">
+  <img
+    class="site-title__logo"
+    src="/live/assets/images/brand/Logo.png"
+    alt=""
+    width="2589"
+    height="2594"
+    decoding="async"
+  />
+  <span class="site-title__text">Hack-A-Bot Live</span>
+</span>
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+  
+  
+    <ul class="nav-list"><li class="nav-list-item"><a href="/live/" class="nav-list-link"><span class="nav-list-link__title">Event Day</span>
+      </a></li><li class="nav-list-item nav-item-projects"><button class="nav-list-expander btn-reset" aria-label="Projects submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/live/projects/" class="nav-list-link"><span class="nav-list-link__title">Projects</span>
+      </a><ul class="nav-list"><li class="nav-list-item"><a href="/live/project-1/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/platformer.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 1 - Platformer</span>
+      </a></li><li class="nav-list-item"><a href="/live/project-2/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/catapult.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 2 - Catapult</span>
+      </a></li><li class="nav-list-item"><a href="/live/project-3/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/robot-arm.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 3 - Robot Arm</span>
+      </a></li><li class="nav-list-item"><a href="/live/project-4/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/swarm.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 4 - Swarm</span>
+      </a></li><li class="nav-list-item"><a href="/live/project-5/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/rover.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 5 - Rover</span>
+      </a></li><li class="nav-list-item"><a href="/live/project-6/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/creative.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 6 - Creative</span>
+      </a></li></ul></li><li class="nav-list-item"><a href="/live/vscode-setup/" class="nav-list-link"><span class="nav-list-link__title">VS Code Setup</span>
+      </a></li><li class="nav-list-item"><a href="/live/pi-pico-controller/" class="nav-list-link"><span class="nav-list-link__title">Pi Pico Controller</span>
+      </a></li><li class="nav-list-item"><a href="/live/power-wiring/" class="nav-list-link"><span class="nav-list-link__title">Power & Wiring</span>
+      </a></li><li class="nav-list-item nav-item-makerspace"><button class="nav-list-expander btn-reset" aria-label="Makerspace submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/live/makerspace/" class="nav-list-link"><span class="nav-list-link__title">Makerspace</span>
+      </a><ul class="nav-list"><li class="nav-list-item"><a href="/live/3d-printing/" class="nav-list-link"><span class="nav-list-link__title">3D Printing</span>
+      </a></li><li class="nav-list-item"><a href="/live/laser-cutter/" class="nav-list-link"><span class="nav-list-link__title">Laser Cutting</span>
+      </a></li></ul></li><li class="nav-list-item"><a href="/live/schedule/" class="nav-list-link"><span class="nav-list-link__title">Schedule</span>
+      </a></li><li class="nav-list-item"><a href="/live/floorplan/" class="nav-list-link"><span class="nav-list-link__title">Floorplan</span>
+      </a></li></ul>
+  
+</nav>
+
+
+<div class="d-md-block d-none site-footer">
+  
+  
+    This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+  
+  </div>
+</header>
+
+    
+    <div class="main" id="top">
+      <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Hack-A-Bot Live" autocomplete="off">
+    <label for="search-input" class="search-label">
+      <span class="sr-only">Search Hack-A-Bot Live</span>
+      <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><use xlink:href="#svg-search"></use></svg>
+    </label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+</div>
+
+      <div class="main-content-wrap">
+        <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-nav-list">
+    <li class="breadcrumb-nav-list-item"><span>Project 2 - Catapult</span></li>
+  </ol>
+</nav>
+
+
+        <div id="main-content" class="main-content">
+          <main>
+            <section class="project-hero" aria-labelledby="project-2-hero-title">
+  <div class="project-hero__badge-panel"><img
+      class="project-hero__badge"
+      src="/live/assets/images/projects/badges/catapult.png"
+      alt="Catapult project badge"
+    /></div>
+
+  <div class="project-hero__content"><p class="project-hero__eyebrow">Project 2</p><h1 class="project-hero__title" id="project-2-hero-title">Catapult</h1><div class="project-hero__meta" aria-label="Sponsors">
+        <p class="project-hero__meta-label">Sponsors</p>
+        <div class="project-hero__sponsors"><div class="project-hero__sponsor"><img
+                  class="project-hero__sponsor-logo"
+                  src="/live/assets/images/projects/sponsors/makerspace.svg"
+                  alt="Makerspace logo"
+                /></div></div>
+      </div><p class="project-hero__description">Design an automated catapult that senses target distance, adjusts its launch mechanism, and hits targets accurately at varying ranges.</p></div>
+</section>
+
+            <section class="project-intro" aria-label="Project overview, videos, and resources"><div class="project-intro__overview">
+        <h2 class="project-intro__heading" id="overview">
+          <a href="#overview" class="anchor-heading" aria-labelledby="overview"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Overview
+        </h2>
+        <div class="project-intro__overview-body">
+          <p>The Catapult project requires teams to design and build an automated projectile launcher using the provided electronics and mechanical components. The system must be capable of detecting target distance and adjusting the launch mechanism to accurately hit the target.</p>
+
+<p>Teams will integrate sensing, control systems, and mechanical design to create a fully automated catapult capable of aiming and firing projectiles at targets placed at varying distances. The intended high-end path is automated target finding and directional aiming using the provided sensor workflow, while the rubric below still distinguishes between full and partial automation.</p>
+
+<p>The project encourages creativity in embedded programming, mechatronics, and system integration.</p>
+
+        </div>
+      </div><aside class="project-intro__media" aria-label="Project videos and resources"><p class="project-intro__media-eyebrow">Videos &amp; Resources</p><div class="project-intro__media-stack"><article class="project-intro__media-item">
+                  <div class="project-intro__media-frame">
+                    <iframe
+                      id="project-2-video-1"
+                      class="js-project-video-player"
+                      src="https://www.youtube-nocookie.com/embed/K3U2OlnTnME?rel=0&enablejsapi=1&playsinline=1"
+                      title="Catapult project demo"
+                      loading="lazy"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="project-intro__media-copy">
+                    <p class="project-intro__media-title">Catapult project demo</p><a class="project-intro__media-link" href="https://youtu.be/K3U2OlnTnME">Open on YouTube</a></div>
+                </article></div><section class="project-intro__resources" aria-labelledby="project-resources">
+            <h3 class="project-intro__resources-title" id="project-resources">Resources</h3>
+            <ul class="project-intro__resource-list"><li>
+                  <a href="https://www.instructables.com/Arduino-Robot-Catapult/">Arduino Robot Catapult inspiration</a>
+                </li></ul>
+          </section></aside></section>
+
+            
+              <h2 id="objectives">
+  
+  
+    <a href="#objectives" class="anchor-heading" aria-labelledby="objectives"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Objectives
+  
+  
+</h2>
+    
+
+<p>Participants must design a system that:</p>
+
+<ol>
+  <li>Identify and measure the distance to the target using the <code class="language-plaintext highlighter-rouge">VL53L0X V2</code> Time-of-Flight sensor.</li>
+  <li>Calculate the required launch and aiming parameters.</li>
+  <li>Adjust the catapult mechanism automatically using motors.</li>
+  <li>Launches a projectile to hit the target as accurately as possible.</li>
+  <li>Display system information on the OLED display for monitoring or troubleshooting.</li>
+</ol>
+<h2 id="materials-provided">
+  
+  
+    <a href="#materials-provided" class="anchor-heading" aria-labelledby="materials-provided"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Materials Provided
+  
+  
+</h2>
+    
+
+<div class="table-wrapper">
+  <div class="table-wrapper"><table class="project-materials-table">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Picture</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="project-materials-table__item"><code>Raspberry Pi Pico 2</code></td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/raspberry-pi-pico-2.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/raspberry-pi-pico-2.webp" alt="Raspberry Pi Pico 2 microcontroller board." loading="lazy" />
+          </a>
+        </td>
+        <td>Main controller for the catapult. It reads the sensor, computes shot settings, drives the actuators, and updates the on-board display.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>VL53L0X V2</code> Time-of-Flight (<code>ToF</code>) laser ranging sensor</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/vl53l0x-v2-sensor.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/vl53l0x-v2-sensor.webp" alt="VL53L0X time-of-flight distance sensor breakout board." loading="lazy" />
+          </a>
+        </td>
+        <td>Measures target distance so the launcher can choose the correct shot profile or automate tower finding in higher-end builds.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>MG996R 360</code> servo</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/mg996r-360-servo.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/mg996r-360-servo.webp" alt="MG996R 360 degree servo motor." loading="lazy" />
+          </a>
+        </td>
+        <td>High-torque servo for heavier mechanism motion such as cocking, feeder drive, or another powered stage that needs more torque than the small servo can provide.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>MG90S</code> micro servo</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/mg90s-servo.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/mg90s-servo.webp" alt="MG90S micro servo." loading="lazy" />
+          </a>
+        </td>
+        <td>Smaller actuator for light tasks such as a latch, gate, sensor mount, or release linkage.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>NEMA 17 42</code> stepper motor</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/nema-17-42-stepper.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/nema-17-42-stepper.webp" alt="NEMA 17 stepper motor." loading="lazy" />
+          </a>
+        </td>
+        <td>Provides repeatable positioning for an aiming axis, turret, or adjustable launch geometry where precise motion matters more than raw speed.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>DRV8825</code> stepper motor driver with heat sink</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/drv8825-stepper-driver.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/drv8825-stepper-driver.webp" alt="DRV8825 stepper motor driver carrier with heat sink." loading="lazy" />
+          </a>
+        </td>
+        <td>Interfaces the Pico to the stepper motor and provides current-limited, direction-and-step control for accurate positioning.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>LM2596S</code> DC buck converter</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/lm2596s-buck-converter.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/lm2596s-buck-converter.webp" alt="LM2596S adjustable DC buck converter module." loading="lazy" />
+          </a>
+        </td>
+        <td>Steps the main supply down to cleaner lower-voltage rails for logic, sensors, and any peripherals that should not be fed directly from the higher-power input.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>12V 6A</code> power supply unit</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/12v-6a-power-supply.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/12v-6a-power-supply.webp" alt="12 volt 6 amp power supply unit." loading="lazy" />
+          </a>
+        </td>
+        <td>Primary bench supply for the launcher, especially during tests where motors, drivers, and other higher-current loads need a stable source.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>0.96&quot;</code> OLED display module</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/oled-display-096.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/oled-display-096.webp" alt="0.96 inch OLED display module." loading="lazy" />
+          </a>
+        </td>
+        <td>Useful for distance readings, calibration state, selected firing mode, and other live debug information during setup and testing.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item">Perfboard <code>7 x 9 cm</code></td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/perfboard-7x9cm.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/perfboard-7x9cm.webp" alt="7 by 9 centimetre perfboard." loading="lazy" />
+          </a>
+        </td>
+        <td>General-purpose prototyping board for soldered wiring, small interface circuits, and more durable assembly than a temporary breadboard.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>USB-A</code> to <code>Micro-USB</code> cable</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/usb-a-to-micro-usb-cable.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/usb-a-to-micro-usb-cable.webp" alt="USB-A to Micro-USB cable." loading="lazy" />
+          </a>
+        </td>
+        <td>Used to power and program the Pico during development, testing, and firmware updates.</td>
+      </tr>
+    </tbody>
+  </table></div>
+</div>
+<h2 id="common-materials">
+  
+  
+    <a href="#common-materials" class="anchor-heading" aria-labelledby="common-materials"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Common Materials
+  
+  
+</h2>
+    
+
+<ul>
+  <li>Mini Precision Screwdriver Set</li>
+  <li><code class="language-plaintext highlighter-rouge">2-meter 22AWG Single Core Wire</code></li>
+  <li><code class="language-plaintext highlighter-rouge">M3x10mm</code> Screws</li>
+  <li>Assorted Electronic Components Kit</li>
+  <li><code class="language-plaintext highlighter-rouge">12 Value Assorted Capacitor Kit</code></li>
+</ul>
+<h2 id="quickstart">
+  
+  
+    <a href="#quickstart" class="anchor-heading" aria-labelledby="quickstart"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Quickstart
+  
+  
+</h2>
+    
+
+<ol>
+  <li>Start with <a href="/live/vscode-setup/">VS Code Setup</a> and <a href="/live/power-wiring/">Power &amp; Wiring</a> before you integrate the full launcher.</li>
+  <li>Prove the Pico 2 can read the <code class="language-plaintext highlighter-rouge">VL53L0X V2</code> and command one actuator cleanly.</li>
+  <li>Get consistent launches with a <code class="language-plaintext highlighter-rouge">30 mm</code> projectile before you automate reload or tower finding.</li>
+  <li>Treat automatic target finding and directional aiming as part of the high-end solution, then layer extra automation on top.</li>
+</ol>
+<h2 id="projectile-rules">
+  
+  
+    <a href="#projectile-rules" class="anchor-heading" aria-labelledby="projectile-rules"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Projectile Rules
+  
+  
+</h2>
+    
+
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">30 mm</code> diameter 3D-printed balls as projectiles.</li>
+  <li>Each kit will include <code class="language-plaintext highlighter-rouge">3</code> projectiles for testing.</li>
+  <li>There is no limit on the number of extra projectiles your team may print, as long as they remain <code class="language-plaintext highlighter-rouge">30 mm</code> in diameter.</li>
+  <li>A magazine or similar reload mechanism is strongly recommended.</li>
+</ul>
+<h2 id="tower-layout-reference">
+  
+  
+    <a href="#tower-layout-reference" class="anchor-heading" aria-labelledby="tower-layout-reference"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Tower Layout Reference
+  
+  
+</h2>
+    
+
+<p>A tower reference image will be added here before launch. Until then, use the distances and scoring rules below as the source of truth.</p>
+<h2 id="inspiration-reference">
+  
+  
+    <a href="#inspiration-reference" class="anchor-heading" aria-labelledby="inspiration-reference"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Inspiration Reference
+  
+  
+</h2>
+    
+
+<p>The main inspiration for this project was the Instructables project <code class="language-plaintext highlighter-rouge">Arduino Robot Catapult</code>:</p>
+
+<ul>
+  <li><a href="https://www.instructables.com/Arduino-Robot-Catapult/">https://www.instructables.com/Arduino-Robot-Catapult/</a></li>
+</ul>
+
+<p>Teams may find it useful as a high-level reference for automation flow, launch sequencing, and general mechanism ideas.</p>
+
+<p>Important constraints for this project:</p>
+
+<ul>
+  <li>Treat the Instructables build as inspiration only. The Hack-A-Bot kit is materially different from the parts used in that project.</li>
+  <li>Use of the external 3D files from that build is not allowed in this project.</li>
+  <li>If you borrow ideas from it, you should adapt them to the components, geometry, and constraints of the kit provided here.</li>
+</ul>
+<h3 id="reference-gallery">
+  
+  
+    <a href="#reference-gallery" class="anchor-heading" aria-labelledby="reference-gallery"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Reference Gallery
+  
+  
+</h3>
+    
+
+<p>These photos are copied from the <code class="language-plaintext highlighter-rouge">Arduino Robot Catapult</code> Instructables page and are included only as visual reference for mechanism layout, actuator placement, and launch sequencing.</p>
+
+<div class="project-reference-gallery">
+  <figure class="project-reference-card">
+    <a class="project-reference-card__link" href="/live/assets/images/projects/project-2/reference/instructables-catapult-parts-layout.webp">
+      <img class="project-reference-card__image" src="/live/assets/images/projects/project-2/reference/instructables-catapult-parts-layout.webp" alt="Exploded layout of the Instructables robot catapult parts, electronics, and printed panels." loading="lazy" />
+    </a>
+    <figcaption class="project-reference-card__caption">Exploded parts-and-electronics layout from the original reference build.</figcaption>
+  </figure>
+
+  <figure class="project-reference-card">
+    <a class="project-reference-card__link" href="/live/assets/images/projects/project-2/reference/instructables-catapult-overview.webp">
+      <img class="project-reference-card__image" src="/live/assets/images/projects/project-2/reference/instructables-catapult-overview.webp" alt="Assembled Arduino robot catapult with controller board and electronics visible beside the mechanism." loading="lazy" />
+    </a>
+    <figcaption class="project-reference-card__caption">Full assembled view showing overall geometry, actuator positions, and control wiring.</figcaption>
+  </figure>
+
+  <figure class="project-reference-card">
+    <a class="project-reference-card__link" href="/live/assets/images/projects/project-2/reference/instructables-catapult-loaded-angle.webp">
+      <img class="project-reference-card__image" src="/live/assets/images/projects/project-2/reference/instructables-catapult-loaded-angle.webp" alt="Close angled view of the catapult arm and launch cup loaded with a yellow ball." loading="lazy" />
+    </a>
+    <figcaption class="project-reference-card__caption">Loaded launch position showing the arm linkage, cup, and feed path.</figcaption>
+  </figure>
+
+  <figure class="project-reference-card">
+    <a class="project-reference-card__link" href="/live/assets/images/projects/project-2/reference/instructables-catapult-side-profile.webp">
+      <img class="project-reference-card__image" src="/live/assets/images/projects/project-2/reference/instructables-catapult-side-profile.webp" alt="Side profile of the assembled robot catapult showing the lever arm and servo-driven structure." loading="lazy" />
+    </a>
+    <figcaption class="project-reference-card__caption">Side profile that makes the main arm motion and support structure easier to read.</figcaption>
+  </figure>
+
+  <figure class="project-reference-card">
+    <a class="project-reference-card__link" href="/live/assets/images/projects/project-2/reference/instructables-catapult-trigger-subassembly.webp">
+      <img class="project-reference-card__image" src="/live/assets/images/projects/project-2/reference/instructables-catapult-trigger-subassembly.webp" alt="Close-up of a catapult trigger or feed subassembly with servo horn mounted to a white plate." loading="lazy" />
+    </a>
+    <figcaption class="project-reference-card__caption">Subassembly close-up for one of the servo-driven moving stages.</figcaption>
+  </figure>
+</div>
+<h2 id="common-failure-points">
+  
+  
+    <a href="#common-failure-points" class="anchor-heading" aria-labelledby="common-failure-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Common Failure Points
+  
+  
+</h2>
+    
+
+<ul>
+  <li>inconsistent projectile size or mass between test shots</li>
+  <li>trying to solve reload, scanning, and launch power at the same time</li>
+  <li>unstable power delivery when multiple motors or drivers move together</li>
+  <li>mounting the sensor in a way that cannot reliably see the towers</li>
+</ul>
+<h2 id="programming-approach">
+  
+  
+    <a href="#programming-approach" class="anchor-heading" aria-labelledby="programming-approach"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Programming approach
+  
+  
+</h2>
+    
+
+<p>VS Code is the primary recommended workflow for this project. Start with <a href="/live/vscode-setup/">VS Code Setup</a> for toolchain bring-up and <a href="/live/power-wiring/">Power &amp; Wiring</a> before running launch hardware at full load.</p>
+
+<ul>
+  <li>Recommended path: VS Code</li>
+  <li>MicroPython or Arduino IDE can still be used if your team already knows them, but treat them as secondary options</li>
+</ul>
+<h2 id="scoring-criteria">
+  
+  
+    <a href="#scoring-criteria" class="anchor-heading" aria-labelledby="scoring-criteria"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Scoring Criteria
+  
+  
+</h2>
+    
+
+<p>Maximum score: 100 points</p>
+
+<p>The project rewards automation, accuracy, engineering quality, and software implementation. Systems with higher autonomy levels receive higher marks.</p>
+<h3 id="1-level-of-automation-50-points">
+  
+  
+    <a href="#1-level-of-automation-50-points" class="anchor-heading" aria-labelledby="1-level-of-automation-50-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1. Level of Automation (50 Points)
+  
+  
+</h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>System Type</th>
+      <th>Description</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fully Autonomous System</td>
+      <td>System measures distance, calculates launch parameters, aims, and fires automatically with no human input.</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Semi-Autonomous (Manual Aim + Automatic Launch)</td>
+      <td>Users align the system with the target direction, but the system measures distance and automatically calculates launch parameters and fires.</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>Distance-Assisted Launch</td>
+      <td>System measures distance and displays recommended settings, but the user manually adjusts and triggers the launch.</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>Fully Manual System</td>
+      <td>User performs aiming and launching manually without automated assistance.</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table></div>
+<h3 id="2-accuracy-scoring---block-target-system-40-points">
+  
+  
+    <a href="#2-accuracy-scoring---block-target-system-40-points" class="anchor-heading" aria-labelledby="2-accuracy-scoring---block-target-system-40-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2. Accuracy Scoring - Block Target System (40 Points)
+  
+  
+</h3>
+    
+
+<p>The target will consist of 6 columns of 3 stacked blocks, arranged by distance from the catapult at marked positions around a circle with the catapult in the center.</p>
+
+<p>Target Layout</p>
+
+<ul>
+  <li>2 Close Columns (0.8m)</li>
+  <li>2 Middle Columns (1.3m)</li>
+  <li>2 Far Columns (1.8m)</li>
+</ul>
+
+<p>Teams aiming for the fully autonomous category are expected to locate and aim at these towers automatically. Lower automation categories are still scored using the rubric above.</p>
+
+<p>Calculation method:</p>
+
+<ul>
+  <li>Only the top two blocks in each column count toward scoring. The bottom block does not count, even if it falls.</li>
+</ul>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Number of boxes fallen* distance multiplier
+</code></pre></div></div>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Distance</th>
+      <th>Multiplier</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Close</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Middle</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Far</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<ul>
+  <li>Total score after 5 shots is the score for accuracy</li>
+</ul>
+<h3 id="3-engineering--system-design-5-points">
+  
+  
+    <a href="#3-engineering--system-design-5-points" class="anchor-heading" aria-labelledby="3-engineering--system-design-5-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3. Engineering &amp; System Design (5 Points)
+  
+  
+</h3>
+    
+
+<p>Judges will assess:</p>
+
+<ul>
+  <li>Stability of the mechanical structure</li>
+  <li>Quality of assembly and wiring</li>
+  <li>Effective use of provided components</li>
+</ul>
+
+<p>Score: 0-5 points</p>
+<h3 id="4-innovation--creativity-5-points">
+  
+  
+    <a href="#4-innovation--creativity-5-points" class="anchor-heading" aria-labelledby="4-innovation--creativity-5-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4. Innovation &amp; Creativity (5 Points)
+  
+  
+</h3>
+    
+
+<p>Points may be awarded for:</p>
+
+<ul>
+  <li>Creative catapult designs</li>
+  <li>Unique engineering solutions</li>
+</ul>
+
+<p>Score: 0-5 points</p>
+<h2 id="supporting-documentation">
+  
+  
+    <a href="#supporting-documentation" class="anchor-heading" aria-labelledby="supporting-documentation"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Supporting Documentation
+  
+  
+</h2>
+    
+
+<ul>
+  <li>Raspberry Pi Pico 2 pin out: <a href="https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#pico2">https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#pico2</a></li>
+  <li>DIymore VL53L0X V2 Sensor: (User manual under description)
+    <ul>
+      <li><a href="https://www.aliexpress.com/item/32902676861.html?spm=a2g0o.productlist.main.46.51a2576a2xuzXY&amp;algo_pvid=a342f1ac-b016-48d5-b2200441a47fd0fc&amp;pdp_ext_f=%7B%22order%22%3A%2254%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&amp;utparamurl=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A32902676861%7C_p_origin_prod%3A#nav-specification">https://www.aliexpress.com/item/32902676861.html?spm=a2g0o.productlist.main.46.51a2576a2xuzXY&amp;algo_pvid=a342f1ac-b016-48d5-b2200441a47fd0fc&amp;pdp_ext_f=%7B%22order%22%3A%2254%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&amp;utparamurl=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A32902676861%7C_p_origin_prod%3A#nav-specification</a></li>
+      <li><a href="https://www.st.com/resource/en/datasheet/vl53l0x.pdf">https://www.st.com/resource/en/datasheet/vl53l0x.pdf</a></li>
+    </ul>
+  </li>
+  <li>MG996R Servo (High Torque): Check power requirements!
+    <ul>
+      <li><a href="https://www.electronicoscaldas.com/datasheet/MG996R_Tower-Pro.pdf">https://www.electronicoscaldas.com/datasheet/MG996R_Tower-Pro.pdf</a></li>
+    </ul>
+  </li>
+  <li>MG90S Servo:
+    <ul>
+      <li><a href="https://www.electronicoscaldas.com/datasheet/MG90S_Tower-Pro.pdf">https://www.electronicoscaldas.com/datasheet/MG90S_Tower-Pro.pdf</a></li>
+    </ul>
+  </li>
+  <li>Nema 17 42 stepper motor:
+    <ul>
+      <li><a href="https://www.handsontec.com/dataspecs/motor_fan/nema17-42BYGH60.pdf">https://www.handsontec.com/dataspecs/motor_fan/nema17-42BYGH60.pdf</a></li>
+    </ul>
+  </li>
+  <li>DRV8825 Stepper Driver Guide:
+    <ul>
+      <li><a href="https://www.pololu.com/product/2133">https://www.pololu.com/product/2133</a></li>
+    </ul>
+  </li>
+  <li>LM2596S DC Buck Converter:
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=RAbTdeLU2JQ&amp;t=246s">https://www.youtube.com/watch?v=RAbTdeLU2JQ&amp;t=246s</a></li>
+    </ul>
+  </li>
+  <li>VL53L0X (ToF Sensor) Library:
+    <ul>
+      <li>MicroPython: <a href="https://github.com/kevinmcaleer/vl53lx0">https://github.com/kevinmcaleer/vl53lx0</a></li>
+      <li>C/C++ : <a href="https://github.com/adafruit/Adafruit_VL53L0X">https://github.com/adafruit/Adafruit_VL53L0X</a></li>
+    </ul>
+  </li>
+  <li>SSD1306-compatible OLED libraries:
+    <ul>
+      <li>MicroPython : <a href="https://github.com/stlehmann/micropython-ssd1306">https://github.com/stlehmann/micropython-ssd1306</a></li>
+    </ul>
+  </li>
+</ul>
+
+            
+
+            
+          </main>
+          
+<hr>
+<footer>
+  
+
+  
+
+  <div class="d-md-none mt-4 fs-2">
+    
+    
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    
+  </div>
+</footer>
+
+        </div>
+      </div>
+      
+        
+
+<div class="search-overlay"></div>
+
+      
+    </div>
+  
+
+  
+</body>
+</html>
+

@@ -1,0 +1,923 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/live/assets/css/just-the-docs-default.css">
+
+  <link rel="stylesheet" href="/live/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  
+    .site-nav ul li a {
+      background-image: none;
+    }
+
+  </style>
+
+  
+
+  
+    <script src="/live/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/live/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Project 6 - Creative | Hack-A-Bot Live</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Project 6 - Creative" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Private event-day microsite for Hack-A-Bot 2026." />
+<meta property="og:description" content="Private event-day microsite for Hack-A-Bot 2026." />
+<link rel="canonical" href="https://hackabot-2026.com/live/project-6/" />
+<meta property="og:url" content="https://hackabot-2026.com/live/project-6/" />
+<meta property="og:site_name" content="Hack-A-Bot Live" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Project 6 - Creative" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Private event-day microsite for Hack-A-Bot 2026.","headline":"Project 6 - Creative","url":"https://hackabot-2026.com/live/project-6/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link rel="icon" href="/live/assets/images/brand/Logo.png" type="image/png" />
+<link rel="apple-touch-icon" href="/live/assets/images/brand/Logo.png" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+/>
+
+<script>
+  (() => {
+    const onReady =
+      (window.jtd && window.jtd.onReady) ||
+      ((callback) => {
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", callback, { once: true });
+        } else {
+          callback();
+        }
+      });
+
+    let youtubeApiPromise = null;
+
+    const loadYouTubeApi = () => {
+      if (window.YT && typeof window.YT.Player === "function") {
+        return Promise.resolve(window.YT);
+      }
+
+      if (youtubeApiPromise) {
+        return youtubeApiPromise;
+      }
+
+      youtubeApiPromise = new Promise((resolve) => {
+        const existingHandler = window.onYouTubeIframeAPIReady;
+
+        window.onYouTubeIframeAPIReady = () => {
+          if (typeof existingHandler === "function") {
+            existingHandler();
+          }
+          resolve(window.YT);
+        };
+
+        const script = document.createElement("script");
+        script.src = "https://www.youtube.com/iframe_api";
+        script.async = true;
+        document.head.appendChild(script);
+      });
+
+      return youtubeApiPromise;
+    };
+
+    onReady(async () => {
+      const players = Array.from(document.querySelectorAll(".js-project-video-player"));
+      if (players.length === 0) {
+        return;
+      }
+
+      const YT = await loadYouTubeApi();
+
+      players.forEach((playerElement) => {
+        if (!playerElement.id || playerElement.dataset.youtubeMuted === "true") {
+          return;
+        }
+
+        playerElement.dataset.youtubeMuted = "true";
+        new YT.Player(playerElement.id, {
+          events: {
+            onReady: (event) => {
+              event.target.mute();
+            },
+          },
+        });
+      });
+    });
+  })();
+</script>
+<meta name="theme-color" content="#101113" />
+
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  
+    
+      <header class="side-bar">
+  <div class="site-header">
+    <a href="/live/" class="site-title lh-tight"><span class="site-title__brand">
+  <img
+    class="site-title__logo"
+    src="/live/assets/images/brand/Logo.png"
+    alt=""
+    width="2589"
+    height="2594"
+    decoding="async"
+  />
+  <span class="site-title__text">Hack-A-Bot Live</span>
+</span>
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+  
+  
+    <ul class="nav-list"><li class="nav-list-item"><a href="/live/" class="nav-list-link"><span class="nav-list-link__title">Event Day</span>
+      </a></li><li class="nav-list-item nav-item-projects"><button class="nav-list-expander btn-reset" aria-label="Projects submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/live/projects/" class="nav-list-link"><span class="nav-list-link__title">Projects</span>
+      </a><ul class="nav-list"><li class="nav-list-item"><a href="/live/project-1/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/platformer.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 1 - Platformer</span>
+      </a></li><li class="nav-list-item"><a href="/live/project-2/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/catapult.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 2 - Catapult</span>
+      </a></li><li class="nav-list-item"><a href="/live/project-3/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/robot-arm.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 3 - Robot Arm</span>
+      </a></li><li class="nav-list-item"><a href="/live/project-4/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/swarm.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 4 - Swarm</span>
+      </a></li><li class="nav-list-item"><a href="/live/project-5/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/rover.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 5 - Rover</span>
+      </a></li><li class="nav-list-item"><a href="/live/project-6/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/creative.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 6 - Creative</span>
+      </a></li></ul></li><li class="nav-list-item"><a href="/live/vscode-setup/" class="nav-list-link"><span class="nav-list-link__title">VS Code Setup</span>
+      </a></li><li class="nav-list-item"><a href="/live/pi-pico-controller/" class="nav-list-link"><span class="nav-list-link__title">Pi Pico Controller</span>
+      </a></li><li class="nav-list-item"><a href="/live/power-wiring/" class="nav-list-link"><span class="nav-list-link__title">Power & Wiring</span>
+      </a></li><li class="nav-list-item nav-item-makerspace"><button class="nav-list-expander btn-reset" aria-label="Makerspace submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/live/makerspace/" class="nav-list-link"><span class="nav-list-link__title">Makerspace</span>
+      </a><ul class="nav-list"><li class="nav-list-item"><a href="/live/3d-printing/" class="nav-list-link"><span class="nav-list-link__title">3D Printing</span>
+      </a></li><li class="nav-list-item"><a href="/live/laser-cutter/" class="nav-list-link"><span class="nav-list-link__title">Laser Cutting</span>
+      </a></li></ul></li><li class="nav-list-item"><a href="/live/schedule/" class="nav-list-link"><span class="nav-list-link__title">Schedule</span>
+      </a></li><li class="nav-list-item"><a href="/live/floorplan/" class="nav-list-link"><span class="nav-list-link__title">Floorplan</span>
+      </a></li></ul>
+  
+</nav>
+
+
+<div class="d-md-block d-none site-footer">
+  
+  
+    This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+  
+  </div>
+</header>
+
+    
+    <div class="main" id="top">
+      <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Hack-A-Bot Live" autocomplete="off">
+    <label for="search-input" class="search-label">
+      <span class="sr-only">Search Hack-A-Bot Live</span>
+      <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><use xlink:href="#svg-search"></use></svg>
+    </label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+</div>
+
+      <div class="main-content-wrap">
+        <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-nav-list">
+    <li class="breadcrumb-nav-list-item"><span>Project 6 - Creative</span></li>
+  </ol>
+</nav>
+
+
+        <div id="main-content" class="main-content">
+          <main>
+            <section class="project-hero" aria-labelledby="project-6-hero-title">
+  <div class="project-hero__badge-panel"><img
+      class="project-hero__badge"
+      src="/live/assets/images/projects/badges/creative.png"
+      alt="Creative project badge"
+    /></div>
+
+  <div class="project-hero__content"><p class="project-hero__eyebrow">Project 6</p><h1 class="project-hero__title" id="project-6-hero-title">Creative</h1><div class="project-hero__meta" aria-label="Sponsors">
+        <p class="project-hero__meta-label">Sponsors</p>
+        <div class="project-hero__sponsors"><div class="project-hero__sponsor"><img
+                  class="project-hero__sponsor-logo"
+                  src="/live/assets/images/projects/sponsors/ARM.svg"
+                  alt="ARM logo"
+                /></div><div class="project-hero__sponsor"><img
+                  class="project-hero__sponsor-logo"
+                  src="/live/assets/images/projects/sponsors/eeesoc.svg"
+                  alt="EEESoc logo"
+                /></div></div>
+      </div><p class="project-hero__description">Design a problem-driven embedded device or robot using two Pi Picos and wireless coordination to address a real need in assistive tech, autonomy, interactive play, or sustainability.</p></div>
+</section>
+
+            <section class="project-intro" aria-label="Project overview, videos, and resources"><div class="project-intro__overview">
+        <h2 class="project-intro__heading" id="overview">
+          <a href="#overview" class="anchor-heading" aria-labelledby="overview"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Overview
+        </h2>
+        <div class="project-intro__overview-body">
+          <p>The Creative project is an open-ended embedded systems and robotics brief. Teams receive a standard Arm-based base kit, including two Raspberry Pi Pico microcontrollers and <code class="language-plaintext highlighter-rouge">nRF24L01+</code> transceivers, with access to additional parts from the event inventory. Over 24 hours, each team must design and build a working device that addresses a clearly defined problem in one of four prompt areas: assistive tech, autonomy, interactive play, or sustainability.</p>
+
+<p>The recommended approach is to use one Pico in the main device and the second as a wireless controller, base station, or companion node. Teams are free to choose their own control method and mechanism, using inputs such as joysticks, buttons, or an IMU, and may build anything from a robotic arm or quadruped to a pick-and-place system or other interactive machine. The focus is not just on building something technically impressive, but on showing how the design solves a real problem in a clear and convincing way.</p>
+
+        </div>
+      </div><aside class="project-intro__media" aria-label="Project videos and resources"><p class="project-intro__media-eyebrow">Videos &amp; Resources</p><div class="project-intro__media-stack"><article class="project-intro__media-item">
+                  <div class="project-intro__media-frame">
+                    <iframe
+                      id="project-6-video-1"
+                      class="js-project-video-player"
+                      src="https://www.youtube-nocookie.com/embed/UDd_kxl1mZw?rel=0&enablejsapi=1&playsinline=1"
+                      title="Creative project example"
+                      loading="lazy"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="project-intro__media-copy">
+                    <p class="project-intro__media-title">Creative project example</p><a class="project-intro__media-link" href="https://www.youtube.com/watch?v=UDd_kxl1mZw&list=PLDqMkB5cbBA6AwYC_DElkDStUdOsTuIL7&index=35">Open on YouTube</a></div>
+                </article></div><section class="project-intro__resources" aria-labelledby="project-resources">
+            <h3 class="project-intro__resources-title" id="project-resources">Resources</h3>
+            <ul class="project-intro__resource-list"><li>
+                  <a href="https://www.youtube.com/playlist?list=PLDqMkB5cbBA6AwYC_DElkDStUdOsTuIL7">Creative inspiration playlist</a>
+                </li></ul>
+          </section></aside></section>
+
+            
+              <h2 id="objectives">
+  
+  
+    <a href="#objectives" class="anchor-heading" aria-labelledby="objectives"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Objectives
+  
+  
+</h2>
+    
+
+<ol>
+  <li>Define a clear real-world problem and explain who the solution is for.</li>
+  <li>Design and build a working physical prototype within one of the four prompt areas.</li>
+  <li>Use the two provided Pico boards and wireless transceivers to coordinate at least two parts of the system.</li>
+  <li>Implement a purposeful control or behaviour strategy, whether remote, semi-autonomous, or autonomous.</li>
+  <li>Demonstrate the prototype completing its intended task reliably during judging.</li>
+  <li>Explain the key engineering choices, tradeoffs, and why the final design is an effective response to the chosen problem.</li>
+</ol>
+<h2 id="quickstart">
+  
+  
+    <a href="#quickstart" class="anchor-heading" aria-labelledby="quickstart"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Quickstart
+  
+  
+</h2>
+    
+
+<ol>
+  <li>Start with <a href="/live/vscode-setup/">VS Code Setup</a>, then use <a href="/live/pi-pico-controller/">Pi Pico Controller</a> for shared <code class="language-plaintext highlighter-rouge">nRF24L01+</code> bring-up ideas and <a href="/live/power-wiring/">Power &amp; Wiring</a> before you add actuators.</li>
+  <li>Decide in the first hour what the main Pico does, what the second Pico does, and what counts as a believable live demo.</li>
+  <li>Prove the wireless link early. Do not wait until the rest of the build is finished.</li>
+  <li>Keep the first prototype small enough that it can demonstrate the core problem-solution loop.</li>
+</ol>
+<h2 id="prompt-areas">
+  
+  
+    <a href="#prompt-areas" class="anchor-heading" aria-labelledby="prompt-areas"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Prompt Areas
+  
+  
+</h2>
+    
+
+<div class="creative-prompt-grid" role="list">
+  <section class="creative-prompt-card" role="listitem" aria-labelledby="creative-prompt-assistive-tech">
+<h3 class="creative-prompt-card__title" id="creative-prompt-assistive-tech">
+  
+  
+    <a href="#creative-prompt-assistive-tech" class="anchor-heading" aria-labelledby="creative-prompt-assistive-tech"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Assistive Tech
+  
+  
+</h3>
+    
+    <p class="creative-prompt-card__description">Build a device that improves accessibility, safety, independence, or ease of use for a person or task.</p>
+  </section>
+  <section class="creative-prompt-card" role="listitem" aria-labelledby="creative-prompt-autonomy">
+<h3 class="creative-prompt-card__title" id="creative-prompt-autonomy">
+  
+  
+    <a href="#creative-prompt-autonomy" class="anchor-heading" aria-labelledby="creative-prompt-autonomy"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Autonomy
+  
+  
+</h3>
+    
+    <p class="creative-prompt-card__description">Build a system that senses, decides, and acts with minimal human input to complete a meaningful task.</p>
+  </section>
+  <section class="creative-prompt-card" role="listitem" aria-labelledby="creative-prompt-interactive-play">
+<h3 class="creative-prompt-card__title" id="creative-prompt-interactive-play">
+  
+  
+    <a href="#creative-prompt-interactive-play" class="anchor-heading" aria-labelledby="creative-prompt-interactive-play"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Interactive Play
+  
+  
+</h3>
+    
+    <p class="creative-prompt-card__description">Build an engaging physical experience that invites interaction, competition, learning, or delight.</p>
+  </section>
+  <section class="creative-prompt-card" role="listitem" aria-labelledby="creative-prompt-sustainability">
+<h3 class="creative-prompt-card__title" id="creative-prompt-sustainability">
+  
+  
+    <a href="#creative-prompt-sustainability" class="anchor-heading" aria-labelledby="creative-prompt-sustainability"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Sustainability
+  
+  
+</h3>
+    
+    <p class="creative-prompt-card__description">Build a device that helps reduce waste, save energy, monitor resources, or encourage more sustainable behaviour.</p>
+  </section>
+</div>
+<h2 id="materials-provided">
+  
+  
+    <a href="#materials-provided" class="anchor-heading" aria-labelledby="materials-provided"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Materials Provided
+  
+  
+</h2>
+    
+
+<div class="table-wrapper">
+  <div class="table-wrapper"><table class="project-materials-table">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Picture</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="project-materials-table__item"><code>Raspberry Pi Pico 2</code></td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/raspberry-pi-pico-2.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/raspberry-pi-pico-2.webp" alt="Raspberry Pi Pico 2 microcontroller board." loading="lazy" />
+          </a>
+        </td>
+        <td>The core controller for the Creative project. Most teams will use one Pico in the main device and the second in a controller, base station, or companion node.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>nRF24L01+ PA + LNA 2.4 GHz</code> wireless modules</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-6/materials/nrf24l01-pa-lna-module.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-6/materials/nrf24l01-pa-lna-module.webp" alt="nRF24L01+ PA plus LNA wireless transceiver module with antenna." loading="lazy" />
+          </a>
+        </td>
+        <td>Provides the required wireless link between the two Pico nodes, with the amplified radio and external antenna giving more margin for room-scale demos.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>PCA9685</code> servo motor driver boards</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-6/materials/pca9685-servo-driver.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-6/materials/pca9685-servo-driver.webp" alt="PCA9685 16-channel servo driver board." loading="lazy" />
+          </a>
+        </td>
+        <td>Adds many PWM outputs over I2C, which is useful when a creative build needs multiple servos without consuming most of the Pico pins.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>MG90S</code> servo motors</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/mg90s-servo.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/mg90s-servo.webp" alt="MG90S micro servo." loading="lazy" />
+          </a>
+        </td>
+        <td>Compact actuators for light mechanisms such as pan-tilt mounts, grippers, latches, dials, or interactive moving parts.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item">Joystick modules</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-1/materials/analog-joystick.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-1/materials/analog-joystick.webp" alt="Analog joystick input module." loading="lazy" />
+          </a>
+        </td>
+        <td>Simple human input for teleoperation, calibration, manual override, or a quick handheld controller for prototype testing.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>BMI160</code> gyroscope and accelerometer sensor</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-6/materials/bmi160-imu.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-6/materials/bmi160-imu.webp" alt="BMI160 gyroscope and accelerometer sensor board." loading="lazy" />
+          </a>
+        </td>
+        <td>Useful for orientation sensing, motion-triggered interaction, gesture control, stabilization, and other behaviour-driven projects.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>0.96&quot;</code> OLED display module</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/oled-display-096.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/oled-display-096.webp" alt="0.96 inch OLED display module." loading="lazy" />
+          </a>
+        </td>
+        <td>A lightweight status screen for mode changes, sensor readouts, wireless state, battery checks, or other live debug information.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>LM2596S</code> DC buck converters</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/lm2596s-buck-converter.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/lm2596s-buck-converter.webp" alt="LM2596S adjustable DC buck converter module." loading="lazy" />
+          </a>
+        </td>
+        <td>Lets teams derive stable lower-voltage rails from a higher-voltage source for logic, radios, sensors, and smaller peripherals.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>300W 20A</code> DC-DC boost/buck power converter</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-6/materials/300w-20a-buck-boost-converter.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-6/materials/300w-20a-buck-boost-converter.webp" alt="High-power 300 watt 20 amp buck-boost converter module." loading="lazy" />
+          </a>
+        </td>
+        <td>High-power adjustable conversion stage for builds that need a custom supply rail or heavier actuation than the small buck modules are meant to handle.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>12V 6A</code> power supply unit</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/12v-6a-power-supply.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/12v-6a-power-supply.webp" alt="12 volt 6 amp power supply unit." loading="lazy" />
+          </a>
+        </td>
+        <td>Bench power source for motors, converters, and other higher-current experiments during bring-up and testing.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>400</code>-tie breadboards</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-6/materials/breadboard-400-tie-points.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-6/materials/breadboard-400-tie-points.webp" alt="Half-size 400 tie-point breadboard." loading="lazy" />
+          </a>
+        </td>
+        <td>Fast solderless prototyping surface for trying control ideas, sensor wiring, and interface circuits before committing to a more permanent build.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item">Perfboard <code>7 x 9 cm</code></td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-2/materials/perfboard-7x9cm.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-2/materials/perfboard-7x9cm.webp" alt="7 by 9 centimetre perfboard." loading="lazy" />
+          </a>
+        </td>
+        <td>Useful when a working breadboard circuit needs to be transferred onto a more durable soldered board for the final prototype.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>22 AWG</code> single-core wire</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-6/materials/wire-22awg-solid-core.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-6/materials/wire-22awg-solid-core.webp" alt="22 AWG solid-core hookup wire spools." loading="lazy" />
+          </a>
+        </td>
+        <td>Breadboard-friendly hookup wire for quick interconnects, sensor headers, and neat point-to-point wiring on perfboard.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item"><code>M3 x 8 mm</code> self-tapping screws</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-6/materials/m3x8-self-tapping-screws.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-6/materials/m3x8-self-tapping-screws.webp" alt="M3 by 8 millimetre self-tapping screws." loading="lazy" />
+          </a>
+        </td>
+        <td>Convenient mechanical hardware for mounting 3D prints, brackets, covers, and light structural parts without a separate tapped insert.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item">Assorted electronic components kit</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-6/materials/assorted-electronic-components-kit.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-6/materials/assorted-electronic-components-kit.webp" alt="Assorted electronic components kit." loading="lazy" />
+          </a>
+        </td>
+        <td>General-purpose parts such as resistors, LEDs, diodes, and small interface components for signal conditioning, indicators, and quick fixes.</td>
+      </tr>
+      <tr>
+        <td class="project-materials-table__item">Mini precision screwdriver set</td>
+        <td>
+          <a class="project-materials-table__image-link" href="/live/assets/images/projects/project-6/materials/precision-screwdriver-set.webp">
+            <img class="project-materials-table__image" src="/live/assets/images/projects/project-6/materials/precision-screwdriver-set.webp" alt="Mini precision screwdriver set." loading="lazy" />
+          </a>
+        </td>
+        <td>Basic hand tool set for assembling the prototype, tightening mounts, and making small adjustments during debugging.</td>
+      </tr>
+    </tbody>
+  </table></div>
+</div>
+<h2 id="additional-parts">
+  
+  
+    <a href="#additional-parts" class="anchor-heading" aria-labelledby="additional-parts"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Additional Parts
+  
+  
+</h2>
+    
+
+<p>If your team genuinely needs extra components, the event inventory will be at the back of the Makerspace near the storage rooms. Ask the supervisor on inventory shift what is actually available before you redesign your build around extra parts.</p>
+<h2 id="common-failure-points">
+  
+  
+    <a href="#common-failure-points" class="anchor-heading" aria-labelledby="common-failure-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Common Failure Points
+  
+  
+</h2>
+    
+
+<ul>
+  <li>choosing a problem that is too vague to demonstrate convincingly</li>
+  <li>waiting too long to prove the two-Pico wireless link</li>
+  <li>chasing extra inventory before the core concept works with the base kit</li>
+  <li>building too much mechanism before the live demo path is stable</li>
+</ul>
+<h2 id="programming-approach">
+  
+  
+    <a href="#programming-approach" class="anchor-heading" aria-labelledby="programming-approach"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Programming approach
+  
+  
+</h2>
+    
+
+<p>Teams will build around the <code class="language-plaintext highlighter-rouge">Raspberry Pi Pico 2</code>, which is well suited to embedded control, sensing, actuation, and wireless communication. VS Code is the primary recommended workflow for this project.</p>
+
+<ul>
+  <li>Recommended path: VS Code</li>
+  <li>MicroPython or Arduino IDE can still be used if your team already knows them, but treat them as secondary options</li>
+</ul>
+<h2 id="scoring-criteria">
+  
+  
+    <a href="#scoring-criteria" class="anchor-heading" aria-labelledby="scoring-criteria"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Scoring Criteria
+  
+  
+</h2>
+    
+
+<p>Maximum score: 100 points</p>
+
+<p>The Creative project is judged using a fixed rubric rather than by fastest time or direct placement against other teams. Judges will look for a clear problem, a convincing physical prototype, and a live demonstration that shows the system doing something meaningful.</p>
+
+<p>Each team will complete one final judged demonstration. Scores will then be awarded across the categories below.</p>
+<h3 id="1-problem-definition-and-solution-fit-30-points">
+  
+  
+    <a href="#1-problem-definition-and-solution-fit-30-points" class="anchor-heading" aria-labelledby="1-problem-definition-and-solution-fit-30-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1. Problem Definition and Solution Fit (30 points)
+  
+  
+</h3>
+    
+
+<p>This category rewards how clearly the team defines the problem, identifies the intended user or context, explains relevant constraints, and shows that the chosen device is a good response. The project should also fit clearly within the selected prompt area.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Performance Level</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Exceptionally clear problem definition, strong prompt fit, and highly convincing solution choice</td>
+      <td>24-30</td>
+    </tr>
+    <tr>
+      <td>Mostly clear problem and solution fit, with some gaps or weaker justification</td>
+      <td>16-23</td>
+    </tr>
+    <tr>
+      <td>Problem is vague, weakly framed, or only partially connected to the prototype</td>
+      <td>8-15</td>
+    </tr>
+    <tr>
+      <td>Problem is unclear or the solution fit is not convincing</td>
+      <td>0-7</td>
+    </tr>
+  </tbody>
+</table></div>
+<h3 id="2-live-demo-and-effectiveness-25-points">
+  
+  
+    <a href="#2-live-demo-and-effectiveness-25-points" class="anchor-heading" aria-labelledby="2-live-demo-and-effectiveness-25-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2. Live Demo and Effectiveness (25 points)
+  
+  
+</h3>
+    
+
+<p>This category rewards how convincingly the prototype performs its intended task during judging. Stable, believable operation will score more highly than a fragile one-off success.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Performance Level</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Core function works clearly and convincingly in the live demo</td>
+      <td>20-25</td>
+    </tr>
+    <tr>
+      <td>Core concept works, but with visible limitations or only partial success</td>
+      <td>13-19</td>
+    </tr>
+    <tr>
+      <td>Only a limited or inconsistent demonstration is achieved</td>
+      <td>6-12</td>
+    </tr>
+    <tr>
+      <td>Intended function is not meaningfully demonstrated</td>
+      <td>0-5</td>
+    </tr>
+  </tbody>
+</table></div>
+<h3 id="3-technical-implementation-and-engineering-quality-20-points">
+  
+  
+    <a href="#3-technical-implementation-and-engineering-quality-20-points" class="anchor-heading" aria-labelledby="3-technical-implementation-and-engineering-quality-20-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3. Technical Implementation and Engineering Quality (20 points)
+  
+  
+</h3>
+    
+
+<p>This category rewards embedded software, sensing, control, actuation, wireless coordination, system integration, and overall build quality.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Performance Level</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Strong integration, robust implementation, and effective use of hardware and software</td>
+      <td>16-20</td>
+    </tr>
+    <tr>
+      <td>Competent execution with some rough edges or missing polish</td>
+      <td>10-15</td>
+    </tr>
+    <tr>
+      <td>Basic implementation or weak integration across the system</td>
+      <td>4-9</td>
+    </tr>
+    <tr>
+      <td>Minimal technical execution or poor overall quality</td>
+      <td>0-3</td>
+    </tr>
+  </tbody>
+</table></div>
+<h3 id="4-innovation-and-creativity-15-points">
+  
+  
+    <a href="#4-innovation-and-creativity-15-points" class="anchor-heading" aria-labelledby="4-innovation-and-creativity-15-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4. Innovation and Creativity (15 points)
+  
+  
+</h3>
+    
+
+<p>This category rewards originality of concept, mechanism, interaction style, control method, or use of the provided kit.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Performance Level</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Clearly original, inventive, and thoughtfully executed</td>
+      <td>12-15</td>
+    </tr>
+    <tr>
+      <td>Some creative ideas, but overall more familiar or expected</td>
+      <td>8-11</td>
+    </tr>
+    <tr>
+      <td>Limited originality or only minor creative elements</td>
+      <td>4-7</td>
+    </tr>
+    <tr>
+      <td>Little meaningful creativity</td>
+      <td>0-3</td>
+    </tr>
+  </tbody>
+</table></div>
+<h3 id="5-communication-and-supporting-documentation-10-points">
+  
+  
+    <a href="#5-communication-and-supporting-documentation-10-points" class="anchor-heading" aria-labelledby="5-communication-and-supporting-documentation-10-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5. Communication and Supporting Documentation (10 points)
+  
+  
+</h3>
+    
+
+<p>This category rewards how clearly the team explains the problem, architecture, design decisions, and tradeoffs. Supporting material may include a short README, block diagram, wiring diagram, CAD view, or control-flow sketch.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Performance Level</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Clear explanation with useful supporting material</td>
+      <td>8-10</td>
+    </tr>
+    <tr>
+      <td>Understandable explanation, but incomplete or uneven</td>
+      <td>5-7</td>
+    </tr>
+    <tr>
+      <td>Weak explanation or minimal supporting material</td>
+      <td>2-4</td>
+    </tr>
+    <tr>
+      <td>Unclear explanation and no meaningful supporting material</td>
+      <td>0-1</td>
+    </tr>
+  </tbody>
+</table></div>
+<h3 id="judging-requirements">
+  
+  
+    <a href="#judging-requirements" class="anchor-heading" aria-labelledby="judging-requirements"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Judging Requirements
+  
+  
+</h3>
+    
+
+<ul>
+  <li>Using both provided Pico boards with the wireless link is a core requirement of the brief.</li>
+  <li>If a team does not meet the two-Pico wireless requirement, they may still be judged, but their total score is capped at <code class="language-plaintext highlighter-rouge">60</code>.</li>
+  <li>A successful live demonstration of the project’s core function is required for full marks.</li>
+  <li>If a team cannot demonstrate the core function live during judging, their total score is capped at <code class="language-plaintext highlighter-rouge">50</code>.</li>
+  <li>If both score caps apply, the lower cap will be used.</li>
+</ul>
+
+            
+
+            
+          </main>
+          
+<hr>
+<footer>
+  
+
+  
+
+  <div class="d-md-none mt-4 fs-2">
+    
+    
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    
+  </div>
+</footer>
+
+        </div>
+      </div>
+      
+        
+
+<div class="search-overlay"></div>
+
+      
+    </div>
+  
+
+  
+</body>
+</html>
+

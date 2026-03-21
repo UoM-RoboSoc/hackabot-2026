@@ -6,7 +6,17 @@
     <title>Redirecting…</title>
     <script>
       (function () {
-        var redirectTo = '/?__gh_path=' + encodeURIComponent(window.location.pathname + window.location.search + window.location.hash);
+        var path = window.location.pathname || '/';
+        var search = window.location.search || '';
+        var hash = window.location.hash || '';
+        var normalizedPath = path.replace(/\/+$/, '') || '/';
+
+        if (normalizedPath === '/live' || normalizedPath.indexOf('/live/') === 0) {
+          window.location.replace('/live/');
+          return;
+        }
+
+        var redirectTo = '/?__gh_path=' + encodeURIComponent(path + search + hash);
         window.location.replace(redirectTo);
       })();
     </script>

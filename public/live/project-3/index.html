@@ -1,0 +1,830 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/live/assets/css/just-the-docs-default.css">
+
+  <link rel="stylesheet" href="/live/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  
+    .site-nav ul li a {
+      background-image: none;
+    }
+
+  </style>
+
+  
+
+  
+    <script src="/live/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/live/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Project 3 - Robot Arm | Hack-A-Bot Live</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Project 3 - Robot Arm" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Private event-day microsite for Hack-A-Bot 2026." />
+<meta property="og:description" content="Private event-day microsite for Hack-A-Bot 2026." />
+<link rel="canonical" href="https://hackabot-2026.com/live/project-3/" />
+<meta property="og:url" content="https://hackabot-2026.com/live/project-3/" />
+<meta property="og:site_name" content="Hack-A-Bot Live" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Project 3 - Robot Arm" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Private event-day microsite for Hack-A-Bot 2026.","headline":"Project 3 - Robot Arm","url":"https://hackabot-2026.com/live/project-3/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link rel="icon" href="/live/assets/images/brand/Logo.png" type="image/png" />
+<link rel="apple-touch-icon" href="/live/assets/images/brand/Logo.png" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+/>
+
+<script>
+  (() => {
+    const onReady =
+      (window.jtd && window.jtd.onReady) ||
+      ((callback) => {
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", callback, { once: true });
+        } else {
+          callback();
+        }
+      });
+
+    let youtubeApiPromise = null;
+
+    const loadYouTubeApi = () => {
+      if (window.YT && typeof window.YT.Player === "function") {
+        return Promise.resolve(window.YT);
+      }
+
+      if (youtubeApiPromise) {
+        return youtubeApiPromise;
+      }
+
+      youtubeApiPromise = new Promise((resolve) => {
+        const existingHandler = window.onYouTubeIframeAPIReady;
+
+        window.onYouTubeIframeAPIReady = () => {
+          if (typeof existingHandler === "function") {
+            existingHandler();
+          }
+          resolve(window.YT);
+        };
+
+        const script = document.createElement("script");
+        script.src = "https://www.youtube.com/iframe_api";
+        script.async = true;
+        document.head.appendChild(script);
+      });
+
+      return youtubeApiPromise;
+    };
+
+    onReady(async () => {
+      const players = Array.from(document.querySelectorAll(".js-project-video-player"));
+      if (players.length === 0) {
+        return;
+      }
+
+      const YT = await loadYouTubeApi();
+
+      players.forEach((playerElement) => {
+        if (!playerElement.id || playerElement.dataset.youtubeMuted === "true") {
+          return;
+        }
+
+        playerElement.dataset.youtubeMuted = "true";
+        new YT.Player(playerElement.id, {
+          events: {
+            onReady: (event) => {
+              event.target.mute();
+            },
+          },
+        });
+      });
+    });
+  })();
+</script>
+<meta name="theme-color" content="#101113" />
+
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  
+    
+      <header class="side-bar">
+  <div class="site-header">
+    <a href="/live/" class="site-title lh-tight"><span class="site-title__brand">
+  <img
+    class="site-title__logo"
+    src="/live/assets/images/brand/Logo.png"
+    alt=""
+    width="2589"
+    height="2594"
+    decoding="async"
+  />
+  <span class="site-title__text">Hack-A-Bot Live</span>
+</span>
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+  
+  
+    <ul class="nav-list"><li class="nav-list-item"><a href="/live/" class="nav-list-link"><span class="nav-list-link__title">Event Day</span>
+      </a></li><li class="nav-list-item nav-item-projects"><button class="nav-list-expander btn-reset" aria-label="Projects submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/live/projects/" class="nav-list-link"><span class="nav-list-link__title">Projects</span>
+      </a><ul class="nav-list"><li class="nav-list-item"><a href="/live/project-1/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/platformer.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 1 - Platformer</span>
+      </a></li><li class="nav-list-item"><a href="/live/project-2/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/catapult.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 2 - Catapult</span>
+      </a></li><li class="nav-list-item"><a href="/live/project-3/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/robot-arm.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 3 - Robot Arm</span>
+      </a></li><li class="nav-list-item"><a href="/live/project-4/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/swarm.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 4 - Swarm</span>
+      </a></li><li class="nav-list-item"><a href="/live/project-5/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/rover.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 5 - Rover</span>
+      </a></li><li class="nav-list-item"><a href="/live/project-6/" class="nav-list-link nav-list-link--project"><img
+            class="nav-project-badge"
+            src="/live/assets/images/projects/badges/creative.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          /><span class="nav-list-link__title">Project 6 - Creative</span>
+      </a></li></ul></li><li class="nav-list-item"><a href="/live/vscode-setup/" class="nav-list-link"><span class="nav-list-link__title">VS Code Setup</span>
+      </a></li><li class="nav-list-item"><a href="/live/pi-pico-controller/" class="nav-list-link"><span class="nav-list-link__title">Pi Pico Controller</span>
+      </a></li><li class="nav-list-item"><a href="/live/power-wiring/" class="nav-list-link"><span class="nav-list-link__title">Power & Wiring</span>
+      </a></li><li class="nav-list-item nav-item-makerspace"><button class="nav-list-expander btn-reset" aria-label="Makerspace submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/live/makerspace/" class="nav-list-link"><span class="nav-list-link__title">Makerspace</span>
+      </a><ul class="nav-list"><li class="nav-list-item"><a href="/live/3d-printing/" class="nav-list-link"><span class="nav-list-link__title">3D Printing</span>
+      </a></li><li class="nav-list-item"><a href="/live/laser-cutter/" class="nav-list-link"><span class="nav-list-link__title">Laser Cutting</span>
+      </a></li></ul></li><li class="nav-list-item"><a href="/live/schedule/" class="nav-list-link"><span class="nav-list-link__title">Schedule</span>
+      </a></li><li class="nav-list-item"><a href="/live/floorplan/" class="nav-list-link"><span class="nav-list-link__title">Floorplan</span>
+      </a></li></ul>
+  
+</nav>
+
+
+<div class="d-md-block d-none site-footer">
+  
+  
+    This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+  
+  </div>
+</header>
+
+    
+    <div class="main" id="top">
+      <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Hack-A-Bot Live" autocomplete="off">
+    <label for="search-input" class="search-label">
+      <span class="sr-only">Search Hack-A-Bot Live</span>
+      <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><use xlink:href="#svg-search"></use></svg>
+    </label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+</div>
+
+      <div class="main-content-wrap">
+        <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-nav-list">
+    <li class="breadcrumb-nav-list-item"><span>Project 3 - Robot Arm</span></li>
+  </ol>
+</nav>
+
+
+        <div id="main-content" class="main-content">
+          <main>
+            <section class="project-hero" aria-labelledby="project-3-hero-title">
+  <div class="project-hero__badge-panel"><img
+      class="project-hero__badge"
+      src="/live/assets/images/projects/badges/robot-arm.png"
+      alt="Robot Arm project badge"
+    /></div>
+
+  <div class="project-hero__content"><p class="project-hero__eyebrow">Project 3</p><h1 class="project-hero__title" id="project-3-hero-title">Robot Arm</h1><div class="project-hero__meta" aria-label="Sponsors">
+        <p class="project-hero__meta-label">Sponsors</p>
+        <div class="project-hero__sponsors"><div class="project-hero__sponsor"><img
+                  class="project-hero__sponsor-logo"
+                  src="/live/assets/images/projects/sponsors/QUANSER.svg"
+                  alt="Quanser logo"
+                /></div><div class="project-hero__sponsor"><img
+                  class="project-hero__sponsor-logo"
+                  src="/live/assets/images/projects/sponsors/Google.svg"
+                  alt="Google logo"
+                /></div></div>
+      </div><p class="project-hero__description">Use Quanser's QArm Mini and cloud AI tooling to rebuild the tower and perform reliable handoffs between adjacent projects.</p></div>
+</section>
+
+            <section class="project-intro" aria-label="Project overview, videos, and resources"><div class="project-intro__overview">
+        <h2 class="project-intro__heading" id="overview">
+          <a href="#overview" class="anchor-heading" aria-labelledby="overview"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Overview
+        </h2>
+        <div class="project-intro__overview-body">
+          <p>The Robot Arm project uses Quanser’s QArm Mini platform, with each of the six teams receiving exclusive access to one arm for the duration of the hackathon. Google Cloud is the expected platform for the AI side of this project, and teams will have access to event-day credits to support that work.</p>
+
+<p>The aim of the project is to show how modern agentic AI can be combined with a robotic arm to carry out repeatable, real-world manipulation tasks. In this project, that has been distilled into two core objectives: manipulating an object and the stacking of blocks.</p>
+
+<p>Within the wider hackathon cycle, the robot arm will act as a key stage, rebuilding the block tower after Project 2. It will also act as an intermediary link between each project, transferring the angry bird through the numbered <code class="language-plaintext highlighter-rouge">1 -&gt; 6</code> sequence so that a loop is created.</p>
+
+        </div>
+      </div><aside class="project-intro__media" aria-label="Project videos and resources"><p class="project-intro__media-eyebrow">Videos &amp; Resources</p><div class="project-intro__media-stack"><article class="project-intro__media-item">
+                  <div class="project-intro__media-frame">
+                    <iframe
+                      id="project-3-video-1"
+                      class="js-project-video-player"
+                      src="https://www.youtube-nocookie.com/embed/Cec2oDspZgA?rel=0&enablejsapi=1&playsinline=1"
+                      title="QArm Mini demo"
+                      loading="lazy"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="project-intro__media-copy">
+                    <p class="project-intro__media-title">QArm Mini demo</p><a class="project-intro__media-link" href="https://youtube.com/shorts/Cec2oDspZgA?si=P5kgoQB8axmNO-Xr">Open on YouTube</a></div>
+                </article></div><section class="project-intro__resources" aria-labelledby="project-resources">
+            <h3 class="project-intro__resources-title" id="project-resources">Resources</h3>
+            <ul class="project-intro__resource-list"><li>
+                  <a href="https://www.quanser.com/products/qarm-mini/">QArm Mini product page</a>
+                </li><li>
+                  <a href="https://quanserinc.box.com/shared/static/qtzqma9xymesk4zoskahrhrxr7mrxs9w">QArm Mini info sheet</a>
+                </li><li>
+                  <a href="https://www.quanser.com/wp-content/uploads/2024/03/Quansers-Take-on-Robotics.pdf">Quanser robotics guide</a>
+                </li><li>
+                  <a href="https://github.com/quanser/Quanser_Academic_Resources/tree/dev-windows">Quanser academic resources repository</a>
+                </li></ul>
+          </section></aside></section>
+
+            
+              <h2 id="objectives">
+  
+  
+    <a href="#objectives" class="anchor-heading" aria-labelledby="objectives"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Objectives
+  
+  
+</h2>
+    
+
+<p>Teams must build a system that achieves two core objectives.</p>
+<h3 id="1-rebuild-the-tower">
+  
+  
+    <a href="#1-rebuild-the-tower" class="anchor-heading" aria-labelledby="1-rebuild-the-tower"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1. Rebuild the Tower
+  
+  
+</h3>
+    
+
+<p>The primary objective is to reconstruct a tall, stable block tower after it has been knocked down by the catapult stage. The system should reset this part of the course in a consistent and repeatable way so that the wider hackathon cycle can continue without manual intervention.</p>
+<h3 id="2-link-the-projects-together-inter-project-handoff">
+  
+  
+    <a href="#2-link-the-projects-together-inter-project-handoff" class="anchor-heading" aria-labelledby="2-link-the-projects-together-inter-project-handoff"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2. Link the Projects Together (Inter-Project Handoff)
+  
+  
+</h3>
+    
+
+<p>The second objective is to use the robot arm as a reliable handoff point between adjacent systems.
+Teams should design a workflow that can receive the angry bird from one stage and place it accurately for the next, for example by transferring it onto the swarm trolley after Project 2. Adjacent-project handoffs follow project number order <code class="language-plaintext highlighter-rouge">1 -&gt; 6</code>. This objective should demonstrate both accurate object handling and effective coordination with the surrounding projects.</p>
+<h2 id="quickstart">
+  
+  
+    <a href="#quickstart" class="anchor-heading" aria-labelledby="quickstart"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Quickstart
+  
+  
+</h2>
+    
+
+<ol>
+  <li>Get the arm calibrated and the workspace bounded before you add cloud logic or complex task sequencing.</li>
+  <li>Prove one repeatable pickup-and-place cycle with a single object before you attempt tower rebuilding or full handoffs.</li>
+  <li>Decide the neighboring project interfaces you need to support in the fixed <code class="language-plaintext highlighter-rouge">1 -&gt; 6</code> order.</li>
+  <li>Collect Google Cloud credits from a project supervisor on the day by scanning the provided QR code into the Google account you want to use.</li>
+</ol>
+<h2 id="google-cloud-workflow">
+  
+  
+    <a href="#google-cloud-workflow" class="anchor-heading" aria-labelledby="google-cloud-workflow"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Google Cloud Workflow
+  
+  
+</h2>
+    
+
+<p>Teams are expected to use Google Cloud for the AI part of this project. In practice that usually means Gemini and Vertex AI for perception or decision-making, plus other Google Cloud services if you need remote compute, hosting, or hardware coordination.</p>
+
+<ul>
+  <li>The event has <code class="language-plaintext highlighter-rouge">100</code> Google Cloud credits available in total.</li>
+  <li>One credit is usually claimed per person, and an average team will often use <code class="language-plaintext highlighter-rouge">1</code> to <code class="language-plaintext highlighter-rouge">4</code> credits in total if several members scan separately.</li>
+  <li>Each credit is worth <code class="language-plaintext highlighter-rouge">$5</code> of Google Cloud usage.</li>
+  <li>Credits can be used for Gemini and other Google AI services, but they can also be spent on CPUs, GPUs, Cloud Run, and other remote processing if your robot pipeline needs it.</li>
+  <li>If one account runs out, multiple credits can be applied to the same Google account.</li>
+  <li>You do not type in a manual code: scan the QR code and the credit is applied automatically to your Google account.</li>
+</ul>
+<h2 id="materials-provided">
+  
+  
+    <a href="#materials-provided" class="anchor-heading" aria-labelledby="materials-provided"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Materials Provided
+  
+  
+</h2>
+    
+
+<ul>
+  <li>Quanser’s QArm Mini platform</li>
+  <li>Google Cloud credits will be distributed by project supervisors on the day via QR code.</li>
+  <li>Vertex AI and Gemini: Run high-performance multimodal models to give your robot the ability to see, hear, and reason.</li>
+  <li>Vision API: Identify objects, detect faces, and read text from your robot’s camera feed in real time.</li>
+  <li>Cloud Run: Deploy your web applications or bot controllers instantly in a fully managed environment.</li>
+  <li>BigQuery: Store and analyse vast amounts of sensor data to find patterns or train your own custom models.</li>
+  <li>Cloud Functions: Create event-driven triggers that let your hardware respond to cloud-based signals automatically.</li>
+  <li>Compute Engine: Access high-power virtual machines and GPUs for intensive training or simulation tasks.</li>
+  <li>Access to the Makerspace to develop the inter-project handoff systems. This includes 3D printers, Laser Cutting and other materials.</li>
+</ul>
+<h2 id="quanser-qarm-mini-notes">
+  
+  
+    <a href="#quanser-qarm-mini-notes" class="anchor-heading" aria-labelledby="quanser-qarm-mini-notes"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Quanser QArm Mini Notes
+  
+  
+</h2>
+    
+
+<p>The official Quanser product material positions the QArm Mini as a compact teaching manipulator for introductory robotics, so teams should aim for controlled tabletop pick-and-place and repeatable handoff behaviours rather than large, high-payload motions.</p>
+<h3 id="platform-snapshot">
+  
+  
+    <a href="#platform-snapshot" class="anchor-heading" aria-labelledby="platform-snapshot"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Platform Snapshot
+  
+  
+</h3>
+    
+
+<ul>
+  <li>4 DOF arm with base yaw, shoulder/elbow/wrist pitch, and a parallel gripper</li>
+  <li>Triple-parallel pitch arrangement that helps maintain picked-object orientation through sagittal-plane motion</li>
+  <li>Approximate arm reach of <code class="language-plaintext highlighter-rouge">382 mm</code>, gripper grasp of <code class="language-plaintext highlighter-rouge">70 mm</code>, and maximum payload of <code class="language-plaintext highlighter-rouge">150 g</code></li>
+  <li>Joint sensing for position, speed, and current monitoring, which can also support payload-estimation workflows</li>
+  <li>Post-wrist RGB camera with two swivel configurations at up to <code class="language-plaintext highlighter-rouge">1280 x 720</code> and <code class="language-plaintext highlighter-rouge">60 Hz</code></li>
+  <li>Plug-and-play USB connection for desktop use, with support across <code class="language-plaintext highlighter-rouge">Python</code>, <code class="language-plaintext highlighter-rouge">MATLAB</code>, <code class="language-plaintext highlighter-rouge">Simulink</code>, and <code class="language-plaintext highlighter-rouge">ROS 2</code></li>
+</ul>
+<h3 id="useful-courseware-ideas">
+  
+  
+    <a href="#useful-courseware-ideas" class="anchor-heading" aria-labelledby="useful-courseware-ideas"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Useful Courseware Ideas
+  
+  
+</h3>
+    
+
+<ul>
+  <li>Forward, inverse, and differential kinematics are directly relevant for repeatable tower rebuilding and handoff positioning.</li>
+  <li>Visual servoing and object detection are a strong fit for block pickup, target alignment, and bird transfer.</li>
+  <li>Current-based payload sensing is useful if teams want to detect whether a block or bird has actually been gripped.</li>
+  <li>Path and collision monitoring matter here because the arm needs to work near surrounding project hardware and custom fixtures.</li>
+  <li>Quanser’s robotics guide presents the platform as part of a broader open-architecture workflow, so a good event-day approach is to lock down calibration and workspace limits first, then layer camera logic and task sequencing on top.</li>
+</ul>
+<h2 id="common-failure-points">
+  
+  
+    <a href="#common-failure-points" class="anchor-heading" aria-labelledby="common-failure-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Common Failure Points
+  
+  
+</h2>
+    
+
+<ul>
+  <li>trying to solve cloud integration before the arm is calibrated and repeatable</li>
+  <li>leaving handoff geometry and fixtures undefined until late in the event</li>
+  <li>assuming the gripper can tolerate an object or fixture without testing it</li>
+  <li>treating adjacent project interfaces as ad hoc instead of fixed numbered handoffs</li>
+</ul>
+<h3 id="reference-gallery">
+  
+  
+    <a href="#reference-gallery" class="anchor-heading" aria-labelledby="reference-gallery"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Reference Gallery
+  
+  
+</h3>
+    
+
+<div class="project-reference-gallery">
+  <figure class="project-reference-card">
+    <a class="project-reference-card__link project-reference-card__link--contain" href="/live/assets/images/projects/project-3/QArmmini-481x766.png">
+      <img class="project-reference-card__image project-reference-card__image--contain" src="/live/assets/images/projects/project-3/QArmmini-481x766.png" alt="Quanser QArm Mini product image showing the compact robotic arm and gripper." loading="lazy" />
+    </a>
+    <figcaption class="project-reference-card__caption">QArm Mini hardware reference image.</figcaption>
+  </figure>
+
+  <figure class="project-reference-card">
+    <a class="project-reference-card__link project-reference-card__link--contain" href="/live/assets/images/projects/project-3/QArmMini-PDetails.jpg">
+      <img class="project-reference-card__image project-reference-card__image--contain" src="/live/assets/images/projects/project-3/QArmMini-PDetails.jpg" alt="Quanser QArm Mini product details image showing the manipulator layout and key specifications." loading="lazy" />
+    </a>
+    <figcaption class="project-reference-card__caption">Annotated product details and spec reference.</figcaption>
+  </figure>
+</div>
+<h3 id="block-handling-examples">
+  
+  
+    <a href="#block-handling-examples" class="anchor-heading" aria-labelledby="block-handling-examples"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Block Handling Examples
+  
+  
+</h3>
+    
+
+<p>These external reference stills show the kind of vision-guided pickup, transfer, and stacking workflow this project is aiming for. Treat them as task reference only, not as a required hardware layout or fixture design.</p>
+
+<div class="project-reference-gallery">
+  <figure class="project-reference-card">
+    <a class="project-reference-card__link" href="/live/assets/images/projects/project-3/reference/hiwonder-armpi-mini-handoff-frame.webp">
+      <img class="project-reference-card__image" src="/live/assets/images/projects/project-3/reference/hiwonder-armpi-mini-handoff-frame.webp" alt="Robot arm vision setup with a red block presented in front of the camera for pickup or handoff detection." loading="lazy" />
+    </a>
+    <figcaption class="project-reference-card__caption">Vision-guided block presentation and pickup setup.</figcaption>
+  </figure>
+
+  <figure class="project-reference-card">
+    <a class="project-reference-card__link" href="/live/assets/images/projects/project-3/reference/hiwonder-armpi-mini-color-sorting-frame.webp">
+      <img class="project-reference-card__image" src="/live/assets/images/projects/project-3/reference/hiwonder-armpi-mini-color-sorting-frame.webp" alt="Robot arm sorting colored blocks on a tabletop with color-marked target zones." loading="lazy" />
+    </a>
+    <figcaption class="project-reference-card__caption">Color-sorting reference with distinct pickup and placement zones.</figcaption>
+  </figure>
+
+  <figure class="project-reference-card">
+    <a class="project-reference-card__link" href="/live/assets/images/projects/project-3/reference/hiwonder-armpi-mini-stacking-frame-020.webp">
+      <img class="project-reference-card__image" src="/live/assets/images/projects/project-3/reference/hiwonder-armpi-mini-stacking-frame-020.webp" alt="Robot arm carrying a blue block toward a stacking area on a marked tabletop." loading="lazy" />
+    </a>
+    <figcaption class="project-reference-card__caption">Block transport into the stacking area.</figcaption>
+  </figure>
+
+  <figure class="project-reference-card">
+    <a class="project-reference-card__link" href="/live/assets/images/projects/project-3/reference/hiwonder-armpi-mini-stacking-frame-180.webp">
+      <img class="project-reference-card__image" src="/live/assets/images/projects/project-3/reference/hiwonder-armpi-mini-stacking-frame-180.webp" alt="Robot arm placing a red block on top of an existing green and blue stack." loading="lazy" />
+    </a>
+    <figcaption class="project-reference-card__caption">Final placement step while building a stacked colored-block tower.</figcaption>
+  </figure>
+</div>
+<h2 id="tower-scoring-criteria-60-points">
+  
+  
+    <a href="#tower-scoring-criteria-60-points" class="anchor-heading" aria-labelledby="tower-scoring-criteria-60-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Tower Scoring Criteria (60 points)
+  
+  
+</h2>
+    
+<h3 id="tower-height-30-points">
+  
+  
+    <a href="#tower-height-30-points" class="anchor-heading" aria-labelledby="tower-height-30-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Tower Height (30 points)
+  
+  
+</h3>
+    
+
+<p>Tower Height will be scored comparatively across all teams. Points will be awarded based on the highest valid tower achieved across three attempts. Height will be measured by the number of completed stacked levels.</p>
+
+<p>For a tower to be considered valid, it must remain standing unsupported for at least 5 seconds after the build is complete.</p>
+
+<p>Each team’s best valid attempt will be used for scoring. Teams will then be ranked from tallest valid tower to shortest valid tower, and points will be awarded as follows:</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Place</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1st place</td>
+      <td>30 points</td>
+    </tr>
+    <tr>
+      <td>2nd place</td>
+      <td>25 points</td>
+    </tr>
+    <tr>
+      <td>3rd place</td>
+      <td>20 points</td>
+    </tr>
+    <tr>
+      <td>4th place</td>
+      <td>15 points</td>
+    </tr>
+    <tr>
+      <td>5th place</td>
+      <td>10 points</td>
+    </tr>
+    <tr>
+      <td>6th place</td>
+      <td>5 points</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>If a team does not achieve a valid tower, they will receive 0 points for this section.
+If two teams achieve the same tower height, the team with the faster valid completion time will place higher.</p>
+<h3 id="repeatability-30-points">
+  
+  
+    <a href="#repeatability-30-points" class="anchor-heading" aria-labelledby="repeatability-30-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Repeatability (30 points)
+  
+  
+</h3>
+    
+
+<p>Repeatability measures how consistently a team can rebuild a valid tower across repeated judged attempts. This category will be scored using the same three official runs used for the Tower Height section.</p>
+
+<p>A run will be considered successful if the robot rebuilds a valid tower that remains standing unsupported for at least 5 seconds, with no manual intervention during the attempt.</p>
+
+<p>Points will be awarded as follows:</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Outcome</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3 successful runs</td>
+      <td>30 points</td>
+    </tr>
+    <tr>
+      <td>2 successful runs</td>
+      <td>20 points</td>
+    </tr>
+    <tr>
+      <td>1 successful run</td>
+      <td>10 points</td>
+    </tr>
+    <tr>
+      <td>0 successful runs</td>
+      <td>0 points</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>This score is independent of Tower Height. Teams do not need to match their tallest tower on every run; each run only needs to result in a valid tower.</p>
+<h2 id="inter-project-handoff-scoring-criteria-40-points">
+  
+  
+    <a href="#inter-project-handoff-scoring-criteria-40-points" class="anchor-heading" aria-labelledby="inter-project-handoff-scoring-criteria-40-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Inter-Project Handoff Scoring Criteria (40 points)
+  
+  
+</h2>
+    
+<h3 id="successful-handoff-scenarios-20-points">
+  
+  
+    <a href="#successful-handoff-scenarios-20-points" class="anchor-heading" aria-labelledby="successful-handoff-scenarios-20-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Successful Handoff Scenarios (20 points)
+  
+  
+</h3>
+    
+
+<p>Teams may earn up to 20 points for successfully implementing inter-project handoffs.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10 points for the first successful handoff scenario</td>
+      <td>10 points</td>
+    </tr>
+    <tr>
+      <td>10 points for the second successful handoff scenario</td>
+      <td>10 points</td>
+    </tr>
+    <tr>
+      <td>Maximum of 20 points total</td>
+      <td>20 points total</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>A handoff scenario will be considered successful if the robot arm receives the angry bird from the previous numbered project and places it for use by the next numbered project in the <code class="language-plaintext highlighter-rouge">1 -&gt; 6</code> loop, with no manual intervention during the attempt. Teams are recommended to design a 3D printed mount that’s easy to attach to the projects if needed.</p>
+<h3 id="repeatability-10-points">
+  
+  
+    <a href="#repeatability-10-points" class="anchor-heading" aria-labelledby="repeatability-10-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Repeatability (10 points)
+  
+  
+</h3>
+    
+
+<p>Teams will be awarded points based on how reliably their chosen handoff scenarios can be repeated.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Outcome</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10 points: handoff system works reliably across repeated attempts</td>
+      <td>10 points</td>
+    </tr>
+    <tr>
+      <td>5 points: handoff system works inconsistently, with partial repeatability</td>
+      <td>5 points</td>
+    </tr>
+    <tr>
+      <td>0 points: handoff system cannot be repeated reliably</td>
+      <td>0 points</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Judges will assess repeatability based on whether the demonstrated handoff process can be reproduced with similar results across multiple runs.</p>
+<h3 id="judge-assessment-approach-and-integration-10-points">
+  
+  
+    <a href="#judge-assessment-approach-and-integration-10-points" class="anchor-heading" aria-labelledby="judge-assessment-approach-and-integration-10-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Judge Assessment: Approach and Integration (10 points)
+  
+  
+</h3>
+    
+
+<p>The remaining 10 points will be awarded qualitatively by the judges based on the quality of the team’s overall approach.</p>
+
+<p>Judges will consider:</p>
+
+<ul>
+  <li>how well the robot arm integrates with the surrounding projects</li>
+  <li>the quality and robustness of the handoff strategy</li>
+  <li>how clearly the system has been designed for use within the wider hackathon cycle</li>
+  <li>the effectiveness of the team’s technical approach to coordination, positioning, and transfer</li>
+</ul>
+
+            
+
+            
+          </main>
+          
+<hr>
+<footer>
+  
+
+  
+
+  <div class="d-md-none mt-4 fs-2">
+    
+    
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    
+  </div>
+</footer>
+
+        </div>
+      </div>
+      
+        
+
+<div class="search-overlay"></div>
+
+      
+    </div>
+  
+
+  
+</body>
+</html>
+

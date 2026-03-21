@@ -1,0 +1,821 @@
+{"0": {
+    "doc": "3D Printing",
+    "title": "3D Printing",
+    "content": "Use this page for printer limits, file prep, and submission guidance before sending a job to the event print team. We expect a shared bank of fast Bambu Lab printers to be available throughout the event. They are ideal for brackets, mounts, sensor holders, adapters, and other small custom parts that benefit from quick iteration. These are X1E printers. These are P1S printers. Step 1 . Design . Use the CAD &amp; 3D Printing Guide below to prepare a printable part and export the right file type. Step 2 . Upload . Upload your .3mf, .stl, or .step file to the public folder with a clear team filename. Step 3 . Confirm in Person . Go to the 3D printing area, tell a technician your student ID, and wait for confirmation. ",
+    "url": "/live/3d-printing/",
+    
+    "relUrl": "/3d-printing/"
+  },"1": {
+    "doc": "3D Printing",
+    "title": "Printer Limits",
+    "content": "Build Volume . About 256 × 256 × 256 mm maximum. Recommended Size . Aim for parts under 200 × 200 mm when possible. Accepted Files . Use .3mf, .stl, or .step in the public upload folder. Typical timings for event-day parts: . | Part size | Typical print time | . | Small parts under 100 mm | 30 to 60 minutes | . | Medium parts up to 200 mm | 1 to 2 hours | . | Large parts near build limits | 3 to 4 hours or more | . ",
+    "url": "/live/3d-printing/#printer-limits",
+    
+    "relUrl": "/3d-printing/#printer-limits"
+  },"2": {
+    "doc": "3D Printing",
+    "title": "Design Guidance",
+    "content": ". | Use 3D printing where you actually need custom geometry: brackets, spacers, wheel adapters, mounts, clips, and sensor fixtures. | Keep structural designs simple. A robot chassis often comes together faster with provided sheet material, stock parts, or repurposed packaging than with a large print. | Design for fit and rework. Small printable modules are easier to test, replace, and reprint than one large all-in-one component. | Pick material and wall thickness for function, not appearance. Strength, stiffness, and weight matter more than cosmetic finish during the event. | . Technicians may refuse or defer prints that are oversized, poorly prepared, unsafe, or likely to block the printers for too long. CAD &amp; 3D Printing Guide . Start here if you need a refresher on modelling, slicing, supports, or exporting the right file type. ",
+    "url": "/live/3d-printing/#design-guidance",
+    
+    "relUrl": "/3d-printing/#design-guidance"
+  },"3": {
+    "doc": "3D Printing",
+    "title": "Uploading Your Files",
+    "content": "Upload files to the public Google Drive folder in a slicable format: .3mf, .stl, or .step. Use a clear filename such as: . studentid_groupname_printnumber . Examples: . 11374538_aicamera3_01.3mf 11374477_rover5_02.stl . This makes it easier for the print team to track multiple uploads across teams and time slots. Open Upload Folder . Upload your .3mf, .stl, or .step file to the public Google Drive folder before speaking to a technician. ",
+    "url": "/live/3d-printing/#uploading-your-files",
+    
+    "relUrl": "/3d-printing/#uploading-your-files"
+  },"4": {
+    "doc": "3D Printing",
+    "title": "Submitting Your Print In Person",
+    "content": ". | Head to the 3D printing area of the Makerspace near the inventory area. | Tell a technician your student ID and any important details about the part. | Wait for confirmation or feedback before assuming the print has been accepted. | . Print times vary, and the print team may ask you to revise the part, reduce scale, or come back later if the printers are too busy. ",
+    "url": "/live/3d-printing/#submitting-your-print-in-person",
+    
+    "relUrl": "/3d-printing/#submitting-your-print-in-person"
+  },"5": {
+    "doc": "3D Printing",
+    "title": "Getting Help",
+    "content": "If you are unsure whether something should be printed, ask the print team or a supervisor before sending it. Use Floorplan for location guidance. ",
+    "url": "/live/3d-printing/#getting-help",
+    
+    "relUrl": "/3d-printing/#getting-help"
+  },"6": {
+    "doc": "Floorplan",
+    "title": "Floorplan",
+    "content": "Below are simplified notes on each floor of the Nancy Rothwell Building. Areas in red on the official maps are off-limits to Hack-A-Bot participants. Please stay within the green authorized work spaces, the makerspace, and the designated study/collaboration areas. ",
+    "url": "/live/floorplan/",
+    
+    "relUrl": "/floorplan/"
+  },"7": {
+    "doc": "Floorplan",
+    "title": "Ground Floor",
+    "content": ". | Main Working Area (Authorized Work Space): This is the central hacking zone where most participants are encouraged to stay, ensuring easy access to the Makerspace and a lively atmosphere. | Food Serving Area (Top Right): Grab snacks and meals in the “meet and greet” section. | Registration Desk (South Entrance): Head here to check in or if you have questions. | Spanish Steps &amp; Rest Area: Short “power naps” only (please use the bean bags). | Projects 1 &amp; 2: Their arenas will be set up in front of the Spanish Steps. | Makerspace: Open for use throughout the event. Project 3 judging will take place here on the second day. | . While you may explore elsewhere, we strongly encourage participants to remain on the Ground Floor near the Makerspace or in the first-floor study spaces to keep the social “hackathon vibe” alive. ",
+    "url": "/live/floorplan/#ground-floor",
+    
+    "relUrl": "/floorplan/#ground-floor"
+  },"8": {
+    "doc": "Floorplan",
+    "title": "First Floor",
+    "content": ". | Balconies Overlooking Spanish Steps: Equipped with computers and casual seating areas. | Study Spaces (East Side): Additional spots to collaborate, still close enough to maintain the event energy. | Lecture Theatre A: Host to main presentations, workshops, and announcements. | . ",
+    "url": "/live/floorplan/#first-floor",
+    
+    "relUrl": "/floorplan/#first-floor"
+  },"9": {
+    "doc": "Floorplan",
+    "title": "Second Floor",
+    "content": ". | More Computers Near Balconies: Ideal if you need a quieter space or a different view. | Extra Working Areas (East Side): Additional tables and power outlets for your hacking needs. | . ",
+    "url": "/live/floorplan/#second-floor",
+    
+    "relUrl": "/floorplan/#second-floor"
+  },"10": {
+    "doc": "Floorplan",
+    "title": "Grouping Together",
+    "content": "We recommend grouping up if you decide to head above Ground Floor. Splitting across too many floors can dilute the hackathon atmosphere. Staying near the Makerspace or in the first-floor study spaces ensures you’re never far from your teammates, resources, or the event action! . Enjoy exploring the Nancy Rothwell Building, but remember: the red areas on the map are off-limits and the best hackathon vibes are where your fellow participants are. ",
+    "url": "/live/floorplan/#grouping-together",
+    
+    "relUrl": "/floorplan/#grouping-together"
+  },"11": {
+    "doc": "Event Day",
+    "title": "Event Day",
+    "content": "Live operations info for Hack-A-Bot 2026. Use the links below for updates, project briefs, and Makerspace guidance. Join Event WhatsApp Projects Makerspace ",
+    "url": "/live/#event-day",
+    
+    "relUrl": "/#event-day"
+  },"12": {
+    "doc": "Event Day",
+    "title": "Do Now",
+    "content": ". | Join the event WhatsApp. | Take a look at the Schedule so you know when food and drinks are handed out and when our mini-events are happening. | Take a look at the Floorplan so you know where you can go during the event. | If your team is using AI or remote cloud processing, scan a Google Cloud credit QR code from your project supervisor early so your account is ready. | . ",
+    "url": "/live/#event-day-do-now-title",
+    
+    "relUrl": "/#event-day-do-now-title"
+  },"13": {
+    "doc": "Event Day",
+    "title": "Google Cloud For AI",
+    "content": "Teams are expected to use Google Cloud for AI workloads during the event. The default route is Google Gemini and Vertex AI, but the same credits can also be used for other Google Cloud resources if your system needs remote compute. | The event has 100 Google Cloud credits available in total. | One credit is usually claimed per person, and an average team will often use 1 to 4 credits in total if multiple members scan separately. | Each credit is worth $5 of Google Cloud usage. | Credits are mainly intended for Gemini and other Google AI services, but they can also cover CPUs, GPUs, Cloud Run, and other remote processing workloads. | If you run out, multiple credits can be applied to the same Google account. | There is no manual voucher entry: scan the QR code and the credit is applied automatically to your Google account. | . ",
+    "url": "/live/#event-day-cloud-title",
+    
+    "relUrl": "/#event-day-cloud-title"
+  },"14": {
+    "doc": "Event Day",
+    "title": "Updates",
+    "content": ". | The WhatsApp group will be where we announce things. | There may be info added there relevant to your project, so make sure your team is on it. | . ",
+    "url": "/live/#updates",
+    
+    "relUrl": "/#updates"
+  },"15": {
+    "doc": "Event Day",
+    "title": "If You’re Stuck",
+    "content": ". | Check the shared setup guides if you are blocked on VS Code, Pi Pico bring-up, or power wiring. | If you still need help, ask your project supervisor. | . ",
+    "url": "/live/#if-youre-stuck",
+    
+    "relUrl": "/#if-youre-stuck"
+  },"16": {
+    "doc": "Event Day",
+    "title": "Venue Rules",
+    "content": ". | Stay inside the designated Hack-A-Bot areas. | Complete the Makerspace induction before using supervised equipment. | Follow safety, capacity, and queue instructions around shared hardware. | Keep rest areas and circulation routes clear. | . ",
+    "url": "/live/#venue-rules",
+    
+    "relUrl": "/#venue-rules"
+  },"17": {
+    "doc": "Event Day",
+    "title": "Event Day",
+    "content": " ",
+    "url": "/live/",
+    
+    "relUrl": "/"
+  },"18": {
+    "doc": "Laser Cutting",
+    "title": "Laser Cutting",
+    "content": "Use this page for the basic file prep, upload, and submission flow before sending a laser job to the Makerspace team. Laser Cutting is useful for flat sheet parts, face plates, mounting panels, spacers, templates, and other quick-cut components that do not need full 3D geometry. Laser Cutting support runs through the same Makerspace workshop team. Speak to a technician before uploading files or bringing material for cutting. Step 1 . Prepare a 2D Design . Keep the job as a clean flat layout with closed vector paths and clearly sized parts. Step 2 . Upload . Use the dedicated Laser Cutting Drive folder once it is shared and give the file a clear team name. Step 3 . Confirm in Person . Go to the Makerspace, tell a technician your student ID and material details, and wait for confirmation. ",
+    "url": "/live/laser-cutter/",
+    
+    "relUrl": "/laser-cutter/"
+  },"19": {
+    "doc": "Laser Cutting",
+    "title": "Laser Basics",
+    "content": "Best For . Flat panels, brackets, spacers, templates, stencils, and other sheet-based parts. Recommended Files . Use a clean vector file such as .svg or .dxf unless the upload folder says otherwise. Material Check . Confirm the material and thickness with a technician before assuming it can be cut safely. ",
+    "url": "/live/laser-cutter/#laser-basics",
+    
+    "relUrl": "/laser-cutter/#laser-basics"
+  },"20": {
+    "doc": "Laser Cutting",
+    "title": "Design Guidance",
+    "content": ". | Use Laser Cutting when the part is mostly 2D. If the design needs depth, curved geometry, or a complex solid shape, 3D Printing is usually the better fit. | Keep outlines clean. Remove duplicate lines, close open paths, and avoid sending screenshots or raster artwork as the final cut file. | Be practical with small features. Tiny slots, fragile bridges, and dense engraving can slow jobs down or make the part unreliable. | Leave time for approval. Material choice, thickness, and machine availability still need a technician check before work is accepted. | . Technicians may refuse or defer jobs that use unapproved material, have unclear file prep, or are likely to take too long during event operation. ",
+    "url": "/live/laser-cutter/#design-guidance",
+    
+    "relUrl": "/laser-cutter/#design-guidance"
+  },"21": {
+    "doc": "Laser Cutting",
+    "title": "Uploading Your Files",
+    "content": "Upload files to the public Google Drive folder in a cut-ready format: .svg or .dxf. Use a clear filename such as: . studentid_groupname_cutnumber . Examples: . 11374538_aicamera3_01.svg 11374477_rover5_02.dxf . This makes it easier for the Makerspace team to track multiple uploads across teams and time slots. Open Upload Folder . Upload your .svg or .dxf file to the public Google Drive folder before speaking to a technician. ",
+    "url": "/live/laser-cutter/#uploading-your-files",
+    
+    "relUrl": "/laser-cutter/#uploading-your-files"
+  },"22": {
+    "doc": "Laser Cutting",
+    "title": "Submitting Your Cut In Person",
+    "content": ". | Head to the Makerspace and tell a technician you want to submit a Laser Cutting job. | Give your student ID, explain the part briefly, and mention the material and thickness you plan to use. | Wait for confirmation before assuming the job has been accepted or queued. | . Laser jobs may still need revision if the file is unclear, the material is not approved, or the queue is already full. ",
+    "url": "/live/laser-cutter/#submitting-your-cut-in-person",
+    
+    "relUrl": "/laser-cutter/#submitting-your-cut-in-person"
+  },"23": {
+    "doc": "Laser Cutting",
+    "title": "Getting Help",
+    "content": "If you are unsure whether something should be laser cut, ask a technician or supervisor before uploading. Use Makerspace for the workshop overview and Floorplan for location guidance. ",
+    "url": "/live/laser-cutter/#getting-help",
+    
+    "relUrl": "/laser-cutter/#getting-help"
+  },"24": {
+    "doc": "Makerspace",
+    "title": "Makerspace",
+    "content": "Build, prototype, iterate . A student-led workshop for event-day making . Makerspace Manchester is a hands-on workshop space for students who want to design, test, and build real things. It is a strong fit for Hack-A-Bot teams that need quick fabrication, electronics bench work, or access to practical tools while turning ideas into working hardware. Whether you need a bracket, a cut panel, a soldered board, or a few workshop tools to get unstuck, the Makerspace is set up to help teams move from concept to prototype quickly. ",
+    "url": "/live/makerspace/",
+    
+    "relUrl": "/makerspace/"
+  },"25": {
+    "doc": "Makerspace",
+    "title": "What They Offer",
+    "content": "3D Printing . Rapid iteration for brackets, mounts, adapters, enclosures, and other custom parts. Electronics . Soldering and bench tools for wiring, debugging, repair work, and prototype assembly. Laser Cutting . Fast cutting for flat panels, structural parts, templates, and quick enclosure pieces. Hand Tools . Workshop basics for cutting, adjusting, measuring, and assembling your build. Power Tools . Portable tools for drilling, fastening, and quick fabrication jobs around your prototype. ",
+    "url": "/live/makerspace/#what-they-offer",
+    
+    "relUrl": "/makerspace/#what-they-offer"
+  },"26": {
+    "doc": "Makerspace",
+    "title": "Where It Is",
+    "content": "Location . Makerspace . Ground Floor . Nancy Rothwell Building . Open bench space for assembly, electronics work, and quick fabrication. Useful for soldering, repairs, and small hardware iterations during the event. A bank of printers supports fast turnaround on custom parts and enclosures. ",
+    "url": "/live/makerspace/#where-it-is",
+    
+    "relUrl": "/makerspace/#where-it-is"
+  },"27": {
+    "doc": "Makerspace",
+    "title": "Tools &amp; Resources",
+    "content": "Fabrication . 3D Printers . The workshop includes fast Bambu Lab printers for rapid prototyping, letting teams produce custom parts quickly without leaving the event workflow. Power Tools . Drills . DeWalt cordless drills are available for drilling and fastening jobs where speed and control matter. Workshop . Carpentry . Hacksaws and junior hacksaws are available for woodwork and quick material prep, alongside protective gear for the task. Bench Work . Electronics . Soldering irons, screwdriver sets, pliers, and multimeters support wiring, board assembly, and general electronics debugging. Everyday Essentials . General Tools . Glue guns, retractable blades, cutting mats, hand files, spanners, socket sets, Allen keys, and measuring tools cover a lot of the day-to-day build work. ",
+    "url": "/live/makerspace/#tools--resources",
+    
+    "relUrl": "/makerspace/#tools--resources"
+  },"28": {
+    "doc": "Makerspace",
+    "title": "Machine Submission",
+    "content": "If your team plans to use Laser Cutting or the 3D printers, follow the separate machine pages for submission guidance and event-day instructions before heading to the workshop. Machine Guide . 3D Printing . See printer limits, file preparation guidance, upload instructions, and the in-person submission process. Machine Guide . Laser Cutting . Check the Laser Cutting page before submitting work so you follow the latest event-specific guidance from the Makerspace team. ",
+    "url": "/live/makerspace/#machine-submission",
+    
+    "relUrl": "/makerspace/#machine-submission"
+  },"29": {
+    "doc": "Pi Pico Controller",
+    "title": "Pi Pico Controller",
+    "content": "This page is the shared reference point for the organiser-built Pi Pico controller, its pinout, and the first pass of nRF24L01+ bring-up. The source hardware files live in the public hack-a-bot-controller repository. ",
+    "url": "/live/pi-pico-controller/",
+    
+    "relUrl": "/pi-pico-controller/"
+  },"30": {
+    "doc": "Pi Pico Controller",
+    "title": "Official References",
+    "content": ". | Hack-A-Bot controller hardware repository | Raspberry Pi Pico board documentation | Raspberry Pi Pico datasheet PDF | Raspberry Pi Pico SDK hardware API reference | Nordic nRF24L01+ product specification PDF | . ",
+    "url": "/live/pi-pico-controller/#official-references",
+    
+    "relUrl": "/pi-pico-controller/#official-references"
+  },"31": {
+    "doc": "Pi Pico Controller",
+    "title": "What This Page Covers",
+    "content": ". | the current controller hardware layout | the real Pico pin map from the KiCad schematic | nRF24L01+ pin numbers and wiring on this board | power, test point, and input details that matter during bring-up | . ",
+    "url": "/live/pi-pico-controller/#what-this-page-covers",
+    
+    "relUrl": "/pi-pico-controller/#what-this-page-covers"
+  },"32": {
+    "doc": "Pi Pico Controller",
+    "title": "Controller Hardware",
+    "content": "Full schematic export from KiCad. Open the SVG for a zoomable view of the nets and annotations. Top-side 3D board render from KiCad. Open the flat PCB plot if you want a zoomable 2D placement view. ",
+    "url": "/live/pi-pico-controller/#controller-hardware",
+    
+    "relUrl": "/pi-pico-controller/#controller-hardware"
+  },"33": {
+    "doc": "Pi Pico Controller",
+    "title": "Board Summary",
+    "content": "From the controller schematic and board files: . | power is designed around a 3xAA battery pack into VSYS, with the toggle switch in the battery path | the Pico 3V3 rail powers the radio, OLED, joysticks, and buttons | there are 3 joystick axes on this revision: Left_H, Left_V, and Right_H | the right joystick vertical axis is not routed on this board revision | the radio uses Pico SPI0 signals on GPIO4, GPIO6, and GPIO7, with CSN and CE on separate GPIOs | the OLED is wired over I2C on GPIO20 and GPIO21 | battery voltage can be estimated in firmware using the Pico’s internal ADC3 VSYS/3 path | the nRF24L01+ IRQ pin is not routed to the Pico on this revision | . ",
+    "url": "/live/pi-pico-controller/#board-summary",
+    
+    "relUrl": "/pi-pico-controller/#board-summary"
+  },"34": {
+    "doc": "Pi Pico Controller",
+    "title": "Controller Pinout",
+    "content": "These are the current signal assignments from the KiCad netlist: . | Pico Pad | Pico Function | Controller Signal | What It Does | . | 5 | GPIO3 | STATUS | status LED drive | . | 6 | GPIO4 | NRF_MISO | radio SPI MISO | . | 9 | GPIO6 | NRF_SCK | radio SPI clock | . | 10 | GPIO7 | NRF_MOSI | radio SPI MOSI | . | 14 | GPIO10 | SW2 | push button input | . | 15 | GPIO11 | SW1 | push button input | . | 16 | GPIO12 | Left_SW | left joystick select button | . | 19 | GPIO14 | NRF_CS | radio chip select | . | 22 | GPIO17 | NRF_CE | radio chip enable | . | 24 | GPIO18 | Right_SW | right joystick select button | . | 26 | GPIO20 | OLED_SDA | OLED I2C data | . | 27 | GPIO21 | OLED_SCL | OLED I2C clock | . | 31 | GPIO26_ADC0 | Left_H | left joystick horizontal axis | . | 32 | GPIO27_ADC1 | Left_V | left joystick vertical axis | . | 34 | GPIO28_ADC2 | Right_H | right joystick horizontal axis | . | 36 | 3V3 | +3V3 | logic and peripheral supply rail | . | 39 | VSYS | VBAT | switched 3xAA battery input | . Unused or not-routed highlights on this revision: . | GPIO0, GPIO1, GPIO2, GPIO5, GPIO8, GPIO9, GPIO13, GPIO15, GPIO16, GPIO19, and GPIO22 are not assigned to controller features | GPIO28_ADC2 is the only routed axis on the right joystick | the Pico RUN, VBUS, ADC_VREF, and AGND pins are not used for controller features | the radio IRQ output is left unconnected | . ",
+    "url": "/live/pi-pico-controller/#controller-pinout",
+    
+    "relUrl": "/pi-pico-controller/#controller-pinout"
+  },"35": {
+    "doc": "Pi Pico Controller",
+    "title": "nRF24L01+ Bring-up",
+    "content": "The official Nordic specification is useful for first principles: . | supply range: 1.9V to 3.6V | host interface: 4-wire SPI | maximum SPI clock: 10Mbps | air data rates: 250kbps, 1Mbps, and 2Mbps | IRQ is active low | . On this controller, the radio mapping is: . | Radio Pin | Module Signal | Pico Connection | Note | . | 1 | GND | Pico GND | common ground | . | 2 | VCC | Pico 3V3 pad 36 | 3.3V only | . | 3 | CE | GPIO17 on pad 22 | RX/TX enable | . | 4 | CSN | GPIO14 on pad 19 | SPI chip select | . | 5 | SCK | GPIO6 on pad 9 | SPI0 clock | . | 6 | MOSI | GPIO7 on pad 10 | SPI0 TX | . | 7 | MISO | GPIO4 on pad 6 | SPI0 RX | . | 8 | IRQ | not connected | optional in software, unused here | . GPIO4, GPIO6, and GPIO7 line up with SPI0 receive, clock, and transmit functions, so use spi0 in firmware and drive CSN and CE as ordinary GPIO pins. Radio Pin Roles . | Pin | What It Does | . | VCC | 3.3V radio supply | . | GND | common ground | . | CE | chip enable, used to activate RX or TX mode | . | CSN | SPI chip select | . | SCK | SPI clock | . | MOSI | SPI data from Pico to radio | . | MISO | SPI data from radio to Pico | . | IRQ | interrupt output, active low | . When you wire the radio: . | keep the radio on a stable 3.3V supply | make sure the controller and Pico share a common ground | keep wiring short and tidy | remember this board has a fitted 10uF decoupling capacitor at the radio rail and an additional 100nF footprint reserved alongside it | test one clean transmit or receive example before you add extra features | . ",
+    "url": "/live/pi-pico-controller/#nrf24l01-bring-up",
+    
+    "relUrl": "/pi-pico-controller/#nrf24l01-bring-up"
+  },"36": {
+    "doc": "Pi Pico Controller",
+    "title": "Buttons, Joysticks, and OLED",
+    "content": ". | SW1 is on GPIO11 and SW2 is on GPIO10 | Left_SW is on GPIO12 and Right_SW is on GPIO18 | because the push buttons and joystick select lines are tied up to 3V3 when pressed, configure those GPIOs with pull-downs in firmware so they do not float when idle | the OLED uses GPIO20 for SDA and GPIO21 for SCL | the routed analog joystick channels are GPIO26_ADC0, GPIO27_ADC1, and GPIO28_ADC2 | . ",
+    "url": "/live/pi-pico-controller/#buttons-joysticks-and-oled",
+    
+    "relUrl": "/pi-pico-controller/#buttons-joysticks-and-oled"
+  },"37": {
+    "doc": "Pi Pico Controller",
+    "title": "Test Points",
+    "content": "The controller also brings a few useful nets out to labelled test pads: . | Test Point | Signal | . | TP1 | Left_H | . | TP2 | Left_V | . | TP3 | Right_H | . | TP4 | OLED_SDA | . | TP5 | OLED_SCL | . | TP6 | VBAT | . | TP7 | +3V3 | . | TP8 | GND | . ",
+    "url": "/live/pi-pico-controller/#test-points",
+    
+    "relUrl": "/pi-pico-controller/#test-points"
+  },"38": {
+    "doc": "Pi Pico Controller",
+    "title": "Bring-up Checklist",
+    "content": ". | Confirm the Pico builds and flashes from VS Code. | Configure pull-downs on SW1, SW2, Left_SW, and Right_SW, then confirm the digital inputs switch cleanly. | Read Left_H, Left_V, and Right_H on ADC0, ADC1, and ADC2, and add a calibration deadzone before you trust the joysticks. | Confirm the OLED comes up on GPIO20 and GPIO21, usually at I2C address 0x3C. | Bring up the radio on spi0 with MISO=GPIO4, SCK=GPIO6, MOSI=GPIO7, CSN=GPIO14, and CE=GPIO17. | Prove a simple send or receive test before you start controlling motors or mechanisms. | If you need battery telemetry, read the Pico’s internal ADC3 VSYS/3 path and calibrate it against a meter. | . ",
+    "url": "/live/pi-pico-controller/#bring-up-checklist",
+    
+    "relUrl": "/pi-pico-controller/#bring-up-checklist"
+  },"39": {
+    "doc": "Pi Pico Controller",
+    "title": "Common Failure Points",
+    "content": ". | unstable 3.3V power to the radio | mixed-up chip-select or IRQ wiring | forgetting common ground between modules | forgetting to enable pull-downs on the button inputs, which leaves them floating | assuming the right joystick has two analog axes on this revision when only Right_H is routed | trying to debug radio, OLED, and input logic all at the same time | . ",
+    "url": "/live/pi-pico-controller/#common-failure-points",
+    
+    "relUrl": "/pi-pico-controller/#common-failure-points"
+  },"40": {
+    "doc": "Pi Pico Controller",
+    "title": "More Help",
+    "content": "If the controller-specific mapping is still unclear after checking the schematic and repo, ask a supervisor. ",
+    "url": "/live/pi-pico-controller/#more-help",
+    
+    "relUrl": "/pi-pico-controller/#more-help"
+  },"41": {
+    "doc": "Power & Wiring",
+    "title": "Power &amp; Wiring",
+    "content": "Most event-day hardware problems are power problems before they are code problems. Use this page as the shared baseline for regulators, motor drivers, servos, and fast bring-up checks. ",
+    "url": "/live/power-wiring/#power--wiring",
+    
+    "relUrl": "/power-wiring/#power--wiring"
+  },"42": {
+    "doc": "Power & Wiring",
+    "title": "Official References",
+    "content": ". | Raspberry Pi Pico board documentation | Raspberry Pi Pico datasheet PDF | Texas Instruments LM2596 product page and datasheet | ST L298 product page and datasheet | Pololu DRV8825 carrier overview | . ",
+    "url": "/live/power-wiring/#official-references",
+    
+    "relUrl": "/power-wiring/#official-references"
+  },"43": {
+    "doc": "Power & Wiring",
+    "title": "Start Small",
+    "content": ". | Prove one powered subsystem at a time. | Get clean logic power first, then add radios, sensors, and only then motor or servo loads. | Avoid building the full machine before you have tested the power path under load. | . ",
+    "url": "/live/power-wiring/#start-small",
+    
+    "relUrl": "/power-wiring/#start-small"
+  },"44": {
+    "doc": "Power & Wiring",
+    "title": "Pico Board Power Facts",
+    "content": "The Pico datasheet is worth knowing before you start improvising rails: . | VSYS is the main system input and the board datasheet places it in the 1.8V to 5.5V range. | 3V3 is the regulated 3.3V rail. Raspberry Pi recommends keeping external load on this pin below 300mA. | Pulling 3V3_EN low disables the 3.3V rail and powers the board down. | ADC_VREF and AGND matter if you want cleaner analogue measurements. | . ",
+    "url": "/live/power-wiring/#pico-board-power-facts",
+    
+    "relUrl": "/power-wiring/#pico-board-power-facts"
+  },"45": {
+    "doc": "Power & Wiring",
+    "title": "Regulator Basics",
+    "content": ". | Set adjustable regulators before connecting sensitive electronics. | Re-check voltage with a meter after any wiring change. | Do not assume one regulator setting is correct for every board in the system. | If a board is resetting or acting randomly, inspect the supply rail before you change code. | . LM2596 Notes . The TI LM2596 is a buck regulator, not a magic universal power fix: . | official input range: 4.5V to 40V | rated output current: up to 3A | use it to step down to a target rail, then verify the actual output before you connect Pico boards, radios, or sensors | . ",
+    "url": "/live/power-wiring/#regulator-basics",
+    
+    "relUrl": "/power-wiring/#regulator-basics"
+  },"46": {
+    "doc": "Power & Wiring",
+    "title": "Motors and Drivers",
+    "content": ". | Do not drive motors directly from the microcontroller. | Use the correct driver for the load and keep logic or control wiring separate from higher-current motor paths where practical. | Expect noise, voltage sag, and brownouts once motors start moving. | . Driver-Specific Notes . | The ST L298 is a dual full-bridge driver intended for inductive loads such as DC motors and steppers. It has separate logic and motor supply considerations, so wire it deliberately rather than assuming the Pico can share every rail blindly. | The Pololu DRV8825 carrier supports simple step-and-direction control, adjustable current limiting, up to 45V motor supply, and direct 3.3V logic interfacing. Set the current limit before you expect a stepper setup to behave. | . ",
+    "url": "/live/power-wiring/#motors-and-drivers",
+    
+    "relUrl": "/power-wiring/#motors-and-drivers"
+  },"47": {
+    "doc": "Power & Wiring",
+    "title": "Servo and High-Load Notes",
+    "content": ". | Treat larger servos and launch or drive actuators as separate load problems, not as simple accessories. | If motion becomes erratic under load, suspect supply stability, grounding, or current draw first. | . ",
+    "url": "/live/power-wiring/#servo-and-high-load-notes",
+    
+    "relUrl": "/power-wiring/#servo-and-high-load-notes"
+  },"48": {
+    "doc": "Power & Wiring",
+    "title": "Wiring Habits That Save Time",
+    "content": ". | label or write down final pin assignments | keep ground routing obvious | test continuity when something looks right but behaves wrong | change one thing at a time when debugging | . ",
+    "url": "/live/power-wiring/#wiring-habits-that-save-time",
+    
+    "relUrl": "/power-wiring/#wiring-habits-that-save-time"
+  },"49": {
+    "doc": "Power & Wiring",
+    "title": "When to Stop and Ask",
+    "content": "Ask a supervisor if: . | you are not sure a board should be powered from a given rail | the regulator setting is uncertain | wires or drivers are getting hot | the system works on USB but fails on its intended power source | . ",
+    "url": "/live/power-wiring/#when-to-stop-and-ask",
+    
+    "relUrl": "/power-wiring/#when-to-stop-and-ask"
+  },"50": {
+    "doc": "Power & Wiring",
+    "title": "Power & Wiring",
+    "content": " ",
+    "url": "/live/power-wiring/",
+    
+    "relUrl": "/power-wiring/"
+  },"51": {
+    "doc": "Project 1 - Platformer",
+    "title": "Objectives",
+    "content": ". | Design and build a vehicle capable of crossing the largest possible gap. | Demonstrate reliable remote operation and stable vehicle control throughout each crossing attempt. | Develop a robust mechanical system that can maintain performance as gap distance increases in 10cm increments. | Achieve successful crossings efficiently, reliably and quickly. | If two or more teams successfully cross the same maximum gap, the team with the fastest successful crossing at that distance will rank higher. | . ",
+    "url": "/live/project-1/#objectives",
+    
+    "relUrl": "/project-1/#objectives"
+  },"52": {
+    "doc": "Project 1 - Platformer",
+    "title": "Quickstart",
+    "content": ". | Start with VS Code Setup, Pi Pico Controller, and Power &amp; Wiring before you build a complex chassis. | Prove the handheld controller and nRF24L01+ link first, then get one drive motor working cleanly through the motor driver. | Build the smallest stable vehicle that can steer, stop, and reverse before you add bridge or actuator mechanisms. | Treat 20 cm as the first scored gap. Use shorter runs as setup and control checks only. | . ",
+    "url": "/live/project-1/#quickstart",
+    
+    "relUrl": "/project-1/#quickstart"
+  },"53": {
+    "doc": "Project 1 - Platformer",
+    "title": "Materials Provided",
+    "content": "| Item | Picture | Description | . | Raspberry Pi Pico microcontroller | | Primary controller board for the vehicle and handheld remote. Teams use it to read inputs, coordinate radio traffic, and drive the rest of the embedded system. | . | nRF24L01+ 2.4 GHz wireless transceiver modules | | Provides the required radio link between the operator controls and the gap-crossing vehicle. | . | Analog joystick modules | | Two-axis operator input for steering, speed control, and mechanism commands on the handheld controller. | . | 0.96&quot; 128 x 64 OLED displays | | Useful for lightweight status output such as pairing state, battery checks, selected mode, or quick debug readouts. | . | Drive components: N20 gear motors and TT motor wheel kits | | Mix of compact geared motors and wheel-drive parts for traction, chassis movement, and small powered mechanisms. | . | L298N dual H-bridge motor driver boards | | Lets the Pico reverse and control DC motors safely without driving the motor load directly from the microcontroller. | . | LM2596 DC-DC voltage regulators | | Adjustable buck regulators for stepping battery voltage down to cleaner supply rails for logic, radios, and accessories. | . | Custom linear actuator kits | | Low-cost extending actuator hardware for teams that want lifting or bridging mechanisms. The kits are supplied as parts, so expect assembly work and possible STL tweaks. | . | Support hardware: casters and 694-2RS bearings | | Useful for rolling support points, pivots, and smoother contact surfaces where the chassis or bridge structure needs low-friction motion. | . | Mechanical hardware: M4 threaded rod and M4 square nuts | | General-purpose structural hardware for frames, adjustments, clamping, and custom linkage assemblies. | . ",
+    "url": "/live/project-1/#materials-provided",
+    
+    "relUrl": "/project-1/#materials-provided"
+  },"54": {
+    "doc": "Project 1 - Platformer",
+    "title": "Common Materials",
+    "content": ". | Battery supplies: 3xAA holders, 6xAA holders, and AA alkaline batteries | Prototyping materials: perfboard and solderless breadboards | Wiring supplies: 22 AWG electrical wire and male-to-female Dupont jumper wires | General electronics assortment: resistors, capacitors, LEDs, diodes, and transistors | Common fasteners: M4 nylon insert lock nuts and M3 self-tapping screws | Basic assembly tools: precision screwdriver set | . ",
+    "url": "/live/project-1/#common-materials",
+    
+    "relUrl": "/project-1/#common-materials"
+  },"55": {
+    "doc": "Project 1 - Platformer",
+    "title": "Mechanical Notes",
+    "content": ". | The actuator option is intended as a cheaper custom alternative to off-the-shelf linear actuators. | Teams should expect to assemble the actuator kits before use. | Some teams will likely need to adjust, remix, or reprint the supplied STL parts to fit their chassis or linkage geometry. | . ",
+    "url": "/live/project-1/#mechanical-notes",
+    
+    "relUrl": "/project-1/#mechanical-notes"
+  },"56": {
+    "doc": "Project 1 - Platformer",
+    "title": "Common Failure Points",
+    "content": ". | building a large bridge or actuator system before the base drive works reliably | debugging radio, motor driver, and power issues all at the same time | leaving handheld controller bring-up until late in the build | designing around one perfect crossing instead of a repeatable scored run | . Actuator Reference Video . Custom linear actuator reference . Open on YouTube Reference Builds . These stills show one example of how a long bridge arm and actuator-assisted chassis can be arranged. Use them as mechanism reference, not as a required final design. Bridge arm deployed during a wide-gap crossing attempt. Long bridge extension reaching the far platform. Top view of the actuator placement and chassis layout. Crossing in motion with the bridge structure loaded. Full-span side view showing the overall bridge geometry. ",
+    "url": "/live/project-1/#common-failure-points",
+    
+    "relUrl": "/project-1/#common-failure-points"
+  },"57": {
+    "doc": "Project 1 - Platformer",
+    "title": "Programming approach",
+    "content": "VS Code is the primary recommended workflow for this project. Start with VS Code Setup, then use Pi Pico Controller for the organiser controller pin map and radio bring-up, and Power &amp; Wiring before you power the full vehicle. | Recommended path: VS Code | MicroPython, Arduino IDE, or Thonny can still be used if your team already knows them, but treat them as secondary options | . ",
+    "url": "/live/project-1/#programming-approach",
+    
+    "relUrl": "/project-1/#programming-approach"
+  },"58": {
+    "doc": "Project 1 - Platformer",
+    "title": "Scoring Criteria",
+    "content": "Gap Crossed (60 points) . | Gap crossed | Points | . | 20 cm crossed | 4 points | . | 30 cm crossed | 6 points | . | 40 cm crossed | 7 points | . | 50 cm crossed | 8 points | . | 60 cm crossed | 9 points | . | 70 cm crossed | 11 points | . | Highest successful gap | 15 points | . Crossing Speed (20 points) . Speed points are awarded by speed placement at the team’s highest successful gap, with 1st being the fastest successful crossing at that distance. The points are distributed to create stronger separation near the top while still ensuring every successful team receives some speed points. Top 10: . | Rank | Points | . | 1st | 20 | . | 2nd | 18 | . | 3rd | 17 | . | 4th | 15 | . | 5th | 13 | . | 6th | 12 | . | 7th | 10 | . | 8th | 9 | . | 9th | 8 | . | 10th | 7 | . Reliability and Repeatability (10 points) . | Category | Points | . | Smoothness | 4 points | . | Control | 3 points | . | Repeatability | 3 points | . Engineering Design (10 points) . Teams start with 10 points. Points are deducted for weaknesses in mechanical design, electrical design, system integration, and overall build quality. ",
+    "url": "/live/project-1/#scoring-criteria",
+    
+    "relUrl": "/project-1/#scoring-criteria"
+  },"59": {
+    "doc": "Project 1 - Platformer",
+    "title": "Project 1 - Platformer",
+    "content": " ",
+    "url": "/live/project-1/",
+    
+    "relUrl": "/project-1/"
+  },"60": {
+    "doc": "Project 2 - Catapult",
+    "title": "Objectives",
+    "content": "Participants must design a system that: . | Identify and measure the distance to the target using the VL53L0X V2 Time-of-Flight sensor. | Calculate the required launch and aiming parameters. | Adjust the catapult mechanism automatically using motors. | Launches a projectile to hit the target as accurately as possible. | Display system information on the OLED display for monitoring or troubleshooting. | . ",
+    "url": "/live/project-2/#objectives",
+    
+    "relUrl": "/project-2/#objectives"
+  },"61": {
+    "doc": "Project 2 - Catapult",
+    "title": "Materials Provided",
+    "content": "| Item | Picture | Description | . | Raspberry Pi Pico 2 | | Main controller for the catapult. It reads the sensor, computes shot settings, drives the actuators, and updates the on-board display. | . | VL53L0X V2 Time-of-Flight (ToF) laser ranging sensor | | Measures target distance so the launcher can choose the correct shot profile or automate tower finding in higher-end builds. | . | MG996R 360 servo | | High-torque servo for heavier mechanism motion such as cocking, feeder drive, or another powered stage that needs more torque than the small servo can provide. | . | MG90S micro servo | | Smaller actuator for light tasks such as a latch, gate, sensor mount, or release linkage. | . | NEMA 17 42 stepper motor | | Provides repeatable positioning for an aiming axis, turret, or adjustable launch geometry where precise motion matters more than raw speed. | . | DRV8825 stepper motor driver with heat sink | | Interfaces the Pico to the stepper motor and provides current-limited, direction-and-step control for accurate positioning. | . | LM2596S DC buck converter | | Steps the main supply down to cleaner lower-voltage rails for logic, sensors, and any peripherals that should not be fed directly from the higher-power input. | . | 12V 6A power supply unit | | Primary bench supply for the launcher, especially during tests where motors, drivers, and other higher-current loads need a stable source. | . | 0.96&quot; OLED display module | | Useful for distance readings, calibration state, selected firing mode, and other live debug information during setup and testing. | . | Perfboard 7 x 9 cm | | General-purpose prototyping board for soldered wiring, small interface circuits, and more durable assembly than a temporary breadboard. | . | USB-A to Micro-USB cable | | Used to power and program the Pico during development, testing, and firmware updates. | . ",
+    "url": "/live/project-2/#materials-provided",
+    
+    "relUrl": "/project-2/#materials-provided"
+  },"62": {
+    "doc": "Project 2 - Catapult",
+    "title": "Common Materials",
+    "content": ". | Mini Precision Screwdriver Set | 2-meter 22AWG Single Core Wire | M3x10mm Screws | Assorted Electronic Components Kit | 12 Value Assorted Capacitor Kit | . ",
+    "url": "/live/project-2/#common-materials",
+    
+    "relUrl": "/project-2/#common-materials"
+  },"63": {
+    "doc": "Project 2 - Catapult",
+    "title": "Quickstart",
+    "content": ". | Start with VS Code Setup and Power &amp; Wiring before you integrate the full launcher. | Prove the Pico 2 can read the VL53L0X V2 and command one actuator cleanly. | Get consistent launches with a 30 mm projectile before you automate reload or tower finding. | Treat automatic target finding and directional aiming as part of the high-end solution, then layer extra automation on top. | . ",
+    "url": "/live/project-2/#quickstart",
+    
+    "relUrl": "/project-2/#quickstart"
+  },"64": {
+    "doc": "Project 2 - Catapult",
+    "title": "Projectile Rules",
+    "content": ". | Use 30 mm diameter 3D-printed balls as projectiles. | Each kit will include 3 projectiles for testing. | There is no limit on the number of extra projectiles your team may print, as long as they remain 30 mm in diameter. | A magazine or similar reload mechanism is strongly recommended. | . ",
+    "url": "/live/project-2/#projectile-rules",
+    
+    "relUrl": "/project-2/#projectile-rules"
+  },"65": {
+    "doc": "Project 2 - Catapult",
+    "title": "Tower Layout Reference",
+    "content": "A tower reference image will be added here before launch. Until then, use the distances and scoring rules below as the source of truth. ",
+    "url": "/live/project-2/#tower-layout-reference",
+    
+    "relUrl": "/project-2/#tower-layout-reference"
+  },"66": {
+    "doc": "Project 2 - Catapult",
+    "title": "Inspiration Reference",
+    "content": "The main inspiration for this project was the Instructables project Arduino Robot Catapult: . | https://www.instructables.com/Arduino-Robot-Catapult/ | . Teams may find it useful as a high-level reference for automation flow, launch sequencing, and general mechanism ideas. Important constraints for this project: . | Treat the Instructables build as inspiration only. The Hack-A-Bot kit is materially different from the parts used in that project. | Use of the external 3D files from that build is not allowed in this project. | If you borrow ideas from it, you should adapt them to the components, geometry, and constraints of the kit provided here. | . Reference Gallery . These photos are copied from the Arduino Robot Catapult Instructables page and are included only as visual reference for mechanism layout, actuator placement, and launch sequencing. Exploded parts-and-electronics layout from the original reference build. Full assembled view showing overall geometry, actuator positions, and control wiring. Loaded launch position showing the arm linkage, cup, and feed path. Side profile that makes the main arm motion and support structure easier to read. Subassembly close-up for one of the servo-driven moving stages. ",
+    "url": "/live/project-2/#inspiration-reference",
+    
+    "relUrl": "/project-2/#inspiration-reference"
+  },"67": {
+    "doc": "Project 2 - Catapult",
+    "title": "Common Failure Points",
+    "content": ". | inconsistent projectile size or mass between test shots | trying to solve reload, scanning, and launch power at the same time | unstable power delivery when multiple motors or drivers move together | mounting the sensor in a way that cannot reliably see the towers | . ",
+    "url": "/live/project-2/#common-failure-points",
+    
+    "relUrl": "/project-2/#common-failure-points"
+  },"68": {
+    "doc": "Project 2 - Catapult",
+    "title": "Programming approach",
+    "content": "VS Code is the primary recommended workflow for this project. Start with VS Code Setup for toolchain bring-up and Power &amp; Wiring before running launch hardware at full load. | Recommended path: VS Code | MicroPython or Arduino IDE can still be used if your team already knows them, but treat them as secondary options | . ",
+    "url": "/live/project-2/#programming-approach",
+    
+    "relUrl": "/project-2/#programming-approach"
+  },"69": {
+    "doc": "Project 2 - Catapult",
+    "title": "Scoring Criteria",
+    "content": "Maximum score: 100 points . The project rewards automation, accuracy, engineering quality, and software implementation. Systems with higher autonomy levels receive higher marks. 1. Level of Automation (50 Points) . | System Type | Description | Points | . | Fully Autonomous System | System measures distance, calculates launch parameters, aims, and fires automatically with no human input. | 50 | . | Semi-Autonomous (Manual Aim + Automatic Launch) | Users align the system with the target direction, but the system measures distance and automatically calculates launch parameters and fires. | 30 | . | Distance-Assisted Launch | System measures distance and displays recommended settings, but the user manually adjusts and triggers the launch. | 15 | . | Fully Manual System | User performs aiming and launching manually without automated assistance. | 0 | . 2. Accuracy Scoring - Block Target System (40 Points) . The target will consist of 6 columns of 3 stacked blocks, arranged by distance from the catapult at marked positions around a circle with the catapult in the center. Target Layout . | 2 Close Columns (0.8m) | 2 Middle Columns (1.3m) | 2 Far Columns (1.8m) | . Teams aiming for the fully autonomous category are expected to locate and aim at these towers automatically. Lower automation categories are still scored using the rubric above. Calculation method: . | Only the top two blocks in each column count toward scoring. The bottom block does not count, even if it falls. | . Number of boxes fallen* distance multiplier . | Distance | Multiplier | . | Close | 2 | . | Middle | 4 | . | Far | 6 | . | Total score after 5 shots is the score for accuracy | . 3. Engineering &amp; System Design (5 Points) . Judges will assess: . | Stability of the mechanical structure | Quality of assembly and wiring | Effective use of provided components | . Score: 0-5 points . 4. Innovation &amp; Creativity (5 Points) . Points may be awarded for: . | Creative catapult designs | Unique engineering solutions | . Score: 0-5 points . ",
+    "url": "/live/project-2/#scoring-criteria",
+    
+    "relUrl": "/project-2/#scoring-criteria"
+  },"70": {
+    "doc": "Project 2 - Catapult",
+    "title": "Supporting Documentation",
+    "content": ". | Raspberry Pi Pico 2 pin out: https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#pico2 | DIymore VL53L0X V2 Sensor: (User manual under description) . | https://www.aliexpress.com/item/32902676861.html?spm=a2g0o.productlist.main.46.51a2576a2xuzXY&amp;algo_pvid=a342f1ac-b016-48d5-b2200441a47fd0fc&amp;pdp_ext_f=%7B%22order%22%3A%2254%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&amp;utparamurl=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A32902676861%7C_p_origin_prod%3A#nav-specification | https://www.st.com/resource/en/datasheet/vl53l0x.pdf | . | MG996R Servo (High Torque): Check power requirements! . | https://www.electronicoscaldas.com/datasheet/MG996R_Tower-Pro.pdf | . | MG90S Servo: . | https://www.electronicoscaldas.com/datasheet/MG90S_Tower-Pro.pdf | . | Nema 17 42 stepper motor: . | https://www.handsontec.com/dataspecs/motor_fan/nema17-42BYGH60.pdf | . | DRV8825 Stepper Driver Guide: . | https://www.pololu.com/product/2133 | . | LM2596S DC Buck Converter: . | https://www.youtube.com/watch?v=RAbTdeLU2JQ&amp;t=246s | . | VL53L0X (ToF Sensor) Library: . | MicroPython: https://github.com/kevinmcaleer/vl53lx0 | C/C++ : https://github.com/adafruit/Adafruit_VL53L0X | . | SSD1306-compatible OLED libraries: . | MicroPython : https://github.com/stlehmann/micropython-ssd1306 | . | . ",
+    "url": "/live/project-2/#supporting-documentation",
+    
+    "relUrl": "/project-2/#supporting-documentation"
+  },"71": {
+    "doc": "Project 2 - Catapult",
+    "title": "Project 2 - Catapult",
+    "content": " ",
+    "url": "/live/project-2/",
+    
+    "relUrl": "/project-2/"
+  },"72": {
+    "doc": "Project 3 - Robot Arm",
+    "title": "Objectives",
+    "content": "Teams must build a system that achieves two core objectives. 1. Rebuild the Tower . The primary objective is to reconstruct a tall, stable block tower after it has been knocked down by the catapult stage. The system should reset this part of the course in a consistent and repeatable way so that the wider hackathon cycle can continue without manual intervention. 2. Link the Projects Together (Inter-Project Handoff) . The second objective is to use the robot arm as a reliable handoff point between adjacent systems. Teams should design a workflow that can receive the angry bird from one stage and place it accurately for the next, for example by transferring it onto the swarm trolley after Project 2. Adjacent-project handoffs follow project number order 1 -&gt; 6. This objective should demonstrate both accurate object handling and effective coordination with the surrounding projects. ",
+    "url": "/live/project-3/#objectives",
+    
+    "relUrl": "/project-3/#objectives"
+  },"73": {
+    "doc": "Project 3 - Robot Arm",
+    "title": "Quickstart",
+    "content": ". | Get the arm calibrated and the workspace bounded before you add cloud logic or complex task sequencing. | Prove one repeatable pickup-and-place cycle with a single object before you attempt tower rebuilding or full handoffs. | Decide the neighboring project interfaces you need to support in the fixed 1 -&gt; 6 order. | Collect Google Cloud credits from a project supervisor on the day by scanning the provided QR code into the Google account you want to use. | . ",
+    "url": "/live/project-3/#quickstart",
+    
+    "relUrl": "/project-3/#quickstart"
+  },"74": {
+    "doc": "Project 3 - Robot Arm",
+    "title": "Google Cloud Workflow",
+    "content": "Teams are expected to use Google Cloud for the AI part of this project. In practice that usually means Gemini and Vertex AI for perception or decision-making, plus other Google Cloud services if you need remote compute, hosting, or hardware coordination. | The event has 100 Google Cloud credits available in total. | One credit is usually claimed per person, and an average team will often use 1 to 4 credits in total if several members scan separately. | Each credit is worth $5 of Google Cloud usage. | Credits can be used for Gemini and other Google AI services, but they can also be spent on CPUs, GPUs, Cloud Run, and other remote processing if your robot pipeline needs it. | If one account runs out, multiple credits can be applied to the same Google account. | You do not type in a manual code: scan the QR code and the credit is applied automatically to your Google account. | . ",
+    "url": "/live/project-3/#google-cloud-workflow",
+    
+    "relUrl": "/project-3/#google-cloud-workflow"
+  },"75": {
+    "doc": "Project 3 - Robot Arm",
+    "title": "Materials Provided",
+    "content": ". | Quanser’s QArm Mini platform | Google Cloud credits will be distributed by project supervisors on the day via QR code. | Vertex AI and Gemini: Run high-performance multimodal models to give your robot the ability to see, hear, and reason. | Vision API: Identify objects, detect faces, and read text from your robot’s camera feed in real time. | Cloud Run: Deploy your web applications or bot controllers instantly in a fully managed environment. | BigQuery: Store and analyse vast amounts of sensor data to find patterns or train your own custom models. | Cloud Functions: Create event-driven triggers that let your hardware respond to cloud-based signals automatically. | Compute Engine: Access high-power virtual machines and GPUs for intensive training or simulation tasks. | Access to the Makerspace to develop the inter-project handoff systems. This includes 3D printers, Laser Cutting and other materials. | . ",
+    "url": "/live/project-3/#materials-provided",
+    
+    "relUrl": "/project-3/#materials-provided"
+  },"76": {
+    "doc": "Project 3 - Robot Arm",
+    "title": "Quanser QArm Mini Notes",
+    "content": "The official Quanser product material positions the QArm Mini as a compact teaching manipulator for introductory robotics, so teams should aim for controlled tabletop pick-and-place and repeatable handoff behaviours rather than large, high-payload motions. Platform Snapshot . | 4 DOF arm with base yaw, shoulder/elbow/wrist pitch, and a parallel gripper | Triple-parallel pitch arrangement that helps maintain picked-object orientation through sagittal-plane motion | Approximate arm reach of 382 mm, gripper grasp of 70 mm, and maximum payload of 150 g | Joint sensing for position, speed, and current monitoring, which can also support payload-estimation workflows | Post-wrist RGB camera with two swivel configurations at up to 1280 x 720 and 60 Hz | Plug-and-play USB connection for desktop use, with support across Python, MATLAB, Simulink, and ROS 2 | . Useful Courseware Ideas . | Forward, inverse, and differential kinematics are directly relevant for repeatable tower rebuilding and handoff positioning. | Visual servoing and object detection are a strong fit for block pickup, target alignment, and bird transfer. | Current-based payload sensing is useful if teams want to detect whether a block or bird has actually been gripped. | Path and collision monitoring matter here because the arm needs to work near surrounding project hardware and custom fixtures. | Quanser’s robotics guide presents the platform as part of a broader open-architecture workflow, so a good event-day approach is to lock down calibration and workspace limits first, then layer camera logic and task sequencing on top. | . ",
+    "url": "/live/project-3/#quanser-qarm-mini-notes",
+    
+    "relUrl": "/project-3/#quanser-qarm-mini-notes"
+  },"77": {
+    "doc": "Project 3 - Robot Arm",
+    "title": "Common Failure Points",
+    "content": ". | trying to solve cloud integration before the arm is calibrated and repeatable | leaving handoff geometry and fixtures undefined until late in the event | assuming the gripper can tolerate an object or fixture without testing it | treating adjacent project interfaces as ad hoc instead of fixed numbered handoffs | . Reference Gallery . QArm Mini hardware reference image. Annotated product details and spec reference. Block Handling Examples . These external reference stills show the kind of vision-guided pickup, transfer, and stacking workflow this project is aiming for. Treat them as task reference only, not as a required hardware layout or fixture design. Vision-guided block presentation and pickup setup. Color-sorting reference with distinct pickup and placement zones. Block transport into the stacking area. Final placement step while building a stacked colored-block tower. ",
+    "url": "/live/project-3/#common-failure-points",
+    
+    "relUrl": "/project-3/#common-failure-points"
+  },"78": {
+    "doc": "Project 3 - Robot Arm",
+    "title": "Tower Scoring Criteria (60 points)",
+    "content": "Tower Height (30 points) . Tower Height will be scored comparatively across all teams. Points will be awarded based on the highest valid tower achieved across three attempts. Height will be measured by the number of completed stacked levels. For a tower to be considered valid, it must remain standing unsupported for at least 5 seconds after the build is complete. Each team’s best valid attempt will be used for scoring. Teams will then be ranked from tallest valid tower to shortest valid tower, and points will be awarded as follows: . | Place | Points | . | 1st place | 30 points | . | 2nd place | 25 points | . | 3rd place | 20 points | . | 4th place | 15 points | . | 5th place | 10 points | . | 6th place | 5 points | . If a team does not achieve a valid tower, they will receive 0 points for this section. If two teams achieve the same tower height, the team with the faster valid completion time will place higher. Repeatability (30 points) . Repeatability measures how consistently a team can rebuild a valid tower across repeated judged attempts. This category will be scored using the same three official runs used for the Tower Height section. A run will be considered successful if the robot rebuilds a valid tower that remains standing unsupported for at least 5 seconds, with no manual intervention during the attempt. Points will be awarded as follows: . | Outcome | Points | . | 3 successful runs | 30 points | . | 2 successful runs | 20 points | . | 1 successful run | 10 points | . | 0 successful runs | 0 points | . This score is independent of Tower Height. Teams do not need to match their tallest tower on every run; each run only needs to result in a valid tower. ",
+    "url": "/live/project-3/#tower-scoring-criteria-60-points",
+    
+    "relUrl": "/project-3/#tower-scoring-criteria-60-points"
+  },"79": {
+    "doc": "Project 3 - Robot Arm",
+    "title": "Inter-Project Handoff Scoring Criteria (40 points)",
+    "content": "Successful Handoff Scenarios (20 points) . Teams may earn up to 20 points for successfully implementing inter-project handoffs. | Scenario | Points | . | 10 points for the first successful handoff scenario | 10 points | . | 10 points for the second successful handoff scenario | 10 points | . | Maximum of 20 points total | 20 points total | . A handoff scenario will be considered successful if the robot arm receives the angry bird from the previous numbered project and places it for use by the next numbered project in the 1 -&gt; 6 loop, with no manual intervention during the attempt. Teams are recommended to design a 3D printed mount that’s easy to attach to the projects if needed. Repeatability (10 points) . Teams will be awarded points based on how reliably their chosen handoff scenarios can be repeated. | Outcome | Points | . | 10 points: handoff system works reliably across repeated attempts | 10 points | . | 5 points: handoff system works inconsistently, with partial repeatability | 5 points | . | 0 points: handoff system cannot be repeated reliably | 0 points | . Judges will assess repeatability based on whether the demonstrated handoff process can be reproduced with similar results across multiple runs. Judge Assessment: Approach and Integration (10 points) . The remaining 10 points will be awarded qualitatively by the judges based on the quality of the team’s overall approach. Judges will consider: . | how well the robot arm integrates with the surrounding projects | the quality and robustness of the handoff strategy | how clearly the system has been designed for use within the wider hackathon cycle | the effectiveness of the team’s technical approach to coordination, positioning, and transfer | . ",
+    "url": "/live/project-3/#inter-project-handoff-scoring-criteria-40-points",
+    
+    "relUrl": "/project-3/#inter-project-handoff-scoring-criteria-40-points"
+  },"80": {
+    "doc": "Project 3 - Robot Arm",
+    "title": "Project 3 - Robot Arm",
+    "content": " ",
+    "url": "/live/project-3/",
+    
+    "relUrl": "/project-3/"
+  },"81": {
+    "doc": "Project 4 - Swarm",
+    "title": "Objectives",
+    "content": "Teams must build a system that: . | Coordinates the provided MONA bots using the shared arena camera for localisation while moving the trolley across the arena. | Detects and avoids obstacles throughout the run. | Completes the crossing as quickly and reliably as possible. | . ",
+    "url": "/live/project-4/#objectives",
+    
+    "relUrl": "/project-4/#objectives"
+  },"82": {
+    "doc": "Project 4 - Swarm",
+    "title": "Quickstart",
+    "content": ". | Start with one MONA and a minimal command loop before you plan 3-bot behaviour. | Use the MONA library and example code linked in the resources section as your starting point. | Plan around supervisor-managed arena and camera access rather than assuming constant availability. | When you are on the arena, plug your laptop into the arena camera and use that live view both to position the MONAs and to run your camera-based tracking from the real camera angle. | Use the initial one-MONA period to agree a shared fiducial marker convention with the other teams before different mounts and sizes diverge. | Generate, print, and mount fiducial markers early rather than treating them as an optional late add-on. | . ",
+    "url": "/live/project-4/#quickstart",
+    
+    "relUrl": "/project-4/#quickstart"
+  },"83": {
+    "doc": "Project 4 - Swarm",
+    "title": "MONA Access Plan",
+    "content": ". | We only have access to 10 MONA bots in total for the event. | At the start of the event, each team will be handed 1 MONA bot for setup, testing, and learning the platform. | Use that initial 1-MONA period to discuss a shared fiducial marker system with the other teams so the arena camera can localise every bot reliably. | Once teams are ready, organisers will transition to 3 shared sets of 3 MONA bots. | Teams will need to share time on those 3-bot sets during development and judged use. | A maximum of 3 MONA bots may be used for a run. | . ",
+    "url": "/live/project-4/#mona-access-plan",
+    
+    "relUrl": "/project-4/#mona-access-plan"
+  },"84": {
+    "doc": "Project 4 - Swarm",
+    "title": "Arena Rules",
+    "content": ". | Teams will share one arena during development and testing. | Each team gets a minimum of 4 minutes on the arena before allowing another team to use it. | Teams are responsible for organising arena time between themselves. | Teams are expected to plug their laptop into the arena camera when they are on the arena and use that feed to position the MONAs and run their camera-based tracking. | Supervisors will manage arena and camera access on the day, but teams still need to keep arena usage fair and practical. | . ",
+    "url": "/live/project-4/#arena-rules",
+    
+    "relUrl": "/project-4/#arena-rules"
+  },"85": {
+    "doc": "Project 4 - Swarm",
+    "title": "Materials Provided",
+    "content": ". | Access to the staged MONA allocation described above | Access to the arena and overhead camera as the shared localisation and tracking view while teams are on the arena | Camera connection for teams to plug a laptop into the arena view while positioning MONAs and running their tracking pipeline | 1 wireless access point shared between 2 teams, for local robot/laptop communication | Access point setup will be kept minimal: . | configured in standard AP mode | 2.4 GHz Wi-Fi for compatibility with the MONA ESP32 hardware | local DHCP enabled so laptops and robots can join the network without manual IP configuration | intended for local command/telemetry traffic only, not high-bandwidth video streaming | . | MONA robot Arduino library and example code are linked in the resources section above | Teams may use the linked MONA robot Arduino library and example code as a starting point for robot control and local wireless communication | The Wi-Fi/socket examples in that linked codebase are a more suitable starting point for team robot coordination than browser-based control examples | One 3D printer will be reserved for this project at the start of the event so teams can print fiducial cases and related mounts quickly | . ",
+    "url": "/live/project-4/#materials-provided",
+    
+    "relUrl": "/project-4/#materials-provided"
+  },"86": {
+    "doc": "Project 4 - Swarm",
+    "title": "Arena Camera Setup",
+    "content": "Teams should treat the arena camera as part of the control stack. When you are on the arena, plug your laptop into the camera and use that live image both to place the MONAs and to run the camera-based tracking that localises them from the real camera position. This is why we strongly recommend putting fiducial markers on the bots. The shared camera view needs a consistent way to identify and position every MONA during setup and testing, and fiducial-based tracking has been the most practical shared standard in previous years. Reference arena view. The camera is mounted above the arena facing downward and is visible on the right side of this image. Teams are expected to plug a laptop into that feed to position the MONAs and run their tracking loop from the real camera viewpoint. ",
+    "url": "/live/project-4/#arena-camera-setup",
+    
+    "relUrl": "/project-4/#arena-camera-setup"
+  },"87": {
+    "doc": "Project 4 - Swarm",
+    "title": "Fiducial Markers",
+    "content": "Teams should plan for printed fiducial markers and a marker mount from the start. The MONA bots do not ship with markers attached by default, so the mount needs to be part of the early build rather than a last-minute add-on. At the start of the hackathon, each team gets 1 MONA to test with. Use that initial window to coordinate with the other teams and agree a shared fiducial marker system that everyone can use reliably from the shared arena camera. We recommend that someone generates the marker sheets early and prints them on the university computers before incompatible mount choices spread across teams. In past years, teams have mounted these fiducials on 3D-printed cases fitted to the MONAs. Teams can design and add those cases this year if they want to build them, and we recommend designing around M3 screws with self-tapping holes for a simple, robust mount. Teams can print fiducial markers on paper using the university printers, and if attaching them cleanly to the MONAs is difficult they can print mounts on a 3D printer at the start of the event instead, since glue must not be used directly on the MONAs. Example of a shared fiducial standard mounted on 3D-printed cases across multiple MONAs. Fit the fiducial mount early. Camera-based tracking depends on the marked configuration, not the bare robot. Bare MONA platform reference. Each team starts here, so use the initial one-MONA period to move quickly to a marker-ready mount. The MONA pool is shared and limited, so keep the fiducial case and mount quick to fit and compatible across the robots you are handed. ",
+    "url": "/live/project-4/#fiducial-markers",
+    
+    "relUrl": "/project-4/#fiducial-markers"
+  },"88": {
+    "doc": "Project 4 - Swarm",
+    "title": "Common Failure Points",
+    "content": ". | designing for three bots before one bot is reliable | treating the arena camera as a setup aid instead of the core localisation view | leaving fiducial marker placement until the end of the build | failing to agree a shared marker standard with the other teams during the initial one-MONA period | assuming uninterrupted arena time during development | delaying trolley interaction and obstacle recovery tests until judged runs | . ",
+    "url": "/live/project-4/#common-failure-points",
+    
+    "relUrl": "/project-4/#common-failure-points"
+  },"89": {
+    "doc": "Project 4 - Swarm",
+    "title": "Scoring Criteria",
+    "content": "Maximum score: 100 points . The project rewards competitive performance on the course, controlled obstacle handling, repeatable operation, and originality of approach. Qualifying and Knockout Placement (50 points) . All teams will complete 3 qualifying runs. A team’s best valid qualifying run will be used to rank the field. Completed crossings rank above non-finishers. Among teams that complete the course, the faster valid completion time ranks higher. Among teams that do not complete the course, the team that achieves the furthest valid trolley progress ranks higher. The top 4 teams advance to the knockout stage. Semifinals will be seeded 1st vs 4th and 2nd vs 3rd, with semifinal winners advancing to the final and semifinal losers competing in a 3rd-place playoff. Teams placed 5th to 10th will receive placement points based on their qualifying rank. | Final Place | Points | . | 1st | 50 | . | 2nd | 42 | . | 3rd | 36 | . | 4th | 30 | . | 5th | 24 | . | 6th | 20 | . | 7th | 16 | . | 8th | 12 | . | 9th | 8 | . | 10th | 4 | . Control and Obstacle Handling (25 points) . This category rewards controlled trolley movement, effective obstacle avoidance, stable corrections, and minimal disruption to obstacles. Minor contact is allowed, but repeated contact, poor recovery, or obvious course disruption will reduce the score. Judges may stop a run if the system becomes uncontrolled or unsafe. | Performance Level | Points | . | Clean, controlled navigation with little or no meaningful obstacle interference | 21-25 | . | Generally controlled operation with some avoidable contact or recovery corrections | 14-20 | . | Repeated contact, weak control, or inconsistent obstacle management | 6-13 | . | Severely uncontrolled or ineffective navigation | 0-5 | . Repeatability (15 points) . Repeatability will be scored using the same 3 qualifying runs. A successful run is one that completes a valid crossing within the allowed judging window. | Successful Qualifying Runs | Points | . | 3 | 15 | . | 2 | 10 | . | 1 | 5 | . | 0 | 0 | . Innovation (10 points) . The final 10 points will be awarded qualitatively for originality of approach. Judges may reward creative swarm strategies, novel robot coordination, interesting recovery methods, or inventive use of sensing and control. ",
+    "url": "/live/project-4/#scoring-criteria",
+    
+    "relUrl": "/project-4/#scoring-criteria"
+  },"90": {
+    "doc": "Project 4 - Swarm",
+    "title": "Project 4 - Swarm",
+    "content": " ",
+    "url": "/live/project-4/",
+    
+    "relUrl": "/project-4/"
+  },"91": {
+    "doc": "Project 5 - Rover",
+    "title": "Status",
+    "content": "Detailed Rover brief content is still being prepared. For now, use the demo video as the only confirmed reference on the site and ask a supervisor for project-specific direction if you are assigned this project. ",
+    "url": "/live/project-5/#status",
+    
+    "relUrl": "/project-5/#status"
+  },"92": {
+    "doc": "Project 5 - Rover",
+    "title": "Project 5 - Rover",
+    "content": " ",
+    "url": "/live/project-5/",
+    
+    "relUrl": "/project-5/"
+  },"93": {
+    "doc": "Project 6 - Creative",
+    "title": "Objectives",
+    "content": ". | Define a clear real-world problem and explain who the solution is for. | Design and build a working physical prototype within one of the four prompt areas. | Use the two provided Pico boards and wireless transceivers to coordinate at least two parts of the system. | Implement a purposeful control or behaviour strategy, whether remote, semi-autonomous, or autonomous. | Demonstrate the prototype completing its intended task reliably during judging. | Explain the key engineering choices, tradeoffs, and why the final design is an effective response to the chosen problem. | . ",
+    "url": "/live/project-6/#objectives",
+    
+    "relUrl": "/project-6/#objectives"
+  },"94": {
+    "doc": "Project 6 - Creative",
+    "title": "Quickstart",
+    "content": ". | Start with VS Code Setup, then use Pi Pico Controller for shared nRF24L01+ bring-up ideas and Power &amp; Wiring before you add actuators. | Decide in the first hour what the main Pico does, what the second Pico does, and what counts as a believable live demo. | Prove the wireless link early. Do not wait until the rest of the build is finished. | Keep the first prototype small enough that it can demonstrate the core problem-solution loop. | . ",
+    "url": "/live/project-6/#quickstart",
+    
+    "relUrl": "/project-6/#quickstart"
+  },"95": {
+    "doc": "Project 6 - Creative",
+    "title": "Prompt Areas",
+    "content": "Assistive Tech . Build a device that improves accessibility, safety, independence, or ease of use for a person or task. Autonomy . Build a system that senses, decides, and acts with minimal human input to complete a meaningful task. Interactive Play . Build an engaging physical experience that invites interaction, competition, learning, or delight. Sustainability . Build a device that helps reduce waste, save energy, monitor resources, or encourage more sustainable behaviour. ",
+    "url": "/live/project-6/#prompt-areas",
+    
+    "relUrl": "/project-6/#prompt-areas"
+  },"96": {
+    "doc": "Project 6 - Creative",
+    "title": "Materials Provided",
+    "content": "| Item | Picture | Description | . | Raspberry Pi Pico 2 | | The core controller for the Creative project. Most teams will use one Pico in the main device and the second in a controller, base station, or companion node. | . | nRF24L01+ PA + LNA 2.4 GHz wireless modules | | Provides the required wireless link between the two Pico nodes, with the amplified radio and external antenna giving more margin for room-scale demos. | . | PCA9685 servo motor driver boards | | Adds many PWM outputs over I2C, which is useful when a creative build needs multiple servos without consuming most of the Pico pins. | . | MG90S servo motors | | Compact actuators for light mechanisms such as pan-tilt mounts, grippers, latches, dials, or interactive moving parts. | . | Joystick modules | | Simple human input for teleoperation, calibration, manual override, or a quick handheld controller for prototype testing. | . | BMI160 gyroscope and accelerometer sensor | | Useful for orientation sensing, motion-triggered interaction, gesture control, stabilization, and other behaviour-driven projects. | . | 0.96&quot; OLED display module | | A lightweight status screen for mode changes, sensor readouts, wireless state, battery checks, or other live debug information. | . | LM2596S DC buck converters | | Lets teams derive stable lower-voltage rails from a higher-voltage source for logic, radios, sensors, and smaller peripherals. | . | 300W 20A DC-DC boost/buck power converter | | High-power adjustable conversion stage for builds that need a custom supply rail or heavier actuation than the small buck modules are meant to handle. | . | 12V 6A power supply unit | | Bench power source for motors, converters, and other higher-current experiments during bring-up and testing. | . | 400-tie breadboards | | Fast solderless prototyping surface for trying control ideas, sensor wiring, and interface circuits before committing to a more permanent build. | . | Perfboard 7 x 9 cm | | Useful when a working breadboard circuit needs to be transferred onto a more durable soldered board for the final prototype. | . | 22 AWG single-core wire | | Breadboard-friendly hookup wire for quick interconnects, sensor headers, and neat point-to-point wiring on perfboard. | . | M3 x 8 mm self-tapping screws | | Convenient mechanical hardware for mounting 3D prints, brackets, covers, and light structural parts without a separate tapped insert. | . | Assorted electronic components kit | | General-purpose parts such as resistors, LEDs, diodes, and small interface components for signal conditioning, indicators, and quick fixes. | . | Mini precision screwdriver set | | Basic hand tool set for assembling the prototype, tightening mounts, and making small adjustments during debugging. | . ",
+    "url": "/live/project-6/#materials-provided",
+    
+    "relUrl": "/project-6/#materials-provided"
+  },"97": {
+    "doc": "Project 6 - Creative",
+    "title": "Additional Parts",
+    "content": "If your team genuinely needs extra components, the event inventory will be at the back of the Makerspace near the storage rooms. Ask the supervisor on inventory shift what is actually available before you redesign your build around extra parts. ",
+    "url": "/live/project-6/#additional-parts",
+    
+    "relUrl": "/project-6/#additional-parts"
+  },"98": {
+    "doc": "Project 6 - Creative",
+    "title": "Common Failure Points",
+    "content": ". | choosing a problem that is too vague to demonstrate convincingly | waiting too long to prove the two-Pico wireless link | chasing extra inventory before the core concept works with the base kit | building too much mechanism before the live demo path is stable | . ",
+    "url": "/live/project-6/#common-failure-points",
+    
+    "relUrl": "/project-6/#common-failure-points"
+  },"99": {
+    "doc": "Project 6 - Creative",
+    "title": "Programming approach",
+    "content": "Teams will build around the Raspberry Pi Pico 2, which is well suited to embedded control, sensing, actuation, and wireless communication. VS Code is the primary recommended workflow for this project. | Recommended path: VS Code | MicroPython or Arduino IDE can still be used if your team already knows them, but treat them as secondary options | . ",
+    "url": "/live/project-6/#programming-approach",
+    
+    "relUrl": "/project-6/#programming-approach"
+  },"100": {
+    "doc": "Project 6 - Creative",
+    "title": "Scoring Criteria",
+    "content": "Maximum score: 100 points . The Creative project is judged using a fixed rubric rather than by fastest time or direct placement against other teams. Judges will look for a clear problem, a convincing physical prototype, and a live demonstration that shows the system doing something meaningful. Each team will complete one final judged demonstration. Scores will then be awarded across the categories below. 1. Problem Definition and Solution Fit (30 points) . This category rewards how clearly the team defines the problem, identifies the intended user or context, explains relevant constraints, and shows that the chosen device is a good response. The project should also fit clearly within the selected prompt area. | Performance Level | Points | . | Exceptionally clear problem definition, strong prompt fit, and highly convincing solution choice | 24-30 | . | Mostly clear problem and solution fit, with some gaps or weaker justification | 16-23 | . | Problem is vague, weakly framed, or only partially connected to the prototype | 8-15 | . | Problem is unclear or the solution fit is not convincing | 0-7 | . 2. Live Demo and Effectiveness (25 points) . This category rewards how convincingly the prototype performs its intended task during judging. Stable, believable operation will score more highly than a fragile one-off success. | Performance Level | Points | . | Core function works clearly and convincingly in the live demo | 20-25 | . | Core concept works, but with visible limitations or only partial success | 13-19 | . | Only a limited or inconsistent demonstration is achieved | 6-12 | . | Intended function is not meaningfully demonstrated | 0-5 | . 3. Technical Implementation and Engineering Quality (20 points) . This category rewards embedded software, sensing, control, actuation, wireless coordination, system integration, and overall build quality. | Performance Level | Points | . | Strong integration, robust implementation, and effective use of hardware and software | 16-20 | . | Competent execution with some rough edges or missing polish | 10-15 | . | Basic implementation or weak integration across the system | 4-9 | . | Minimal technical execution or poor overall quality | 0-3 | . 4. Innovation and Creativity (15 points) . This category rewards originality of concept, mechanism, interaction style, control method, or use of the provided kit. | Performance Level | Points | . | Clearly original, inventive, and thoughtfully executed | 12-15 | . | Some creative ideas, but overall more familiar or expected | 8-11 | . | Limited originality or only minor creative elements | 4-7 | . | Little meaningful creativity | 0-3 | . 5. Communication and Supporting Documentation (10 points) . This category rewards how clearly the team explains the problem, architecture, design decisions, and tradeoffs. Supporting material may include a short README, block diagram, wiring diagram, CAD view, or control-flow sketch. | Performance Level | Points | . | Clear explanation with useful supporting material | 8-10 | . | Understandable explanation, but incomplete or uneven | 5-7 | . | Weak explanation or minimal supporting material | 2-4 | . | Unclear explanation and no meaningful supporting material | 0-1 | . Judging Requirements . | Using both provided Pico boards with the wireless link is a core requirement of the brief. | If a team does not meet the two-Pico wireless requirement, they may still be judged, but their total score is capped at 60. | A successful live demonstration of the project’s core function is required for full marks. | If a team cannot demonstrate the core function live during judging, their total score is capped at 50. | If both score caps apply, the lower cap will be used. | . ",
+    "url": "/live/project-6/#scoring-criteria",
+    
+    "relUrl": "/project-6/#scoring-criteria"
+  },"101": {
+    "doc": "Project 6 - Creative",
+    "title": "Project 6 - Creative",
+    "content": " ",
+    "url": "/live/project-6/",
+    
+    "relUrl": "/project-6/"
+  },"102": {
+    "doc": "Projects",
+    "title": "Projects",
+    "content": " ",
+    "url": "/live/projects/",
+    
+    "relUrl": "/projects/"
+  },"103": {
+    "doc": "Schedule",
+    "title": "Schedule",
+    "content": "Use this page for the current event timeline. ",
+    "url": "/live/schedule/",
+    
+    "relUrl": "/schedule/"
+  },"104": {
+    "doc": "Schedule",
+    "title": "Saturday 21st March 2026",
+    "content": "| Time | Event | . | 08:00-09:30 | Setup | . | 09:30-10:30 | Registration | . | 10:30-11:00 | Opening Lecture | . | 11:00-11:15 | Make Teams | . | 11:15-11:30 | Project Allocation | . | 13:00-14:00 | Lunch | . | 15:00 | Mini Event #1 | . | 19:00-20:00 | Dinner | . ",
+    "url": "/live/schedule/#saturday-21st-march-2026",
+    
+    "relUrl": "/schedule/#saturday-21st-march-2026"
+  },"105": {
+    "doc": "Schedule",
+    "title": "Sunday 22nd March 2026",
+    "content": "| Time | Event | . | 00:00 | Movie | . | 03:00 | Mini Event #2 | . | 06:00-07:00 | Breakfast | . | 12:00-14:00 | Judging | . | 14:00-15:00 | Ending Lecture | . ",
+    "url": "/live/schedule/#sunday-22nd-march-2026",
+    
+    "relUrl": "/schedule/#sunday-22nd-march-2026"
+  },"106": {
+    "doc": "VS Code Setup",
+    "title": "VS Code Setup",
+    "content": "VS Code is the recommended development workflow for Hack-A-Bot 2026. This page is the shared starting point for teams working with Raspberry Pi Pico projects. It is also the default editor recommendation across the site, even when a project uses a different runtime or library stack. ",
+    "url": "/live/vscode-setup/",
+    
+    "relUrl": "/vscode-setup/"
+  },"107": {
+    "doc": "VS Code Setup",
+    "title": "Official References",
+    "content": ". | Raspberry Pi Pico VS Code extension repository | Official Raspberry Pi extension announcement | Official getting-started walkthrough for Pico-series and VS Code | Raspberry Pi C/C++ SDK documentation | Raspberry Pi Pico board documentation | . ",
+    "url": "/live/vscode-setup/#official-references",
+    
+    "relUrl": "/vscode-setup/#official-references"
+  },"108": {
+    "doc": "VS Code Setup",
+    "title": "Start Here",
+    "content": ". | Install Visual Studio Code. | Install the Raspberry Pi Pico VS Code extension. | Let the extension install the toolchain it needs, or point it at an existing setup if you already have one. | Create or import your project in VS Code before wiring the rest of the system together. | . ",
+    "url": "/live/vscode-setup/#start-here",
+    
+    "relUrl": "/vscode-setup/#start-here"
+  },"109": {
+    "doc": "VS Code Setup",
+    "title": "Minimum Host Checks",
+    "content": "The official Raspberry Pi setup guidance is stricter than a normal text editor install. Before you start: . | Use a recent VS Code release. Raspberry Pi’s published setup notes call out VS Code 1.92.1 or newer for the Pico extension. | On Linux, make sure you have Python 3.9+, git, tar, and a native C/C++ compiler available. | On macOS, run xcode-select --install before you expect compiling or debugging to work cleanly. | . ",
+    "url": "/live/vscode-setup/#minimum-host-checks",
+    
+    "relUrl": "/vscode-setup/#minimum-host-checks"
+  },"110": {
+    "doc": "VS Code Setup",
+    "title": "Recommended Workflow",
+    "content": ". | Use VS Code to prove a very small test first: blink an LED, print to serial, or read one sensor. | Confirm build, flash, and serial output before you start integrating motors, radios, or larger mechanisms. | Keep one known-good baseline project so you can separate software problems from wiring or power problems. | . ",
+    "url": "/live/vscode-setup/#recommended-workflow",
+    
+    "relUrl": "/vscode-setup/#recommended-workflow"
+  },"111": {
+    "doc": "VS Code Setup",
+    "title": "First Project Flow",
+    "content": "The official Raspberry Pi flow is a good baseline for event-day bring-up: . | Create a new project from examples and start with blink. | Choose the correct Pico-series board in the project wizard. | Put the board into BOOTSEL mode before your first flash. | Expect the first project setup to take several minutes while the extension installs the SDK and toolchain. | Use the extension’s Run button for the fastest proof that compile and flash are both working. | . If you prefer to flash manually, the extension also generates a UF2 file in your build directory that you can drag onto a Pico in BOOTSEL mode. ",
+    "url": "/live/vscode-setup/#first-project-flow",
+    
+    "relUrl": "/vscode-setup/#first-project-flow"
+  },"112": {
+    "doc": "VS Code Setup",
+    "title": "Good Early Checks",
+    "content": ". | Can you build and flash reliably? | Can you open a serial monitor and see output? | Have you written down which board, pins, and power rails you are using? | If you change several things at once, can you still recover to a known working state? | . ",
+    "url": "/live/vscode-setup/#good-early-checks",
+    
+    "relUrl": "/vscode-setup/#good-early-checks"
+  },"113": {
+    "doc": "VS Code Setup",
+    "title": "Useful Features To Lean On",
+    "content": ". | The official extension can create Pico SDK example projects directly from VS Code. | It handles SDK and toolchain setup automatically for the standard path. | Raspberry Pi also documents integrated offline Pico SDK documentation inside the editor, which is useful once you are wiring peripherals under time pressure. | . ",
+    "url": "/live/vscode-setup/#useful-features-to-lean-on",
+    
+    "relUrl": "/vscode-setup/#useful-features-to-lean-on"
+  },"114": {
+    "doc": "VS Code Setup",
+    "title": "If Your Project Uses Other Tools",
+    "content": ". | Some project resources may still reference MicroPython, Arduino IDE, MATLAB, or ROS 2. | Treat VS Code as the default path unless your project supervisor explicitly tells you to use a different stack. | . ",
+    "url": "/live/vscode-setup/#if-your-project-uses-other-tools",
+    
+    "relUrl": "/vscode-setup/#if-your-project-uses-other-tools"
+  },"115": {
+    "doc": "VS Code Setup",
+    "title": "Common VS Code-Specific Problems",
+    "content": ". | First-run setup taking longer than expected because the extension is downloading the SDK and tools. | Build or toolchain errors caused by missing Linux or macOS prerequisites. | Conflicts from old manual Pico SDK installs or older Pico setup methods already on the machine. | GitHub API rate limiting when the extension tries to fetch SDK or toolchain versions. The official extension README documents a user-level GitHub token setting for this case. | . ",
+    "url": "/live/vscode-setup/#common-vs-code-specific-problems",
+    
+    "relUrl": "/vscode-setup/#common-vs-code-specific-problems"
+  },"116": {
+    "doc": "VS Code Setup",
+    "title": "More Help",
+    "content": "If your environment still is not working after a simple blink or serial test, ask a supervisor before moving on to the rest of the build. ",
+    "url": "/live/vscode-setup/#more-help",
+    
+    "relUrl": "/vscode-setup/#more-help"
+  }
+}
