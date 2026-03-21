@@ -1,4 +1,4 @@
-import { Paper, Stack, Image, Text, Group, Badge, Anchor, rem } from '@mantine/core'
+import { Paper, Stack, Image, Text, Group, Badge, Anchor, Button, rem } from '@mantine/core'
 import event from '../../data/event.json'
 import { assetPath } from '../../lib/assets'
 import { smoothScrollTo } from '../../lib/anchors'
@@ -15,23 +15,19 @@ export function HeroCard(){
     <Paper withBorder p="xl" radius="lg" style={{ background: 'var(--panel)' }}>
       <Stack gap={24}>
         <Group justify="center">
-          <Badge
+          <Button
+            component="a"
+            href="/live/"
             size="lg"
             radius="xl"
+            className="btn-gradient g-animate"
             styles={{
               root: {
-                background: 'rgba(239,35,60,0.22)',
-                color: '#ff9aa8',
-                border: '1px solid rgba(239,35,60,0.55)',
-                paddingInline: rem(18),
-                paddingBlock: rem(8),
                 width: 'min(100%, 520px)',
-                justifyContent: 'center',
+                minHeight: rem(56),
+                boxShadow: '0 16px 32px rgba(217,4,41,0.22)',
               },
               label: {
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: rem(8),
                 textTransform: 'uppercase',
                 letterSpacing: '0.08em',
                 fontWeight: 700,
@@ -39,12 +35,15 @@ export function HeroCard(){
               },
             }}
           >
-            Fill out participation form!
-          </Badge>
+            Open Hack-A-Bot Live
+          </Button>
         </Group>
         <Image src={assetPath('brand/Title_Date_Logo.png')} alt="Hack-A-Bot 2026" maw={rem(420)} mx="auto" />
         <Stack gap={8} ta="center">
           <Text fz={{ base: 'lg', md: 'xl' }} fw={500} c="var(--text)">{event.tagline}</Text>
+          <Text fz={{ base: 'sm', md: 'md' }} c="var(--text-dim)" maw={rem(440)} mx="auto">
+            Hack-A-Bot Live is the student hub for the event-day schedule, floorplan, project guides, and setup notes.
+          </Text>
           <Group justify="center" gap="sm">
             <Badge
               size="lg"

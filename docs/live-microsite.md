@@ -10,8 +10,8 @@ This repo publishes the event-day microsite at `/live/` by copying a prebuilt st
 
 ## Current launch mode
 
-- `/live/` is direct-URL only for now.
-- The main site does not expose `/live/` in nav, hero, or ticket UI in this pass.
+- `/live/` is exposed from the main-site hero CTA as `Open Hack-A-Bot Live`.
+- The main site mentions `/live/` in hero UI only in this pass; nav and ticket UI still do not link to it.
 - Browser visits to bad `/live/...` paths should return users to `/live/`.
 
 ## Required output shape
