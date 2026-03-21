@@ -637,180 +637,187 @@
     "relUrl": "/project-4/"
   },"91": {
     "doc": "Project 5 - Rover",
-    "title": "Status",
-    "content": "Detailed Rover brief content is still being prepared. For now, use the demo video as the only confirmed reference on the site and ask a supervisor for project-specific direction if you are assigned this project. ",
-    "url": "/live/project-5/#status",
+    "title": "Beginner Friendly",
+    "content": "Perfect for beginners if you have no prior experience. Guided teaching sessions will run throughout the event. One member from each team will take part in a soldering workshop during the day. You’ll gain experience using CAD, 3D printing, soldering, and coding. ",
+    "url": "/live/project-5/#beginner-friendly",
     
-    "relUrl": "/project-5/#status"
+    "relUrl": "/project-5/#beginner-friendly"
   },"92": {
+    "doc": "Project 5 - Rover",
+    "title": "Challenge Brief",
+    "content": "Remote Control Rovers: chaos or control? . Robots are being pushed further than ever before across unpredictable, mixed terrains. Your mission: Build and operate an RC rover to track down and collect 5 runaway Angry Birds hidden across the course. But can you navigate the terrain, avoid obstacles, gather them all without losing control, and save the flock from total chaos? . ",
+    "url": "/live/project-5/#challenge-brief",
+    
+    "relUrl": "/project-5/#challenge-brief"
+  },"93": {
     "doc": "Project 5 - Rover",
     "title": "Project 5 - Rover",
     "content": " ",
     "url": "/live/project-5/",
     
     "relUrl": "/project-5/"
-  },"93": {
+  },"94": {
     "doc": "Project 6 - Creative",
     "title": "Objectives",
     "content": ". | Define a clear real-world problem and explain who the solution is for. | Design and build a working physical prototype within one of the four prompt areas. | Use the two provided Pico boards and wireless transceivers to coordinate at least two parts of the system. | Implement a purposeful control or behaviour strategy, whether remote, semi-autonomous, or autonomous. | Demonstrate the prototype completing its intended task reliably during judging. | Explain the key engineering choices, tradeoffs, and why the final design is an effective response to the chosen problem. | . ",
     "url": "/live/project-6/#objectives",
     
     "relUrl": "/project-6/#objectives"
-  },"94": {
+  },"95": {
     "doc": "Project 6 - Creative",
     "title": "Quickstart",
     "content": ". | Start with VS Code Setup, then use Pi Pico Controller for shared nRF24L01+ bring-up ideas and Power &amp; Wiring before you add actuators. | Decide in the first hour what the main Pico does, what the second Pico does, and what counts as a believable live demo. | Prove the wireless link early. Do not wait until the rest of the build is finished. | Keep the first prototype small enough that it can demonstrate the core problem-solution loop. | . ",
     "url": "/live/project-6/#quickstart",
     
     "relUrl": "/project-6/#quickstart"
-  },"95": {
+  },"96": {
     "doc": "Project 6 - Creative",
     "title": "Prompt Areas",
     "content": "Assistive Tech . Build a device that improves accessibility, safety, independence, or ease of use for a person or task. Autonomy . Build a system that senses, decides, and acts with minimal human input to complete a meaningful task. Interactive Play . Build an engaging physical experience that invites interaction, competition, learning, or delight. Sustainability . Build a device that helps reduce waste, save energy, monitor resources, or encourage more sustainable behaviour. ",
     "url": "/live/project-6/#prompt-areas",
     
     "relUrl": "/project-6/#prompt-areas"
-  },"96": {
+  },"97": {
     "doc": "Project 6 - Creative",
     "title": "Materials Provided",
     "content": "| Item | Picture | Description | . | Raspberry Pi Pico 2 | | The core controller for the Creative project. Most teams will use one Pico in the main device and the second in a controller, base station, or companion node. | . | nRF24L01+ PA + LNA 2.4 GHz wireless modules | | Provides the required wireless link between the two Pico nodes, with the amplified radio and external antenna giving more margin for room-scale demos. | . | PCA9685 servo motor driver boards | | Adds many PWM outputs over I2C, which is useful when a creative build needs multiple servos without consuming most of the Pico pins. | . | MG90S servo motors | | Compact actuators for light mechanisms such as pan-tilt mounts, grippers, latches, dials, or interactive moving parts. | . | Joystick modules | | Simple human input for teleoperation, calibration, manual override, or a quick handheld controller for prototype testing. | . | BMI160 gyroscope and accelerometer sensor | | Useful for orientation sensing, motion-triggered interaction, gesture control, stabilization, and other behaviour-driven projects. | . | 0.96&quot; OLED display module | | A lightweight status screen for mode changes, sensor readouts, wireless state, battery checks, or other live debug information. | . | LM2596S DC buck converters | | Lets teams derive stable lower-voltage rails from a higher-voltage source for logic, radios, sensors, and smaller peripherals. | . | 300W 20A DC-DC boost/buck power converter | | High-power adjustable conversion stage for builds that need a custom supply rail or heavier actuation than the small buck modules are meant to handle. | . | 12V 6A power supply unit | | Bench power source for motors, converters, and other higher-current experiments during bring-up and testing. | . | 400-tie breadboards | | Fast solderless prototyping surface for trying control ideas, sensor wiring, and interface circuits before committing to a more permanent build. | . | Perfboard 7 x 9 cm | | Useful when a working breadboard circuit needs to be transferred onto a more durable soldered board for the final prototype. | . | 22 AWG single-core wire | | Breadboard-friendly hookup wire for quick interconnects, sensor headers, and neat point-to-point wiring on perfboard. | . | M3 x 8 mm self-tapping screws | | Convenient mechanical hardware for mounting 3D prints, brackets, covers, and light structural parts without a separate tapped insert. | . | Assorted electronic components kit | | General-purpose parts such as resistors, LEDs, diodes, and small interface components for signal conditioning, indicators, and quick fixes. | . | Mini precision screwdriver set | | Basic hand tool set for assembling the prototype, tightening mounts, and making small adjustments during debugging. | . ",
     "url": "/live/project-6/#materials-provided",
     
     "relUrl": "/project-6/#materials-provided"
-  },"97": {
+  },"98": {
     "doc": "Project 6 - Creative",
     "title": "Additional Parts",
     "content": "If your team genuinely needs extra components, the event inventory will be at the back of the Makerspace near the storage rooms. Ask the supervisor on inventory shift what is actually available before you redesign your build around extra parts. ",
     "url": "/live/project-6/#additional-parts",
     
     "relUrl": "/project-6/#additional-parts"
-  },"98": {
+  },"99": {
     "doc": "Project 6 - Creative",
     "title": "Common Failure Points",
     "content": ". | choosing a problem that is too vague to demonstrate convincingly | waiting too long to prove the two-Pico wireless link | chasing extra inventory before the core concept works with the base kit | building too much mechanism before the live demo path is stable | . ",
     "url": "/live/project-6/#common-failure-points",
     
     "relUrl": "/project-6/#common-failure-points"
-  },"99": {
+  },"100": {
     "doc": "Project 6 - Creative",
     "title": "Programming approach",
     "content": "Teams will build around the Raspberry Pi Pico 2, which is well suited to embedded control, sensing, actuation, and wireless communication. VS Code is the primary recommended workflow for this project. | Recommended path: VS Code | MicroPython or Arduino IDE can still be used if your team already knows them, but treat them as secondary options | . ",
     "url": "/live/project-6/#programming-approach",
     
     "relUrl": "/project-6/#programming-approach"
-  },"100": {
+  },"101": {
     "doc": "Project 6 - Creative",
     "title": "Scoring Criteria",
     "content": "Maximum score: 100 points . The Creative project is judged using a fixed rubric rather than by fastest time or direct placement against other teams. Judges will look for a clear problem, a convincing physical prototype, and a live demonstration that shows the system doing something meaningful. Each team will complete one final judged demonstration. Scores will then be awarded across the categories below. 1. Problem Definition and Solution Fit (30 points) . This category rewards how clearly the team defines the problem, identifies the intended user or context, explains relevant constraints, and shows that the chosen device is a good response. The project should also fit clearly within the selected prompt area. | Performance Level | Points | . | Exceptionally clear problem definition, strong prompt fit, and highly convincing solution choice | 24-30 | . | Mostly clear problem and solution fit, with some gaps or weaker justification | 16-23 | . | Problem is vague, weakly framed, or only partially connected to the prototype | 8-15 | . | Problem is unclear or the solution fit is not convincing | 0-7 | . 2. Live Demo and Effectiveness (25 points) . This category rewards how convincingly the prototype performs its intended task during judging. Stable, believable operation will score more highly than a fragile one-off success. | Performance Level | Points | . | Core function works clearly and convincingly in the live demo | 20-25 | . | Core concept works, but with visible limitations or only partial success | 13-19 | . | Only a limited or inconsistent demonstration is achieved | 6-12 | . | Intended function is not meaningfully demonstrated | 0-5 | . 3. Technical Implementation and Engineering Quality (20 points) . This category rewards embedded software, sensing, control, actuation, wireless coordination, system integration, and overall build quality. | Performance Level | Points | . | Strong integration, robust implementation, and effective use of hardware and software | 16-20 | . | Competent execution with some rough edges or missing polish | 10-15 | . | Basic implementation or weak integration across the system | 4-9 | . | Minimal technical execution or poor overall quality | 0-3 | . 4. Innovation and Creativity (15 points) . This category rewards originality of concept, mechanism, interaction style, control method, or use of the provided kit. | Performance Level | Points | . | Clearly original, inventive, and thoughtfully executed | 12-15 | . | Some creative ideas, but overall more familiar or expected | 8-11 | . | Limited originality or only minor creative elements | 4-7 | . | Little meaningful creativity | 0-3 | . 5. Communication and Supporting Documentation (10 points) . This category rewards how clearly the team explains the problem, architecture, design decisions, and tradeoffs. Supporting material may include a short README, block diagram, wiring diagram, CAD view, or control-flow sketch. | Performance Level | Points | . | Clear explanation with useful supporting material | 8-10 | . | Understandable explanation, but incomplete or uneven | 5-7 | . | Weak explanation or minimal supporting material | 2-4 | . | Unclear explanation and no meaningful supporting material | 0-1 | . Judging Requirements . | Using both provided Pico boards with the wireless link is a core requirement of the brief. | If a team does not meet the two-Pico wireless requirement, they may still be judged, but their total score is capped at 60. | A successful live demonstration of the project’s core function is required for full marks. | If a team cannot demonstrate the core function live during judging, their total score is capped at 50. | If both score caps apply, the lower cap will be used. | . ",
     "url": "/live/project-6/#scoring-criteria",
     
     "relUrl": "/project-6/#scoring-criteria"
-  },"101": {
+  },"102": {
     "doc": "Project 6 - Creative",
     "title": "Project 6 - Creative",
     "content": " ",
     "url": "/live/project-6/",
     
     "relUrl": "/project-6/"
-  },"102": {
+  },"103": {
     "doc": "Projects",
     "title": "Projects",
     "content": " ",
     "url": "/live/projects/",
     
     "relUrl": "/projects/"
-  },"103": {
+  },"104": {
     "doc": "Schedule",
     "title": "Schedule",
     "content": "Use this page for the current event timeline. ",
     "url": "/live/schedule/",
     
     "relUrl": "/schedule/"
-  },"104": {
+  },"105": {
     "doc": "Schedule",
     "title": "Saturday 21st March 2026",
     "content": "| Time | Event | . | 08:00-09:30 | Setup | . | 09:30-10:30 | Registration | . | 10:30-11:00 | Opening Lecture | . | 11:00-11:15 | Make Teams | . | 11:15-11:30 | Project Allocation | . | 13:00-14:00 | Lunch | . | 15:00 | Mini Event #1 | . | 19:00-20:00 | Dinner | . ",
     "url": "/live/schedule/#saturday-21st-march-2026",
     
     "relUrl": "/schedule/#saturday-21st-march-2026"
-  },"105": {
+  },"106": {
     "doc": "Schedule",
     "title": "Sunday 22nd March 2026",
     "content": "| Time | Event | . | 00:00 | Movie | . | 03:00 | Mini Event #2 | . | 06:00-07:00 | Breakfast | . | 12:00-14:00 | Judging | . | 14:00-15:00 | Ending Lecture | . ",
     "url": "/live/schedule/#sunday-22nd-march-2026",
     
     "relUrl": "/schedule/#sunday-22nd-march-2026"
-  },"106": {
+  },"107": {
     "doc": "VS Code Setup",
     "title": "VS Code Setup",
     "content": "VS Code is the recommended development workflow for Hack-A-Bot 2026. This page is the shared starting point for teams working with Raspberry Pi Pico projects. It is also the default editor recommendation across the site, even when a project uses a different runtime or library stack. ",
     "url": "/live/vscode-setup/",
     
     "relUrl": "/vscode-setup/"
-  },"107": {
+  },"108": {
     "doc": "VS Code Setup",
     "title": "Official References",
     "content": ". | Raspberry Pi Pico VS Code extension repository | Official Raspberry Pi extension announcement | Official getting-started walkthrough for Pico-series and VS Code | Raspberry Pi C/C++ SDK documentation | Raspberry Pi Pico board documentation | . ",
     "url": "/live/vscode-setup/#official-references",
     
     "relUrl": "/vscode-setup/#official-references"
-  },"108": {
+  },"109": {
     "doc": "VS Code Setup",
     "title": "Start Here",
     "content": ". | Install Visual Studio Code. | Install the Raspberry Pi Pico VS Code extension. | Let the extension install the toolchain it needs, or point it at an existing setup if you already have one. | Create or import your project in VS Code before wiring the rest of the system together. | . ",
     "url": "/live/vscode-setup/#start-here",
     
     "relUrl": "/vscode-setup/#start-here"
-  },"109": {
+  },"110": {
     "doc": "VS Code Setup",
     "title": "Minimum Host Checks",
     "content": "The official Raspberry Pi setup guidance is stricter than a normal text editor install. Before you start: . | Use a recent VS Code release. Raspberry Pi’s published setup notes call out VS Code 1.92.1 or newer for the Pico extension. | On Linux, make sure you have Python 3.9+, git, tar, and a native C/C++ compiler available. | On macOS, run xcode-select --install before you expect compiling or debugging to work cleanly. | . ",
     "url": "/live/vscode-setup/#minimum-host-checks",
     
     "relUrl": "/vscode-setup/#minimum-host-checks"
-  },"110": {
+  },"111": {
     "doc": "VS Code Setup",
     "title": "Recommended Workflow",
     "content": ". | Use VS Code to prove a very small test first: blink an LED, print to serial, or read one sensor. | Confirm build, flash, and serial output before you start integrating motors, radios, or larger mechanisms. | Keep one known-good baseline project so you can separate software problems from wiring or power problems. | . ",
     "url": "/live/vscode-setup/#recommended-workflow",
     
     "relUrl": "/vscode-setup/#recommended-workflow"
-  },"111": {
+  },"112": {
     "doc": "VS Code Setup",
     "title": "First Project Flow",
     "content": "The official Raspberry Pi flow is a good baseline for event-day bring-up: . | Create a new project from examples and start with blink. | Choose the correct Pico-series board in the project wizard. | Put the board into BOOTSEL mode before your first flash. | Expect the first project setup to take several minutes while the extension installs the SDK and toolchain. | Use the extension’s Run button for the fastest proof that compile and flash are both working. | . If you prefer to flash manually, the extension also generates a UF2 file in your build directory that you can drag onto a Pico in BOOTSEL mode. ",
     "url": "/live/vscode-setup/#first-project-flow",
     
     "relUrl": "/vscode-setup/#first-project-flow"
-  },"112": {
+  },"113": {
     "doc": "VS Code Setup",
     "title": "Good Early Checks",
     "content": ". | Can you build and flash reliably? | Can you open a serial monitor and see output? | Have you written down which board, pins, and power rails you are using? | If you change several things at once, can you still recover to a known working state? | . ",
     "url": "/live/vscode-setup/#good-early-checks",
     
     "relUrl": "/vscode-setup/#good-early-checks"
-  },"113": {
+  },"114": {
     "doc": "VS Code Setup",
     "title": "Useful Features To Lean On",
     "content": ". | The official extension can create Pico SDK example projects directly from VS Code. | It handles SDK and toolchain setup automatically for the standard path. | Raspberry Pi also documents integrated offline Pico SDK documentation inside the editor, which is useful once you are wiring peripherals under time pressure. | . ",
     "url": "/live/vscode-setup/#useful-features-to-lean-on",
     
     "relUrl": "/vscode-setup/#useful-features-to-lean-on"
-  },"114": {
+  },"115": {
     "doc": "VS Code Setup",
     "title": "If Your Project Uses Other Tools",
     "content": ". | Some project resources may still reference MicroPython, Arduino IDE, MATLAB, or ROS 2. | Treat VS Code as the default path unless your project supervisor explicitly tells you to use a different stack. | . ",
     "url": "/live/vscode-setup/#if-your-project-uses-other-tools",
     
     "relUrl": "/vscode-setup/#if-your-project-uses-other-tools"
-  },"115": {
+  },"116": {
     "doc": "VS Code Setup",
     "title": "Common VS Code-Specific Problems",
     "content": ". | First-run setup taking longer than expected because the extension is downloading the SDK and tools. | Build or toolchain errors caused by missing Linux or macOS prerequisites. | Conflicts from old manual Pico SDK installs or older Pico setup methods already on the machine. | GitHub API rate limiting when the extension tries to fetch SDK or toolchain versions. The official extension README documents a user-level GitHub token setting for this case. | . ",
     "url": "/live/vscode-setup/#common-vs-code-specific-problems",
     
     "relUrl": "/vscode-setup/#common-vs-code-specific-problems"
-  },"116": {
+  },"117": {
     "doc": "VS Code Setup",
     "title": "More Help",
     "content": "If your environment still is not working after a simple blink or serial test, ask a supervisor before moving on to the rest of the build. ",
