@@ -50,7 +50,7 @@
   },"7": {
     "doc": "Floorplan",
     "title": "Ground Floor",
-    "content": ". | Main Working Area (Authorized Work Space): This is the central hacking zone where most participants are encouraged to stay, ensuring easy access to the Makerspace and a lively atmosphere. | Food Serving Area (Top Right): Grab snacks and meals in the “meet and greet” section. | Registration Desk (South Entrance): Head here to check in or if you have questions. | Spanish Steps &amp; Rest Area: Short “power naps” only (please use the bean bags). | Projects 1 &amp; 2: Their arenas will be set up in front of the Spanish Steps. | Makerspace: Open for use throughout the event. Project 3 judging will take place here on the second day. | . While you may explore elsewhere, we strongly encourage participants to remain on the Ground Floor near the Makerspace or in the first-floor study spaces to keep the social “hackathon vibe” alive. ",
+    "content": ". | Main Working Area (Authorized Work Space): This is the central hacking zone where most participants are encouraged to stay, ensuring easy access to the Makerspace and a lively atmosphere. | Food Serving Area (Top Right): Grab snacks and meals in the “meet and greet” section. | Registration Desk (South Entrance): Head here to check in or if you have questions. | Spanish Steps &amp; Rest Area: Short “power naps” only (please use the bean bags). | Projects 1 &amp; 2: Their arenas will be set up in front of the Spanish Steps. | Makerspace: Open for use throughout the event. Project 5 judging will take place here on the second day. | . While you may explore elsewhere, we strongly encourage participants to remain on the Ground Floor near the Makerspace or in the first-floor study spaces to keep the social “hackathon vibe” alive. ",
     "url": "/live/floorplan/#ground-floor",
     
     "relUrl": "/floorplan/#ground-floor"
@@ -356,302 +356,302 @@
     
     "relUrl": "/power-wiring/"
   },"51": {
-    "doc": "Project 1 - Platformer",
-    "title": "Objectives",
-    "content": ". | Design and build a vehicle capable of crossing the largest possible gap. | Demonstrate reliable remote operation and stable vehicle control throughout each crossing attempt. | Develop a robust mechanical system that can maintain performance as gap distance increases in 10cm increments. | Achieve successful crossings efficiently, reliably and quickly. | If two or more teams successfully cross the same maximum gap, the team with the fastest successful crossing at that distance will rank higher. | . ",
-    "url": "/live/project-1/#objectives",
+    "doc": "Project 1 - Rover",
+    "title": "Beginner Friendly",
+    "content": "Perfect for beginners if you have no prior experience. Guided teaching sessions will run throughout the event. One member from each team will take part in a soldering workshop during the day. You’ll gain experience using CAD, 3D printing, soldering, and coding. ",
+    "url": "/live/project-1/#beginner-friendly",
     
-    "relUrl": "/project-1/#objectives"
+    "relUrl": "/project-1/#beginner-friendly"
   },"52": {
-    "doc": "Project 1 - Platformer",
-    "title": "Quickstart",
-    "content": ". | Start with VS Code Setup, Pi Pico Controller, and Power &amp; Wiring before you build a complex chassis. | Prove the handheld controller and nRF24L01+ link first, then get one drive motor working cleanly through the motor driver. | Build the smallest stable vehicle that can steer, stop, and reverse before you add bridge or actuator mechanisms. | Treat 20 cm as the first scored gap. Use shorter runs as setup and control checks only. | . ",
-    "url": "/live/project-1/#quickstart",
+    "doc": "Project 1 - Rover",
+    "title": "Challenge Brief",
+    "content": "Remote Control Rovers: chaos or control? . Robots are being pushed further than ever before across unpredictable, mixed terrains. Your mission: Build and operate an RC rover to track down and collect 5 runaway Angry Birds hidden across the course. But can you navigate the terrain, avoid obstacles, gather them all without losing control, and save the flock from total chaos? . ",
+    "url": "/live/project-1/#challenge-brief",
     
-    "relUrl": "/project-1/#quickstart"
+    "relUrl": "/project-1/#challenge-brief"
   },"53": {
-    "doc": "Project 1 - Platformer",
-    "title": "Materials Provided",
-    "content": "| Item | Picture | Description | . | Raspberry Pi Pico microcontroller | | Primary controller board for the vehicle and handheld remote. Teams use it to read inputs, coordinate radio traffic, and drive the rest of the embedded system. | . | nRF24L01+ 2.4 GHz wireless transceiver modules | | Provides the required radio link between the operator controls and the gap-crossing vehicle. | . | Analog joystick modules | | Two-axis operator input for steering, speed control, and mechanism commands on the handheld controller. | . | 0.96&quot; 128 x 64 OLED displays | | Useful for lightweight status output such as pairing state, battery checks, selected mode, or quick debug readouts. | . | Drive components: N20 gear motors and TT motor wheel kits | | Mix of compact geared motors and wheel-drive parts for traction, chassis movement, and small powered mechanisms. | . | L298N dual H-bridge motor driver boards | | Lets the Pico reverse and control DC motors safely without driving the motor load directly from the microcontroller. | . | LM2596 DC-DC voltage regulators | | Adjustable buck regulators for stepping battery voltage down to cleaner supply rails for logic, radios, and accessories. | . | Custom linear actuator kits | | Low-cost extending actuator hardware for teams that want lifting or bridging mechanisms. The kits are supplied as parts, so expect assembly work and possible STL tweaks. | . | Support hardware: casters and 694-2RS bearings | | Useful for rolling support points, pivots, and smoother contact surfaces where the chassis or bridge structure needs low-friction motion. | . | Mechanical hardware: M4 threaded rod and M4 square nuts | | General-purpose structural hardware for frames, adjustments, clamping, and custom linkage assemblies. | . ",
-    "url": "/live/project-1/#materials-provided",
-    
-    "relUrl": "/project-1/#materials-provided"
-  },"54": {
-    "doc": "Project 1 - Platformer",
-    "title": "Common Materials",
-    "content": ". | Battery supplies: 3xAA holders, 6xAA holders, and AA alkaline batteries | Prototyping materials: perfboard and solderless breadboards | Wiring supplies: 22 AWG electrical wire and male-to-female Dupont jumper wires | General electronics assortment: resistors, capacitors, LEDs, diodes, and transistors | Common fasteners: M4 nylon insert lock nuts and M3 self-tapping screws | Basic assembly tools: precision screwdriver set | . ",
-    "url": "/live/project-1/#common-materials",
-    
-    "relUrl": "/project-1/#common-materials"
-  },"55": {
-    "doc": "Project 1 - Platformer",
-    "title": "Mechanical Notes",
-    "content": ". | The actuator option is intended as a cheaper custom alternative to off-the-shelf linear actuators. | Teams should expect to assemble the actuator kits before use. | Some teams will likely need to adjust, remix, or reprint the supplied STL parts to fit their chassis or linkage geometry. | . ",
-    "url": "/live/project-1/#mechanical-notes",
-    
-    "relUrl": "/project-1/#mechanical-notes"
-  },"56": {
-    "doc": "Project 1 - Platformer",
-    "title": "Common Failure Points",
-    "content": ". | building a large bridge or actuator system before the base drive works reliably | debugging radio, motor driver, and power issues all at the same time | leaving handheld controller bring-up until late in the build | designing around one perfect crossing instead of a repeatable scored run | . Actuator Reference Video . Custom linear actuator reference . Open on YouTube Reference Builds . These stills show one example of how a long bridge arm and actuator-assisted chassis can be arranged. Use them as mechanism reference, not as a required final design. Bridge arm deployed during a wide-gap crossing attempt. Long bridge extension reaching the far platform. Top view of the actuator placement and chassis layout. Crossing in motion with the bridge structure loaded. Full-span side view showing the overall bridge geometry. ",
-    "url": "/live/project-1/#common-failure-points",
-    
-    "relUrl": "/project-1/#common-failure-points"
-  },"57": {
-    "doc": "Project 1 - Platformer",
-    "title": "Programming approach",
-    "content": "VS Code is the primary recommended workflow for this project. Start with VS Code Setup, then use Pi Pico Controller for the organiser controller pin map and radio bring-up, and Power &amp; Wiring before you power the full vehicle. | Recommended path: VS Code | MicroPython, Arduino IDE, or Thonny can still be used if your team already knows them, but treat them as secondary options | . ",
-    "url": "/live/project-1/#programming-approach",
-    
-    "relUrl": "/project-1/#programming-approach"
-  },"58": {
-    "doc": "Project 1 - Platformer",
-    "title": "Scoring Criteria",
-    "content": "Gap Crossed (60 points) . | Gap crossed | Points | . | 20 cm crossed | 4 points | . | 30 cm crossed | 6 points | . | 40 cm crossed | 7 points | . | 50 cm crossed | 8 points | . | 60 cm crossed | 9 points | . | 70 cm crossed | 11 points | . | Highest successful gap | 15 points | . Crossing Speed (20 points) . Speed points are awarded by speed placement at the team’s highest successful gap, with 1st being the fastest successful crossing at that distance. The points are distributed to create stronger separation near the top while still ensuring every successful team receives some speed points. Top 10: . | Rank | Points | . | 1st | 20 | . | 2nd | 18 | . | 3rd | 17 | . | 4th | 15 | . | 5th | 13 | . | 6th | 12 | . | 7th | 10 | . | 8th | 9 | . | 9th | 8 | . | 10th | 7 | . Reliability and Repeatability (10 points) . | Category | Points | . | Smoothness | 4 points | . | Control | 3 points | . | Repeatability | 3 points | . Engineering Design (10 points) . Teams start with 10 points. Points are deducted for weaknesses in mechanical design, electrical design, system integration, and overall build quality. ",
-    "url": "/live/project-1/#scoring-criteria",
-    
-    "relUrl": "/project-1/#scoring-criteria"
-  },"59": {
-    "doc": "Project 1 - Platformer",
-    "title": "Project 1 - Platformer",
+    "doc": "Project 1 - Rover",
+    "title": "Project 1 - Rover",
     "content": " ",
     "url": "/live/project-1/",
     
     "relUrl": "/project-1/"
-  },"60": {
+  },"54": {
     "doc": "Project 2 - Catapult",
     "title": "Objectives",
     "content": "Participants must design a system that: . | Identify and measure the distance to the target using the VL53L0X V2 Time-of-Flight sensor. | Calculate the required launch and aiming parameters. | Adjust the catapult mechanism automatically using motors. | Launches a projectile to hit the target as accurately as possible. | Display system information on the OLED display for monitoring or troubleshooting. | . ",
     "url": "/live/project-2/#objectives",
     
     "relUrl": "/project-2/#objectives"
-  },"61": {
+  },"55": {
     "doc": "Project 2 - Catapult",
     "title": "Materials Provided",
     "content": "| Item | Picture | Description | . | Raspberry Pi Pico 2 | | Main controller for the catapult. It reads the sensor, computes shot settings, drives the actuators, and updates the on-board display. | . | VL53L0X V2 Time-of-Flight (ToF) laser ranging sensor | | Measures target distance so the launcher can choose the correct shot profile or automate tower finding in higher-end builds. | . | MG996R 360 servo | | High-torque servo for heavier mechanism motion such as cocking, feeder drive, or another powered stage that needs more torque than the small servo can provide. | . | MG90S micro servo | | Smaller actuator for light tasks such as a latch, gate, sensor mount, or release linkage. | . | NEMA 17 42 stepper motor | | Provides repeatable positioning for an aiming axis, turret, or adjustable launch geometry where precise motion matters more than raw speed. | . | DRV8825 stepper motor driver with heat sink | | Interfaces the Pico to the stepper motor and provides current-limited, direction-and-step control for accurate positioning. | . | LM2596S DC buck converter | | Steps the main supply down to cleaner lower-voltage rails for logic, sensors, and any peripherals that should not be fed directly from the higher-power input. | . | 12V 6A power supply unit | | Primary bench supply for the launcher, especially during tests where motors, drivers, and other higher-current loads need a stable source. | . | 0.96&quot; OLED display module | | Useful for distance readings, calibration state, selected firing mode, and other live debug information during setup and testing. | . | Perfboard 7 x 9 cm | | General-purpose prototyping board for soldered wiring, small interface circuits, and more durable assembly than a temporary breadboard. | . | USB-A to Micro-USB cable | | Used to power and program the Pico during development, testing, and firmware updates. | . ",
     "url": "/live/project-2/#materials-provided",
     
     "relUrl": "/project-2/#materials-provided"
-  },"62": {
+  },"56": {
     "doc": "Project 2 - Catapult",
     "title": "Common Materials",
     "content": ". | Mini Precision Screwdriver Set | 2-meter 22AWG Single Core Wire | M3x10mm Screws | Assorted Electronic Components Kit | 12 Value Assorted Capacitor Kit | . ",
     "url": "/live/project-2/#common-materials",
     
     "relUrl": "/project-2/#common-materials"
-  },"63": {
+  },"57": {
     "doc": "Project 2 - Catapult",
     "title": "Quickstart",
     "content": ". | Start with VS Code Setup and Power &amp; Wiring before you integrate the full launcher. | Prove the Pico 2 can read the VL53L0X V2 and command one actuator cleanly. | Get consistent launches with a 30 mm projectile before you automate reload or tower finding. | Treat automatic target finding and directional aiming as part of the high-end solution, then layer extra automation on top. | . ",
     "url": "/live/project-2/#quickstart",
     
     "relUrl": "/project-2/#quickstart"
-  },"64": {
+  },"58": {
     "doc": "Project 2 - Catapult",
     "title": "Projectile Rules",
     "content": ". | Use 30 mm diameter 3D-printed balls as projectiles. | Each kit will include 3 projectiles for testing. | There is no limit on the number of extra projectiles your team may print, as long as they remain 30 mm in diameter. | A magazine or similar reload mechanism is strongly recommended. | . ",
     "url": "/live/project-2/#projectile-rules",
     
     "relUrl": "/project-2/#projectile-rules"
-  },"65": {
+  },"59": {
     "doc": "Project 2 - Catapult",
     "title": "Tower Layout Reference",
     "content": "A tower reference image will be added here before launch. Until then, use the distances and scoring rules below as the source of truth. ",
     "url": "/live/project-2/#tower-layout-reference",
     
     "relUrl": "/project-2/#tower-layout-reference"
-  },"66": {
+  },"60": {
     "doc": "Project 2 - Catapult",
     "title": "Inspiration Reference",
     "content": "The main inspiration for this project was the Instructables project Arduino Robot Catapult: . | https://www.instructables.com/Arduino-Robot-Catapult/ | . Teams may find it useful as a high-level reference for automation flow, launch sequencing, and general mechanism ideas. Important constraints for this project: . | Treat the Instructables build as inspiration only. The Hack-A-Bot kit is materially different from the parts used in that project. | Use of the external 3D files from that build is not allowed in this project. | If you borrow ideas from it, you should adapt them to the components, geometry, and constraints of the kit provided here. | . Reference Gallery . These photos are copied from the Arduino Robot Catapult Instructables page and are included only as visual reference for mechanism layout, actuator placement, and launch sequencing. Exploded parts-and-electronics layout from the original reference build. Full assembled view showing overall geometry, actuator positions, and control wiring. Loaded launch position showing the arm linkage, cup, and feed path. Side profile that makes the main arm motion and support structure easier to read. Subassembly close-up for one of the servo-driven moving stages. ",
     "url": "/live/project-2/#inspiration-reference",
     
     "relUrl": "/project-2/#inspiration-reference"
-  },"67": {
+  },"61": {
     "doc": "Project 2 - Catapult",
     "title": "Common Failure Points",
     "content": ". | inconsistent projectile size or mass between test shots | trying to solve reload, scanning, and launch power at the same time | unstable power delivery when multiple motors or drivers move together | mounting the sensor in a way that cannot reliably see the towers | . ",
     "url": "/live/project-2/#common-failure-points",
     
     "relUrl": "/project-2/#common-failure-points"
-  },"68": {
+  },"62": {
     "doc": "Project 2 - Catapult",
     "title": "Programming approach",
     "content": "VS Code is the primary recommended workflow for this project. Start with VS Code Setup for toolchain bring-up and Power &amp; Wiring before running launch hardware at full load. | Recommended path: VS Code | MicroPython or Arduino IDE can still be used if your team already knows them, but treat them as secondary options | . ",
     "url": "/live/project-2/#programming-approach",
     
     "relUrl": "/project-2/#programming-approach"
-  },"69": {
+  },"63": {
     "doc": "Project 2 - Catapult",
     "title": "Scoring Criteria",
     "content": "Maximum score: 100 points . The project rewards automation, accuracy, engineering quality, and software implementation. Systems with higher autonomy levels receive higher marks. 1. Level of Automation (50 Points) . | System Type | Description | Points | . | Fully Autonomous System | System measures distance, calculates launch parameters, aims, and fires automatically with no human input. | 50 | . | Semi-Autonomous (Manual Aim + Automatic Launch) | Users align the system with the target direction, but the system measures distance and automatically calculates launch parameters and fires. | 30 | . | Distance-Assisted Launch | System measures distance and displays recommended settings, but the user manually adjusts and triggers the launch. | 15 | . | Fully Manual System | User performs aiming and launching manually without automated assistance. | 0 | . 2. Accuracy Scoring - Block Target System (40 Points) . The target will consist of 6 columns of 3 stacked blocks, arranged by distance from the catapult at marked positions around a circle with the catapult in the center. Target Layout . | 2 Close Columns (0.8m) | 2 Middle Columns (1.3m) | 2 Far Columns (1.8m) | . Teams aiming for the fully autonomous category are expected to locate and aim at these towers automatically. Lower automation categories are still scored using the rubric above. Calculation method: . | Only the top two blocks in each column count toward scoring. The bottom block does not count, even if it falls. | . Number of boxes fallen* distance multiplier . | Distance | Multiplier | . | Close | 2 | . | Middle | 4 | . | Far | 6 | . | Total score after 5 shots is the score for accuracy | . 3. Engineering &amp; System Design (5 Points) . Judges will assess: . | Stability of the mechanical structure | Quality of assembly and wiring | Effective use of provided components | . Score: 0-5 points . 4. Innovation &amp; Creativity (5 Points) . Points may be awarded for: . | Creative catapult designs | Unique engineering solutions | . Score: 0-5 points . ",
     "url": "/live/project-2/#scoring-criteria",
     
     "relUrl": "/project-2/#scoring-criteria"
-  },"70": {
+  },"64": {
     "doc": "Project 2 - Catapult",
     "title": "Supporting Documentation",
     "content": ". | Raspberry Pi Pico 2 pin out: https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#pico2 | DIymore VL53L0X V2 Sensor: (User manual under description) . | https://www.aliexpress.com/item/32902676861.html?spm=a2g0o.productlist.main.46.51a2576a2xuzXY&amp;algo_pvid=a342f1ac-b016-48d5-b2200441a47fd0fc&amp;pdp_ext_f=%7B%22order%22%3A%2254%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&amp;utparamurl=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A32902676861%7C_p_origin_prod%3A#nav-specification | https://www.st.com/resource/en/datasheet/vl53l0x.pdf | . | MG996R Servo (High Torque): Check power requirements! . | https://www.electronicoscaldas.com/datasheet/MG996R_Tower-Pro.pdf | . | MG90S Servo: . | https://www.electronicoscaldas.com/datasheet/MG90S_Tower-Pro.pdf | . | Nema 17 42 stepper motor: . | https://www.handsontec.com/dataspecs/motor_fan/nema17-42BYGH60.pdf | . | DRV8825 Stepper Driver Guide: . | https://www.pololu.com/product/2133 | . | LM2596S DC Buck Converter: . | https://www.youtube.com/watch?v=RAbTdeLU2JQ&amp;t=246s | . | VL53L0X (ToF Sensor) Library: . | MicroPython: https://github.com/kevinmcaleer/vl53lx0 | C/C++ : https://github.com/adafruit/Adafruit_VL53L0X | . | SSD1306-compatible OLED libraries: . | MicroPython : https://github.com/stlehmann/micropython-ssd1306 | . | . ",
     "url": "/live/project-2/#supporting-documentation",
     
     "relUrl": "/project-2/#supporting-documentation"
-  },"71": {
+  },"65": {
     "doc": "Project 2 - Catapult",
     "title": "Project 2 - Catapult",
     "content": " ",
     "url": "/live/project-2/",
     
     "relUrl": "/project-2/"
-  },"72": {
-    "doc": "Project 3 - Robot Arm",
+  },"66": {
+    "doc": "Project 3 - Platformer",
     "title": "Objectives",
-    "content": "Teams must build a system that achieves two core objectives. 1. Rebuild the Tower . The primary objective is to reconstruct a tall, stable block tower after it has been knocked down by the catapult stage. The system should reset this part of the course in a consistent and repeatable way so that the wider hackathon cycle can continue without manual intervention. 2. Link the Projects Together (Inter-Project Handoff) . The second objective is to use the robot arm as a reliable handoff point between adjacent systems. Teams should design a workflow that can receive the angry bird from one stage and place it accurately for the next, for example by transferring it onto the swarm trolley after Project 2. Adjacent-project handoffs follow project number order 1 -&gt; 6. This objective should demonstrate both accurate object handling and effective coordination with the surrounding projects. ",
+    "content": ". | Design and build a vehicle capable of crossing the largest possible gap. | Demonstrate reliable remote operation and stable vehicle control throughout each crossing attempt. | Develop a robust mechanical system that can maintain performance as gap distance increases in 10cm increments. | Achieve successful crossings efficiently, reliably and quickly. | If two or more teams successfully cross the same maximum gap, the team with the fastest successful crossing at that distance will rank higher. | . ",
     "url": "/live/project-3/#objectives",
     
     "relUrl": "/project-3/#objectives"
-  },"73": {
-    "doc": "Project 3 - Robot Arm",
+  },"67": {
+    "doc": "Project 3 - Platformer",
     "title": "Quickstart",
-    "content": ". | Get the arm calibrated and the workspace bounded before you add cloud logic or complex task sequencing. | Prove one repeatable pickup-and-place cycle with a single object before you attempt tower rebuilding or full handoffs. | Decide the neighboring project interfaces you need to support in the fixed 1 -&gt; 6 order. | Collect Google Cloud credits from a project supervisor on the day by scanning the provided QR code into the Google account you want to use. | . ",
+    "content": ". | Start with VS Code Setup, Pi Pico Controller, and Power &amp; Wiring before you build a complex chassis. | Prove the handheld controller and nRF24L01+ link first, then get one drive motor working cleanly through the motor driver. | Build the smallest stable vehicle that can steer, stop, and reverse before you add bridge or actuator mechanisms. | Treat 20 cm as the first scored gap. Use shorter runs as setup and control checks only. | . ",
     "url": "/live/project-3/#quickstart",
     
     "relUrl": "/project-3/#quickstart"
-  },"74": {
-    "doc": "Project 3 - Robot Arm",
-    "title": "Google Cloud Workflow",
-    "content": "Teams are expected to use Google Cloud for the AI part of this project. In practice that usually means Gemini and Vertex AI for perception or decision-making, plus other Google Cloud services if you need remote compute, hosting, or hardware coordination. | The event has 100 Google Cloud credits available in total. | One credit is usually claimed per person, and an average team will often use 1 to 4 credits in total if several members scan separately. | Each credit is worth $5 of Google Cloud usage. | Credits can be used for Gemini and other Google AI services, but they can also be spent on CPUs, GPUs, Cloud Run, and other remote processing if your robot pipeline needs it. | If one account runs out, multiple credits can be applied to the same Google account. | You do not type in a manual code: scan the QR code and the credit is applied automatically to your Google account. | . ",
-    "url": "/live/project-3/#google-cloud-workflow",
-    
-    "relUrl": "/project-3/#google-cloud-workflow"
-  },"75": {
-    "doc": "Project 3 - Robot Arm",
+  },"68": {
+    "doc": "Project 3 - Platformer",
     "title": "Materials Provided",
-    "content": ". | Quanser’s QArm Mini platform | Google Cloud credits will be distributed by project supervisors on the day via QR code. | Vertex AI and Gemini: Run high-performance multimodal models to give your robot the ability to see, hear, and reason. | Vision API: Identify objects, detect faces, and read text from your robot’s camera feed in real time. | Cloud Run: Deploy your web applications or bot controllers instantly in a fully managed environment. | BigQuery: Store and analyse vast amounts of sensor data to find patterns or train your own custom models. | Cloud Functions: Create event-driven triggers that let your hardware respond to cloud-based signals automatically. | Compute Engine: Access high-power virtual machines and GPUs for intensive training or simulation tasks. | Access to the Makerspace to develop the inter-project handoff systems. This includes 3D printers, Laser Cutting and other materials. | . ",
+    "content": "| Item | Picture | Description | . | Raspberry Pi Pico microcontroller | | Primary controller board for the vehicle and handheld remote. Teams use it to read inputs, coordinate radio traffic, and drive the rest of the embedded system. | . | nRF24L01+ 2.4 GHz wireless transceiver modules | | Provides the required radio link between the operator controls and the gap-crossing vehicle. | . | Analog joystick modules | | Two-axis operator input for steering, speed control, and mechanism commands on the handheld controller. | . | 0.96&quot; 128 x 64 OLED displays | | Useful for lightweight status output such as pairing state, battery checks, selected mode, or quick debug readouts. | . | Drive components: N20 gear motors and TT motor wheel kits | | Mix of compact geared motors and wheel-drive parts for traction, chassis movement, and small powered mechanisms. | . | L298N dual H-bridge motor driver boards | | Lets the Pico reverse and control DC motors safely without driving the motor load directly from the microcontroller. | . | LM2596 DC-DC voltage regulators | | Adjustable buck regulators for stepping battery voltage down to cleaner supply rails for logic, radios, and accessories. | . | Custom linear actuator kits | | Low-cost extending actuator hardware for teams that want lifting or bridging mechanisms. The kits are supplied as parts, so expect assembly work and possible STL tweaks. | . | Support hardware: casters and 694-2RS bearings | | Useful for rolling support points, pivots, and smoother contact surfaces where the chassis or bridge structure needs low-friction motion. | . | Mechanical hardware: M4 threaded rod and M4 square nuts | | General-purpose structural hardware for frames, adjustments, clamping, and custom linkage assemblies. | . ",
     "url": "/live/project-3/#materials-provided",
     
     "relUrl": "/project-3/#materials-provided"
-  },"76": {
-    "doc": "Project 3 - Robot Arm",
-    "title": "Quanser QArm Mini Notes",
-    "content": "The official Quanser product material positions the QArm Mini as a compact teaching manipulator for introductory robotics, so teams should aim for controlled tabletop pick-and-place and repeatable handoff behaviours rather than large, high-payload motions. Platform Snapshot . | 4 DOF arm with base yaw, shoulder/elbow/wrist pitch, and a parallel gripper | Triple-parallel pitch arrangement that helps maintain picked-object orientation through sagittal-plane motion | Approximate arm reach of 382 mm, gripper grasp of 70 mm, and maximum payload of 150 g | Joint sensing for position, speed, and current monitoring, which can also support payload-estimation workflows | Post-wrist RGB camera with two swivel configurations at up to 1280 x 720 and 60 Hz | Plug-and-play USB connection for desktop use, with support across Python, MATLAB, Simulink, and ROS 2 | . Useful Courseware Ideas . | Forward, inverse, and differential kinematics are directly relevant for repeatable tower rebuilding and handoff positioning. | Visual servoing and object detection are a strong fit for block pickup, target alignment, and bird transfer. | Current-based payload sensing is useful if teams want to detect whether a block or bird has actually been gripped. | Path and collision monitoring matter here because the arm needs to work near surrounding project hardware and custom fixtures. | Quanser’s robotics guide presents the platform as part of a broader open-architecture workflow, so a good event-day approach is to lock down calibration and workspace limits first, then layer camera logic and task sequencing on top. | . ",
-    "url": "/live/project-3/#quanser-qarm-mini-notes",
+  },"69": {
+    "doc": "Project 3 - Platformer",
+    "title": "Common Materials",
+    "content": ". | Battery supplies: 3xAA holders, 6xAA holders, and AA alkaline batteries | Prototyping materials: perfboard and solderless breadboards | Wiring supplies: 22 AWG electrical wire and male-to-female Dupont jumper wires | General electronics assortment: resistors, capacitors, LEDs, diodes, and transistors | Common fasteners: M4 nylon insert lock nuts and M3 self-tapping screws | Basic assembly tools: precision screwdriver set | . ",
+    "url": "/live/project-3/#common-materials",
     
-    "relUrl": "/project-3/#quanser-qarm-mini-notes"
-  },"77": {
-    "doc": "Project 3 - Robot Arm",
+    "relUrl": "/project-3/#common-materials"
+  },"70": {
+    "doc": "Project 3 - Platformer",
+    "title": "Mechanical Notes",
+    "content": ". | The actuator option is intended as a cheaper custom alternative to off-the-shelf linear actuators. | Teams should expect to assemble the actuator kits before use. | Some teams will likely need to adjust, remix, or reprint the supplied STL parts to fit their chassis or linkage geometry. | . ",
+    "url": "/live/project-3/#mechanical-notes",
+    
+    "relUrl": "/project-3/#mechanical-notes"
+  },"71": {
+    "doc": "Project 3 - Platformer",
     "title": "Common Failure Points",
-    "content": ". | trying to solve cloud integration before the arm is calibrated and repeatable | leaving handoff geometry and fixtures undefined until late in the event | assuming the gripper can tolerate an object or fixture without testing it | treating adjacent project interfaces as ad hoc instead of fixed numbered handoffs | . Reference Gallery . QArm Mini hardware reference image. Annotated product details and spec reference. Block Handling Examples . These external reference stills show the kind of vision-guided pickup, transfer, and stacking workflow this project is aiming for. Treat them as task reference only, not as a required hardware layout or fixture design. Vision-guided block presentation and pickup setup. Color-sorting reference with distinct pickup and placement zones. Block transport into the stacking area. Final placement step while building a stacked colored-block tower. ",
+    "content": ". | building a large bridge or actuator system before the base drive works reliably | debugging radio, motor driver, and power issues all at the same time | leaving handheld controller bring-up until late in the build | designing around one perfect crossing instead of a repeatable scored run | . Actuator Reference Video . Custom linear actuator reference . Open on YouTube Reference Builds . These stills show one example of how a long bridge arm and actuator-assisted chassis can be arranged. Use them as mechanism reference, not as a required final design. Bridge arm deployed during a wide-gap crossing attempt. Long bridge extension reaching the far platform. Top view of the actuator placement and chassis layout. Crossing in motion with the bridge structure loaded. Full-span side view showing the overall bridge geometry. ",
     "url": "/live/project-3/#common-failure-points",
     
     "relUrl": "/project-3/#common-failure-points"
-  },"78": {
-    "doc": "Project 3 - Robot Arm",
-    "title": "Tower Scoring Criteria (60 points)",
-    "content": "Tower Height (30 points) . Tower Height will be scored comparatively across all teams. Points will be awarded based on the highest valid tower achieved across three attempts. Height will be measured by the number of completed stacked levels. For a tower to be considered valid, it must remain standing unsupported for at least 5 seconds after the build is complete. Each team’s best valid attempt will be used for scoring. Teams will then be ranked from tallest valid tower to shortest valid tower, and points will be awarded as follows: . | Place | Points | . | 1st place | 30 points | . | 2nd place | 25 points | . | 3rd place | 20 points | . | 4th place | 15 points | . | 5th place | 10 points | . | 6th place | 5 points | . If a team does not achieve a valid tower, they will receive 0 points for this section. If two teams achieve the same tower height, the team with the faster valid completion time will place higher. Repeatability (30 points) . Repeatability measures how consistently a team can rebuild a valid tower across repeated judged attempts. This category will be scored using the same three official runs used for the Tower Height section. A run will be considered successful if the robot rebuilds a valid tower that remains standing unsupported for at least 5 seconds, with no manual intervention during the attempt. Points will be awarded as follows: . | Outcome | Points | . | 3 successful runs | 30 points | . | 2 successful runs | 20 points | . | 1 successful run | 10 points | . | 0 successful runs | 0 points | . This score is independent of Tower Height. Teams do not need to match their tallest tower on every run; each run only needs to result in a valid tower. ",
-    "url": "/live/project-3/#tower-scoring-criteria-60-points",
+  },"72": {
+    "doc": "Project 3 - Platformer",
+    "title": "Programming approach",
+    "content": "VS Code is the primary recommended workflow for this project. Start with VS Code Setup, then use Pi Pico Controller for the organiser controller pin map and radio bring-up, and Power &amp; Wiring before you power the full vehicle. | Recommended path: VS Code | MicroPython, Arduino IDE, or Thonny can still be used if your team already knows them, but treat them as secondary options | . ",
+    "url": "/live/project-3/#programming-approach",
     
-    "relUrl": "/project-3/#tower-scoring-criteria-60-points"
-  },"79": {
-    "doc": "Project 3 - Robot Arm",
-    "title": "Inter-Project Handoff Scoring Criteria (40 points)",
-    "content": "Successful Handoff Scenarios (20 points) . Teams may earn up to 20 points for successfully implementing inter-project handoffs. | Scenario | Points | . | 10 points for the first successful handoff scenario | 10 points | . | 10 points for the second successful handoff scenario | 10 points | . | Maximum of 20 points total | 20 points total | . A handoff scenario will be considered successful if the robot arm receives the angry bird from the previous numbered project and places it for use by the next numbered project in the 1 -&gt; 6 loop, with no manual intervention during the attempt. Teams are recommended to design a 3D printed mount that’s easy to attach to the projects if needed. Repeatability (10 points) . Teams will be awarded points based on how reliably their chosen handoff scenarios can be repeated. | Outcome | Points | . | 10 points: handoff system works reliably across repeated attempts | 10 points | . | 5 points: handoff system works inconsistently, with partial repeatability | 5 points | . | 0 points: handoff system cannot be repeated reliably | 0 points | . Judges will assess repeatability based on whether the demonstrated handoff process can be reproduced with similar results across multiple runs. Judge Assessment: Approach and Integration (10 points) . The remaining 10 points will be awarded qualitatively by the judges based on the quality of the team’s overall approach. Judges will consider: . | how well the robot arm integrates with the surrounding projects | the quality and robustness of the handoff strategy | how clearly the system has been designed for use within the wider hackathon cycle | the effectiveness of the team’s technical approach to coordination, positioning, and transfer | . ",
-    "url": "/live/project-3/#inter-project-handoff-scoring-criteria-40-points",
+    "relUrl": "/project-3/#programming-approach"
+  },"73": {
+    "doc": "Project 3 - Platformer",
+    "title": "Scoring Criteria",
+    "content": "Gap Crossed (60 points) . | Gap crossed | Points | . | 20 cm crossed | 4 points | . | 30 cm crossed | 6 points | . | 40 cm crossed | 7 points | . | 50 cm crossed | 8 points | . | 60 cm crossed | 9 points | . | 70 cm crossed | 11 points | . | Highest successful gap | 15 points | . Crossing Speed (20 points) . Speed points are awarded by speed placement at the team’s highest successful gap, with 1st being the fastest successful crossing at that distance. The points are distributed to create stronger separation near the top while still ensuring every successful team receives some speed points. Top 10: . | Rank | Points | . | 1st | 20 | . | 2nd | 18 | . | 3rd | 17 | . | 4th | 15 | . | 5th | 13 | . | 6th | 12 | . | 7th | 10 | . | 8th | 9 | . | 9th | 8 | . | 10th | 7 | . Reliability and Repeatability (10 points) . | Category | Points | . | Smoothness | 4 points | . | Control | 3 points | . | Repeatability | 3 points | . Engineering Design (10 points) . Teams start with 10 points. Points are deducted for weaknesses in mechanical design, electrical design, system integration, and overall build quality. ",
+    "url": "/live/project-3/#scoring-criteria",
     
-    "relUrl": "/project-3/#inter-project-handoff-scoring-criteria-40-points"
-  },"80": {
-    "doc": "Project 3 - Robot Arm",
-    "title": "Project 3 - Robot Arm",
+    "relUrl": "/project-3/#scoring-criteria"
+  },"74": {
+    "doc": "Project 3 - Platformer",
+    "title": "Project 3 - Platformer",
     "content": " ",
     "url": "/live/project-3/",
     
     "relUrl": "/project-3/"
-  },"81": {
+  },"75": {
     "doc": "Project 4 - Swarm",
     "title": "Objectives",
     "content": "Teams must build a system that: . | Coordinates the provided MONA bots using the shared arena camera for localisation while moving the trolley across the arena. | Detects and avoids obstacles throughout the run. | Completes the crossing as quickly and reliably as possible. | . ",
     "url": "/live/project-4/#objectives",
     
     "relUrl": "/project-4/#objectives"
-  },"82": {
+  },"76": {
     "doc": "Project 4 - Swarm",
     "title": "Quickstart",
     "content": ". | Start with one MONA and a minimal command loop before you plan 3-bot behaviour. | Use the MONA library and example code linked in the resources section as your starting point. | Plan around supervisor-managed arena and camera access rather than assuming constant availability. | When you are on the arena, plug your laptop into the arena camera and use that live view both to position the MONAs and to run your camera-based tracking from the real camera angle. | Use the initial one-MONA period to agree a shared fiducial marker convention with the other teams before different mounts and sizes diverge. | Generate, print, and mount fiducial markers early rather than treating them as an optional late add-on. | . ",
     "url": "/live/project-4/#quickstart",
     
     "relUrl": "/project-4/#quickstart"
-  },"83": {
+  },"77": {
     "doc": "Project 4 - Swarm",
     "title": "MONA Access Plan",
     "content": ". | We only have access to 10 MONA bots in total for the event. | At the start of the event, each team will be handed 1 MONA bot for setup, testing, and learning the platform. | Use that initial 1-MONA period to discuss a shared fiducial marker system with the other teams so the arena camera can localise every bot reliably. | Once teams are ready, organisers will transition to 3 shared sets of 3 MONA bots. | Teams will need to share time on those 3-bot sets during development and judged use. | A maximum of 3 MONA bots may be used for a run. | . ",
     "url": "/live/project-4/#mona-access-plan",
     
     "relUrl": "/project-4/#mona-access-plan"
-  },"84": {
+  },"78": {
     "doc": "Project 4 - Swarm",
     "title": "Arena Rules",
     "content": ". | Teams will share one arena during development and testing. | Each team gets a minimum of 4 minutes on the arena before allowing another team to use it. | Teams are responsible for organising arena time between themselves. | Teams are expected to plug their laptop into the arena camera when they are on the arena and use that feed to position the MONAs and run their camera-based tracking. | Supervisors will manage arena and camera access on the day, but teams still need to keep arena usage fair and practical. | . ",
     "url": "/live/project-4/#arena-rules",
     
     "relUrl": "/project-4/#arena-rules"
-  },"85": {
+  },"79": {
     "doc": "Project 4 - Swarm",
     "title": "Materials Provided",
     "content": ". | Access to the staged MONA allocation described above | Access to the arena and overhead camera as the shared localisation and tracking view while teams are on the arena | Camera connection for teams to plug a laptop into the arena view while positioning MONAs and running their tracking pipeline | 1 wireless access point shared between 2 teams, for local robot/laptop communication | Access point setup will be kept minimal: . | configured in standard AP mode | 2.4 GHz Wi-Fi for compatibility with the MONA ESP32 hardware | local DHCP enabled so laptops and robots can join the network without manual IP configuration | intended for local command/telemetry traffic only, not high-bandwidth video streaming | . | MONA robot Arduino library and example code are linked in the resources section above | Teams may use the linked MONA robot Arduino library and example code as a starting point for robot control and local wireless communication | The Wi-Fi/socket examples in that linked codebase are a more suitable starting point for team robot coordination than browser-based control examples | One 3D printer will be reserved for this project at the start of the event so teams can print fiducial cases and related mounts quickly | . ",
     "url": "/live/project-4/#materials-provided",
     
     "relUrl": "/project-4/#materials-provided"
-  },"86": {
+  },"80": {
     "doc": "Project 4 - Swarm",
     "title": "Arena Camera Setup",
     "content": "Teams should treat the arena camera as part of the control stack. When you are on the arena, plug your laptop into the camera and use that live image both to place the MONAs and to run the camera-based tracking that localises them from the real camera position. This is why we strongly recommend putting fiducial markers on the bots. The shared camera view needs a consistent way to identify and position every MONA during setup and testing, and fiducial-based tracking has been the most practical shared standard in previous years. Reference arena view. The camera is mounted above the arena facing downward and is visible on the right side of this image. Teams are expected to plug a laptop into that feed to position the MONAs and run their tracking loop from the real camera viewpoint. ",
     "url": "/live/project-4/#arena-camera-setup",
     
     "relUrl": "/project-4/#arena-camera-setup"
-  },"87": {
+  },"81": {
     "doc": "Project 4 - Swarm",
     "title": "Fiducial Markers",
     "content": "Teams should plan for printed fiducial markers and a marker mount from the start. The MONA bots do not ship with markers attached by default, so the mount needs to be part of the early build rather than a last-minute add-on. At the start of the hackathon, each team gets 1 MONA to test with. Use that initial window to coordinate with the other teams and agree a shared fiducial marker system that everyone can use reliably from the shared arena camera. We recommend that someone generates the marker sheets early and prints them on the university computers before incompatible mount choices spread across teams. In past years, teams have mounted these fiducials on 3D-printed cases fitted to the MONAs. Teams can design and add those cases this year if they want to build them, and we recommend designing around M3 screws with self-tapping holes for a simple, robust mount. Teams can print fiducial markers on paper using the university printers, and if attaching them cleanly to the MONAs is difficult they can print mounts on a 3D printer at the start of the event instead, since glue must not be used directly on the MONAs. Example of a shared fiducial standard mounted on 3D-printed cases across multiple MONAs. Fit the fiducial mount early. Camera-based tracking depends on the marked configuration, not the bare robot. Bare MONA platform reference. Each team starts here, so use the initial one-MONA period to move quickly to a marker-ready mount. The MONA pool is shared and limited, so keep the fiducial case and mount quick to fit and compatible across the robots you are handed. ",
     "url": "/live/project-4/#fiducial-markers",
     
     "relUrl": "/project-4/#fiducial-markers"
-  },"88": {
+  },"82": {
     "doc": "Project 4 - Swarm",
     "title": "Common Failure Points",
     "content": ". | designing for three bots before one bot is reliable | treating the arena camera as a setup aid instead of the core localisation view | leaving fiducial marker placement until the end of the build | failing to agree a shared marker standard with the other teams during the initial one-MONA period | assuming uninterrupted arena time during development | delaying trolley interaction and obstacle recovery tests until judged runs | . ",
     "url": "/live/project-4/#common-failure-points",
     
     "relUrl": "/project-4/#common-failure-points"
-  },"89": {
+  },"83": {
     "doc": "Project 4 - Swarm",
     "title": "Scoring Criteria",
     "content": "Maximum score: 100 points . The project rewards competitive performance on the course, controlled obstacle handling, repeatable operation, and originality of approach. Qualifying and Knockout Placement (50 points) . All teams will complete 3 qualifying runs. A team’s best valid qualifying run will be used to rank the field. Completed crossings rank above non-finishers. Among teams that complete the course, the faster valid completion time ranks higher. Among teams that do not complete the course, the team that achieves the furthest valid trolley progress ranks higher. The top 4 teams advance to the knockout stage. Semifinals will be seeded 1st vs 4th and 2nd vs 3rd, with semifinal winners advancing to the final and semifinal losers competing in a 3rd-place playoff. Teams placed 5th to 10th will receive placement points based on their qualifying rank. | Final Place | Points | . | 1st | 50 | . | 2nd | 42 | . | 3rd | 36 | . | 4th | 30 | . | 5th | 24 | . | 6th | 20 | . | 7th | 16 | . | 8th | 12 | . | 9th | 8 | . | 10th | 4 | . Control and Obstacle Handling (25 points) . This category rewards controlled trolley movement, effective obstacle avoidance, stable corrections, and minimal disruption to obstacles. Minor contact is allowed, but repeated contact, poor recovery, or obvious course disruption will reduce the score. Judges may stop a run if the system becomes uncontrolled or unsafe. | Performance Level | Points | . | Clean, controlled navigation with little or no meaningful obstacle interference | 21-25 | . | Generally controlled operation with some avoidable contact or recovery corrections | 14-20 | . | Repeated contact, weak control, or inconsistent obstacle management | 6-13 | . | Severely uncontrolled or ineffective navigation | 0-5 | . Repeatability (15 points) . Repeatability will be scored using the same 3 qualifying runs. A successful run is one that completes a valid crossing within the allowed judging window. | Successful Qualifying Runs | Points | . | 3 | 15 | . | 2 | 10 | . | 1 | 5 | . | 0 | 0 | . Innovation (10 points) . The final 10 points will be awarded qualitatively for originality of approach. Judges may reward creative swarm strategies, novel robot coordination, interesting recovery methods, or inventive use of sensing and control. ",
     "url": "/live/project-4/#scoring-criteria",
     
     "relUrl": "/project-4/#scoring-criteria"
-  },"90": {
+  },"84": {
     "doc": "Project 4 - Swarm",
     "title": "Project 4 - Swarm",
     "content": " ",
     "url": "/live/project-4/",
     
     "relUrl": "/project-4/"
+  },"85": {
+    "doc": "Project 5 - Robot Arm",
+    "title": "Objectives",
+    "content": "Teams must build a system that achieves two core objectives. 1. Rebuild the Tower . The primary objective is to reconstruct a tall, stable block tower after it has been knocked down by the catapult stage. The system should reset this part of the course in a consistent and repeatable way so that the wider hackathon cycle can continue without manual intervention. 2. Link the Projects Together (Inter-Project Handoff) . The second objective is to use the robot arm as a reliable handoff point between adjacent systems. Teams should design a workflow that can receive the angry bird from one stage and place it accurately for the next. This objective should demonstrate both accurate object handling and effective coordination with the surrounding projects. The intended inter-project connection order is: . Project 3 (Platformer) -&gt; Project 2 (Catapult) -&gt; Project 5 (Robot Arm) -&gt; Project 4 (Swarm) -&gt; Project 1 (Rover) -&gt; Project 6 (Creative) -&gt; back to Project 3 (Platformer) . For the Robot Arm page specifically, that means the handoff path is: . | receive from Project 2 (Catapult) | place for Project 4 (Swarm) | . ",
+    "url": "/live/project-5/#objectives",
+    
+    "relUrl": "/project-5/#objectives"
+  },"86": {
+    "doc": "Project 5 - Robot Arm",
+    "title": "Quickstart",
+    "content": ". | Get the arm calibrated and the workspace bounded before you add cloud logic or complex task sequencing. | Prove one repeatable pickup-and-place cycle with a single object before you attempt tower rebuilding or full handoffs. | Decide the neighboring project interfaces you need to support in the fixed connection order: receive from Project 2 (Catapult) and place for Project 4 (Swarm). | Collect Google Cloud credits from a project supervisor on the day by scanning the provided QR code into the Google account you want to use. | . ",
+    "url": "/live/project-5/#quickstart",
+    
+    "relUrl": "/project-5/#quickstart"
+  },"87": {
+    "doc": "Project 5 - Robot Arm",
+    "title": "Google Cloud Workflow",
+    "content": "Teams are expected to use Google Cloud for the AI part of this project. In practice that usually means Gemini and Vertex AI for perception or decision-making, plus other Google Cloud services if you need remote compute, hosting, or hardware coordination. | The event has 100 Google Cloud credits available in total. | One credit is usually claimed per person, and an average team will often use 1 to 4 credits in total if several members scan separately. | Each credit is worth $5 of Google Cloud usage. | Credits can be used for Gemini and other Google AI services, but they can also be spent on CPUs, GPUs, Cloud Run, and other remote processing if your robot pipeline needs it. | If one account runs out, multiple credits can be applied to the same Google account. | You do not type in a manual code: scan the QR code and the credit is applied automatically to your Google account. | . ",
+    "url": "/live/project-5/#google-cloud-workflow",
+    
+    "relUrl": "/project-5/#google-cloud-workflow"
+  },"88": {
+    "doc": "Project 5 - Robot Arm",
+    "title": "Materials Provided",
+    "content": ". | Quanser’s QArm Mini platform | Google Cloud credits will be distributed by project supervisors on the day via QR code. | Vertex AI and Gemini: Run high-performance multimodal models to give your robot the ability to see, hear, and reason. | Vision API: Identify objects, detect faces, and read text from your robot’s camera feed in real time. | Cloud Run: Deploy your web applications or bot controllers instantly in a fully managed environment. | BigQuery: Store and analyse vast amounts of sensor data to find patterns or train your own custom models. | Cloud Functions: Create event-driven triggers that let your hardware respond to cloud-based signals automatically. | Compute Engine: Access high-power virtual machines and GPUs for intensive training or simulation tasks. | Access to the Makerspace to develop the inter-project handoff systems. This includes 3D printers, Laser Cutting and other materials. | . ",
+    "url": "/live/project-5/#materials-provided",
+    
+    "relUrl": "/project-5/#materials-provided"
+  },"89": {
+    "doc": "Project 5 - Robot Arm",
+    "title": "Quanser QArm Mini Notes",
+    "content": "The official Quanser product material positions the QArm Mini as a compact teaching manipulator for introductory robotics, so teams should aim for controlled tabletop pick-and-place and repeatable handoff behaviours rather than large, high-payload motions. Platform Snapshot . | 4 DOF arm with base yaw, shoulder/elbow/wrist pitch, and a parallel gripper | Triple-parallel pitch arrangement that helps maintain picked-object orientation through sagittal-plane motion | Approximate arm reach of 382 mm, gripper grasp of 70 mm, and maximum payload of 150 g | Joint sensing for position, speed, and current monitoring, which can also support payload-estimation workflows | Post-wrist RGB camera with two swivel configurations at up to 1280 x 720 and 60 Hz | Plug-and-play USB connection for desktop use, with support across Python, MATLAB, Simulink, and ROS 2 | . Useful Courseware Ideas . | Forward, inverse, and differential kinematics are directly relevant for repeatable tower rebuilding and handoff positioning. | Visual servoing and object detection are a strong fit for block pickup, target alignment, and bird transfer. | Current-based payload sensing is useful if teams want to detect whether a block or bird has actually been gripped. | Path and collision monitoring matter here because the arm needs to work near surrounding project hardware and custom fixtures. | Quanser’s robotics guide presents the platform as part of a broader open-architecture workflow, so a good event-day approach is to lock down calibration and workspace limits first, then layer camera logic and task sequencing on top. | . ",
+    "url": "/live/project-5/#quanser-qarm-mini-notes",
+    
+    "relUrl": "/project-5/#quanser-qarm-mini-notes"
+  },"90": {
+    "doc": "Project 5 - Robot Arm",
+    "title": "Common Failure Points",
+    "content": ". | trying to solve cloud integration before the arm is calibrated and repeatable | leaving handoff geometry and fixtures undefined until late in the event | assuming the gripper can tolerate an object or fixture without testing it | treating adjacent project interfaces as ad hoc instead of designing around the fixed connection order | . Reference Gallery . QArm Mini hardware reference image. Annotated product details and spec reference. Block Handling Examples . These external reference stills show the kind of vision-guided pickup, transfer, and stacking workflow this project is aiming for. Treat them as task reference only, not as a required hardware layout or fixture design. Vision-guided block presentation and pickup setup. Color-sorting reference with distinct pickup and placement zones. Block transport into the stacking area. Final placement step while building a stacked colored-block tower. ",
+    "url": "/live/project-5/#common-failure-points",
+    
+    "relUrl": "/project-5/#common-failure-points"
   },"91": {
-    "doc": "Project 5 - Rover",
-    "title": "Beginner Friendly",
-    "content": "Perfect for beginners if you have no prior experience. Guided teaching sessions will run throughout the event. One member from each team will take part in a soldering workshop during the day. You’ll gain experience using CAD, 3D printing, soldering, and coding. ",
-    "url": "/live/project-5/#beginner-friendly",
+    "doc": "Project 5 - Robot Arm",
+    "title": "Tower Scoring Criteria (60 points)",
+    "content": "Tower Height (30 points) . Tower Height will be scored comparatively across all teams. Points will be awarded based on the highest valid tower achieved across three attempts. Height will be measured by the number of completed stacked levels. For a tower to be considered valid, it must remain standing unsupported for at least 5 seconds after the build is complete. Each team’s best valid attempt will be used for scoring. Teams will then be ranked from tallest valid tower to shortest valid tower, and points will be awarded as follows: . | Place | Points | . | 1st place | 30 points | . | 2nd place | 25 points | . | 3rd place | 20 points | . | 4th place | 15 points | . | 5th place | 10 points | . | 6th place | 5 points | . If a team does not achieve a valid tower, they will receive 0 points for this section. If two teams achieve the same tower height, the team with the faster valid completion time will place higher. Repeatability (30 points) . Repeatability measures how consistently a team can rebuild a valid tower across repeated judged attempts. This category will be scored using the same three official runs used for the Tower Height section. A run will be considered successful if the robot rebuilds a valid tower that remains standing unsupported for at least 5 seconds, with no manual intervention during the attempt. Points will be awarded as follows: . | Outcome | Points | . | 3 successful runs | 30 points | . | 2 successful runs | 20 points | . | 1 successful run | 10 points | . | 0 successful runs | 0 points | . This score is independent of Tower Height. Teams do not need to match their tallest tower on every run; each run only needs to result in a valid tower. ",
+    "url": "/live/project-5/#tower-scoring-criteria-60-points",
     
-    "relUrl": "/project-5/#beginner-friendly"
+    "relUrl": "/project-5/#tower-scoring-criteria-60-points"
   },"92": {
-    "doc": "Project 5 - Rover",
-    "title": "Challenge Brief",
-    "content": "Remote Control Rovers: chaos or control? . Robots are being pushed further than ever before across unpredictable, mixed terrains. Your mission: Build and operate an RC rover to track down and collect 5 runaway Angry Birds hidden across the course. But can you navigate the terrain, avoid obstacles, gather them all without losing control, and save the flock from total chaos? . ",
-    "url": "/live/project-5/#challenge-brief",
+    "doc": "Project 5 - Robot Arm",
+    "title": "Inter-Project Handoff Scoring Criteria (40 points)",
+    "content": "Successful Handoff Scenarios (20 points) . Teams may earn up to 20 points for successfully implementing inter-project handoffs. | Scenario | Points | . | 10 points for the first successful handoff scenario | 10 points | . | 10 points for the second successful handoff scenario | 10 points | . | Maximum of 20 points total | 20 points total | . A handoff scenario will be considered successful if the robot arm receives the angry bird from Project 2 (Catapult) and places it for Project 4 (Swarm) as part of the intended connection order listed above, with no manual intervention during the attempt. Teams are recommended to design a 3D printed mount that’s easy to attach to the projects if needed. Repeatability (10 points) . Teams will be awarded points based on how reliably their chosen handoff scenarios can be repeated. | Outcome | Points | . | 10 points: handoff system works reliably across repeated attempts | 10 points | . | 5 points: handoff system works inconsistently, with partial repeatability | 5 points | . | 0 points: handoff system cannot be repeated reliably | 0 points | . Judges will assess repeatability based on whether the demonstrated handoff process can be reproduced with similar results across multiple runs. Judge Assessment: Approach and Integration (10 points) . The remaining 10 points will be awarded qualitatively by the judges based on the quality of the team’s overall approach. Judges will consider: . | how well the robot arm integrates with the surrounding projects | the quality and robustness of the handoff strategy | how clearly the system has been designed for use within the wider hackathon cycle | the effectiveness of the team’s technical approach to coordination, positioning, and transfer | . ",
+    "url": "/live/project-5/#inter-project-handoff-scoring-criteria-40-points",
     
-    "relUrl": "/project-5/#challenge-brief"
+    "relUrl": "/project-5/#inter-project-handoff-scoring-criteria-40-points"
   },"93": {
-    "doc": "Project 5 - Rover",
-    "title": "Project 5 - Rover",
+    "doc": "Project 5 - Robot Arm",
+    "title": "Project 5 - Robot Arm",
     "content": " ",
     "url": "/live/project-5/",
     
