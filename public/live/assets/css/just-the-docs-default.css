@@ -7814,6 +7814,11 @@ body {
   margin: 1.25rem 0 1.75rem;
 }
 
+.event-day-actions__projects {
+  flex: 0 0 100%;
+  display: flex;
+}
+
 .main-content a.event-day-whatsapp-cta,
 .main-content a.event-day-action-link {
   display: inline-flex;
@@ -7876,6 +7881,38 @@ body {
 .main-content a.event-day-action-link:focus-visible {
   outline: 2px solid var(--accent-stronger);
   outline-offset: 2px;
+}
+
+.main-content a.event-day-action-link--projects {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.95rem 1.15rem;
+  border-radius: 1.1rem;
+  border-color: rgba(239, 35, 60, 0.38);
+  background: linear-gradient(135deg, rgba(239, 35, 60, 0.2), rgba(239, 35, 60, 0.06)), linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)), var(--bg-2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.main-content a.event-day-action-link--projects:hover,
+.main-content a.event-day-action-link--projects:focus-visible {
+  border-color: rgba(239, 35, 60, 0.52);
+}
+
+.event-day-action-link__eyebrow {
+  display: block;
+  color: var(--text-dim);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.event-day-action-link__title {
+  display: block;
+  color: var(--text);
+  font-size: 1.15rem;
+  line-height: 1.1;
 }
 
 .event-day-whatsapp-cta__icon {
